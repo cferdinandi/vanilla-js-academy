@@ -3,7 +3,7 @@ baseURL: "https://vanillajsacademy.com"
 
 # Customer parameters
 params:
-  description: "Short, focused vanilla JS ebooks and video courses made for beginners. Start building real JavaScript projects in under an hour."
+  description: "A project-based online JavaScript training program for beginners."
   rssURL: ""
   rssLimit: 7
   cacheBust: true
