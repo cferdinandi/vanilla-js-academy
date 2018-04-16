@@ -242,6 +242,9 @@ Kick-start your journey to JavaScript mastery. You get...
 What's the difference between the Vanilla JS Academy and your pocket guides?
 : My pocket guides provide tactical knowledge around specific topics. The Vanilla JS Academy is focused on teaching you to "think in JavaScript," with a focus on experiential, project-based learning.
 
+How much of a time commitment does the Vanilla JS Academy involve?
+: This program is for people who are *serious* about learning JavaScript. The more you put into it, the more you'll get out of it. You should be willing to spend at least 4 or 5 hours a week working on your lessons and projects.
+
 Does the Vanilla JS Academy cover new ES6 methods?
 : Yes. Where applicable, I cover new ES6 functions and browser APIs. I also include polyfills when available to push browser support as far back as possible.
 
