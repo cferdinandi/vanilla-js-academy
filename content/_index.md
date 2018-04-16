@@ -222,7 +222,7 @@ Kick-start your journey to JavaScript mastery. You get...
 - Weekly video office hours
 - Exclusive Slack access
 
-**The next session runs from May 15 to June 30.** After joining, you'll get an email with the details.
+**The next session runs from May 14 to June 22.** After joining, you'll get an email with the details.
 
 {{<purchase-link product="ajaxHttp">}}
 
@@ -251,14 +251,11 @@ Do you offer team discounts?
 Do you offer a student discount?
 : Absolutely! This applies to anyone in any type of schooling, including evening classes and coding bootcamps. [Learn more about student discounts.](/student-discount/)
 
-I have a poor exchange rate in USD. There's no way I can afford this.
-: I totally get that in some countries salaries and cost of living are such that this program unaffordable. Send me an email at {{<email params="subject=Vanilla%20JS%20Academy:%20Exchange%20Rate&body=I%20live%20in%20{country}.%20Can%20I%20have%20a%20discount%20to%20make%20the%20Vanilla%20JS%20Academy%20more%20affordable%20for%20me?">}} and I'll send you a discount to make it fair for where you live.</dd>
-
 I'm not a student. Any other discounts?
 : Yep. I've had a lot of helping getting where I am, and I want to pay it forward. If you're a member of an under-represented group in tech, you can get special pricing. [Learn more about discounts for under-represented groups in tech.](/underrepresented-group-discount/)
 
 Do you have a return policy?
-: Absolutely! If you’re not 100% satisfied with the Vanilla JS Academy, email me at {{<email params="subject=Vanilla%20JS%20Academy:%20Refund%20Request">}} within 30 days after the program starts and I’ll give you a full refund.</dd>
+: Absolutely! If you’re not 100% satisfied with the Vanilla JS Academy, email me at {{<email params="subject=Vanilla%20JS%20Academy:%20Refund%20Request">}} within 30 days after the program starts and I’ll give you a full refund.
 
 After I sign up, how do I access the training program materials?
 : Visit [https://courses.gomakethings.com](https://courses.gomakethings.com) and create an account with the email address you used to make your purchase. The program has fixed start and end dates, so not all material will be available at once. You'll get a few emails from me when the program is about to start.
