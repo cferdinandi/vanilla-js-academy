@@ -15,6 +15,8 @@ description: ""
 
 **The Vanilla JS Academy provides a structured learning path, lots of fun projects, and the support you need to work through challenges.**
 
+{{<cta for="academy">}}
+
 {{<pricing-link>}}
 
 
@@ -223,6 +225,8 @@ Kick-start your journey to JavaScript mastery. You get...
 - Exclusive Slack access
 
 **The next session runs from May 14 to June 22.** After joining, you'll get an email with the details.
+
+{{<cta for="academy-buy">}}
 
 {{<purchase-link product="ajaxHttp">}}
 
