@@ -239,6 +239,9 @@ Kick-start your journey to JavaScript mastery. You get...
 
 ## Frequently Asked Questions
 
+What's the difference between the Vanilla JS Academy and your pocket guides?
+: My pocket guides provide tactical knowledge around specific topics. The Vanilla JS Academy is focused on teaching you to "think in JavaScript," with a focus on experiential, project-based learning.
+
 Does the Vanilla JS Academy cover new ES6 methods?
 : Yes. Where applicable, I cover new ES6 functions and browser APIs. I also include polyfills when available to push browser support as far back as possible.
 
