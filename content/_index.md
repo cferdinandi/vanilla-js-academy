@@ -170,7 +170,7 @@ The Vanilla JS Academy is a six-week structured training program. You'll learn J
 
 <div class="row padding-top-small margin-bottom">
 	<div class="grid-fifth margin-bottom-small text-center">
-		<svg xmlns="http://www.w3.org/2000/svg" style="height:4em;width:4em;" viewBox="0 0 16 16"><title></title><path fill="#f7272f" d="M0 15a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1V6H0v9zm11-8h4v2h-4V7zm0 3h4v2h-4v-2zm0 3h4v2h-4v-2zM6 7h4v2H6V7zm0 3h4v2H6v-2zm0 3h4v2H6v-2zM1 7h4v2H1V7zm0 3h4v2H1v-2zm0 3h4v2H1v-2zM15 2h-2V.571C13 .255 12.776 0 12.5 0s-.5.256-.5.571V2H4V.571C4 .255 3.776 0 3.5 0S3 .256 3 .571V2H1a1 1 0 0 0-1 1v2h16V3a1 1 0 0 0-1-1zM3.5 4.5A1 1 0 0 1 3 2.634V3.5a.5.5 0 0 0 1 0v-.866A1 1 0 0 1 3.5 4.5zm9 0a1 1 0 0 1-.5-1.866V3.5a.5.5 0 0 0 1 0v-.866a1 1 0 0 1-.5 1.866z"/></svg>
+		<svg xmlns="http://www.w3.org/2000/svg" style="height:4em;width:4em;" viewBox="0 0 16 16"><title></title><path fill="#0088cc" d="M14.5 0h-13C.675 0 0 .675 0 1.5v9c0 .825.675 1.5 1.5 1.5H4v4l4.8-4h5.7c.825 0 1.5-.675 1.5-1.5v-9c0-.825-.675-1.5-1.5-1.5zM8 2.005a1.995 1.995 0 1 1 0 3.99 1.995 1.995 0 0 1 0-3.99zM11 10H5V9a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v1z"/></svg>
 	</div>
 	<div class="grid-four-fifths">
 		<h3 class="h5 no-padding-top margin-bottom-small">Weekly Office Hours</h3>
