@@ -1,5 +1,5 @@
 /*!
- * academy v1.0.0: The theme for vanillajsacademy.com
+ * academy v1.1.0: The theme for vanillajsacademy.com
  * (c) 2018 Chris Ferdinandi
  * MIT License
  * http://github.com/cferdinandi/vanilla-js-academy
@@ -120,8 +120,12 @@ var mailchimp = function (callback) {
 	// Messages
 	var messages = {
 		empty: 'Please provide an email address.',
-		notEmail: 'Please use a valid email address.'
+		notEmail: 'Please use a valid email address.',
+		success: 'Success! Thanks for inviting me to your inbox.'
 	};
+
+	// Endpoint
+	var endpoint = 'https://gomakethings.com/checkout/wp-json/gmt-mailchimp/v1/subscribe';
 
 
 	//
@@ -137,7 +141,7 @@ var mailchimp = function (callback) {
 	var serialize = function (form) {
 
 		// Setup our serialized data
-		var serialized = '';
+		var serialized = [];
 
 		// Loop through each field in the form
 		for (var i = 0; i < form.elements.length; i++) {
@@ -149,11 +153,11 @@ var mailchimp = function (callback) {
 
 			// Convert field data to a query string
 			if ((field.type !== 'checkbox' && field.type !== 'radio') || field.checked) {
-				serialized += '&' + encodeURIComponent(field.name) + "=" + encodeURIComponent(field.value);
+				serialized.push(encodeURIComponent(field.name) + "=" + encodeURIComponent(field.value));
 			}
 		}
 
-		return serialized;
+		return serialized.join('&');
 
 	};
 
@@ -163,7 +167,7 @@ var mailchimp = function (callback) {
 		if (!status) return;
 
 		// Wipe classes and HTML from the status
-		status.innerHTML = '';
+		status.textContent = '';
 		status.className = '';
 
 		// Wipe classes and aria labels from the email field
@@ -178,7 +182,7 @@ var mailchimp = function (callback) {
 		if (!status) return;
 
 		// Update the status message
-		status.innerHTML = msg;
+		status.textContent = msg;
 
 		// Set status class
 		if (success) {
@@ -209,20 +213,41 @@ var mailchimp = function (callback) {
 		btn.innerHTML = btn.getAttribute('data-original');
 	};
 
-	// Callback to run when data from form submit comes back
-	window.mailchimpCallback = function (data) {
+	var sendData = function (params) {
 
-		// Reactive the submit button
-		enableButton();
+		// Set up our HTTP request
+		var xhr = new XMLHttpRequest();
 
-		// Show status message
-		var success = data.result === 'error' ? false : true;
-		showStatus(data.msg, success);
+		// Setup our listener to process compeleted requests
+		xhr.onreadystatechange = function () {
 
-		// If there's a callback, run it
-		if (callback && typeof callback === 'function') {
-			callback(data);
-		}
+			// Only run if the request is complete
+			if ( xhr.readyState !== 4 ) return;
+
+			// Show status message
+			var success = xhr.status === 200 ? true : false;
+			var response = JSON.parse(xhr.responseText);
+			if (success) {
+				showStatus(messages.success, success);
+			} else {
+				showStatus(response.message, success);
+			}
+
+			// Reenable button
+			enableButton();
+
+			// If there's a callback, run it
+			if (callback && typeof callback === 'function') {
+				callback(response);
+			}
+
+		};
+
+		// Create and send a GET request
+		// The first argument is the post type (GET, POST, PUT, DELETE, etc.)
+		// The second argument is the endpoint URL
+		xhr.open('POST', endpoint + '?' + params);
+		xhr.send();
 
 	};
 
@@ -232,26 +257,8 @@ var mailchimp = function (callback) {
 		// Disable the submit button
 		disableButton();
 
-		// Get the Submit URL
-		var url = form.getAttribute('action');
-		url = url.replace('/post?u=', '/post-json?u=');
-		url += serialize(form) + '&c=mailchimpCallback';
-
-		// Create script with url and callback (if specified)
-		var ref = window.document.getElementsByTagName('script')[ 0 ];
-		var script = window.document.createElement('script');
-		script.src = url;
-
-		// Create a global variable for the status container
-		window.mcStatus = form.querySelector('.mc-status');
-
-		// Insert script tag into the DOM (append to <head>)
-		ref.parentNode.insertBefore(script, ref);
-
-		// After the script is loaded (and executed), remove it
-		script.onload = function () {
-			this.remove();
-		};
+		// Send the data to the MailChimp API
+		sendData(serialize(form));
 
 	};
 
@@ -299,7 +306,6 @@ var mailchimp = function (callback) {
 	// Event Listeners & Inits
 	//
 
-	form.setAttribute('novalidate', 'novalidate');
 	form.addEventListener('submit', submitHandler, false);
 
 };

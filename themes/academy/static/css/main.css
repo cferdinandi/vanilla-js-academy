@@ -1,5 +1,5 @@
 /*!
- * academy v1.0.0: The theme for vanillajsacademy.com
+ * academy v1.1.0: The theme for vanillajsacademy.com
  * (c) 2018 Chris Ferdinandi
  * MIT License
  * http://github.com/cferdinandi/vanilla-js-academy
@@ -721,15 +721,14 @@ dfn {
  */
 /* line 350, src/sass/components/_typography.scss */
 mark {
-  background: #fbf89a;
-  background-image: linear-gradient(to right, #fbf89a 0%, #fbf9c9 100%);
+  background: #fbf9c9;
   color: #272727;
 }
 
 /**
  * Address inconsistent and variable font size in all browsers.
  */
-/* line 359, src/sass/components/_typography.scss */
+/* line 360, src/sass/components/_typography.scss */
 small {
   font-size: 80%;
 }
@@ -737,7 +736,7 @@ small {
 /**
  * Prevent `sub` and `sup` affecting `line-height` in all browsers.
  */
-/* line 366, src/sass/components/_typography.scss */
+/* line 367, src/sass/components/_typography.scss */
 sub,
 sup {
   font-size: 75%;
@@ -746,12 +745,12 @@ sup {
   vertical-align: baseline;
 }
 
-/* line 374, src/sass/components/_typography.scss */
+/* line 375, src/sass/components/_typography.scss */
 sup {
   top: -0.5em;
 }
 
-/* line 378, src/sass/components/_typography.scss */
+/* line 379, src/sass/components/_typography.scss */
 sub {
   bottom: -0.25em;
 }
@@ -759,7 +758,7 @@ sub {
 /**
  * Blockquotes
  */
-/* line 387, src/sass/components/_typography.scss */
+/* line 388, src/sass/components/_typography.scss */
 blockquote {
   border-left: 0.25em solid #e5e5e5;
   font-style: italic;
@@ -768,20 +767,20 @@ blockquote {
   padding-right: 1em;
 }
 
-/* line 395, src/sass/components/_typography.scss */
+/* line 396, src/sass/components/_typography.scss */
 blockquote cite {
   color: #808080;
   font-size: 0.9375em;
   padding-top: 1em;
 }
 
-/* line 402, src/sass/components/_typography.scss */
+/* line 403, src/sass/components/_typography.scss */
 blockquote,
 q {
   quotes: none;
 }
 
-/* line 407, src/sass/components/_typography.scss */
+/* line 408, src/sass/components/_typography.scss */
 blockquote:before,
 blockquote:after,
 q:before,

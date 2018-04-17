@@ -1,5 +1,5 @@
 /*!
- * academy v1.0.0: The theme for vanillajsacademy.com
+ * academy v1.1.0: The theme for vanillajsacademy.com
  * (c) 2018 Chris Ferdinandi
  * MIT License
  * http://github.com/cferdinandi/vanilla-js-academy
