@@ -22,6 +22,8 @@ description: ""
 
 ## How It Works
 
+<iframe src="https://player.vimeo.com/video/266326608?color=0088cc&title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+
 The Vanilla JS Academy is a six-week structured training program. You'll learn JavaScript as part of a small group of other students.
 
 <svg xmlns="http://www.w3.org/2000/svg" style="height:1em;width:1em;" viewBox="0 0 16 16"><title></title><path fill="#808080" d="M11.5 0h-7C3.675 0 3 .675 3 1.5v13c0 .825.675 1.5 1.5 1.5h7c.825 0 1.5-.675 1.5-1.5v-13c0-.825-.675-1.5-1.5-1.5zM6 .75h4v.5H6v-.5zM8 15a1 1 0 1 1 0-2 1 1 0 0 1 0 2zm4-3H4V2h8v10z"/></svg> 1. Watch and Read
