@@ -226,8 +226,6 @@ Kick-start your journey to JavaScript mastery. You get...
 - Weekly video office hours
 - Exclusive Slack access
 
-**The next session runs from May 14 to June 22.** After joining, you'll get an email with the details.
-
 {{<cta for="academy-buy">}}
 
 {{<purchase-link product="ajaxHttp">}}
