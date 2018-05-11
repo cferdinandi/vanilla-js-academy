@@ -93,37 +93,49 @@ The Vanilla JS Academy is a six-week structured training program. You'll learn J
 
 <div class="row text-center">
 	<div class="grid-third margin-bottom">
-		<span class="text-xlarge"><svg xmlns="http://www.w3.org/2000/svg" style="height:1em;width:1em;" viewBox="0 0 16 16"><title></title><path fill="#dba909" d="M11 0a5 5 0 0 0-4.916 5.916L0 12v3a1 1 0 0 0 1 1h1v-1h2v-2h2v-2h2l1.298-1.298A5 5 0 1 0 11 0zm1.498 5.002a1.5 1.5 0 1 1 .001-3.001 1.5 1.5 0 0 1-.001 3.001z"/></svg></span>
-		<h3 class="h5 no-padding-top no-margin-bottom">Show Passwords</h3>
+		<a href="/projects/toggle-password/">
+			<span class="text-xlarge"><svg xmlns="http://www.w3.org/2000/svg" style="height:1em;width:1em;" viewBox="0 0 16 16"><title></title><path fill="#dba909" d="M11 0a5 5 0 0 0-4.916 5.916L0 12v3a1 1 0 0 0 1 1h1v-1h2v-2h2v-2h2l1.298-1.298A5 5 0 1 0 11 0zm1.498 5.002a1.5 1.5 0 1 1 .001-3.001 1.5 1.5 0 0 1-.001 3.001z"/></svg></span>
+			<h3 class="h5 no-padding-top no-margin-bottom">Show Passwords</h3>
+		</a>
 		<span class="text-small">Toggle password visibility with a&nbsp;checkbox.</span>
 	</div>
 	<div class="grid-third margin-bottom">
-		<span class="text-xlarge"><svg xmlns="http://www.w3.org/2000/svg" style="height:1em;width:1em;" viewBox="0 0 16 16"><title></title><path fill="#f7272f" d="M12.5 2h-3a.5.5 0 0 1 0-1h3a.5.5 0 0 1 0 1zM11.5 4h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 0 1zM12.5 6h-3a.5.5 0 0 1 0-1h3a.5.5 0 0 1 0 1zM11.5 8h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 0 1zM12.5 10h-3a.5.5 0 0 1 0-1h3a.5.5 0 0 1 0 1zM7.143 9.9A.497.497 0 0 1 7 9.55V1.999c0-1.103-.897-2-2-2s-2 .897-2 2V9.55a.497.497 0 0 1-.143.35A2.982 2.982 0 0 0 2 12c0 1.654 1.346 3 3 3s3-1.346 3-3c0-.79-.304-1.535-.857-2.1zM5 1c.551 0 1 .449 1 1v3H4V2c0-.551.449-1 1-1z"/></svg></span>
-		<h3 class="h5 no-padding-top no-margin-bottom">Temperature Converter</h3>
+		<a href="/projects/temperature-converter/">
+			<span class="text-xlarge"><svg xmlns="http://www.w3.org/2000/svg" style="height:1em;width:1em;" viewBox="0 0 16 16"><title></title><path fill="#f7272f" d="M12.5 2h-3a.5.5 0 0 1 0-1h3a.5.5 0 0 1 0 1zM11.5 4h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 0 1zM12.5 6h-3a.5.5 0 0 1 0-1h3a.5.5 0 0 1 0 1zM11.5 8h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 0 1zM12.5 10h-3a.5.5 0 0 1 0-1h3a.5.5 0 0 1 0 1zM7.143 9.9A.497.497 0 0 1 7 9.55V1.999c0-1.103-.897-2-2-2s-2 .897-2 2V9.55a.497.497 0 0 1-.143.35A2.982 2.982 0 0 0 2 12c0 1.654 1.346 3 3 3s3-1.346 3-3c0-.79-.304-1.535-.857-2.1zM5 1c.551 0 1 .449 1 1v3H4V2c0-.551.449-1 1-1z"/></svg></span>
+			<h3 class="h5 no-padding-top no-margin-bottom">Temperature Converter</h3>
+		</a>
 		<span class="text-small">Convert temperatures from Fahrenheit to&nbsp;Celsius.</span>
 	</div>
 	<div class="grid-third margin-bottom">
-		<span class="text-xlarge"><svg xmlns="http://www.w3.org/2000/svg" style="height:1em;width:1em;" viewBox="0 0 16 16"><title></title><path fill="#2cad4e" d="M14 7c0-3.866-2.686-7-6-7S2 3.134 2 7c0 3.478 2.174 6.363 5.023 6.907L6.5 16h3l-.523-2.093C11.826 13.363 14 10.478 14 7zM4.417 8h-1.5a6.842 6.842 0 0 1 .229-3h1.5a6.701 6.701 0 0 0-.302 2c0 .341.025.675.074 1z"/></svg></span>
-		<h3 class="h5 no-padding-top no-margin-bottom">Random Awesomeness</h3>
+		<a href="/projects/random-ron/">
+			<span class="text-xlarge"><svg xmlns="http://www.w3.org/2000/svg" style="height:1em;width:1em;" viewBox="0 0 16 16"><title></title><path fill="#2cad4e" d="M14 7c0-3.866-2.686-7-6-7S2 3.134 2 7c0 3.478 2.174 6.363 5.023 6.907L6.5 16h3l-.523-2.093C11.826 13.363 14 10.478 14 7zM4.417 8h-1.5a6.842 6.842 0 0 1 .229-3h1.5a6.701 6.701 0 0 0-.302 2c0 .341.025.675.074 1z"/></svg></span>
+			<h3 class="h5 no-padding-top no-margin-bottom">Random Awesomeness</h3>
+		</a>
 		<span class="text-small">Show a random awesome thing using API&nbsp;calls.</span>
 	</div>
 </div>
 
 <div class="row text-center">
 	<div class="grid-third margin-bottom">
-		<span class="text-xlarge"><svg xmlns="http://www.w3.org/2000/svg" style="height:1em;width:1em;" viewBox="0 0 16 16"><title></title><path fill="#808080" d="M14 4V2H0v11a1 1 0 0 0 1 1h13.5a1.5 1.5 0 0 0 1.5-1.5V4h-2zm-1 9H1V3h12v10zM2 5h10v1H2zm6 2h4v1H8zm0 2h4v1H8zm0 2h3v1H8zM2 7h5v5H2z"/></svg></span>
-		<h3 class="h5 no-padding-top no-margin-bottom">Top Stories</h3>
+		<a href="/projects/top-stories">
+			<span class="text-xlarge"><svg xmlns="http://www.w3.org/2000/svg" style="height:1em;width:1em;" viewBox="0 0 16 16"><title></title><path fill="#808080" d="M14 4V2H0v11a1 1 0 0 0 1 1h13.5a1.5 1.5 0 0 0 1.5-1.5V4h-2zm-1 9H1V3h12v10zM2 5h10v1H2zm6 2h4v1H8zm0 2h4v1H8zm0 2h3v1H8zM2 7h5v5H2z"/></svg></span>
+			<h3 class="h5 no-padding-top no-margin-bottom">Top Stories</h3>
+		</a>
 		<span class="text-small">Use the <em>New York Times</em> API to get and display today's top&nbsp;stories.</span>
 	</div>
 	<div class="grid-third margin-bottom">
-		<span class="text-xlarge"><svg xmlns="http://www.w3.org/2000/svg" style="height:1em;width:1em;" viewBox="0 0 16 16"><title></title><path fill="currentColor" d="M5.032 13l.9-3h4.137l.9 3h1.775l-3-10H6.256l-3 10h1.776zm2.4-8h1.137l.9 3H6.532l.9-3z"/></svg></span>
-		<h3 class="h5 no-padding-top no-margin-bottom">Word Count</h3>
+		<a href="/projects/word-count/">
+			<span class="text-xlarge"><svg xmlns="http://www.w3.org/2000/svg" style="height:1em;width:1em;" viewBox="0 0 16 16"><title></title><path fill="currentColor" d="M5.032 13l.9-3h4.137l.9 3h1.775l-3-10H6.256l-3 10h1.776zm2.4-8h1.137l.9 3H6.532l.9-3z"/></svg></span>
+			<h3 class="h5 no-padding-top no-margin-bottom">Word Count</h3>
+		</a>
 		<span class="text-small">Count the number of words and characters in a block of&nbsp;text.</span>
 	</div>
 	<div class="grid-third margin-bottom">
-		<span class="text-xlarge"><svg style="height:1em;width:1em;" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><title></title><g transform="translate(0 .5)" fill="none" fill-rule="evenodd"><path d="M8.027 12c4.411 0 8-.651 8-3.943S12.399 0 7.987 0C3.578 0 .028 4.765.028 8.057c0 3.292 3.589 3.943 8 3.943z" fill="#800080"/><path d="M11.5 11.5l1 3M8 11.5v3M4 11.5l-1 3" stroke="#800080" stroke-linecap="round"/><ellipse fill="#fff" cx="5.5" cy="5.5" rx="1.5" ry="1"/><ellipse fill="#fff" cx="10.5" cy="5.5" rx="1.5" ry="1"/></g></svg></span>
-		<h3 class="h5 no-padding-top no-margin-bottom">Avoid the Monster</h3>
-		<span class="text-small">Create a fun game where you have to avoid the hiding&nbsp;monster.</span>
+		<a href="/projects/monsters/">
+			<span class="text-xlarge"><svg style="height:1em;width:1em;" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><title></title><g transform="translate(0 .5)" fill="none" fill-rule="evenodd"><path d="M8.027 12c4.411 0 8-.651 8-3.943S12.399 0 7.987 0C3.578 0 .028 4.765.028 8.057c0 3.292 3.589 3.943 8 3.943z" fill="#800080"/><path d="M11.5 11.5l1 3M8 11.5v3M4 11.5l-1 3" stroke="#800080" stroke-linecap="round"/><ellipse fill="#fff" cx="5.5" cy="5.5" rx="1.5" ry="1"/><ellipse fill="#fff" cx="10.5" cy="5.5" rx="1.5" ry="1"/></g></svg></span>
+			<h3 class="h5 no-padding-top no-margin-bottom">Avoid the Monster</h3>
+		</a>
+		<span class="text-small">Create a fun game where you find your monster friends and avoid the&nbsp;sock.</span>
 	</div>
 </div>
 
