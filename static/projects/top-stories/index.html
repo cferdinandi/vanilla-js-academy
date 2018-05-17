@@ -172,7 +172,7 @@
 		var getArticles = function () {
 			sections.forEach(function (section, index) {
 				// Make the request
-				makeRequest('technology')
+				makeRequest(section)
 					.then(function (data) {
 						// Convert the data into JSON and return just the articles
 						return JSON.parse(data.responseText).results;
