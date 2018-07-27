@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://vanillajsacademy.com/</loc>
+    <lastmod>2018-01-16T10:05:20-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://vanillajsacademy.com/about/</loc>
+    <lastmod>2018-01-11T16:03:33-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://vanillajsacademy.com/mit/</loc>
+    <lastmod>2018-01-11T16:03:33-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://vanillajsacademy.com/404/</loc>
+    <lastmod>2018-01-11T16:03:33-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://vanillajsacademy.com/special-discounts/</loc>
+    <lastmod>2018-01-11T16:03:33-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://vanillajsacademy.com/student-discount/</loc>
+    <lastmod>2018-01-11T16:03:33-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://vanillajsacademy.com/underrepresented-group-discount/</loc>
+    <lastmod>2018-01-11T16:03:33-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://vanillajsacademy.com/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://vanillajsacademy.com/tags/</loc>
+    <priority>0</priority>
+  </url>
+  
+</urlset>

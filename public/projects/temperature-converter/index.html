@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<title>Farenheit to Celcius App</title>
+
+	<meta charset="utf-8">
+
+	<!-- Force latest available IE rendering engine and Chrome Frame (if installed) -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<!-- Mobile Screen Resizing -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<style type="text/css">
+		/**
+		 * Add box sizing to everything
+		 * @link http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+		 */
+		/* line 38, src/sass/components/_normalize.scss */
+		*,
+		*:before,
+		*:after {
+			box-sizing: border-box;
+		}
+
+		/**
+		 * Layout
+		 */
+		body {
+			font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+			font-size: 112.5%;
+			margin-left: auto;
+			margin-right: auto;
+			max-width: 40em;
+			width: 88%;
+		}
+
+		.row {
+			margin-left: -1.4%;
+			margin-right: -1.4%;
+		}
+
+		.grid,
+		.grid {
+			float: left;
+			padding-left: 1.4%;
+			padding-right: 1.4%;
+			width: 100%;
+		}
+
+		.grid-content {
+			width: 45%;
+		}
+
+		.grid-equals {
+			width: 10%;
+		}
+
+		.row:before,
+		.row:after {
+			display: table;
+			content: " ";
+		}
+
+		.row:after {
+			clear: both;
+		}
+
+		/**
+		 * Forms
+		 */
+		input {
+			font-size: 1.2em;
+			padding: 0.5em 1em;
+			width: 100%;
+		}
+
+		label {
+			background-color: #f7f7f7;
+			border: 1px solid #e5e5e5;
+			border-top: 0;
+			display: block;
+			font-weight: bold;
+			padding: 0.25em 0.5em;
+			width: 100%;
+		}
+
+		/**
+		 * Utilities
+		 */
+		.font-big {
+			font-size: 1.2em;
+		}
+
+		.padding {
+			padding: 0.5em 0;
+		}
+
+		.text-center {
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+
+	<p><a href="/#work-on-fun-projects">&larr; Back to the Vanilla JS Academy</a></p>
+
+	<h1>Farenheit/Celcius Calculator</h1>
+
+	<div class="row">
+		<div class="grid grid-content">
+			<input type="number" name="farenheit" id="farenheit" value="32">
+			<label for="farenheit">Farenheit</label>
+		</div>
+		<div class="grid grid-equals padding text-center"><span class="font-big">=</span></div>
+		<div class="grid grid-content">
+			<input type="number" name="celcius" id="celcius" value="0">
+			<label for="celcius">Celcius</label>
+		</div>
+	</div>
+
+	<script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
+	<script>
+		// Variables
+		var farenheit = document.querySelector('#farenheit');
+		var celcius = document.querySelector('#celcius');
+
+		// Convert temp
+		var convert = function (temp, toFarenheit) {
+			if (toFarenheit) {
+				return Math.round((parseInt(temp, 10) * 9/5) + 32);
+			} else {
+				return Math.round((parseInt(temp, 10) - 32) * 5/9);
+			}
+		};
+
+		// Listen for input changes
+		document.addEventListener('input', function (event) {
+			if (event.target.value.length < 1) return;
+			if (event.target.id === 'farenheit') {
+				celcius.value = convert(event.target.value);
+			} else {
+				farenheit.value = convert(event.target.value, true);
+			}
+		}, false);
+
+	</script>
+
+</body>
+</html>

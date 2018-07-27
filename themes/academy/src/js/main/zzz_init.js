@@ -21,3 +21,6 @@ if (document.querySelector('#mailchimp-form')) {
 		}
 	});
 }
+
+// API for testimonials and CTAs
+api();

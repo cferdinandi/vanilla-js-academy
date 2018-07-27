@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<title>What to read today</title>
+
+	<meta charset="utf-8">
+
+	<!-- Force latest available IE rendering engine and Chrome Frame (if installed) -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<!-- Mobile Screen Resizing -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<style type="text/css">
+		/**
+		 * Add box sizing to everything
+		 * @link http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+		 */
+		/* line 38, src/sass/components/_normalize.scss */
+		*,
+		*:before,
+		*:after {
+			box-sizing: border-box;
+		}
+
+		/**
+		 * Layout
+		 */
+		body {
+			font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+			font-size: 112.5%;
+			margin-left: auto;
+			margin-right: auto;
+			max-width: 40em;
+			width: 88%;
+		}
+
+		h2, h3, h4, h5, h6 {
+			font-weight: normal;
+			padding-top: 1em;
+		}
+
+		li {
+			margin-bottom: 1em;
+		}
+
+		/**
+		 * Utilities
+		 */
+		.text-muted {
+			color: #808080;
+		}
+
+		.text-small {
+			font-size: 0.8em;
+		}
+
+		.title-case {
+			text-transform: capitalize;
+		}
+	</style>
+</head>
+<body>
+
+	<p><a href="/#work-on-fun-projects">&larr; Back to the Vanilla JS Academy</a></p>
+
+	<h1>What to read today</h1>
+
+	<div id="app"></div>
+
+
+	<script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
+	<script>
+
+		//
+		// Variables
+		//
+
+		var app = document.querySelector('#app');
+		var apiKey = '658cf0e4f41d48a29fd424f03ea549e8';
+		var sections = ['technology', 'science', 'magazine'];
+		var articleCount = 3;
+
+
+		//
+		// Methods
+		//
+
+		/**
+		 * Make a request to the NYT API
+		 * @param  {String} section The section to request articles from
+		 * @return {Promise}        The XHR request as a Promise
+		 */
+		var makeRequest = function (section) {
+
+			// Setup the request URL
+			var url = 'https://api.nytimes.com/svc/topstories/v2/' + section + '.json?api-key=' + apiKey;
+
+			// Create the XHR request
+			var request = new XMLHttpRequest();
+
+			// Return it as a Promise
+			return new Promise(function (resolve, reject) {
+
+				// Setup our listener to process compeleted requests
+				request.onreadystatechange = function () {
+
+					// Only run if the request is complete
+					if (request.readyState !== 4) return;
+
+					// Process the response
+					if (request.status >= 200 && request.status < 300) {
+						// If successful
+						resolve(request);
+					} else {
+						// If failed
+						reject({
+							status: request.status,
+							statusText: request.statusText
+						});
+					}
+
+				};
+
+				// Setup our HTTP request
+				request.open('GET', url, true);
+
+				// Send the request
+				request.send();
+
+			});
+		};
+
+		/**
+		 * Render article list elements from the articles object
+		 * @param  {Object} articles The articles and article data
+		 * @return {String}          The article markup as a string
+		 */
+		var renderArticles = function (articles) {
+			var content = ''
+			articles.forEach(function (article) {
+				content +=
+					'<li>' +
+						'<strong><a href="' + article.url + '">' + article.title + '</a></strong><br>' +
+						'<span class="text-muted text-small">' + article.byline + '</span><br>' +
+						'<span class="text-small">' + article.abstract + '</span>' +
+					'</li>';
+			});
+			return content;
+		};
+
+		/**
+		 * Render a section of articles
+		 * @param  {Object} articles The article data for the section
+		 * @param  {String} title    The title of the section
+		 */
+		var renderSection = function (articles, title) {
+			console.log(articles);
+			var section = document.createElement('div');
+			section.id = 'section-' + section;
+			section.innerHTML =
+				'<h2 class="title-case">' + title + '</h2>' +
+				'<ol>' +
+					renderArticles(articles) +
+				'</ol>';
+			app.append(section);
+		};
+
+		/**
+		 * Make an API request for each section
+		 */
+		var getArticles = function () {
+			sections.forEach(function (section, index) {
+				// Make the request
+				makeRequest(section)
+					.then(function (data) {
+						// Convert the data into JSON and return just the articles
+						return JSON.parse(data.responseText).results;
+					})
+					.then(function (articles) {
+						// Reduce the array to a set number of articles
+						return articles.slice(0, articleCount);
+					})
+					.then(function (articles) {
+						// Render the section
+						renderSection(articles, section);
+					});
+			});
+		};
+
+
+		//
+		// Inits and Event Listeners
+		//
+
+		getArticles();
+
+	</script>
+
+</body>
+</html>

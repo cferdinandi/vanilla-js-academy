@@ -1,11 +1,1 @@
-{{ if and (gt (now.Format "20060102") 20180329) (lt (now.Format "20060102") 20180429) }}
-{{ if eq (.Get "for") "academy" }}
-<p><mark>🦉<em><strong>Want to save $130?</strong> Get early bird pricing if you join {{ if eq (now.Format "20060102") 20180428 }}today{{ else if eq (now.Format "20060102") 20180427 }}by tomorrow{{ else if gt (now.Format "20060102") 20180421 }}by Saturday{{ else }}in the next two weeks{{ end }}. Don't&nbsp;wait!</em></mark></p>
-{{ else if eq (.Get "for") "academy-buy" }}
-<p><em><strong>Want to save $130?</strong> Get early bird pricing with the code <code>EARLYBIRD</code> at checkout. Early bird pricing ends {{ if eq (now.Format "20060102") 20180428 }}today{{ else if eq (now.Format "20060102") 20180427 }}tomorrow{{ else if gt (now.Format "20060102") 20180421 }}on Saturday{{ else }}in less than two weeks{{ end }}, so don't&nbsp;wait!</em></p>
-{{ end }}
-{{ else }}
-{{ if eq (.Get "for") "academy" }}
-{{ else if eq (.Get "for") "academy-buy" }}
-{{ end }}
-{{ end }}
+<div data-cta="{{ .Get "for" }}"></div>

@@ -1,11 +1,12 @@
 {{ if lt (now.Format "20060102") 20180514 }}<p><strong>The next session runs from May 14 to June 22.</strong> After joining, you'll get an email with the details.</p>{{ end }}
 
 {{ if and (ge (now.Format "20060102") 20180413) (lt (now.Format "20060102") 20180421) }}
-<p><a class="btn btn-large btn-block edd-buy-now-button" href="https://gomakethings.com/checkout?edd_action=add_to_cart&download_id=28868&edd_options[price_id]=1">Join now for just <del>$499</del> $369</a></p>
+<p><a class="btn btn-large btn-block edd-buy-now-button" href="https://gomakethings.com/checkout?edd_action=add_to_cart&download_id=28868&edd_options[price_id]=1">Join now for just <span data-product="price"><del>$499</del> $369</span></a></p>
 {{ else if lt (now.Format "20060102") 20180514 }}
-<p><a class="btn btn-large btn-block edd-buy-now-button" href="https://gomakethings.com/checkout?edd_action=add_to_cart&download_id=28868&edd_options[price_id]=1">Join now for just $499</a></p>
+<p><a class="btn btn-large btn-block edd-buy-now-button" href="https://gomakethings.com/checkout?edd_action=add_to_cart&download_id=28868&edd_options[price_id]=1">Join now for just <span data-price="academy" data-product="price">$499</span></a></p>
 {{ else }}
-<p><strong>The Vanilla JS Academy is currently closed, but you can get daily JavaScript tips while you wait.</strong> You'll also be the first to hear when the next session to open up, and get exclusive discounts.</p>
+<h3>The Vanilla JS Academy is currently closed, but you can get daily JavaScript tips while you wait.</h3>
+<p>You'll also be the first to hear when the next session to open up, and get exclusive discounts.</p>
 
 {{ partial "mailchimp-form.html" }}
 {{ end }}

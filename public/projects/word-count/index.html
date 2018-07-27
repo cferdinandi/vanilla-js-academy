@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<title>Word Count</title>
+
+	<meta charset="utf-8">
+
+	<!-- Force latest available IE rendering engine and Chrome Frame (if installed) -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<!-- Mobile Screen Resizing -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<style type="text/css">
+		/**
+		 * Add box sizing to everything
+		 * @link http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+		 */
+		/* line 38, src/sass/components/_normalize.scss */
+		*,
+		*:before,
+		*:after {
+			box-sizing: border-box;
+		}
+
+		/**
+		 * Layout
+		 */
+		body {
+			font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+			font-size: 112.5%;
+			margin-left: auto;
+			margin-right: auto;
+			max-width: 40em;
+			width: 88%;
+		}
+
+		/**
+		 * Forms
+		 */
+		textarea {
+			min-height: 24em;
+			width: 100%;
+		}
+
+		/**
+		 * Utilities
+		 */
+		.font-big {
+			font-size: 1.2em;
+		}
+
+		.padding {
+			padding: 0.5em 0;
+		}
+
+		.text-center {
+			text-align: center;
+		}
+	</style>
+</head>
+<body>
+
+	<p><a href="/#work-on-fun-projects">&larr; Back to the Vanilla JS Academy</a></p>
+
+	<h1>Word Count</h1>
+
+	<textarea data-character-count></textarea>
+	<p>You've written <strong><span id="word-count">0</span> words</strong> and <strong><span id="character-count">0</span> characters</strong>.</p>
+
+	<script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
+	<script>
+
+		//
+		// Variables
+		//
+
+		var words = document.querySelector('#word-count');
+		var characters = document.querySelector('#character-count');
+
+
+		//
+		// Methods
+		//
+
+		var inputHandler = function (event) {
+
+			// Make sure input is our textarea
+			if (!event.target.matches('[data-character-count]')) return;
+
+			// Get the word count
+			var wordCount = event.target.value.split(' ').filter(function (word) {
+				return word.length > 0;
+			});
+
+			// Update the DOM
+			words.textContent = wordCount.length;
+			characters.textContent = event.target.value.length;
+
+		};
+
+
+		//
+		// Inits and Event Listeners
+		//
+
+		document.addEventListener('input', inputHandler, false);
+
+	</script>
+
+</body>
+</html>

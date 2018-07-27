@@ -6,8 +6,7 @@ params:
   description: "A project-based online JavaScript training program for beginners."
   rssURL: ""
   rssLimit: 7
-  cacheBust: true
-  version: "1.1.0"
+  minify: true
 
 # The language code for the site
 languageCode: "en-us"
