@@ -141,8 +141,7 @@
 		//
 
 		var app = document.querySelector('#app'); // The app
-		var door = 'door.svg'; // The door
-		var total, socks;
+		var total;
 
 		// The monsters and socks
 		var monsters = [
@@ -171,7 +170,7 @@
 		 * @param  {Array} array The array to shuffle
 		 * @return {String}      The first item in the shuffled array
 		 */
-		var randomize = function (array) {
+		var shuffle = function (array) {
 
 			var currentIndex = array.length, temporaryValue, randomIndex;
 
@@ -191,17 +190,25 @@
 
 		};
 
+		/**
+		 * Create the grid of doors with monsters behind them
+		 * @param  {Array} monsters The monster data
+		 * @return {String}         The markup
+		 */
 		var getMarkup = function (monsters) {
 			var markup = '';
 			monsters.forEach(function (monster, index) {
 				markup +=
 					'<div class="grid" data-monster="' + monster + '">' +
-						'<button class="btn-unstyled"><img alt="Click Me" src="' + door + '"></button>' +
+						'<button class="btn-unstyled"><img alt="Click Me" src="door.svg"></button>' +
 					'</div>';
 			});
 			return markup;
 		};
 
+		/**
+		 * Update the total number of doors opened so far
+		 */
 		var updateTotal = function () {
 			total = total - 1;
 			if (total < 2) {
@@ -209,6 +216,9 @@
 			}
 		};
 
+		/**
+		 * Show a success message if the player finds all of the monsters
+		 */
 		var renderWin = function () {
 			app.innerHTML =
 				'<img class="img-full" alt="" src="https://media.giphy.com/media/1242bJFCbb3FxC/giphy.gif">' +
@@ -217,6 +227,9 @@
 				'<p><button class="btn" data-monster-play-again>Play Again</button></p>';
 		};
 
+		/**
+		 * Show a failure message if the player finds a sock
+		 */
 		renderLoss = function () {
 			app.innerHTML =
 				'<img class="img-full" alt="" src="https://media.giphy.com/media/13zUNhE9WZspMc/giphy.gif">' +
@@ -224,13 +237,16 @@
 				'<p><button class="btn" data-monster-play-again>Play Again</button></p>';
 		};
 
+		/**
+		 * Render the initial app layout
+		 */
 		var renderApp = function () {
 
 			// Create a grid layout
 			app.classList.add('row');
 
 			// Variables
-			var randomMonsters = randomize(monsters);
+			var randomMonsters = shuffle(monsters);
 			var markup = getMarkup(randomMonsters);
 
 			// Add monsters to the app
@@ -241,6 +257,10 @@
 
 		};
 
+		/**
+		 * Show an individual monster after a door is selected
+		 * @param  {Node} monster The node with the door and monster
+		 */
 		var renderMonster = function (monster) {
 
 			// Get monster img
@@ -255,13 +275,18 @@
 			// Show the hidden monster
 			monster.innerHTML = '<img alt="' + monsterImg.replace('.svg', '') + '" src="' + monsterImg + '">';
 
+			// Remove the data attribute
+			monster.removeAttribute('data-monster');
+
 			// Update the total
 			updateTotal();
 
-
-
 		};
 
+		/**
+		 * Handle click events
+		 * @param  {Event} event The click event
+		 */
 		var clickHandler = function (event) {
 
 			// If clicked element was a monster

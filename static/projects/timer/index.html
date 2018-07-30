@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<title>Pomodoro Timer</title>
+
+	<meta charset="utf-8">
+
+	<!-- Force latest available IE rendering engine and Chrome Frame (if installed) -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<!-- Mobile Screen Resizing -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<style type="text/css">
+		/**
+		 * Add box sizing to everything
+		 * @link http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+		 */
+		/* line 38, src/sass/components/_normalize.scss */
+		*,
+		*:before,
+		*:after {
+			box-sizing: border-box;
+		}
+
+		/**
+		 * Layout
+		 */
+		body {
+			font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+			font-size: 112.5%;
+			margin-left: auto;
+			margin-right: auto;
+			max-width: 40em;
+			width: 88%;
+		}
+
+		#timer {
+			font-size: 2em;
+			font-weight: bold;
+		}
+	</style>
+</head>
+<body>
+
+	<p><a href="/#work-on-fun-projects">&larr; Back to the Vanilla JS Academy</a></p>
+
+	<h1>Pomodoro Timer</h1>
+
+	<div id="app"></div>
+
+	<script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
+	<script>
+		//
+		// Variables
+		//
+
+		var timer, countdown;
+
+
+		//
+		// Methods
+		//
+
+		/**
+		 * A vanilla JS helper for creating state-based components
+		 * @param {String|Node} elem    The element to make into a component
+		 * @param {Object}      options The component options
+		 */
+		var Component = (function () {
+
+			'use strict';
+
+			/**
+			 * Create the Component object
+			 * @param {String|Node} elem    The element to make into a component
+			 * @param {Object}      options The component options
+			 */
+			var Component = function (elem, options) {
+				if (!elem) throw 'ComponentJS: You did not provide an element to make into a component.';
+				this.elem = elem;
+				this.data = options ? options.data : null;
+				this.template = options ? options.template : null;
+			};
+
+			/**
+			 * Sanitize and encode all HTML in a user-submitted string
+			 * @param  {String} str  The user-submitted string
+			 * @return {String}      The sanitized string
+			 */
+			Component.sanitize = function (str) {
+				var temp = document.createElement('div');
+				temp.textContent = str;
+				return temp.innerHTML;
+			};
+
+			/**
+			 * Render a template into the DOM
+			 * @return {[type]}                   The element
+			 */
+			Component.prototype.render = function () {
+
+				// Make sure there's a template
+				if (!this.template) throw 'ComponentJS: No template was provided.';
+
+				// If elem is an element, use it.
+				// If it's a selector, get it.
+				var elem = typeof this.elem === 'string' ? document.querySelector(this.elem) : this.elem;
+				if (!elem) return;
+
+				// Get the template
+				var template = (typeof this.template === 'function' ? this.template(this.data) : this.template);
+				if (typeof template !== 'string') return;
+
+				// Render the template into the element
+				if (elem.innerHTML === template) return;
+				elem.innerHTML = template;
+
+				// Dispatch a render event
+				if (typeof window.CustomEvent === 'function') {
+					var event = new CustomEvent('render', {
+						bubbles: true
+					});
+					elem.dispatchEvent(event);
+				}
+
+				// Return the elem for use elsewhere
+				return elem;
+
+			};
+
+			return Component;
+
+		})();
+
+		/**
+		 * Play an alarm sound
+		 */
+		var alarm = function () {
+			var alarm = new Audio('https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/Yodel_Sound_Effect.mp3');
+			alarm.play();
+		};
+
+		/**
+		 * Add a leading 0 if none exists
+		 * @param  {Integer} num The number to pad
+		 * @return {String}      The padded number
+		 */
+		var padLeft = function (num) {
+			if (num.toString().length < 2) {
+				return '0' + num;
+			}
+			return num;
+		};
+
+		/**
+		 * Setup the timer on page load
+		 */
+		var setup = function () {
+
+			// Create app container and render it into the DOM
+			new Component('#app', {
+				template: '<div id="timer"></div><p><button data-action="start">Start</button><button data-action="stop">Pause</button><button data-action="clear">Reset</button></p>'
+			}).render();
+
+			// Create the timer
+			timer = new Component('#timer', {
+				data: {
+					time: 1500
+				},
+				template: function (props) {
+					return parseInt(props.time / 60, 10).toString() + ':' + padLeft(props.time % 60);
+				}
+			});
+
+			// Render the timer into the DOM
+			timer.render();
+
+		};
+
+		/**
+		 * Reset the timer
+		 */
+		var reset = function () {
+			timer.data.time = 1500;
+			timer.render();
+		};
+
+		/**
+		 * Start the timer
+		 */
+		var start = function () {
+
+			// If the timer is at 0, reset it
+			if (timer.data.time === 0) {
+				reset();
+			}
+
+			countdown = window.setInterval(function () {
+
+				// Update the timer
+				timer.data.time = timer.data.time - 1;
+				timer.render();
+
+				// If the timer reaches zero, stop and sound an alarm
+				if (timer.data.time === 0) {
+					stop();
+					alarm();
+				}
+
+			}, 1000);
+		};
+
+		/**
+		 * Stop the timer
+		 */
+		var stop = function () {
+			window.clearInterval(countdown);
+		};
+
+		/**
+		 * Handle click events
+		 */
+		var clickHandler = function (event) {
+
+			// Check if a timer action button was clicked
+			var action = event.target.getAttribute('data-action');
+			if (!action) return;
+
+			// If it's the start button, start the timer
+			if (action === 'start') {
+				start();
+				return;
+			}
+
+			// If it's the stop button, stop the timer
+			if (action === 'stop') {
+				stop();
+				return;
+			}
+
+			// If it's the clear button, reset
+			if (action === 'clear') {
+				stop();
+				reset();
+			}
+
+		};
+
+
+		//
+		// Inits & Event Listeners
+		//
+
+		// Setup the app
+		setup();
+
+		// Listen for clicks
+		document.addEventListener('click', clickHandler, false);
+
+	</script>
+
+</body>
+</html>

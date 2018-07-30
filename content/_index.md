@@ -141,37 +141,49 @@ The Vanilla JS Academy is a six-week structured training program. You'll learn J
 
 <div class="row text-center">
 	<div class="grid-third margin-bottom">
-		<span class="text-xlarge"><svg xmlns="http://www.w3.org/2000/svg" style="height:1em;width:1em;" viewBox="0 0 16 16"><title></title><path fill="#0088cc" d="M13.922 10.626A2.726 2.726 0 0 1 13.281 16H3.027C1.355 16 0 14.644 0 12.971a3.028 3.028 0 0 1 3.567-2.98 2.088 2.088 0 0 1 3.719-1.573A3.71 3.71 0 0 1 10.206 7a3.72 3.72 0 0 1 3.717 3.626z"/><path fill="#dba909" d="M5.634 6.856c.591 0 1.152.179 1.621.507a4.435 4.435 0 0 1 2.737-1.108 3.5 3.5 0 1 0-6.645 1.764 2.836 2.836 0 0 1 2.288-1.163zM6.5 0a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-1 0v-1a.5.5 0 0 1 .5-.5zM0 6.5A.5.5 0 0 1 .5 6h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5zM10.5 3a.5.5 0 0 1-.354-.853l1-1a.5.5 0 0 1 .707.707l-1 1a.498.498 0 0 1-.354.146zM2.5 3a.502.502 0 0 1-.354-.146l-1-1a.5.5 0 0 1 .707-.707l1 1A.5.5 0 0 1 2.499 3z"/></svg></span>
-		<h3 class="h5 no-padding-top no-margin-bottom">Weather App</h3>
+		<a href="/projects/weather/">
+			<span class="text-xlarge"><svg xmlns="http://www.w3.org/2000/svg" style="height:1em;width:1em;" viewBox="0 0 16 16"><title></title><path fill="#0088cc" d="M13.922 10.626A2.726 2.726 0 0 1 13.281 16H3.027C1.355 16 0 14.644 0 12.971a3.028 3.028 0 0 1 3.567-2.98 2.088 2.088 0 0 1 3.719-1.573A3.71 3.71 0 0 1 10.206 7a3.72 3.72 0 0 1 3.717 3.626z"/><path fill="#dba909" d="M5.634 6.856c.591 0 1.152.179 1.621.507a4.435 4.435 0 0 1 2.737-1.108 3.5 3.5 0 1 0-6.645 1.764 2.836 2.836 0 0 1 2.288-1.163zM6.5 0a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-1 0v-1a.5.5 0 0 1 .5-.5zM0 6.5A.5.5 0 0 1 .5 6h1a.5.5 0 0 1 0 1h-1a.5.5 0 0 1-.5-.5zM10.5 3a.5.5 0 0 1-.354-.853l1-1a.5.5 0 0 1 .707.707l-1 1a.498.498 0 0 1-.354.146zM2.5 3a.502.502 0 0 1-.354-.146l-1-1a.5.5 0 0 1 .707-.707l1 1A.5.5 0 0 1 2.499 3z"/></svg></span>
+			<h3 class="h5 no-padding-top no-margin-bottom">Weather App</h3>
+		</a>
 		<span class="text-small">Find a visitor's location and display their local&nbsp;weather.</span>
 	</div>
 	<div class="grid-third margin-bottom">
-		<span class="text-xlarge"><svg xmlns="http://www.w3.org/2000/svg" style="height:1em;width:1em;" viewBox="0 0 16 16"><title></title><path fill="#800080" d="M8 9L0 5l8-4 8 4zm6.398-1.801L16 8l-8 4-8-4 1.602-.801L8 10.398zm0 3L16 11l-8 4-8-4 1.602-.801L8 13.398z"/></svg></span>
-		<h3 class="h5 no-padding-top no-margin-bottom">Toggle Tabs</h3>
+		<a href="/projects/toggle-tabs/">
+			<span class="text-xlarge"><svg xmlns="http://www.w3.org/2000/svg" style="height:1em;width:1em;" viewBox="0 0 16 16"><title></title><path fill="#800080" d="M8 9L0 5l8-4 8 4zm6.398-1.801L16 8l-8 4-8-4 1.602-.801L8 10.398zm0 3L16 11l-8 4-8-4 1.602-.801L8 13.398z"/></svg></span>
+			<h3 class="h5 no-padding-top no-margin-bottom">Toggle Tabs</h3>
+		</a>
 		<span class="text-small">Create a toggle tab plugin for showing collections of&nbsp;content.</span>
 	</div>
 	<div class="grid-third margin-bottom">
-		<span class="text-xlarge"><svg style="height:1em;width:1em;" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><title></title><g transform="translate(0 6)" stroke="currentColor" fill="transparent"><rect x=".5" y=".5" width="15" height="4" rx="2"/><rect stroke="#0088cc" x="2" y="2" width="8.5" height="1" rx=".5"/></g></svg></span>
-		<h3 class="h5 no-padding-top no-margin-bottom">Progress Bar</h3>
+		<a href="/projects/progress/">
+			<span class="text-xlarge"><svg style="height:1em;width:1em;" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><title></title><g transform="translate(0 6)" stroke="currentColor" fill="transparent"><rect x=".5" y=".5" width="15" height="4" rx="2"/><rect stroke="#0088cc" x="2" y="2" width="8.5" height="1" rx=".5"/></g></svg></span>
+			<h3 class="h5 no-padding-top no-margin-bottom">Progress Bar</h3>
+		</a>
 		<span class="text-small">Track a user's progress as they complete&nbsp;tasks.</span>
 	</div>
 </div>
 
 <div class="row margin-bottom text-center">
 	<div class="grid-third margin-bottom">
-		<span class="text-xlarge"><svg xmlns="http://www.w3.org/2000/svg" style="height:1em;width:1em;" viewBox="0 0 16 16"><title></title><path fill="#f7272f" d="M11 3v-.5a2.5 2.5 0 0 0-4-2 2.5 2.5 0 0 0-4 2v1.7l-2 .3V15h2l1 1 10-1.5V4l-3-1zM3 14H2V5.361l1-.15V14zM8.5 1c.827 0 1.5.673 1.5 1.5v.65l-2 .3V2.5c0-.454-.122-.88-.333-1.247.239-.16.525-.253.833-.253zM4 2.5a1.502 1.502 0 0 1 2.333-1.247A2.483 2.483 0 0 0 6 2.5v1.25l-2 .3V2.5zm9 11.139l-8 1.2V6.361l8-1.2v8.478z"/></svg></span>
-		<h3 class="h5 no-padding-top no-margin-bottom">Shopping Filters</h3>
-		Filter a list of products by a variety of&nbsp;criteria.
+		<a href="/projects/shopping-filters/">
+			<span class="text-xlarge"><svg xmlns="http://www.w3.org/2000/svg" style="height:1em;width:1em;" viewBox="0 0 16 16"><title></title><path fill="#f7272f" d="M11 3v-.5a2.5 2.5 0 0 0-4-2 2.5 2.5 0 0 0-4 2v1.7l-2 .3V15h2l1 1 10-1.5V4l-3-1zM3 14H2V5.361l1-.15V14zM8.5 1c.827 0 1.5.673 1.5 1.5v.65l-2 .3V2.5c0-.454-.122-.88-.333-1.247.239-.16.525-.253.833-.253zM4 2.5a1.502 1.502 0 0 1 2.333-1.247A2.483 2.483 0 0 0 6 2.5v1.25l-2 .3V2.5zm9 11.139l-8 1.2V6.361l8-1.2v8.478z"/></svg></span>
+			<h3 class="h5 no-padding-top no-margin-bottom">Shopping Filters</h3>
+		</a>
+		<span class="text-small">Filter a list of products by a variety of&nbsp;criteria.</span>
 	</div>
 	<div class="grid-third margin-bottom">
-		<span class="text-xlarge"><svg xmlns="http://www.w3.org/2000/svg" style="height:1em;width:1em;" viewBox="0 0 16 16"><title></title><path fill="#808080" d="M8 2a7 7 0 1 0 0 14A7 7 0 0 0 8 2zm0 12.625a5.624 5.624 0 1 1 0-11.25 5.624 5.624 0 1 1 0 11.25zm6.606-10.138a3 3 0 0 0-4.98-3.321 8.008 8.008 0 0 1 4.98 3.322zM6.374 1.166a3 3 0 1 0-4.98 3.321 8.006 8.006 0 0 1 4.98-3.322z"/><path d="M8 9V5H7v5h4V9z"/></svg></span>
-		<h3 class="h5 no-padding-top no-margin-bottom">Countdown Timer</h3>
-		Create a countdown timer app for tracking&nbsp;tasks.
+		<a href="/projects/timer/">
+			<span class="text-xlarge"><svg xmlns="http://www.w3.org/2000/svg" style="height:1em;width:1em;" viewBox="0 0 16 16"><title></title><path fill="#808080" d="M8 2a7 7 0 1 0 0 14A7 7 0 0 0 8 2zm0 12.625a5.624 5.624 0 1 1 0-11.25 5.624 5.624 0 1 1 0 11.25zm6.606-10.138a3 3 0 0 0-4.98-3.321 8.008 8.008 0 0 1 4.98 3.322zM6.374 1.166a3 3 0 1 0-4.98 3.321 8.006 8.006 0 0 1 4.98-3.322z"/><path d="M8 9V5H7v5h4V9z"/></svg></span>
+			<h3 class="h5 no-padding-top no-margin-bottom">Countdown Timer</h3>
+		</a>
+		<span class="text-small">Create a countdown timer app for tracking&nbsp;tasks.</span>
 	</div>
 	<div class="grid-third margin-bottom">
-		<span class="text-xlarge"><svg xmlns="http://www.w3.org/2000/svg" style="height:1em;width:1em;" viewBox="0 0 16 16"><title></title><path fill="#808080" d="M0 0v16h16V0H0zm15 15H1V1h14v14z"/><path fill="#2cad4e" d="M2.5 8L4 6.5 6.5 9 12 3.5 13.5 5l-7 7z"/></svg></span>
-		<h3 class="h5 no-padding-top no-margin-bottom">Todo List</h3>
-		Build a simple todo app with local&nbsp;storage.
+		<a href="/projects/todo/">
+			<span class="text-xlarge"><svg xmlns="http://www.w3.org/2000/svg" style="height:1em;width:1em;" viewBox="0 0 16 16"><title></title><path fill="#808080" d="M0 0v16h16V0H0zm15 15H1V1h14v14z"/><path fill="#2cad4e" d="M2.5 8L4 6.5 6.5 9 12 3.5 13.5 5l-7 7z"/></svg></span>
+			<h3 class="h5 no-padding-top no-margin-bottom">Todo List</h3>
+		</a>
+		<span class="text-small">Build a simple todo app with local&nbsp;storage.</span>
 	</div>
 </div>
 

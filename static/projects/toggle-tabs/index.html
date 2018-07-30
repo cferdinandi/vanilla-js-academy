@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<title>Tabs</title>
+
+	<meta charset="utf-8">
+
+	<!-- Force latest available IE rendering engine and Chrome Frame (if installed) -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<!-- Mobile Screen Resizing -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<style type="text/css">
+		/**
+		 * Add box sizing to everything
+		 * @link http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+		 */
+		*,
+		*:before,
+		*:after {
+			box-sizing: border-box;
+		}
+
+		/**
+		 * Layout
+		 */
+		body {
+			font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+			font-size: 112.5%;
+			margin-left: auto;
+			margin-right: auto;
+			max-width: 40em;
+			width: 88%;
+		}
+
+
+		/**
+		 * Tab styles
+		 */
+
+		.tabs {
+			border-bottom: 1px solid #808080;
+			list-style: none;
+			margin: 0;
+			padding: 0;
+		}
+
+		.tabs li {
+			display: inline;
+		}
+
+		.tabs li a {
+			border: 1px solid transparent;
+			display: inline-block;
+			margin-bottom: -1px;
+			padding: 0.5em 2em;
+			text-decoration: none;
+		}
+
+		.tabs li a:hover {
+			border-color: #808080;
+			border-bottom-width: 0;
+			background-color: #f7f7f7;
+		}
+
+		.tabs li a.active {
+			border: 1px solid #808080;
+			border-bottom-color: #ffffff;
+		}
+
+		.js-tabs-init .tab-pane {
+			display: none;
+			visibility: hidden;
+		}
+
+		.tab-pane.active {
+			display: block;
+			visibility: visible;
+		}
+	</style>
+</head>
+<body>
+
+	<p><a href="/#work-on-fun-projects">&larr; Back to the Vanilla JS Academy</a></p>
+
+	<h1>Tabs</h1>
+
+	<ul class="tabs">
+		<li><a class="active" href="#spiderman">Spiderman</a></li>
+		<li><a href="#wonder-woman">Wonder Woman</a></li>
+		<li><a href="#wolverine">Wolverine</a></li>
+	</ul>
+
+	<div class="tab-content">
+		<div class="tab-pane active" id="spiderman">
+			<h2>Spiderman</h2>
+			<p>After being bitten by a radioactive spider at a science exhibit, Peter Parker "acquires the agility and proportionate strength of an arachnid." Along with super strength, Peter gains the ability to adhere to walls and ceilings.</p>
+		</div>
+		<div class="tab-pane" id="wonder-woman">
+			<h2>Wonder Woman</h2>
+			<p>Diana, aka Wonder Woman, is the daughter of Hippolyta and grows up on the Amazon island of Themyscira. After American pilot and spy Steve Trevor crashes offshore of the island and is rescued by her, he tells the Amazons about the ongoing World War.</p>
+		</div>
+		<div class="tab-pane" id="wolverine">
+			<h2>Wolverine</h2>
+			<p>Wolverine is a mutant and member of the X-Men, who possesses animal-keen senses, enhanced physical capabilities, powerful regenerative ability known as a healing factor, and three retractable claws in each hand.</p>
+		</div>
+	</div>
+
+	<script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
+	<script>
+		// The toggle tabs plugin
+		var toggleTabs = (function () {
+
+			'use strict';
+
+			//
+			// Variables
+			//
+
+			var publicAPIs = {};
+
+
+			//
+			// Methods
+			//
+
+			/**
+			 * Show a tab
+			 * @param  {Node} tab     The clicked tab
+			 * @param  {Node} content The content for that tab
+			 */
+			publicAPIs.showTab = function (tab, content) {
+
+				// Throw an error if required content isn't supplied
+				if (!tab || !content) throw 'toggleTabs.showTab(): both a tab and content must be specified.';
+
+				// Get the currently active tab link and content
+				var activeTabLink = tab.closest('.tabs').querySelector('a.active');
+				var contentSection = content.closest('.tab-content');
+				if (!contentSection) return;
+				var activeContent = contentSection.querySelector('.tab-pane.active');
+
+				// Hide the currently active content
+				activeTabLink.classList.remove('active');
+				activeContent.classList.remove('active');
+
+				// Show the new tab and content
+				tab.classList.add('active');
+				content.classList.add('active');
+
+			};
+
+			/**
+			 * Handle click events
+			 * @param  {Event} event The click event
+			 */
+			var clickHandler = function (event) {
+
+				// Only run if the click was on a tab
+				var tab = event.target.closest('.tabs a');
+				if (!tab) return;
+
+				// Get the tab content
+				var content = document.querySelector(tab.hash);
+				if (!content) return;
+
+				// Prevent default click event
+				event.preventDefault();
+
+				// Show the tab
+				publicAPIs.showTab(tab, content);
+
+			};
+
+			/**
+			 * Initialize the plugin
+			 */
+			publicAPIs.init = function () {
+
+				// Add an initialization class to hide the content by default
+				document.documentElement.classList.add('js-tabs-init');
+
+				// Add our click event listener
+				document.addEventListener('click', clickHandler, false);
+
+			};
+
+
+			//
+			// Return the Public APIs
+			//
+
+			return publicAPIs;
+
+		})();
+
+		// Initialize the toggle tabs
+		toggleTabs.init();
+
+		// Example with public API
+		// Run manuallyToggle() in the console
+		var manuallyToggle = function () {
+			var tab = document.querySelector('.tabs [href*="#wolverine"]');
+			var content = document.querySelector('#wolverine');
+			toggleTabs.showTab(tab, content);
+		};
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<title>Todo</title>
+
+	<meta charset="utf-8">
+
+	<!-- Force latest available IE rendering engine and Chrome Frame (if installed) -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<!-- Mobile Screen Resizing -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<style type="text/css">
+		/**
+		 * Add box sizing to everything
+		 * @link http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+		 */
+		/* line 38, src/sass/components/_normalize.scss */
+		*,
+		*:before,
+		*:after {
+			box-sizing: border-box;
+		}
+
+		/**
+		 * Layout
+		 */
+		body {
+			font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+			font-size: 112.5%;
+			margin-left: auto;
+			margin-right: auto;
+			max-width: 40em;
+			width: 88%;
+		}
+
+
+		/**
+		 * Forms
+		 */
+
+		label,
+		[type="text"] {
+			display: block;
+			width: 100%;
+		}
+
+		label {
+			margin-bottom: 0.25em;
+		}
+
+		[type="text"] {
+			font-size: inherit;
+			margin-bottom: 1em;
+			padding: 0.25em 1em;
+		}
+
+		[type="checkbox"] {
+			margin-right: 0.5em;
+		}
+
+		/**
+		 * Buttons
+		 */
+
+		.btn {
+			background-color: #0088cc;
+			border: 1px solid #0088cc;
+			border-radius: 1px;
+			color: #ffffff;
+			display: inline-block;
+			font-size: 0.9375em;
+			font-weight: normal;
+			line-height: 1.2;
+			margin-right: 0.3125em;
+			margin-bottom: 0.3125em;
+			padding: 0.5em 0.6875em;
+		}
+
+		.btn:hover,
+		.btn:focus,
+		.btn:active {
+			background-color: #005580;
+			border-color: #005580;
+			color: #ffffff;
+			text-decoration: none;
+		}
+
+		/**
+		 * Todos
+		 */
+
+		.todos {
+			list-style: none;
+			margin-left: 0;
+			padding-left: 0;
+		}
+
+		.todos .completed {
+			text-decoration: line-through;
+		}
+
+		.todo:before,
+		.todo:after {
+			display: table;
+			content: " ";
+		}
+
+		.todo:after {
+			clear: both;
+		}
+
+		.todo label {
+			width: auto;
+		}
+
+		.todo label,
+		.todo button {
+			float: left;
+		}
+
+		.todo button {
+			margin-left: 0.5em;
+		}
+	</style>
+</head>
+<body>
+
+	<p><a href="/#work-on-fun-projects">&larr; Back to the Vanilla JS Academy</a></p>
+
+	<h1>Todo</h1>
+
+	<form id="todo-form">
+		<label for="todo-item">What do you need to do?</label>
+		<input type="text" name="todo-item" id="todo-item">
+		<button class="btn" id="add-todo">Add Todo</button>
+	</form>
+
+	<div id="app"></div>
+
+
+	<script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
+	<script>
+		//
+		// Variables
+		//
+
+		var todoField = document.querySelector('#todo-item');
+		var todo;
+
+
+		//
+		// Methods
+		//
+
+		/**
+		 * A vanilla JS helper for creating state-based components
+		 * @param {String|Node} elem    The element to make into a component
+		 * @param {Object}      options The component options
+		 */
+		var Component = (function () {
+
+			'use strict';
+
+			/**
+			 * Create the Component object
+			 * @param {String|Node} elem    The element to make into a component
+			 * @param {Object}      options The component options
+			 */
+			var Component = function (elem, options) {
+				if (!elem) throw 'ComponentJS: You did not provide an element to make into a component.';
+				this.elem = elem;
+				this.data = options ? options.data : null;
+				this.template = options ? options.template : null;
+			};
+
+			/**
+			 * Sanitize and encode all HTML in a user-submitted string
+			 * @param  {String} str  The user-submitted string
+			 * @return {String}      The sanitized string
+			 */
+			Component.sanitize = function (str) {
+				var temp = document.createElement('div');
+				temp.textContent = str;
+				return temp.innerHTML;
+			};
+
+			/**
+			 * Render a template into the DOM
+			 * @return {[type]}                   The element
+			 */
+			Component.prototype.render = function () {
+
+				// Make sure there's a template
+				if (!this.template) throw 'ComponentJS: No template was provided.';
+
+				// If elem is an element, use it.
+				// If it's a selector, get it.
+				var elem = typeof this.elem === 'string' ? document.querySelector(this.elem) : this.elem;
+				if (!elem) return;
+
+				// Get the template
+				var template = (typeof this.template === 'function' ? this.template(this.data) : this.template);
+				if (typeof template !== 'string') return;
+
+				// Render the template into the element
+				if (elem.innerHTML === template) return;
+				elem.innerHTML = template;
+
+				// Dispatch a render event
+				if (typeof window.CustomEvent === 'function') {
+					var event = new CustomEvent('render', {
+						bubbles: true
+					});
+					elem.dispatchEvent(event);
+				}
+
+				// Return the elem for use elsewhere
+				return elem;
+
+			};
+
+			return Component;
+
+		})();
+
+		/**
+		 * Save todo items to local storage
+		 */
+		var saveTodos = function () {
+			localStorage.setItem('todos', JSON.stringify(todo.data.todos));
+		};
+
+		/**
+		 * Get todo items from local storage
+		 * @return {Array} The todo items (or an empty array if none exist)
+		 */
+		var getTodos = function () {
+			var todos = localStorage.getItem('todos');
+			if (todos) return JSON.parse(todos);
+			return [];
+		};
+
+		/**
+		 * Setup the initial todo list container
+		 */
+		var setup = function () {
+
+			// Create the todo list
+			todo = new Component('#app', {
+				data: {
+					todos: getTodos()
+				},
+				template: function (props) {
+
+					// Setup the template
+					var template = '';
+
+					// Create each todo item
+					props.todos.forEach(function (todo, index) {
+
+						// Check if it's completed
+						var completed = todo.completed ? ' class="completed"' : '';
+						var checked = todo.completed ? ' checked' : '';
+
+						// If it's being edited, show a form
+						// Otherwise, show the item with a checkbox
+						if (todo.edit) {
+							template +=
+								'<li class="todo">' +
+									'<form class="todo-edit-form">' +
+										'<input type="text" class="todo-update" value="' + Component.sanitize(todo.item) + '" data-todo-edit="' + index + '">' +
+										'<button>Save</button>' +
+									'</form>' +
+								'</li>';
+						} else {
+							template +=
+								'<li class="todo">' +
+									'<label' + completed + '>' +
+										'<input data-todo="' + index + '" type="checkbox"' + checked + '>' +
+										'<span class="todo-item">' + Component.sanitize(todo.item) + '</span>' +
+									'</label>' +
+									'<button class="todo-edit">Edit</button>' +
+									'<button class="todo-delete">Delete</button>' +
+								'</li>';
+						}
+					});
+
+					// If there are todo items, wrap it in an unordered list
+					if (template.length > 0) {
+						template = '<ul class="todos">' + template + '</ul><p><button class="todo-clear">Clear All Todos</button></p>';
+					}
+
+					return template;
+
+				}
+			});
+
+			// Render the todo list
+			todo.render();
+
+		};
+
+		/**
+		 * Add a todo to the list
+		 */
+		var addTodo = function (event) {
+
+			// Only run if there's an item to add
+			if (todoField.value.length < 1) return;
+
+			// Prevent default form submission
+			event.preventDefault();
+
+			// Update the state
+			todo.data.todos.push({
+				item: todoField.value,
+				completed: false
+			});
+
+			// Render the updated list
+			todo.render();
+
+			// Clear the input field and return to focus
+			todoField.value = '';
+			todoField.focus();
+
+		};
+
+		/**
+		 * Mark a todo as complete (or incomplete)
+		 * @param  {Node} item  The todo item
+		 */
+		var completeTodo = function (item) {
+
+			// Get the todo item
+			var todoItem = todo.data.todos[item.getAttribute('data-todo')];
+			if (!todoItem) return;
+
+			// If it's completed, uncomplete it
+			// Otherwise, mark is as complete
+			if (todoItem.completed) {
+				todoItem.completed = false;
+			} else {
+				todoItem.completed = true;
+			}
+
+			// Render the updated list
+			todo.render();
+
+		};
+
+		/**
+		 * Delete a todo list item
+		 * @param  {Node} btn The delete button that was clicked
+		 */
+		var deleteTodo = function (btn) {
+
+			// Get the index for the todo list item
+			var index = btn.closest('.todo').querySelector('input').getAttribute('data-todo');
+			if (!index) return;
+
+			// Remove the item from state
+			todo.data.todos.splice(index, 1);
+
+			// Render the updated list
+			todo.render();
+
+		};
+
+		/**
+		 * Edit a todo list item
+		 * @param  {Node} btn The edit button that was clicked
+		 */
+		var editTodo = function (btn) {
+
+			// Get the todo list DOM element
+			var todoListItem = btn.closest('.todo');
+			if (!todoListItem) return;
+
+			// Get the index for the item
+			var index = todoListItem.querySelector('input').getAttribute('data-todo');
+			if (!index) return;
+
+			// Get the item from state
+			var todoItem = todo.data.todos[index];
+			if (!todoItem) return;
+
+			// Update state
+			todoItem.edit = true;
+
+			// Render the updated UI
+			todo.render();
+
+		};
+
+		var saveEditTodo = function (event) {
+
+			// Prevent default form submit
+			event.preventDefault();
+
+			// Get the todo list DOM node
+			var newTodo = event.target.querySelector('.todo-update');
+			if (!newTodo) return;
+
+			// Get the todo list item index
+			var index = newTodo.getAttribute('data-todo-edit');
+			if (!index) return;
+
+			// Get the item from state
+			var todoItem = todo.data.todos[index];
+			if (!todoItem) return;
+
+			// If the item is empty, delete the todo item
+			// Otherwise, update it
+			if (newTodo.value.length < 1) {
+				todo.data.todos.splice(index, 1);
+			} else {
+				todoItem.item = newTodo.value;
+				todoItem.edit = false;
+			}
+
+			// Render the updated list in the DOM
+			todo.render();
+
+		};
+
+		/**
+		 * Remove all todo items from state
+		 */
+		var clearTodos = function () {
+
+			// Replace the existing state with an empty array
+			todo.data.todos = [];
+
+			// Render the updated list
+			todo.render();
+
+		};
+
+		/**
+		 * Handle click events
+		 */
+		var clickHandler = function (event) {
+
+			// Complete todos
+			var todo = event.target.closest('[data-todo]');
+			if (todo) {
+				completeTodo(todo);
+			};
+
+			// Edit todo
+			var editBtn = event.target.closest('.todo-edit');
+			if (editBtn) {
+				editTodo(editBtn);
+			}
+
+			// Delete todo
+			var deleteBtn = event.target.closest('.todo-delete');
+			if (deleteBtn) {
+				deleteTodo(deleteBtn);
+			}
+
+			// Clear all todos
+			if (event.target.closest('.todo-clear')) {
+				clearTodos();
+			}
+		};
+
+		/**
+		 * Handle form submit events
+		 */
+		var submitHandler = function (event) {
+
+			// If it's the "new todo" form, add the item
+			if (event.target.matches('#todo-form')) {
+				addTodo(event);
+			}
+
+			// If it's the "edit todo" form, save the edit
+			if (event.target.matches('.todo-edit-form')) {
+				saveEditTodo(event);
+			}
+		};
+
+		/**
+		 * Handle render events
+		 */
+		var renderHandler = function (event) {
+
+			// If the rendered element is not the #app, bail
+			if (!event.target.matches('#app')) return;
+
+			// Save the current state to localStorage
+			saveTodos();
+
+		};
+
+
+		//
+		// Inits & Event Listeners
+		//
+
+		// Setup the DOM
+		setup();
+
+		// Listen for events
+		document.addEventListener('submit', submitHandler, false);
+		document.addEventListener('click', clickHandler, false);
+		document.addEventListener('render', renderHandler, false);
+
+	</script>
+
+</body>
+</html>

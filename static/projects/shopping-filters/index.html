@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-	<title>Word Count</title>
+	<title>Shopping Filters</title>
 
 	<meta charset="utf-8">
 
@@ -31,15 +31,72 @@
 			font-size: 112.5%;
 			margin-left: auto;
 			margin-right: auto;
-			max-width: 40em;
+			max-width: 80em;
 			width: 88%;
+		}
+
+		.row {
+			margin-left: -1.4%;
+			margin-right: -1.4%;
+		}
+
+		.grid-fourth,
+		.grid-third,
+		.grid-two-thirds,
+		.grid-three-fourths {
+			float: left;
+			padding-left: 1.4%;
+			padding-right: 1.4%;
+			width: 100%;
+		}
+
+		.grid-third {
+			margin-bottom: 0.5em;
+		}
+
+		@media (min-width: 40em) {
+			.grid-fourth {
+				width: 25%;
+			}
+
+			.grid-third {
+				width: 33.33333%;
+			}
+
+			.grid-two-thirds {
+				width: 66.66666%;
+			}
+
+			.grid-three-fourths {
+				width: 75%;
+			}
+		}
+
+		.row:before,
+		.row:after {
+			display: table;
+			content: " ";
+		}
+
+		.row:after {
+			clear: both;
+		}
+
+		/**
+		 * Responsive Images
+		 */
+
+		img {
+			height: auto;
+			max-width: 100%;
 		}
 
 		/**
 		 * Forms
 		 */
-		textarea {
-			min-height: 24em;
+
+		label {
+			display: block;
 			width: 100%;
 		}
 
@@ -63,50 +120,9 @@
 
 	<p><a href="/#work-on-fun-projects">&larr; Back to the Vanilla JS Academy</a></p>
 
-	<h1>Word Count</h1>
+	<h1>Shopping Filters</h1>
 
-	<textarea data-character-count></textarea>
-	<p>You've written <strong><span id="word-count">0</span> words</strong> and <strong><span id="character-count">0</span> characters</strong>.</p>
-
-	<script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
-	<script>
-
-		//
-		// Variables
-		//
-
-		var words = document.querySelector('#word-count');
-		var characters = document.querySelector('#character-count');
-
-
-		//
-		// Methods
-		//
-
-		var inputHandler = function (event) {
-
-			// Make sure input is our textarea
-			if (!event.target.matches('[data-character-count]')) return;
-
-			// Get the word count
-			var wordCount = event.target.value.split(/[\n\r\s]+/g).filter(function (word) {
-				return word.length > 0;
-			});
-
-			// Update the DOM
-			words.textContent = wordCount.length;
-			characters.textContent = event.target.value.length;
-
-		};
-
-
-		//
-		// Inits and Event Listeners
-		//
-
-		document.addEventListener('input', inputHandler, false);
-
-	</script>
+	<p>Coming soon...</p>
 
 </body>
 </html>
