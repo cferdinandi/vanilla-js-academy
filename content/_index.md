@@ -128,7 +128,7 @@ The Vanilla JS Academy is an eight-week structured training program. You'll lear
 	</div>
 	<div class="grid-third margin-bottom">
 		<a href="/projects/word-count/">
-			<span class="text-xlarge"><svg xmlns="http://www.w3.org/2000/svg" style="height:1em;width:1em;" viewBox="0 0 16 16"><title></title><path fill="currentColor" d="M5.032 13l.9-3h4.137l.9 3h1.775l-3-10H6.256l-3 10h1.776zm2.4-8h1.137l.9 3H6.532l.9-3z"/></svg></span>
+			<span class="text-xlarge"><svg xmlns="http://www.w3.org/2000/svg" style="height:1em;width:1em;" viewBox="0 0 16 16"><title></title><path fill="#0088cc" d="M5.032 13l.9-3h4.137l.9 3h1.775l-3-10H6.256l-3 10h1.776zm2.4-8h1.137l.9 3H6.532l.9-3z"/></svg></span>
 			<h3 class="h5 no-padding-top no-margin-bottom">Word Count</h3>
 		</a>
 		<span class="text-small">Count the number of words and characters in a block of&nbsp;text.</span>
@@ -158,21 +158,21 @@ The Vanilla JS Academy is an eight-week structured training program. You'll lear
 		<span class="text-small">Create a toggle tab plugin for showing collections of&nbsp;content.</span>
 	</div>
 	<div class="grid-third margin-bottom">
-		<a href="/projects/progress/">
-			<span class="text-xlarge"><svg style="height:1em;width:1em;" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><title></title><g transform="translate(0 6)" stroke="currentColor" fill="transparent"><rect x=".5" y=".5" width="15" height="4" rx="2"/><rect stroke="#0088cc" x="2" y="2" width="8.5" height="1" rx=".5"/></g></svg></span>
-			<h3 class="h5 no-padding-top no-margin-bottom">Progress Bar</h3>
-		</a>
-		<span class="text-small">Track a user's progress as they complete&nbsp;tasks.</span>
+		<!-- <a href="/projects/progress/"> -->
+			<span class="text-xlarge"><svg xmlns="http://www.w3.org/2000/svg" style="height:1em;width:1em;"  viewBox="0 0 16 16"><title></title><path fill="#808080" d="M11 4h3.627a6.38 6.38 0 0 0-.286-.421c-.347-.473-.831-1.027-1.362-1.558S11.894 1.006 11.421.659A6.38 6.38 0 0 0 11 .373V4z"/><path fill="#808080" d="M10.5 5a.5.5 0 0 1-.5-.5V0H2.25C1.561 0 1 .561 1 1.25v13.5c0 .689.561 1.25 1.25 1.25h11.5c.689 0 1.25-.561 1.25-1.25V5h-4.5zM8 15.5L4.5 12H7V7h2v5h2.5L8 15.5z"/></svg></span>
+			<h3 class="h5 no-padding-top no-margin-bottom">Form Saver</h3>
+		<!-- </a> -->
+		<span class="text-small">Automatically save form data as a user types.</span>
 	</div>
 </div>
 
 <div class="row margin-bottom text-center">
 	<div class="grid-third margin-bottom">
-		<a href="/projects/shopping-filters/">
-			<span class="text-xlarge"><svg xmlns="http://www.w3.org/2000/svg" style="height:1em;width:1em;" viewBox="0 0 16 16"><title></title><path fill="#f7272f" d="M11 3v-.5a2.5 2.5 0 0 0-4-2 2.5 2.5 0 0 0-4 2v1.7l-2 .3V15h2l1 1 10-1.5V4l-3-1zM3 14H2V5.361l1-.15V14zM8.5 1c.827 0 1.5.673 1.5 1.5v.65l-2 .3V2.5c0-.454-.122-.88-.333-1.247.239-.16.525-.253.833-.253zM4 2.5a1.502 1.502 0 0 1 2.333-1.247A2.483 2.483 0 0 0 6 2.5v1.25l-2 .3V2.5zm9 11.139l-8 1.2V6.361l8-1.2v8.478z"/></svg></span>
-			<h3 class="h5 no-padding-top no-margin-bottom">Shopping Filters</h3>
-		</a>
-		<span class="text-small">Filter a list of products by a variety of&nbsp;criteria.</span>
+		<!-- <a href="/projects/shopping-filters/"> -->
+			<span class="text-xlarge"><svg xmlns="http://www.w3.org/2000/svg" style="height:1em;width:1em;" viewBox="0 0 16 16"><title></title><path fill="#dba909" d="M15.976 6.345a.5.5 0 0 0-.476-.346h-5.367L8.475.919a.5.5 0 0 0-.95 0l-1.658 5.08H.5a.5.5 0 0 0-.293.905l4.34 3.139-1.657 5.079a.5.5 0 0 0 .769.56l4.342-3.141 4.342 3.141a.5.5 0 0 0 .769-.56l-1.657-5.079 4.34-3.139a.5.5 0 0 0 .183-.559z"/></svg></span>
+			<h3 class="h5 no-padding-top no-margin-bottom">Offline Reader</h3>
+		<!-- </a> -->
+		<span class="text-small">Save articles for offline&nbsp;reading.</span>
 	</div>
 	<div class="grid-third margin-bottom">
 		<a href="/projects/timer/">
