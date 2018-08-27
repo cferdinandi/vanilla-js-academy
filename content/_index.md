@@ -24,7 +24,9 @@ description: ""
 
 <iframe src="https://player.vimeo.com/video/266326608?color=0088cc&title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
-The Vanilla JS Academy is a six-week structured training program. You'll learn JavaScript as part of a small group of other students.
+👆*__Psst...__ The video above says it's a six-week program. This session, I updated the program to eight weeks. I'll be publishing a new video soon to reflect the change.*
+
+The Vanilla JS Academy is an eight-week structured training program. You'll learn JavaScript as part of a small group of other students.
 
 <svg xmlns="http://www.w3.org/2000/svg" style="height:1em;width:1em;" viewBox="0 0 16 16"><title></title><path fill="#808080" d="M11.5 0h-7C3.675 0 3 .675 3 1.5v13c0 .825.675 1.5 1.5 1.5h7c.825 0 1.5-.675 1.5-1.5v-13c0-.825-.675-1.5-1.5-1.5zM6 .75h4v.5H6v-.5zM8 15a1 1 0 1 1 0-2 1 1 0 0 1 0 2zm4-3H4V2h8v10z"/></svg> 1. Watch and Read
 : Each week, you'll get a set of a lessons (a mix of videos and articles) focused on a core JavaScript topic.
@@ -83,6 +85,7 @@ The Vanilla JS Academy is a six-week structured training program. You'll learn J
 - How to write JavaScript plugins
 - Framework-free web apps
 - How to easily write cross-browser compatible code
+- How to debug broken code
 - Working with polyfills
 - JavaScript performance tricks
 {{%/md%}}
@@ -217,6 +220,40 @@ The Vanilla JS Academy is a six-week structured training program. You'll learn J
 </div>
 
 
+## The Schedule
+
+Here's exactly what you'll learn each week.
+
+Week 1: DOM Basics
+: How to listen for user interactions, get elements in the DOM, manipulate elements and content, and make updates to a web page with JavaScript.
+
+Week 2: APIs & JavaScript
+: How to request data from APIs, turn it into HTML, and inject it into the DOM.
+
+Week 3: Manipulating Data
+: How to manipulate strings, arrays, and objects. You’ll dig into some of the newer ES6 methods, too.
+
+Week 4: JavaScript Plugins & Scope
+: How to write code that's more resilient and reusable, and that can scale to a variety of use cases.
+
+Week 5: Debugging
+: How to figure why your code isn't working (and how to fix it).
+
+Week 6: Browser Storage
+: How to store data locally in the browser and use it later.
+
+Week 7: JS Apps & State Management
+: What state is and some different approaches for managing it.
+
+Week 8: JS Apps & Routing
+: How to manage different views and layouts in a JavaScript app.
+
+
+<div class="padding-top-large padding-bottom-large">
+	{{<testimonial for="alexMuraro" photo="true">}}
+</div>
+
+
 ## Go from beginner to JavaScript expert
 
 - Learn **modern best practices** and code patterns.
@@ -252,7 +289,7 @@ Kick-start your journey to JavaScript mastery. You get...
 
 {{<cta for="academy-buy">}}
 
-{{<purchase-link product="ajaxHttp">}}
+{{<purchase-link>}}
 
 {{%/purchase-box%}}
 
