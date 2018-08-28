@@ -9,7 +9,6 @@ description: ""
 
 <h1 class="no-padding-top no-margin-bottom h5">The Vanilla JS Academy</h1>
 <p class="text-xlarge margin-bottom-small">A project-based online JavaScript training program for beginners.</p>
-<!-- <p class="text-xlarge margin-bottom-small">An immersive, project-based online JavaScript training program for beginners.</p> -->
 
 <span class="text-large">The best way to learn JavaScript is by writing lots of code, but where do you even start? And what happens when you get stuck?</span>
 
@@ -22,9 +21,7 @@ description: ""
 
 ## How It Works
 
-<iframe src="https://player.vimeo.com/video/266326608?color=0088cc&title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-
-👆*__Psst...__ The video above says it's a six-week program. This session, I updated the program to eight weeks. I'll be publishing a new video soon to reflect the change.*
+<iframe src="https://player.vimeo.com/video/287121374?color=0088cc&title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
 
 The Vanilla JS Academy is an eight-week structured training program. You'll learn JavaScript as part of a small group of other students.
 
