@@ -176,7 +176,7 @@
 			data.articles.reverse().forEach(function (article) {
 
 				// If an article was already loaded from offline storage, skip it
-				var exists = offline.articles.find(function (item) {
+				var exists = offline.articles && offline.articles.find(function (item) {
 					return item.title === article.title;
 				});
 				if (exists) return;
