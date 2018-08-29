@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<title>Autosave</title>
+
+	<meta charset="utf-8">
+
+	<!-- Force latest available IE rendering engine and Chrome Frame (if installed) -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<!-- Mobile Screen Resizing -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<style type="text/css">
+		/**
+		 * Add box sizing to everything
+		 * @link http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+		 */
+		/* line 38, src/sass/components/_normalize.scss */
+		*,
+		*:before,
+		*:after {
+			box-sizing: border-box;
+		}
+
+		/**
+		 * Layout
+		 */
+		body {
+			font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+			font-size: 112.5%;
+			margin-left: auto;
+			margin-right: auto;
+			max-width: 40em;
+			width: 88%;
+		}
+
+		/**
+		 * Forms
+		 */
+		[type="text"],
+		[type="email"],
+		select,
+		textarea {
+			display: block;
+			margin-bottom: 1em;
+			width: 100%;
+		}
+
+		textarea {
+			height: 8em;
+		}
+
+		label {
+			display: block;
+			font-weight: bold;
+			margin-bottom: 0.25em;
+		}
+
+		.label-plain {
+			font-weight: normal;
+		}
+	</style>
+</head>
+<body>
+
+	<p><a href="/#work-on-fun-projects">&larr; Back to the Vanilla JS Academy</a></p>
+
+	<h1>Autosave</h1>
+
+	<form class="save-me" id="save-me">
+
+		<label for="name">Name</label>
+		<input type="text" name="name" id="name">
+
+		<label for="address">Address</label>
+		<input type="text" name="address" id="address">
+
+		<label for="email">Email</label>
+		<input type="email" name="email" id="email">
+
+		<label for="hear-about-us">How did you hear about us?</label>
+		<select name="hear-about-us" id="hear-about-us">
+			<option value=""></option>
+			<option value="google">Google</option>
+			<option value="referral">Referred by a Friend</option>
+			<option value="tv">A TV Ad</option>
+			<option value="radio">A Radio Ad</option>
+		</select>
+
+		<label id="more">Additional thoughts?</label>
+		<textarea name="more" id="more"></textarea>
+
+		<p><strong>Do you agree to our terms of service?</strong></p>
+		<label class="label-plain">
+			<input type="radio" name="tos" value="yes">
+			Yes
+		</label>
+		<label class="label-plain">
+			<input type="radio" name="tos" value="no">
+			No
+		</label>
+
+		<p><strong>Pick your favorite super heros.</strong></p>
+
+		<label class="label-plain">
+			<input type="checkbox" name="spiderman">
+			Spiderman
+		</label>
+
+		<label class="label-plain">
+			<input type="checkbox" name="wonderwoman">
+			Wonder Woman
+		</label>
+
+		<label class="label-plain">
+			<input type="checkbox" name="blackpanther">
+			Black Panther
+		</label>
+
+		<p><button type="submit">Submit</button></p>
+
+	</form>
+
+	<script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
+	<script>
+
+		//
+		// Variables
+		//
+
+		var baseID = 'savedForm-';
+
+		//
+		// Methods
+		//
+
+		/**
+		 * Get data from localStorage
+		 * @param  {String} id The localStorage ID
+		 * @return {Object}    The localStorage data
+		 */
+		var getData = function (id) {
+			if (!id) return {};
+			var saved = localStorage.getItem(baseID + id);
+			var data = saved ? JSON.parse(saved) : {};
+			return data;
+		};
+
+		/**
+		 * Get the ID for the field
+		 * @param  {Node} field The field
+		 * @return {String}     The field's ID
+		 */
+		var getFieldID = function (field) {
+			return field.id || field.name;
+		};
+
+		/**
+		 * Set the value of a checkbox
+		 * @param {Node} field   The checkbox
+		 * @param {String} value Its value
+		 */
+		var setCheckbox = function (field, value) {
+			if (value !== 'on') return;
+			field.checked = true;
+		};
+
+		/**
+		 * Set the value of a radio button
+		 * @param {Node} field   The checkbox
+		 * @param {String} value Its value
+		 */
+		var setRadio = function (field, value) {
+			if (field.value !== value) return;
+			field.checked = true;
+		};
+
+		/**
+		 * Load a field's value from localStorage
+		 * @param  {Node} field   The field
+		 * @param  {Object} saved The localStorage data
+		 */
+		var loadField = function (field, saved) {
+
+			// Get an ID for the field
+			var fieldID = getFieldID(field);
+			if (!fieldID) return;
+
+			// Get field value from localStorage
+			var fieldValue = saved[fieldID];
+			if (!fieldValue) return;
+
+			// Set the field value
+			if (field.type === 'checkbox') {
+				setCheckbox(field, fieldValue);
+			} else if (field.type === 'radio') {
+				setRadio(field, fieldValue);
+			} else {
+				field.value = fieldValue;
+			}
+
+		};
+
+		/**
+		 * Load a form's data from localStorage
+		 * @param  {Node} form The form
+		 */
+		var loadForm = function (form) {
+
+			// Make sure the form has an ID
+			if (!form.id) return;
+
+			// Get all of the fields in the form
+			var fields = form.elements;
+
+			// Get saved data from localStorage
+			var saved = getData(form.id);
+			if (!saved) return;
+
+			// Loop over each field in the form and load any saved data
+			Array.from(fields).forEach(function (field) {
+				loadField(field, saved);
+			});
+
+		};
+
+		/**
+		 * Load all form data from localStorage
+		 */
+		var loadForms = function () {
+			Array.from(document.forms).forEach(function (form) {
+				loadForm(form);
+			});
+		};
+
+		/**
+		 * Save a form's data to localStorage
+		 * @param  {Node} field  The field that was updated
+		 * @param  {String} id   The form's ID
+		 */
+		var saveForm = function (field, id) {
+
+			// Make sure there's an ID to save to
+			if (!id) return;
+
+			// Get existing data from localStorage
+			var data = getData(id);
+
+			// Add new field data
+			var fieldID = getFieldID(field);
+
+			// Add the field value in localStorage
+			if (field.type === 'checkbox') {
+				// If the field is a checkbox
+				data[fieldID] = field.checked === true ? 'on' : 'off';
+			} else {
+				// If the field is anything else
+				data[fieldID] = field.value;
+			}
+
+			// Save back to localStorage
+			localStorage.setItem(baseID + id, JSON.stringify(data));
+
+		};
+
+		/**
+		 * When a field changes, save its data to localStorage
+		 */
+		var changeHandler = function (event) {
+			if (!event.target.closest('.save-me')) return;
+			var form = event.target.closest('form');
+			saveForm(event.target, form.id);
+		};
+
+		/**
+		 * When a form is submitted, wipe saved data from localStorage
+		 */
+		var submitHandler = function (event) {
+			if (!event.target.matches('.save-me')) return;
+			localStorage.removeItem(baseID + event.target.id);
+		};
+
+
+		//
+		// Inits & Event Listeners
+		//
+
+		loadForms();
+		document.addEventListener('input', changeHandler, false);
+		document.addEventListener('submit', submitHandler, false);
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<title>Offline Reader</title>
+
+	<meta charset="utf-8">
+
+	<!-- Force latest available IE rendering engine and Chrome Frame (if installed) -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<!-- Mobile Screen Resizing -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<style type="text/css">
+		/**
+				 * Add box sizing to everything
+				 * @link http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+				 */
+				/* line 38, src/sass/components/_normalize.scss */
+				*,
+				*:before,
+				*:after {
+					box-sizing: border-box;
+				}
+
+				/**
+				 * Layout
+				 */
+				body {
+					font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+					font-size: 112.5%;
+					margin-left: auto;
+					margin-right: auto;
+					max-width: 40em;
+					width: 88%;
+				}
+
+				/**
+				 * Typography
+				 */
+				h1 {
+					margin-bottom: 0.25em;
+				}
+
+				h2 {
+					margin: 0;
+				}
+
+				p {
+					margin: 0 0 1.5em;
+				}
+
+				.article {
+					margin-bottom: 3em;
+				}
+
+				/**
+				 * Utilities
+				 */
+				.text-large {
+					font-size: 1.2em;
+				}
+
+				.text-muted {
+					color: #808080;
+				}
+
+				.text-red {
+					color: #f7272f;
+				}
+	</style>
+</head>
+<body>
+
+	<p><a href="/#work-on-fun-projects">&larr; Back to the Vanilla JS Academy</a></p>
+
+	<h1>The Scuttlebutt</h1>
+	<p class="text-large text-muted">The number one source for pirate news!</p>
+
+	<p><em class="text-muted" id="app-status">Loading...</em></p>
+	<div id="app"></div>
+
+	<script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
+	<script>
+
+		//
+		// Variables
+		//
+
+		var app = document.querySelector('#app');
+		var appStatus = document.querySelector('#app-status');
+		var offlineID = 'piratesOffline';
+
+
+		//
+		// Methods
+		//
+
+		/**
+		 * Dynamically vary the API endpoint
+		 * @return {String} The API endpoint
+		 */
+		var getEndpoint = function () {
+			var endpoint = 'https://vanillajsacademy.com/api/';
+			if (Math.random() > 0.5) return endpoint + 'pirates2.json';
+			return endpoint + 'pirates.json';
+		};
+
+		/**
+		 * Get article data from localStorage
+		 * @return {Object} The article data
+		 */
+		var getOfflineArticles = function () {
+			var offline = localStorage.getItem(offlineID);
+			if (!offline) return;
+			return JSON.parse(offline);
+		};
+
+		/**
+		 * Sanitize and encode all HTML in a user-submitted string
+		 * @param  {String} str  The user-submitted string
+		 * @return {String} str  The sanitized string
+		 */
+		var sanitizeHTML = function (str) {
+			var temp = document.createElement('div');
+			temp.textContent = str;
+			return temp.innerHTML;
+		};
+
+		/**
+		 * Display a message if no articles are available
+		 */
+		var renderNoArticles = function () {
+			if (getOfflineArticles()) return;
+			appStatus.innerHTML = 'We are unable to get any articles at this time. Sorry!';
+		};
+
+		/**
+		 * Render an article into the DOM
+		 * @param  {Object} article The article data
+		 */
+		var renderArticle = function (article) {
+
+			// Create the article container
+			var container = document.createElement('article');
+			container.className = 'article';
+
+			// Inject article content
+			container.innerHTML =
+				'<strong class="text-red">' + sanitizeHTML(article.category) + '</strong>' +
+				'<h2>' + sanitizeHTML(article.title) + '</h2>' +
+				'<p class="text-muted">' + sanitizeHTML(article.pubdate) + '</p>' +
+				sanitizeHTML(article.article).replace(new RegExp('\n', 'g'), '<br>');
+
+			// Append the article to the DOM
+			app.prepend(container);
+
+		};
+
+		/**
+		 * Render all articles into the DOM
+		 * @param  {Object} data The article data
+		 */
+		var renderArticles = function (data) {
+
+			// Make sure there are articles to render
+			if (data.articles.length < 1) {
+				renderNoArticles();
+				return;
+			}
+
+			// Get offline articles
+			var offline = getOfflineArticles();
+
+			// Loop through each article and render it
+			data.articles.reverse().forEach(function (article) {
+
+				// If an article was already loaded from offline storage, skip it
+				var exists = offline.articles.find(function (item) {
+					return item.title === article.title;
+				});
+				if (exists) return;
+
+				// Render the article
+				renderArticle(article);
+
+			});
+
+			// Save articles for offline reading
+			localStorage.setItem(offlineID, JSON.stringify(data));
+
+			// Update status
+			appStatus.innerText = 'Articles saved for reading offline.';
+
+		};
+
+		/**
+		 * Get new articles from the Pirates API
+		 */
+		var getNewArticles = function () {
+
+			// Set up our HTTP request
+			var xhr = new XMLHttpRequest();
+
+			// Setup our listener to process compeleted requests
+			xhr.onreadystatechange = function () {
+
+				// Only run if the request is complete
+				if (xhr.readyState !== 4) return;
+
+				// Process our return data
+				if (xhr.status === 200) {
+					// What do when the request is successful
+					renderArticles(JSON.parse(xhr.responseText));
+				} else {
+					// What do when the request fails
+					renderNoArticles();
+				}
+
+			};
+
+			// Create and send a GET request
+			// The first argument is the post type (GET, POST, PUT, DELETE, etc.)
+			// The second argument is the endpoint URL
+			xhr.open('GET', getEndpoint());
+			xhr.send();
+
+		};
+
+		/**
+		 * Render articles from localStorage
+		 */
+		var renderOfflineArticles = function () {
+
+			// Do nothing yet...
+			var offline = getOfflineArticles();
+			if (!offline) return;
+
+			// Update status
+			appStatus.textContent = 'Articles loaded from offline data.';
+
+			// Loop through each article and render it
+			offline.articles.forEach(function (article) {
+				renderArticle(article);
+			});
+
+		};
+
+
+		//
+		// Inits & Event Listeners
+		//
+
+		renderOfflineArticles();
+		getNewArticles();
+
+	</script>
+
+</body>
+</html>

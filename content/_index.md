@@ -155,20 +155,20 @@ The Vanilla JS Academy is an eight-week structured training program. You'll lear
 		<span class="text-small">Create a toggle tab plugin for showing collections of&nbsp;content.</span>
 	</div>
 	<div class="grid-third margin-bottom">
-		<!-- <a href="/projects/progress/"> -->
+		<a href="/projects/autosave/">
 			<span class="text-xlarge"><svg xmlns="http://www.w3.org/2000/svg" style="height:1em;width:1em;"  viewBox="0 0 16 16"><title></title><path fill="#808080" d="M11 4h3.627a6.38 6.38 0 0 0-.286-.421c-.347-.473-.831-1.027-1.362-1.558S11.894 1.006 11.421.659A6.38 6.38 0 0 0 11 .373V4z"/><path fill="#808080" d="M10.5 5a.5.5 0 0 1-.5-.5V0H2.25C1.561 0 1 .561 1 1.25v13.5c0 .689.561 1.25 1.25 1.25h11.5c.689 0 1.25-.561 1.25-1.25V5h-4.5zM8 15.5L4.5 12H7V7h2v5h2.5L8 15.5z"/></svg></span>
 			<h3 class="h5 no-padding-top no-margin-bottom">Form Saver</h3>
-		<!-- </a> -->
+		</a>
 		<span class="text-small">Automatically save form data as a user types.</span>
 	</div>
 </div>
 
 <div class="row margin-bottom text-center">
 	<div class="grid-third margin-bottom">
-		<!-- <a href="/projects/shopping-filters/"> -->
+		<a href="/projects/offline-reader/">
 			<span class="text-xlarge"><svg xmlns="http://www.w3.org/2000/svg" style="height:1em;width:1em;" viewBox="0 0 16 16"><title></title><path fill="#dba909" d="M15.976 6.345a.5.5 0 0 0-.476-.346h-5.367L8.475.919a.5.5 0 0 0-.95 0l-1.658 5.08H.5a.5.5 0 0 0-.293.905l4.34 3.139-1.657 5.079a.5.5 0 0 0 .769.56l4.342-3.141 4.342 3.141a.5.5 0 0 0 .769-.56l-1.657-5.079 4.34-3.139a.5.5 0 0 0 .183-.559z"/></svg></span>
 			<h3 class="h5 no-padding-top no-margin-bottom">Offline Reader</h3>
-		<!-- </a> -->
+		</a>
 		<span class="text-small">Save articles for offline&nbsp;reading.</span>
 	</div>
 	<div class="grid-third margin-bottom">
