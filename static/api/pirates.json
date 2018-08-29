@@ -1,6 +1,10 @@
 {
 	"publication": "The Scuttlebutt",
 	"tagline": "The number one source of pirate news",
+	"attribution": {
+		"name": "Pirate Ipsum",
+		"url": "https://pirateipsum.me"
+	},
 	"articles": [
 		{
 			"title": "Scourge of the High Seas",
