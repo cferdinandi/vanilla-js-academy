@@ -279,7 +279,7 @@ I want to help you master vanilla JavaScript, without all of the painful false s
 
 Kick-start your journey to JavaScript mastery. You get...
 
-- 6 weeks of focused lessons made for beginners
+- 8 weeks of focused lessons made for beginners
 - 12 amazing JavaScript projects
 - Weekly video office hours
 - Exclusive Slack access
@@ -310,7 +310,7 @@ How much of a time commitment does the Vanilla JS Academy involve?
 Does the Vanilla JS Academy cover new ES6 methods?
 : Yes. Where applicable, I cover new ES6 functions and browser APIs. I also include polyfills when available to push browser support as far back as possible.
 
-What happens after the 6-week program? Do I lose access to the lessons?
+What happens after the 8-week program? Do I lose access to the lessons?
 : No. You get lifetime access to all of the lessons from the program.
 
 Do you offer team discounts?
