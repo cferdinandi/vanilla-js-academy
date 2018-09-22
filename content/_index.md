@@ -26,7 +26,7 @@ description: ""
 The Vanilla JS Academy is an eight-week structured training program. You'll learn JavaScript as part of a small group of other students.
 
 <svg xmlns="http://www.w3.org/2000/svg" style="height:1em;width:1em;" viewBox="0 0 16 16"><title></title><path fill="#808080" d="M11.5 0h-7C3.675 0 3 .675 3 1.5v13c0 .825.675 1.5 1.5 1.5h7c.825 0 1.5-.675 1.5-1.5v-13c0-.825-.675-1.5-1.5-1.5zM6 .75h4v.5H6v-.5zM8 15a1 1 0 1 1 0-2 1 1 0 0 1 0 2zm4-3H4V2h8v10z"/></svg> 1. Watch and Read
-: Each week, you'll get a set of a lessons (a mix of videos and articles) focused on a core JavaScript topic.
+: Each week, you'll get a set of a lessons (a mix of videos and articles) focused on a core JavaScript topic that you can watch and read whenever you want.
 
 <svg xmlns="http://www.w3.org/2000/svg" style="height:1em;width:1em;" viewBox="0 0 16 16"><title></title><path fill="#f7272f" d="M11 1L6 6H3l-3 4s3.178-.885 5.032-.47L0 16l6.592-5.127C7.511 12.977 6 16 6 16l4-3v-3l5-5 1-5-5 1z"/></svg> 2. Build Awesome Things
 : Along with your lessons, you'll get two fun projects to work on that reinforce everything you learned in the lessons. I don't give you the answers. You'll use what you learned that week to solve interesting problems and build cool stuff.
@@ -217,7 +217,7 @@ The Vanilla JS Academy is an eight-week structured training program. You'll lear
 </div>
 
 
-## The Schedule
+## The Program Schedule
 
 Here's exactly what you'll learn each week.
 
@@ -302,10 +302,16 @@ Kick-start your journey to JavaScript mastery. You get...
 ## Frequently Asked Questions
 
 What's the difference between the Vanilla JS Academy and your pocket guides?
-: My pocket guides provide tactical knowledge around specific topics. The Vanilla JS Academy is focused on teaching you to "think in JavaScript," with a focus on experiential, project-based learning.
+: The guides try to cover all of the important details on a particular topic, then walk you through a project to help you remember what you learned. Academy is about learning from doing, and gives you just enough information to get started on projects without giving you all the answers.<br><br>If you learn best from experience and building things, Academy is a great fit. If you learn best by being guided through a problem, Academy would probably be a waste of money.
+
+I already purchased your pocket guides? Will I learn anything new from the Vanilla JS Academy?
+: There's definitely some overlap in content, but the focus of the Vanilla JS Academy is on teaching you to “think in JavaScript,” through experiential, project-based learning. If you've already read the pocket guides, you'll be able to focus more on thinking through problems and less on, "what method do I need to do this?"
 
 How much of a time commitment does the Vanilla JS Academy involve?
 : This program is for people who are *serious* about learning JavaScript. The more you put into it, the more you'll get out of it. You should be willing to spend at least 4 or 5 hours a week working on your lessons and projects.
+
+When are office hours held?
+: Office hours are held every Thursday at 12 noon US Eastern. They're recorded for people who can't attend, and you can submit questions ahead of time if you can't make it.
 
 Does the Vanilla JS Academy cover new ES6 methods?
 : Yes. Where applicable, I cover new ES6 functions and browser APIs. I also include polyfills when available to push browser support as far back as possible.
@@ -318,6 +324,9 @@ Do you offer team discounts?
 
 Do you offer a student discount?
 : Absolutely! This applies to anyone in any type of schooling, including evening classes and coding bootcamps. [Learn more about student discounts.](/student-discount/)
+
+I have a poor exchange rate in USD. There's no way I can afford this.
+: I totally get that in some countries salaries and cost of living are such that the Vanilla JS Academy is unaffordable. Send me an email at {{<email params="subject=Vanilla%20JS%20Academy:%20Exchange%20Rate&body=I%20live%20in%20a%20{country}.%20Can%20I%20have%20a%20discount%20to%20make%20the%20Vanilla%20JS%20Academy%20more%20affordable%20for%20me?%20Thanks!">}} and I'll send you a discount to make it fair for where you live.
 
 I'm not a student. Any other discounts?
 : Yep. I've had a lot of helping getting where I am, and I want to pay it forward. If you're a member of an under-represented group in tech, you can get special pricing. [Learn more about discounts for under-represented groups in tech.](/underrepresented-group-discount/)
