@@ -6,6 +6,13 @@
  * Open Source Credits: https://github.com/toddmotto/fluidvids, http://prismjs.com, https://github.com/filamentgroup/loadJS/, https://github.com/filamentgroup/loadCSS, https://github.com/bramstein/fontfaceobserver
  */
 
+/**
+ * Element.matches() polyfill (simple version)
+ * https://developer.mozilla.org/en-US/docs/Web/API/Element/matches#Polyfill
+ */
+if (!Element.prototype.matches) {
+	Element.prototype.matches = Element.prototype.msMatchesSelector || Element.prototype.webkitMatchesSelector;
+}
 ;(function (window, document, undefined) {
 
 	'use strict';
