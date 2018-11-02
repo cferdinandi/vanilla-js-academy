@@ -65,7 +65,7 @@ The Vanilla JS Academy is an eight-week structured training program. You'll lear
 </div> -->
 
 
-<div class="padding-top-large padding-bottom-large">{{<testimonial for="kb" photo="true">}}</div>
+<div class="padding-top-large padding-bottom-large">{{<testimonial for="benRudolph" photo="true">}}</div>
 
 
 ## What You'll Learn
@@ -247,7 +247,7 @@ Week 8: JS Apps & Routing
 
 
 <div class="padding-top-large padding-bottom-large">
-	{{<testimonial for="alexMuraro" photo="true">}}
+	{{<testimonial for="elliotPorter" photo="true">}}
 </div>
 
 
@@ -358,6 +358,6 @@ I have another question.
 {{<pricing-link>}}
 
 
-<div class="padding-top-large padding-bottom-large">{{<testimonial for="jCHiatt" photo="true">}}</div>
+<div class="padding-top-large padding-bottom-large">{{<testimonial for="kb" photo="true">}}</div>
 
 {{<not-ready-yet>}}
