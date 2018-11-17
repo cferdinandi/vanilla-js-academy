@@ -217,6 +217,9 @@ The Vanilla JS Academy is an eight-week structured training program. You'll lear
 </div>
 
 
+{{<bonuses-special>}}
+
+
 ## The Program Schedule
 
 Here's exactly what you'll learn each week.
