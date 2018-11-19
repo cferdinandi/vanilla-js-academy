@@ -69,7 +69,7 @@ var api = function () {
 	 */
 	var renderTestimonial = function (node, data) {
 		var noPhoto = node.getAttribute('data-no-photo');
-		if (noPhoto) {
+		if (noPhoto || !data.photo) {
 			node.innerHTML =
 				'<blockquote>' +
 					data.quote +

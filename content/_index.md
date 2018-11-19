@@ -190,7 +190,7 @@ The Vanilla JS Academy is an eight-week structured training program. You'll lear
 {{<pricing-link>}}
 
 <div class="padding-top-large padding-bottom-large">
-	{{<testimonial for="patriciaParker" photo="true">}}
+	{{<testimonial for="jonathanSchofield" photo="true">}}
 </div>
 
 
@@ -294,11 +294,19 @@ Kick-start your journey to JavaScript mastery. You get...
 {{%/purchase-box%}}
 
 <div class="padding-top-large padding-bottom">
-	{{<testimonial for="mojtabaSeyedi" photo="true">}}
+	{{<testimonial for="zacHeisey" photo="true">}}
+</div>
+
+<div class="padding-bottom">
+	{{<testimonial for="patriciaParker" photo="true">}}
+</div>
+
+<div class="padding-bottom">
+	{{<testimonial for="kevinBeck" photo="true">}}
 </div>
 
 <div class="padding-bottom-large">
-	{{<testimonial for="ruudVanZuidam" photo="true">}}
+	{{<testimonial for="kumarSucom" photo="true">}}
 </div>
 
 
