@@ -236,17 +236,17 @@ Week 3: Manipulating Data
 Week 4: JavaScript Plugins & Scope
 : How to write code that's more resilient and reusable, and that can scale to a variety of use cases.
 
-Week 5: Debugging
-: How to figure why your code isn't working (and how to fix it).
-
-Week 6: Browser Storage
+Week 5: Browser Storage
 : How to store data locally in the browser and use it later.
 
-Week 7: JS Apps & State Management
+Week 6: JS Apps & State Management
 : What state is and some different approaches for managing it.
 
-Week 8: JS Apps & Routing
+Week 7: JS Apps & Routing
 : How to manage different views and layouts in a JavaScript app.
+
+Week 8: Wrap Up
+: Wrap up the JavaScript app projects, explore how to apply what you've learned to your own work, and talk about what's next.
 
 
 <div class="padding-top-large padding-bottom-large">
