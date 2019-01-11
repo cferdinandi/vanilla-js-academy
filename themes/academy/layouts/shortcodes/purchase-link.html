@@ -1,13 +1,12 @@
 {{ if and (ge (now.Format "20060102") 20181122) (le (now.Format "20060102") 20190106) }}<p><strong>The next session runs from January 7 to March 1.</strong> After joining, you'll get an email with the details.</p>
 <p><a class="btn btn-large btn-block edd-buy-now-button" href="https://gomakethings.com/checkout?edd_action=add_to_cart&download_id=28868&edd_options[price_id]=3">Join now for just <span data-price="academy" data-product="price">$749</span></a></p>
 <p><em><strong>Want your team to join?</strong> Email me at <a href="mailto:&#099;&#104;&#114;&#105;&#115;&#064;&#103;&#111;&#109;&#097;&#107;&#101;&#116;&#104;&#105;&#110;&#103;&#115;&#046;&#099;&#111;&#109;?params=subject=Vanilla%20JS%20Academy%20Team%20Pricing&body=Hi%2C%20I'm%20interested%20in%20team%20pricing%20for%20the%20Vanilla%20JS%20Academy%20for%20%7BX%7D%20people.%20Thanks!">&#099;&#104;&#114;&#105;&#115;&#064;&#103;&#111;&#109;&#097;&#107;&#101;&#116;&#104;&#105;&#110;&#103;&#115;&#046;&#099;&#111;&#109;</a> to get special team pricing.</em></p>
-{{ else }}
-{{ if false }}
-<h3>The Vanilla JS Academy returns later this year.</h3>
-<p>Registration is currently closed, but you can be the first to find out when registration opens back up <em>and</em> get exclusive discounts. Enter your email&nbsp;below.</p>
 {{ end }}
+{{ if false }}
 <h3>Registration opens up on Friday.</h3>
 <p>To get notified when registration opens up <em>and</em> get exclusive discounts, enter your email&nbsp;below.</p>
+{{ end }}
+<h3>The Vanilla JS Academy returns later this year.</h3>
+<p>Registration is currently closed, but you can be the first to find out when registration opens back up <em>and</em> get exclusive discounts. Enter your email&nbsp;below.</p>
 
 {{ partial "mailchimp-form.html" }}
-{{ end }}
