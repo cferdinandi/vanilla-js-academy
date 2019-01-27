@@ -291,6 +291,14 @@ Kick-start your journey to JavaScript mastery. You get...
 
 {{<purchase-link>}}
 
+## Team Training
+
+Want your whole team to attend the Vanilla JS Academy? I offer private training programs that can be customized for your team.
+
+Email me at {{<email params="?subject=Vanilla%20JS%20Academy%20Team%20Training">}} to learn more.
+
+<a class="btn btn-large btn-block" href="mailto:&#099;&#104;&#114;&#105;&#115;&#064;&#103;&#111;&#109;&#097;&#107;&#101;&#116;&#104;&#105;&#110;&#103;&#115;&#046;&#099;&#111;&#109;?subject=Vanilla%20JS%20Academy%20Team%20Training">Apply for Team Training</a>
+
 {{%/purchase-box%}}
 
 <div class="padding-top-large padding-bottom">
