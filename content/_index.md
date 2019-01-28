@@ -312,6 +312,10 @@ I only run a limited number of these a year. Email me at {{<email params="?subje
 </div>
 
 <div class="padding-bottom">
+	{{<testimonial for="craigHaggart" photo="true">}}
+</div>
+
+<div class="padding-bottom">
 	{{<testimonial for="kevinBeck" photo="true">}}
 </div>
 
