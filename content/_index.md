@@ -108,10 +108,10 @@ The Vanilla JS Academy is an eight-week structured training program. You'll lear
 	</div>
 	<div class="grid-third margin-bottom">
 		<a href="/projects/random-ron/">
-			<span class="text-xlarge"><svg xmlns="http://www.w3.org/2000/svg" style="height:1em;width:1em;" viewBox="0 0 16 16"><title></title><path fill="#2cad4e" d="M14 7c0-3.866-2.686-7-6-7S2 3.134 2 7c0 3.478 2.174 6.363 5.023 6.907L6.5 16h3l-.523-2.093C11.826 13.363 14 10.478 14 7zM4.417 8h-1.5a6.842 6.842 0 0 1 .229-3h1.5a6.701 6.701 0 0 0-.302 2c0 .341.025.675.074 1z"/></svg></span>
-			<h3 class="h5 no-padding-top no-margin-bottom">Random Awesomeness</h3>
+			<span class="text-xlarge"><svg xmlns="http://www.w3.org/2000/svg" style="height:1em;width:1em;" viewBox="0 0 16 16"><title></title><path fill="#272727" d="M14.645 8.021a.5.5 0 0 0-.561.201c-.327.491-.734.761-1.146.761-.408 0-.793-.271-.982-.689l-.007-.015c-.229-.509-.466-1.035-.815-1.462C10.692 6.275 10.142 6 9.5 6c-.817 0-1.544.394-2 1.002A2.497 2.497 0 0 0 5.5 6c-.642 0-1.192.275-1.634.817-.348.427-.586.953-.815 1.462l-.007.015c-.189.419-.574.689-.982.689-.412 0-.819-.27-1.146-.761A.5.5 0 0 0 0 8.5c0 1.074.419 1.978 1.212 2.615C1.923 11.686 2.913 12 4 12a4.22 4.22 0 0 0 2.807-1.064c.276-.245.508-.518.693-.809.185.291.417.564.693.809A4.22 4.22 0 0 0 11 12c1.087 0 2.077-.314 2.788-.885C14.581 10.479 15 9.574 15 8.5a.5.5 0 0 0-.355-.479z"/></svg></span>
+			<h3 class="h5 no-padding-top no-margin-bottom">Random Ron</h3>
 		</a>
-		<span class="text-small">Show a random awesome thing using API&nbsp;calls.</span>
+		<span class="text-small">Show random Ron Swanson quotes using API&nbsp;calls.</span>
 	</div>
 </div>
 
@@ -155,21 +155,21 @@ The Vanilla JS Academy is an eight-week structured training program. You'll lear
 		<span class="text-small">Create a toggle tab plugin for showing collections of&nbsp;content.</span>
 	</div>
 	<div class="grid-third margin-bottom">
-		<a href="/projects/autosave/">
+		<a href="/projects/api-cache/">
 			<span class="text-xlarge"><svg xmlns="http://www.w3.org/2000/svg" style="height:1em;width:1em;"  viewBox="0 0 16 16"><title></title><path fill="#808080" d="M11 4h3.627a6.38 6.38 0 0 0-.286-.421c-.347-.473-.831-1.027-1.362-1.558S11.894 1.006 11.421.659A6.38 6.38 0 0 0 11 .373V4z"/><path fill="#808080" d="M10.5 5a.5.5 0 0 1-.5-.5V0H2.25C1.561 0 1 .561 1 1.25v13.5c0 .689.561 1.25 1.25 1.25h11.5c.689 0 1.25-.561 1.25-1.25V5h-4.5zM8 15.5L4.5 12H7V7h2v5h2.5L8 15.5z"/></svg></span>
-			<h3 class="h5 no-padding-top no-margin-bottom">Form Saver</h3>
+			<h3 class="h5 no-padding-top no-margin-bottom">API Cache</h3>
 		</a>
-		<span class="text-small">Automatically save form data as a user types.</span>
+		<span class="text-small">Cache API data for more resilient apps.</span>
 	</div>
 </div>
 
 <div class="row margin-bottom text-center">
 	<div class="grid-third margin-bottom">
-		<a href="/projects/offline-reader/">
+		<a href="/projects/autosave/">
 			<span class="text-xlarge"><svg xmlns="http://www.w3.org/2000/svg" style="height:1em;width:1em;" viewBox="0 0 16 16"><title></title><path fill="#dba909" d="M15.976 6.345a.5.5 0 0 0-.476-.346h-5.367L8.475.919a.5.5 0 0 0-.95 0l-1.658 5.08H.5a.5.5 0 0 0-.293.905l4.34 3.139-1.657 5.079a.5.5 0 0 0 .769.56l4.342-3.141 4.342 3.141a.5.5 0 0 0 .769-.56l-1.657-5.079 4.34-3.139a.5.5 0 0 0 .183-.559z"/></svg></span>
-			<h3 class="h5 no-padding-top no-margin-bottom">Offline Reader</h3>
+			<h3 class="h5 no-padding-top no-margin-bottom">Form Saver</h3>
 		</a>
-		<span class="text-small">Save articles for offline&nbsp;reading.</span>
+		<span class="text-small">Automatically save form data as a user types.</span>
 	</div>
 	<div class="grid-third margin-bottom">
 		<a href="/projects/timer/">
@@ -295,7 +295,9 @@ Kick-start your journey to JavaScript mastery. You get...
 
 Want your whole team to attend the Vanilla JS Academy? I offer private training programs that can be customized for your team.
 
-Email me at {{<email params="?subject=Vanilla%20JS%20Academy%20Team%20Training">}} to learn more.
+Your team of up to 20 people can attend the 8-week program as a private group for $8,250. They'll receive their own private Slack channel and lifetime access to the course materials.
+
+I only run a limited number of these a year. Email me at {{<email params="?subject=Vanilla%20JS%20Academy%20Team%20Training">}} to apply.
 
 <a class="btn btn-large btn-block" href="mailto:&#099;&#104;&#114;&#105;&#115;&#064;&#103;&#111;&#109;&#097;&#107;&#101;&#116;&#104;&#105;&#110;&#103;&#115;&#046;&#099;&#111;&#109;?subject=Vanilla%20JS%20Academy%20Team%20Training">Apply for Team Training</a>
 
@@ -330,7 +332,7 @@ How much of a time commitment does the Vanilla JS Academy involve?
 : This program is for people who are *serious* about learning JavaScript. The more you put into it, the more you'll get out of it. You should be willing to spend at least 4 or 5 hours a week working on your lessons and projects.
 
 When are office hours held?
-: Office hours are held every Thursday at 12 noon US Eastern. They're recorded for people who can't attend, and you can submit questions ahead of time if you can't make it.
+: Office hours are held every Thursday at 11am US Eastern. They're recorded for people who can't attend, and you can submit questions ahead of time if you can't make it.
 
 Does the Vanilla JS Academy cover new ES6 methods?
 : Yes. Where applicable, I cover new ES6 functions and browser APIs. I also include polyfills when available to push browser support as far back as possible.
@@ -338,8 +340,8 @@ Does the Vanilla JS Academy cover new ES6 methods?
 What happens after the 8-week program? Do I lose access to the lessons?
 : No. You get lifetime access to all of the lessons from the program.
 
-Do you offer team discounts?
-: If you want to sign up your team or a group of people, email me at {{<email params="subject=Vanilla%20JS%20Academy&body=I'd%20like%20to%20enroll%20{Number%20of%20People}%20in%20the%20Vanilla%20JS%20Academy.%20How%20much%20would%20that%20cost?">}}.
+Do you offer team training?
+: Yes. If you want your entire team to attend the Vanilla JS Academy, I offer [a private version of the program just for your team](/#team-training).
 
 Do you offer a student discount?
 : Absolutely! This applies to anyone in any type of schooling, including evening classes and coding bootcamps. [Learn more about student discounts.](/student-discount/)
@@ -367,9 +369,6 @@ Do I need any prior knowledge or experience to participate in the Vanilla JS Aca
 
 Are there any rules or requirements for participating in the office hours and Slack channel?
 : Yes. You must be at least 18 years old, and read and agree to follow the [Code of Conduct](https://gomakethings.com/slack-guidelines/).
-
-I can't use Stripe to pay but really want to join the Vanilla JS Academy. How else can I buy it?
-: Send me an email at {{<email params="subject=Vanilla%20JS%20Academy:%20Payment%20Options&body=I%20cannot%20pay%20with%20Stripe.%20What%20other%20options%20are%20available?%20Thanks!">}} and we'll work something out so that you're able to join.
 
 I have another question.
 : No problem! Send me an email at {{<email params="subject=Vanilla%20JS%20Academy:%20General%20Questions">}}.

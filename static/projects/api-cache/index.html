@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<title>API Cache</title>
+
+	<meta charset="utf-8">
+
+	<!-- Force latest available IE rendering engine and Chrome Frame (if installed) -->
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+	<!-- Mobile Screen Resizing -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<style type="text/css">
+	/**
+	 * Add box sizing to everything
+	 * @link http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+	 */
+	/* line 38, src/sass/components/_normalize.scss */
+	*,
+	*:before,
+	*:after {
+		box-sizing: border-box;
+	}
+
+	/**
+	 * Layout
+	 */
+	body {
+		font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+		font-size: 112.5%;
+		margin-left: auto;
+		margin-right: auto;
+		max-width: 40em;
+		width: 88%;
+	}
+
+	/**
+	 * Typography
+	 */
+	h1 {
+		margin-bottom: 0.25em;
+	}
+
+	h2 {
+		margin: 0;
+	}
+
+	p {
+		margin: 0 0 1.5em;
+	}
+
+	.article {
+		margin-bottom: 3em;
+	}
+
+	/**
+	 * Utilities
+	 */
+	.text-large {
+		font-size: 1.2em;
+	}
+
+	.text-muted {
+		color: #808080;
+	}
+
+	.text-red {
+		color: #f7272f;
+	}
+	</style>
+</head>
+<body>
+
+	<p><a href="/#work-on-fun-projects">&larr; Back to the Vanilla JS Academy</a></p>
+
+	<h1>The Scuttlebutt</h1>
+	<p class="text-large text-muted">The number one source for pirate news!</p>
+
+	<div id="app">
+		<p>Loading...</p>
+	</div>
+
+	<script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
+	<script>
+
+		//
+		// Variables
+		//
+
+		var app = document.querySelector('#app');
+		var cacheID = 'piratesCache';
+
+
+		//
+		// Methods
+		//
+
+		/**
+		 * Dynamically vary the API endpoint
+		 * @return {String} The API endpoint
+		 */
+		var getEndpoint = function () {
+			var endpoint = 'https://vanillajsacademy.com/api/';
+			var random = Math.random();
+			if (random < 0.4) return endpoint + 'pirates.json';
+			if (random < 0.8) return endpoint + 'pirates2.json';
+			return endpoint + 'fail.json';
+		};
+
+		/**
+		 * Sanitize and encode all HTML in a user-submitted string
+		 * @param  {String} str  The user-submitted string
+		 * @return {String} str  The sanitized string
+		 */
+		var sanitizeHTML = function (str) {
+			var temp = document.createElement('div');
+			temp.textContent = str;
+			return temp.innerHTML;
+		};
+
+		/**
+		 * Get cached articles from localStorage
+		 * @return {Object} The cached articles
+		 */
+		var getCachedArticles = function () {
+			var cached = localStorage.getItem(cacheID);
+			if (!cached) return;
+			return JSON.parse(cached);
+		};
+
+		/**
+		 * Check if the cached data is still valid
+		 * @param  {Object}  cache The cached data
+		 * @return {Boolean}       Returns true if it's still valid
+		 */
+		var isCacheValid = function (cache) {
+
+			// Check that there's data, and a timestamp key
+			if (!cache || !cache.data || !cache.timestamp) return false;
+
+			// Check if the cached data is less than 1 hour old
+			if (((new Date().getTime() - cache.timestamp) / (60 * 60 * 1000)) < 1) return true;
+
+			// Otherwise, return false
+			return false;
+
+		};
+
+		/**
+		 * Display a message if no articles are available
+		 */
+		var renderNoArticles = function () {
+			app.innerHTML = '<p>We are unable to get any new articles at this time. Sorry!</p>';
+		};
+
+		/**
+		 * Render an article into the DOM
+		 * @param  {Object} article The article data
+		 */
+		var renderArticle = function (article) {
+			var html =
+				'<div class="article">' +
+					'<strong class="text-red">' + sanitizeHTML(article.category) + '</strong>' +
+					'<h2>' + sanitizeHTML(article.title) + '</h2>' +
+					'<p class="text-muted">' + sanitizeHTML(article.pubdate) + '</p>' +
+					sanitizeHTML(article.article).replace(new RegExp('\n', 'g'), '<br>') +
+				'</div>';
+			return html;
+		};
+
+		/**
+		 * Render all articles into the DOM
+		 * @param  {Object} data The article data
+		 */
+		var renderArticles = function (data) {
+
+			// Make sure there are articles to render
+			if (data.articles.length < 1) {
+				renderNoArticles();
+				return;
+			}
+
+			// Loop through each article and render the markup
+			var html = '';
+			data.articles.forEach(function (article) {
+				html += renderArticle(article, app);
+			});
+
+			// Inject the markup into the DOM
+			app.innerHTML = html;
+
+		};
+
+		/**
+		 * Fallback to cached data if the API call fails
+		 */
+		var fallbackToCache = function () {
+
+			// If there's cached data, use it
+			var cache = getCachedArticles();
+			if (cache && cache.data) {
+				renderArticles(cache.data);
+				console.log('rendered from cache as a fallback');
+				return;
+			}
+
+			// Otherwise, render error message
+			renderNoArticles();
+
+		};
+
+		/**
+		 * Save API data to localStorage
+		 * @param  {Object} data The API data
+		 */
+		var saveToCache = function (data) {
+
+			// Add a timestamp
+			var cache = {
+				data: data,
+				timestamp: new Date().getTime()
+			};
+
+			// Save to localStorage
+			localStorage.setItem(cacheID, JSON.stringify(cache));
+
+		};
+
+		/**
+		 * Get new articles from the Pirates API
+		 */
+		var makeRequest = function () {
+
+			// Set up our HTTP request
+			var xhr = new XMLHttpRequest();
+
+			// Setup our listener to process completed requests
+			xhr.onreadystatechange = function () {
+
+				// Only run if the request is complete
+				if (xhr.readyState !== 4) return;
+
+				// Process our return data
+				if (xhr.status === 200) {
+					// If the request is successful...
+					// 1. Render the content, and
+					// 2. save the new data to localStorage
+					var data = JSON.parse(xhr.responseText);
+					renderArticles(data);
+					saveToCache(data);
+					console.log(data);
+				} else {
+					// If the request fails, fallback to cached data
+					fallbackToCache();
+				}
+
+			};
+
+			// Create and send a GET request
+			// The first argument is the post type (GET, POST, PUT, DELETE, etc.)
+			// The second argument is the endpoint URL
+			xhr.open('GET', getEndpoint());
+			xhr.send();
+
+		};
+
+		/**
+		 * Get articles to display
+		 */
+		var getArticles = function () {
+
+			// Check for cached data
+			var cache = getCachedArticles();
+
+			// If there's cached data and it's valid, use that
+			if (isCacheValid(cache)) {
+				renderArticles(cache.data);
+				console.log('rendered from cache');
+				return;
+			}
+
+			// Otherwise, pull fresh data from the API
+			makeRequest();
+			console.log('called the API');
+
+		};
+
+
+		//
+		// Inits & Event Listeners
+		//
+
+		getArticles();
+
+	</script>
+
+</body>
+</html>

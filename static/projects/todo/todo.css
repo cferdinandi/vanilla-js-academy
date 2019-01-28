@@ -1,0 +1,111 @@
+/**
+ * Add box sizing to everything
+ * @link http://www.paulirish.com/2012/box-sizing-border-box-ftw/
+ */
+/* line 38, src/sass/components/_normalize.scss */
+*,
+*:before,
+*:after {
+	box-sizing: border-box;
+}
+
+/**
+ * Layout
+ */
+body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+	font-size: 112.5%;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 40em;
+	width: 88%;
+}
+
+
+/**
+ * Forms
+ */
+
+label,
+[type="text"] {
+	display: block;
+	width: 100%;
+}
+
+label {
+	margin-bottom: 0.25em;
+}
+
+[type="text"] {
+	font-size: inherit;
+	margin-bottom: 1em;
+	padding: 0.25em 1em;
+}
+
+[type="checkbox"] {
+	margin-right: 0.5em;
+}
+
+/**
+ * Buttons
+ */
+
+.btn {
+	background-color: #0088cc;
+	border: 1px solid #0088cc;
+	border-radius: 1px;
+	color: #ffffff;
+	display: inline-block;
+	font-size: 0.9375em;
+	font-weight: normal;
+	line-height: 1.2;
+	margin-right: 0.3125em;
+	margin-bottom: 0.3125em;
+	padding: 0.5em 0.6875em;
+}
+
+.btn:hover,
+.btn:focus,
+.btn:active {
+	background-color: #005580;
+	border-color: #005580;
+	color: #ffffff;
+	text-decoration: none;
+}
+
+/**
+ * Todos
+ */
+
+.todos {
+	list-style: none;
+	margin-left: 0;
+	padding-left: 0;
+}
+
+.todos .completed {
+	text-decoration: line-through;
+}
+
+.todo:before,
+.todo:after {
+	display: table;
+	content: " ";
+}
+
+.todo:after {
+	clear: both;
+}
+
+.todo label {
+	width: auto;
+}
+
+.todo label,
+.todo button {
+	float: left;
+}
+
+.todo button {
+	margin-left: 0.5em;
+}
