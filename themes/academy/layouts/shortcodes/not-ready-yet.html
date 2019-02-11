@@ -5,4 +5,4 @@
 
 <p>I send out a short email each weekday with code snippets, tools, techniques, and interesting stuff from around the web. {{ if isset $ctas "mc-subscribers" }}{{ index $ctas "mc-subscribers" | safeHTML }}{{ end }}</p>
 
-{{ partial "mailchimp-form.html" }}
+{{ partial "mailchimp-form-daily.html" }}
