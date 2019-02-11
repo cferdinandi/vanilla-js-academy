@@ -4,9 +4,16 @@ baseURL: "https://vanillajsacademy.com"
 # Customer parameters
 params:
   description: "A project-based online JavaScript training program for beginners."
+  price: "$749"
+  api: "https://gomakethings.com/api/data.json"
   rssURL: ""
   rssLimit: 7
   minify: true
+
+# Caches
+caches:
+  getjson:
+    maxAge: "10m"
 
 # The language code for the site
 languageCode: "en-us"
