@@ -295,7 +295,7 @@ Kick-start your journey to JavaScript mastery. You get...
 
 Want your whole team to attend the Vanilla JS Academy? I offer private training programs that can be customized for your team.
 
-Your team of up to 20 people can attend the 8-week program as a private group for $8,250. They'll receive their own private Slack channel and lifetime access to the course materials.
+Your team of up to 20 people can attend the 8-week program as a private group for $8,250. You'll receive your own private Slack channel and lifetime access to the course materials.
 
 I only run a limited number of these a year. Email me at {{<email params="?subject=Vanilla%20JS%20Academy%20Team%20Training">}} to apply.
 
