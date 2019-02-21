@@ -34,36 +34,6 @@ The Vanilla JS Academy is an eight-week structured training program. You'll lear
 <svg xmlns="http://www.w3.org/2000/svg" style="height:1em;width:1em;" viewBox="0 0 18 16"><title></title><path fill="#0088cc" d="M17 14.081c0 .711.407 1.327 1 1.628v.249a3.71 3.71 0 0 1-3.207-1.125 5.03 5.03 0 0 1-1.293.168c-2.485 0-4.5-1.791-4.5-4s2.015-4 4.5-4 4.5 1.791 4.5 4c0 .865-.309 1.665-.834 2.32a1.81 1.81 0 0 0-.166.761zM8 0c4.351 0 7.89 2.822 7.997 6.336a6.123 6.123 0 0 0-2.497-.524c-1.493 0-2.903.523-3.971 1.472C8.422 8.268 7.812 9.588 7.812 11c0 .698.149 1.373.433 1.997a10.089 10.089 0 0 1-1.493-.076c-1.718 1.718-3.77 2.027-5.753 2.072v-.421c1.071-.525 2-1.48 2-2.572a3.01 3.01 0 0 0-.034-.448C1.156 10.36-.001 8.54-.001 6.5c0-3.59 3.582-6.5 8-6.5z"/></svg> 3. Connect & Share
 : To help support your learning, you can join weekly video office hours and collaborate with your fellow students in an exclusive private Slack workspace. Ask questions, share what you're learning, and get unstuck.
 
-<!-- <div class="row padding-top-small margin-bottom-small">
-	<div class="grid-fifth margin-bottom-small text-center">
-		<svg xmlns="http://www.w3.org/2000/svg" style="height:4em;width:4em;" viewBox="0 0 16 16"><title></title><path fill="#808080" d="M11.5 0h-7C3.675 0 3 .675 3 1.5v13c0 .825.675 1.5 1.5 1.5h7c.825 0 1.5-.675 1.5-1.5v-13c0-.825-.675-1.5-1.5-1.5zM6 .75h4v.5H6v-.5zM8 15a1 1 0 1 1 0-2 1 1 0 0 1 0 2zm4-3H4V2h8v10z"/></svg>
-	</div>
-	<div class="grid-four-fifths">
-		<h3 class="h5 no-padding-top margin-bottom-small">1. Watch and Read</h3>
-		<p>Each week, you'll get a set of a lessons (a mix of videos and articles) focused on a core JavaScript topic.</p>
-	</div>
-</div>
-
-<div class="row padding-top-small margin-bottom-small">
-	<div class="grid-fifth margin-bottom-small text-center">
-		<svg xmlns="http://www.w3.org/2000/svg" style="height:4em;width:4em;" viewBox="0 0 16 16"><title></title><path fill="#f7272f" d="M11 1L6 6H3l-3 4s3.178-.885 5.032-.47L0 16l6.592-5.127C7.511 12.977 6 16 6 16l4-3v-3l5-5 1-5-5 1z"/></svg>
-	</div>
-	<div class="grid-four-fifths">
-		<h3 class="h5 no-padding-top margin-bottom-small">2. Build Awesome Things</h3>
-		<p>Along with your lessons, you'll get two fun projects to work on that reinforce everything you learned in the lessons. I don't give you the answers. You'll use what you learned that week to solve interesting problems and build cool stuff.</p>
-	</div>
-</div>
-
-<div class="row padding-top-small margin-bottom-small">
-	<div class="grid-fifth margin-bottom-small text-center">
-		<svg xmlns="http://www.w3.org/2000/svg" style="height:4em;width:4em;" viewBox="0 0 18 16"><title></title><path fill="#0088cc" d="M17 14.081c0 .711.407 1.327 1 1.628v.249a3.71 3.71 0 0 1-3.207-1.125 5.03 5.03 0 0 1-1.293.168c-2.485 0-4.5-1.791-4.5-4s2.015-4 4.5-4 4.5 1.791 4.5 4c0 .865-.309 1.665-.834 2.32a1.81 1.81 0 0 0-.166.761zM8 0c4.351 0 7.89 2.822 7.997 6.336a6.123 6.123 0 0 0-2.497-.524c-1.493 0-2.903.523-3.971 1.472C8.422 8.268 7.812 9.588 7.812 11c0 .698.149 1.373.433 1.997a10.089 10.089 0 0 1-1.493-.076c-1.718 1.718-3.77 2.027-5.753 2.072v-.421c1.071-.525 2-1.48 2-2.572a3.01 3.01 0 0 0-.034-.448C1.156 10.36-.001 8.54-.001 6.5c0-3.59 3.582-6.5 8-6.5z"/></svg>
-	</div>
-	<div class="grid-four-fifths">
-		<h3 class="h5 no-padding-top margin-bottom-small">3. Connect &amp; Share</h3>
-		<p>To help support your learning, you can join weekly video office hours and collaborate with your fellow students in an exclusive private Slack workspace. Ask questions, share what you're learning, and get unstuck.</p>
-	</div>
-</div> -->
-
 
 <div class="padding-top-large padding-bottom-large">{{<testimonial for="benRudolph" photo="true">}}</div>
 
@@ -268,15 +238,7 @@ Week 8: Wrap Up
 Don’t put off learning vanilla JavaScript! If you’re not 100% satisfied with the Vanilla JS Academy, let me know within 30 days of when the program starts and I’ll give you a full refund.
 
 
-## About the Instructor
-
-<div class="clearfix margin-bottom">
-{{%md%}}
-<img src="/img/chris-ferdinandi-high-res.jpg" alt="Chris Ferdinandi" width="175" height="175" class="img-circle alignleft margin-bottom">Hi, I’m Chris Ferdinandi. I write vanilla JavaScript plugins that are used by organizations like Apple, Harvard Business School, and CNN.
-
-I want to help you master vanilla JavaScript, without all of the painful false starts and roadblocks I encountered when I was learning.
-{{%/md%}}
-</div>
+{{<about-me>}}
 
 {{%purchase-box%}}
 
@@ -383,3 +345,5 @@ I have another question.
 <div class="padding-top-large padding-bottom-large">{{<testimonial for="kb" photo="true">}}</div>
 
 {{<not-ready-yet>}}
+
+*If you have any questions about anything, feel free to send me an email at {{<email>}}.*
