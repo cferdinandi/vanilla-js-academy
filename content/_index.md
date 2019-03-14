@@ -206,13 +206,16 @@ Week 3: Manipulating Data
 Week 4: JavaScript Plugins & Scope
 : How to write code that's more resilient and reusable, and that can scale to a variety of use cases.
 
-Week 5: Browser Storage
+Week 5: Debugging
+: How to figure why your code isn't working (and how to fix it).
+
+Week 6: Browser Storage
 : How to store data locally in the browser and use it later.
 
-Week 6: JS Apps & State Management
+Week 7: JS Apps & State Management
 : What state is and some different approaches for managing it.
 
-Week 7: JS Apps & Routing
+Week 8: JS Apps & Routing
 : How to manage different views and layouts in a JavaScript app.
 
 Week 8: Wrap Up
@@ -298,13 +301,13 @@ How much of a time commitment does the Vanilla JS Academy involve?
 : This program is for people who are *serious* about learning JavaScript. The more you put into it, the more you'll get out of it. You should be willing to spend at least 4 or 5 hours a week working on your lessons and projects.
 
 When are office hours held?
-: Office hours are held every Thursday at 11am US Eastern. They're recorded for people who can't attend, and you can submit questions ahead of time if you can't make it.
+: Office hours are held every Thursday at noon US Eastern. They're recorded for people who can't attend, and you can submit questions ahead of time if you can't make it.
 
 Does the Vanilla JS Academy cover new ES6 methods?
 : Yes. Where applicable, I cover new ES6 functions and browser APIs. I also include polyfills when available to push browser support as far back as possible.
 
 What happens after the 8-week program? Do I lose access to the lessons?
-: No. You get lifetime access to all of the lessons from the program.
+: You get lifetime access to all of the lessons from the program.
 
 Do you offer team training?
 : Yes. If you want your entire team to attend the Vanilla JS Academy, I offer [a private version of the program just for your team](/#team-training).
@@ -318,7 +321,7 @@ I have a poor exchange rate in USD. There's no way I can afford this.
 I'm not a student. Any other discounts?
 : Yep. I've had a lot of helping getting where I am, and I want to pay it forward. If you're a member of an under-represented group in tech, you can get special pricing. [Learn more about discounts for under-represented groups in tech.](/underrepresented-group-discount/)
 
-Do you have a return policy?
+Do you have a refund policy?
 : Absolutely! If you’re not 100% satisfied with the Vanilla JS Academy, email me at {{<email params="subject=Vanilla%20JS%20Academy:%20Refund%20Request">}} within 30 days after the program starts and I’ll give you a full refund.
 
 After I sign up, how do I access the training program materials?

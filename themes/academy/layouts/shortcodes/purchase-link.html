@@ -1,4 +1,4 @@
-{{- if and (ge (now.Format "20060102") 20181122) (le (now.Format "20060102") 20190106) -}}
+{{- if and (ge (now.Format "20060102") 20190401) (le (now.Format "20060102") 20190509) -}}
 
 {{- $data := getJSON $.Site.Params.api -}}
 {{- $apiPrices := index $data "prices" -}}
@@ -7,20 +7,20 @@
 	{{- $apiPrice := index $apiPrices "academy" -}}
 {{- end -}}
 
-<p><strong>The next session runs from January 7 to March 1.</strong> After joining, you'll get an email with the details.</p>
+<p><strong>The next session runs from May 6 to June 28.</strong> After joining, you'll get an email with the details.</p>
 
-<p><a class="btn btn-large btn-block edd-buy-now-button" href="https://gomakethings.com/checkout?edd_action=add_to_cart&download_id=28868&edd_options[price_id]=3">Join now for just {{ if ne $apiPrice "" }}{{ index $apiPrice "price" | safeHTML }}{{ else }}{{ $.Site.Params.price | safeHTML }}{{ end }}</a></p>
+<p><a class="btn btn-large btn-block edd-buy-now-button" href="https://gomakethings.com/checkout?edd_action=add_to_cart&download_id=28868&edd_options[price_id]=4">Join now for just {{ if ne $apiPrice "" }}{{ index $apiPrice "price" | safeHTML }}{{ else }}{{ $.Site.Params.price | safeHTML }}{{ end }}</a></p>
 
 {{- else -}}
 
-<h3>The Vanilla JS Academy returns later this year.</h3>
-<p>Registration is currently closed, but you can be the first to find out when registration opens back up <em>and</em> get exclusive discounts. Enter your email&nbsp;below.</p>
+<h3>The Vanilla JS Academy returns on May 6.</h3>
+<p>Registration opens on April 1. Get notified the moment it does <em>and</em> get exclusive discounts. Enter your email&nbsp;below.</p>
 
 {{ partial "mailchimp-form.html" }}
 
 {{- end -}}
 
 {{- if false -}}
-<h3>Registration opens up on Friday.</h3>
-<p>To get notified when registration opens up <em>and</em> get exclusive discounts, enter your email&nbsp;below.</p>
+<h3>The Vanilla JS Academy returns later this year.</h3>
+<p>Registration is currently closed, but you can be the first to find out when registration opens back up <em>and</em> get exclusive discounts. Enter your email&nbsp;below.</p>
 {{- end -}}
