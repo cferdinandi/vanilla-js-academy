@@ -218,9 +218,6 @@ Week 7: JS Apps & State Management
 Week 8: JS Apps & Routing
 : How to manage different views and layouts in a JavaScript app.
 
-Week 8: Wrap Up
-: Wrap up the JavaScript app projects, explore how to apply what you've learned to your own work, and talk about what's next.
-
 
 <div class="padding-top-large padding-bottom-large">
 	{{<testimonial for="elliotPorter" photo="true">}}
