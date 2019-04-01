@@ -2,14 +2,14 @@
 
 {{- $data := getJSON $.Site.Params.api -}}
 {{- $apiPrices := index $data "prices" -}}
-{{- $apiPrice := "" -}}
+{{- .Scratch.Set "apiPrice" "" -}}
 {{- if isset $apiPrices "academy" -}}
-	{{- $apiPrice := index $apiPrices "academy" -}}
+	{{- .Scratch.Set "apiPrice" $apiPrices.academy.price -}}
 {{- end -}}
 
 <p><strong>The next session runs from May 6 to June 28.</strong> After joining, you'll get an email with the details.</p>
 
-<p><a class="btn btn-large btn-block edd-buy-now-button" href="https://gomakethings.com/checkout?edd_action=add_to_cart&download_id=28868&edd_options[price_id]=4">Join now for just {{ if ne $apiPrice "" }}{{ index $apiPrice "price" | safeHTML }}{{ else }}{{ $.Site.Params.price | safeHTML }}{{ end }}</a></p>
+<p><a class="btn btn-large btn-block edd-buy-now-button" href="https://gomakethings.com/checkout?edd_action=add_to_cart&download_id=28868&edd_options[price_id]=4">Join now for just {{ if ne (.Scratch.Get "apiPrice") "" }}{{ .Scratch.Get "apiPrice" | safeHTML }}{{ else }}{{ $.Site.Params.price | safeHTML }}{{ end }}</a></p>
 
 {{- else -}}
 
