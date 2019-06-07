@@ -6,6 +6,7 @@ params:
   description: "A project-based online JavaScript training program for beginners."
   price: "$799"
   api: "https://gomakethings.com/api/data.json"
+  font: "https://fonts.googleapis.com/css?family=PT+Serif:400,400i,700,700i&display=swap"
   rssURL: ""
   rssLimit: 7
   minify: true
