@@ -7,13 +7,31 @@
 	{{- .Scratch.Set "apiPrice" $apiPrices.academy.price -}}
 {{- end -}}
 
+{{- $ctas := index $data "ctas" -}}
+{{- .Scratch.Set "cta" "" -}}
+{{- if isset $ctas "academyBuy" -}}
+	{{ .Scratch.Set "cta" ($ctas.academyBuy | safeHTML) }}
+{{- end -}}
+
+<p>Kick-start your journey to JavaScript mastery. You get...</p>
+
+<ul>
+	<li>8 weeks of focused lessons made for beginners</li>
+	<li>12 amazing JavaScript projects</li>
+	<li>Weekly video office hours</li>
+	<li>Exclusive Slack access</li>
+</ul>
+
+{{- .Scratch.Get "cta" -}}
+
 <p><strong>The next session runs from May 6 to June 28.</strong> After joining, you'll get an email with the details.</p>
 
 <p><a class="btn btn-large btn-block edd-buy-now-button" href="https://gomakethings.com/checkout?edd_action=add_to_cart&download_id=28868&edd_options[price_id]=4">Join now for just {{ if ne (.Scratch.Get "apiPrice") "" }}{{ .Scratch.Get "apiPrice" | safeHTML }}{{ else }}{{ $.Site.Params.price | safeHTML }}{{ end }}</a></p>
 
 {{- else -}}
 
-<h3>A brand new Vanilla JS Academy returns later this year.</h3>
+<p><strong>A brand new Vanilla JS Academy returns later this year.</strong></p>
+
 <p>The Vanilla JS Academy is getting some major improvements. Registration is currently closed, but you can be the first to find out when registration opens back up <em>and</em> get exclusive discounts. Enter your email&nbsp;below.</p>
 
 {{ partial "mailchimp-form.html" }}

@@ -242,26 +242,11 @@ Don’t put off learning vanilla JavaScript! If you’re not 100% satisfied with
 
 {{%purchase-box%}}
 
-Kick-start your journey to JavaScript mastery. You get...
-
-- 8 weeks of focused lessons made for beginners
-- 12 amazing JavaScript projects
-- Weekly video office hours
-- Exclusive Slack access
-
 {{<cta for="academy-buy">}}
 
 {{<purchase-link>}}
 
-## Team Training
-
-Want your whole team to attend the Vanilla JS Academy? I offer private training programs that can be customized for your team.
-
-Your team of up to 20 people can attend the 8-week program as a private group for $8,250. You'll receive your own private Slack channel and lifetime access to the course materials.
-
-I only run a limited number of these a year. Email me at {{<email params="?subject=Vanilla%20JS%20Academy%20Team%20Training">}} to apply.
-
-<a class="btn btn-large btn-block" href="mailto:&#099;&#104;&#114;&#105;&#115;&#064;&#103;&#111;&#109;&#097;&#107;&#101;&#116;&#104;&#105;&#110;&#103;&#115;&#046;&#099;&#111;&#109;?subject=Vanilla%20JS%20Academy%20Team%20Training">Apply for Team Training</a>
+_**Want your whole team to attend the Vanilla JS Academy?** I offer private training programs that can be customized for your team. I only run a limited number of these a year. Email me at {{<email params="?subject=Vanilla%20JS%20Academy%20Team%20Training&body=I%20am%20interested%20in%20a%20private%20Vanilla%20JS%20Academy%20session%20for%20my%20team%20of%20{NUMBER%20OF%20PEOPLE%20ON%20YOUR%20TEAM}.">}} to apply._
 
 {{%/purchase-box%}}
 
