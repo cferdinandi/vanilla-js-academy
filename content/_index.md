@@ -235,7 +235,7 @@ Week 8: JS Apps & Routing
 
 ## Your 100% Money-Back Guarantee &#128176;
 
-Don’t put off learning vanilla JavaScript! If you’re not 100% satisfied with the Vanilla JS Academy, let me know within 30 days of when the program starts and I’ll give you a full refund.
+Don’t put off learning vanilla JavaScript! If you’re not 100% satisfied with the Vanilla JS Academy, let me know and I’ll give you a full refund.
 
 
 {{<about-me>}}
@@ -308,7 +308,7 @@ I'm not a student. Any other discounts?
 : Yep. I've had a lot of helping getting where I am, and I want to pay it forward. If you're a member of an under-represented group in tech, you can get special pricing. [Learn more about discounts for under-represented groups in tech.](/underrepresented-group-discount/)
 
 Do you have a refund policy?
-: Absolutely! If you’re not 100% satisfied with the Vanilla JS Academy, email me at {{<email params="subject=Vanilla%20JS%20Academy:%20Refund%20Request">}} within 30 days after the program starts and I’ll give you a full refund.
+: Absolutely! If you’re not 100% satisfied with the Vanilla JS Academy, email me at {{<email params="subject=Vanilla%20JS%20Academy:%20Refund%20Request">}} and I’ll give you a full refund.
 
 After I sign up, how do I access the training program materials?
 : Visit [https://courses.gomakethings.com](https://courses.gomakethings.com) and create an account with the email address you used to make your purchase. The program has fixed start and end dates, so not all material will be available at once. You'll get a few emails from me when the program is about to start.
