@@ -21,19 +21,25 @@ description: ""
 
 ## How It Works
 
-<iframe src="https://player.vimeo.com/video/287121374?color=0088cc&title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+<iframe src="https://player.vimeo.com/video/358304328?color=0088cc&title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
 
-The Vanilla JS Academy is an eight-week structured training program. You'll learn JavaScript as part of a small group of other students.
+<ul class="list-inline list-inline-responsive text-center">
+	<li><strong>70+ Lessons</strong></li>
+	<li><strong>34 Projects</strong></li>
+	<li><strong>24/7 Peer Chat</strong></li>
+	<li><strong>10 Week Program</strong></li>
+</ul>
 
-<svg xmlns="http://www.w3.org/2000/svg" style="height:1em;width:1em;" viewBox="0 0 16 16"><title></title><path fill="#808080" d="M11.5 0h-7C3.675 0 3 .675 3 1.5v13c0 .825.675 1.5 1.5 1.5h7c.825 0 1.5-.675 1.5-1.5v-13c0-.825-.675-1.5-1.5-1.5zM6 .75h4v.5H6v-.5zM8 15a1 1 0 1 1 0-2 1 1 0 0 1 0 2zm4-3H4V2h8v10z"/></svg> 1. Watch and Read
-: Each week, you'll get a set of a lessons (a mix of videos and articles) focused on a core JavaScript topic that you can watch and read whenever you want.
+The Vanilla JS Academy is a project-based training program designed to help you learn to solve problems and think in JavaScript. 
 
-<svg xmlns="http://www.w3.org/2000/svg" style="height:1em;width:1em;" viewBox="0 0 16 16"><title></title><path fill="#f7272f" d="M11 1L6 6H3l-3 4s3.178-.885 5.032-.47L0 16l6.592-5.127C7.511 12.977 6 16 6 16l4-3v-3l5-5 1-5-5 1z"/></svg> 2. Build Awesome Things
-: Along with your lessons, you'll get two fun projects to work on that reinforce everything you learned in the lessons. I don't give you the answers. You'll use what you learned that week to solve interesting problems and build cool stuff.
+<div class="list-spaced">
+{{%md%}}
+1. **Every other day, you get a project to work on**, 1-3 short lessons that provide some background, and a template to help you get started. 
+2. **On the in-between days, I share my approach to the project** and some of the common challenges and “gotchas” that students often run into.
+{{%/md%}}
+</div>
 
-<svg xmlns="http://www.w3.org/2000/svg" style="height:1em;width:1em;" viewBox="0 0 18 16"><title></title><path fill="#0088cc" d="M17 14.081c0 .711.407 1.327 1 1.628v.249a3.71 3.71 0 0 1-3.207-1.125 5.03 5.03 0 0 1-1.293.168c-2.485 0-4.5-1.791-4.5-4s2.015-4 4.5-4 4.5 1.791 4.5 4c0 .865-.309 1.665-.834 2.32a1.81 1.81 0 0 0-.166.761zM8 0c4.351 0 7.89 2.822 7.997 6.336a6.123 6.123 0 0 0-2.497-.524c-1.493 0-2.903.523-3.971 1.472C8.422 8.268 7.812 9.588 7.812 11c0 .698.149 1.373.433 1.997a10.089 10.089 0 0 1-1.493-.076c-1.718 1.718-3.77 2.027-5.753 2.072v-.421c1.071-.525 2-1.48 2-2.572a3.01 3.01 0 0 0-.034-.448C1.156 10.36-.001 8.54-.001 6.5c0-3.59 3.582-6.5 8-6.5z"/></svg> 3. Connect & Share
-: To help support your learning, you can join weekly video office hours and collaborate with your fellow students in an exclusive private Slack workspace. Ask questions, share what you're learning, and get unstuck.
-
+If you get stuck, there’s a **24/7 private Slack channel** exclusively for students, and **video office hours** every few weeks.
 
 <div class="padding-top-large padding-bottom-large">{{<testimonial for="benRudolph" photo="true">}}</div>
 
@@ -42,19 +48,19 @@ The Vanilla JS Academy is an eight-week structured training program. You'll lear
 
 <div class="list-columns margin-bottom-large">
 {{%md%}}
-- DOM manipulation, injection, and traversal
-- How to transform and edit strings, arrays, and objects
+- DOM manipulation, injection, and&nbsp;traversal
+- How to transform and edit strings, numbers, arrays, and&nbsp;objects
 - ES6 essentials
-- How to structure and organize code
+- How to structure and organize&nbsp;code
 - How to save data locally
 - Ajax and HTTP
-- How to work with APIs
-- How to write JavaScript plugins
-- Framework-free web apps
-- How to easily write cross-browser compatible code
-- How to debug broken code
-- Working with polyfills
-- JavaScript performance tricks
+- How to work with&nbsp;APIs
+- How to write JavaScript&nbsp;plugins
+- How to build framework-free web apps and&nbsp;games
+- How to easily write code that works in all&nbsp;browsers
+- How to debug broken&nbsp;code
+- JavaScript performance&nbsp;tricks
+- Web accessibility fundamentals
 {{%/md%}}
 </div>
 
@@ -171,8 +177,8 @@ The Vanilla JS Academy is an eight-week structured training program. You'll lear
 		<svg xmlns="http://www.w3.org/2000/svg" style="height:4em;width:4em;" viewBox="0 0 16 16"><title></title><path fill="#0088cc" d="M14.5 0h-13C.675 0 0 .675 0 1.5v9c0 .825.675 1.5 1.5 1.5H4v4l4.8-4h5.7c.825 0 1.5-.675 1.5-1.5v-9c0-.825-.675-1.5-1.5-1.5zM8 2.005a1.995 1.995 0 1 1 0 3.99 1.995 1.995 0 0 1 0-3.99zM11 10H5V9a2 2 0 0 1 2-2h2a2 2 0 0 1 2 2v1z"/></svg>
 	</div>
 	<div class="grid-four-fifths">
-		<h3 class="h5 no-padding-top margin-bottom-small">Weekly Office Hours</h3>
-		<p>Join weekly video office hours to ask questions, share works in progress, and get help with any big roadblocks.</p>
+		<h3 class="h5 no-padding-top margin-bottom-small">Video Office Hours</h3>
+		<p>Join video office hours every few weeks to ask questions, share works in progress, and get help with any big&nbsp;roadblocks.</p>
 	</div>
 </div>
 
@@ -182,7 +188,7 @@ The Vanilla JS Academy is an eight-week structured training program. You'll lear
 	</div>
 	<div class="grid-four-fifths">
 		<h3 class="h5 no-padding-top margin-bottom-small">Private Slack Access</h3>
-		<p>Get access to a private Slack channel where you can chat with other students, get feedback on code, and ask questions in between office hours.</p>
+		<p>Get 24/7 access to a private Slack channel where you can chat with other students, get feedback on code, and ask questions in between office&nbsp;hours.</p>
 	</div>
 </div>
 
@@ -192,31 +198,21 @@ The Vanilla JS Academy is an eight-week structured training program. You'll lear
 
 ## The Program Schedule
 
-Here's exactly what you'll learn each week.
+Here's exactly what you'll learn in the Vanilla JS Academy.
 
-Week 1: DOM Basics
-: How to listen for user interactions, get elements in the DOM, manipulate elements and content, and make updates to a web page with JavaScript.
+<div class="list-spaced">
+{{%md%}}
+1. **DOM Basics.** How to listen for user interactions, get elements in the DOM, manipulate elements and content, and make updates to a web page with JavaScript.
+2. **APIs & JavaScript.** How to request data from APIs, turn it into HTML, and inject it into the DOM.
+3. **Manipulating Data.** How to manipulate strings, arrays, and objects. You’ll dig into some of the newer ES6 methods, too.
+4. **JavaScript Plugins.** How to write code that's more resilient and reusable, and that can scale to a variety of use cases.
+5. **Browser Storage.** How to store data locally in the browser and use it later.
+6. **State-Based UI.** What state is and some different approaches for managing it.
+7. **Apps & Routing.** How to manage different views and layouts in your apps.
+8. **Web Accessibility.** What you need to do to make sure everyone can enjoy the sites and apps you build.
+{{%/md%}}
+</div>
 
-Week 2: APIs & JavaScript
-: How to request data from APIs, turn it into HTML, and inject it into the DOM.
-
-Week 3: Manipulating Data
-: How to manipulate strings, arrays, and objects. You’ll dig into some of the newer ES6 methods, too.
-
-Week 4: JavaScript Plugins & Scope
-: How to write code that's more resilient and reusable, and that can scale to a variety of use cases.
-
-Week 5: Debugging
-: How to figure why your code isn't working (and how to fix it).
-
-Week 6: Browser Storage
-: How to store data locally in the browser and use it later.
-
-Week 7: JS Apps & State Management
-: What state is and some different approaches for managing it.
-
-Week 8: JS Apps & Routing
-: How to manage different views and layouts in a JavaScript app.
 
 
 <div class="padding-top-large padding-bottom-large">
@@ -287,12 +283,12 @@ How much of a time commitment does the Vanilla JS Academy involve?
 : This program is for people who are *serious* about learning JavaScript. The more you put into it, the more you'll get out of it. You should be willing to spend at least 4 or 5 hours a week working on your lessons and projects.
 
 When are office hours held?
-: Office hours are held every Thursday at noon US Eastern. They're recorded for people who can't attend, and you can submit questions ahead of time if you can't make it.
+: TBD. They're recorded for people who can't attend, and you can submit questions ahead of time if you can't make it.
 
 Does the Vanilla JS Academy cover new ES6 methods?
 : Yes. Where applicable, I cover new ES6 functions and browser APIs. I also include polyfills when available to push browser support as far back as possible.
 
-What happens after the 8-week program? Do I lose access to the lessons?
+What happens after the program? Do I lose access to the lessons?
 : You get lifetime access to all of the lessons from the program.
 
 Do you offer team training?
