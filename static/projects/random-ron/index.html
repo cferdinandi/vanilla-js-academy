@@ -23,7 +23,7 @@
 
 	<h1>Random Ron</h1>
 
-	<img alt="A photo of Ron Swanson" src="http://giphygifs.s3.amazonaws.com/media/iofbYa67AbBg4/giphy.gif">
+	<img alt="A photo of Ron Swanson" src="https://giphygifs.s3.amazonaws.com/media/iofbYa67AbBg4/giphy.gif">
 
 	<blockquote id="quote" aria-live="polite">
 		<em>Getting a fresh quote...</em>
@@ -44,7 +44,7 @@
 		// Get a fresh quote and render it into the DOM
 		var getQuote = function () {
 			// Get a Ron Swanson quote
-			fetch('http://ron-swanson-quotes.herokuapp.com/v2/quotes').then(function (response) {
+			fetch('https://ron-swanson-quotes.herokuapp.com/v2/quotes').then(function (response) {
 				return response.json();
 			}).then(function (data) {
 
