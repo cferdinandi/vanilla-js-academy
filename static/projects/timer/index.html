@@ -1,43 +1,23 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html>
 <head>
-	<title>Pomodoro Timer</title>
-
-	<meta charset="utf-8">
-
-	<!-- Force latest available IE rendering engine and Chrome Frame (if installed) -->
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-
-	<!-- Mobile Screen Resizing -->
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Timer</title>
 
 	<style type="text/css">
-		/**
-		 * Add box sizing to everything
-		 * @link http://www.paulirish.com/2012/box-sizing-border-box-ftw/
-		 */
-		/* line 38, src/sass/components/_normalize.scss */
-		*,
-		*:before,
-		*:after {
-			box-sizing: border-box;
-		}
-
-		/**
-		 * Layout
-		 */
 		body {
-			font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-			font-size: 112.5%;
-			margin-left: auto;
-			margin-right: auto;
+			margin: 1em auto;
 			max-width: 40em;
+			text-align: center;
 			width: 88%;
 		}
 
-		#timer {
+		#app {
 			font-size: 2em;
-			font-weight: bold;
+		}
+
+		p {
+			margin: 0 0.5em;
+			padding: 0;
 		}
 	</style>
 </head>
@@ -45,17 +25,30 @@
 
 	<p><a href="/#work-on-fun-projects">&larr; Back to the Vanilla JS Academy</a></p>
 
-	<h1>Pomodoro Timer</h1>
+	<h1>Timer</h1>
 
 	<div id="app"></div>
 
-	<script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
 	<script>
 		//
 		// Variables
 		//
 
-		var timer, countdown;
+		// Get the #app element from the DOM
+		var app = document.querySelector('#app');
+
+		// Store duration to a variable
+		var duration = 120;
+
+		// The state/data object
+		var data = {
+			timer: duration,
+			done: false,
+			paused: true
+		};
+
+		// A placeholder for the countdown interval
+		var countdown;
 
 
 		//
@@ -63,186 +56,142 @@
 		//
 
 		/**
-		 * A vanilla JS helper for creating state-based components
-		 * @param {String|Node} elem    The element to make into a component
-		 * @param {Object}      options The component options
+		 * Get the template markup
+		 * @return {String} The HTML string
 		 */
-		var Component = (function () {
+		var template = function () {
 
-			'use strict';
-
-			/**
-			 * Create the Component object
-			 * @param {String|Node} elem    The element to make into a component
-			 * @param {Object}      options The component options
-			 */
-			var Component = function (elem, options) {
-				if (!elem) throw 'ComponentJS: You did not provide an element to make into a component.';
-				this.elem = elem;
-				this.data = options ? options.data : null;
-				this.template = options ? options.template : null;
-			};
-
-			/**
-			 * Sanitize and encode all HTML in a user-submitted string
-			 * @param  {String} str  The user-submitted string
-			 * @return {String}      The sanitized string
-			 */
-			Component.sanitize = function (str) {
-				var temp = document.createElement('div');
-				temp.textContent = str;
-				return temp.innerHTML;
-			};
-
-			/**
-			 * Render a template into the DOM
-			 * @return {[type]}                   The element
-			 */
-			Component.prototype.render = function () {
-
-				// Make sure there's a template
-				if (!this.template) throw 'ComponentJS: No template was provided.';
-
-				// If elem is an element, use it.
-				// If it's a selector, get it.
-				var elem = typeof this.elem === 'string' ? document.querySelector(this.elem) : this.elem;
-				if (!elem) return;
-
-				// Get the template
-				var template = (typeof this.template === 'function' ? this.template(this.data) : this.template);
-				if (typeof template !== 'string') return;
-
-				// Render the template into the element
-				if (elem.innerHTML === template) return;
-				elem.innerHTML = template;
-
-				// Dispatch a render event
-				if (typeof window.CustomEvent === 'function') {
-					var event = new CustomEvent('render', {
-						bubbles: true
-					});
-					elem.dispatchEvent(event);
-				}
-
-				// Return the elem for use elsewhere
-				return elem;
-
-			};
-
-			return Component;
-
-		})();
-
-		/**
-		 * Play an alarm sound
-		 */
-		var alarm = function () {
-			var alarm = new Audio('https://s3-us-west-2.amazonaws.com/s.cdpn.io/123941/Yodel_Sound_Effect.mp3');
-			alarm.play();
-		};
-
-		/**
-		 * Add a leading 0 if none exists
-		 * @param  {Integer} num The number to pad
-		 * @return {String}      The padded number
-		 */
-		var padLeft = function (num) {
-			if (num.toString().length < 2) {
-				return '0' + num;
-			}
-			return num;
-		};
-
-		/**
-		 * Setup the timer on page load
-		 */
-		var setup = function () {
-
-			// Create app container and render it into the DOM
-			new Component('#app', {
-				template: '<div id="timer"></div><p><button data-action="start">Start</button><button data-action="stop">Pause</button><button data-action="clear">Reset</button></p>'
-			}).render();
-
-			// Create the timer
-			timer = new Component('#timer', {
-				data: {
-					time: 1500
-				},
-				template: function (props) {
-					return parseInt(props.time / 60, 10).toString() + ':' + padLeft(props.time % 60);
-				}
-			});
-
-			// Render the timer into the DOM
-			timer.render();
-
-		};
-
-		/**
-		 * Reset the timer
-		 */
-		var reset = function () {
-			timer.data.time = 1500;
-			timer.render();
-		};
-
-		/**
-		 * Start the timer
-		 */
-		var start = function () {
-
-			// If the timer is at 0, reset it
-			if (timer.data.time === 0) {
-				reset();
+			// If the timer is done, show a different UI
+			if (data.done) {
+				return '⏰ <p><button data-restart-timer>Restart Timer</button></p>';
 			}
 
+			// Get the minutes and seconds
+			var minutes = parseInt(data.timer / 60, 10);
+			var seconds = data.timer % 60;
+
+			// Create the markup string
+			var html =
+				'<p>' + minutes.toString() + ':' + seconds.toString().padStart(2, '0') + '</p>' +
+				'<p><button data-pause-timer>' + (data.paused ? 'Start' : 'Pause') + '</button> <button data-restart-timer>Restart</button></p>';
+
+			return html;
+		};
+
+		/**
+		 * Render the template into the DOM
+		 */
+		var render = function () {
+
+			// If there are no updates to the UI, do nothing
+			if (app.innerHTML === template()) return;
+
+			// Update the UI
+			app.innerHTML = template();
+
+		};
+
+		/**
+		 * Reactively update the data object
+		 * @param {Object} obj The updated data
+		 */
+		var setData = function (obj) {
+
+			// Update the data object
+			for (var key in obj) {
+				if (obj.hasOwnProperty(key)) {
+					data[key] = obj[key];
+				}
+			}
+
+			// Render a new UI
+			render();
+
+		};
+
+		/**
+		 * Stop the countdown
+		 */
+		var stopCountdown = function () {
+			window.clearInterval(countdown);
+		};
+
+		/**
+		 * Update the timer every second
+		 */
+		var startCountdown = function () {
 			countdown = window.setInterval(function () {
 
-				// Update the timer
-				timer.data.time = timer.data.time - 1;
-				timer.render();
+				// Get the new timer value
+				var time = data.timer - 1;
 
-				// If the timer reaches zero, stop and sound an alarm
-				if (timer.data.time === 0) {
-					stop();
-					alarm();
+				// If the timer hits 0, set as done
+				var done = time === 0 ? true : false;
+
+				// Update data and render new UI
+				setData({
+					timer: time,
+					done: done,
+					paused: done
+				});
+
+				// If the timer is done, stop it from running
+				if (done) {
+					stopCountdown();
 				}
 
 			}, 1000);
 		};
 
 		/**
-		 * Stop the timer
+		 * Start the timer
 		 */
-		var stop = function () {
-			window.clearInterval(countdown);
+		var startTimer = function () {
+
+			// Initial render
+			setData({
+				timer: duration,
+				done: false,
+				paused: false
+			});
+
+			// Update the timer every second
+			startCountdown();
+
 		};
 
 		/**
 		 * Handle click events
+		 * @return {Event} The event object
 		 */
 		var clickHandler = function (event) {
 
-			// Check if a timer action button was clicked
-			var action = event.target.getAttribute('data-action');
-			if (!action) return;
-
-			// If it's the start button, start the timer
-			if (action === 'start') {
-				start();
-				return;
+			// If a restart button was clicked
+			// Stop any existing countdown
+			// Start the timer
+			if (event.target.hasAttribute('data-restart-timer')) {
+				stopCountdown();
+				startTimer();
 			}
 
-			// If it's the stop button, stop the timer
-			if (action === 'stop') {
-				stop();
-				return;
-			}
+			// If the pause/play button was clicked
+			if (event.target.hasAttribute('data-pause-timer')) {
 
-			// If it's the clear button, reset
-			if (action === 'clear') {
-				stop();
-				reset();
+				// If the timer is already paused, start it
+				// Update the data.paused state
+				// Restart the countdown
+				if (data.paused) {
+					setData({paused: false});
+					startCountdown();
+					return;
+				}
+
+				// Otherwise, pause it
+				// Update the data.paused state
+				// Stop the countdown
+				setData({paused: true});
+				stopCountdown();
+
 			}
 
 		};
@@ -252,13 +201,11 @@
 		// Inits & Event Listeners
 		//
 
-		// Setup the app
-		setup();
+		// Start the timer on page load
+		startTimer();
 
-		// Listen for clicks
+		// Listen for clicks on the timer buttons
 		document.addEventListener('click', clickHandler, false);
-
 	</script>
-
 </body>
 </html>

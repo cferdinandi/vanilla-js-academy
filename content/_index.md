@@ -76,11 +76,11 @@ If you get stuck, there’s a **24/7 private Slack channel** exclusively for stu
 		<span class="text-small">Toggle password visibility with a&nbsp;checkbox.</span>
 	</div>
 	<div class="grid-third margin-bottom">
-		<a href="/projects/temperature-converter/">
-			<span class="text-xlarge"><svg xmlns="http://www.w3.org/2000/svg" style="height:1em;width:1em;" viewBox="0 0 16 16"><title></title><path fill="#f7272f" d="M12.5 2h-3a.5.5 0 0 1 0-1h3a.5.5 0 0 1 0 1zM11.5 4h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 0 1zM12.5 6h-3a.5.5 0 0 1 0-1h3a.5.5 0 0 1 0 1zM11.5 8h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 0 1zM12.5 10h-3a.5.5 0 0 1 0-1h3a.5.5 0 0 1 0 1zM7.143 9.9A.497.497 0 0 1 7 9.55V1.999c0-1.103-.897-2-2-2s-2 .897-2 2V9.55a.497.497 0 0 1-.143.35A2.982 2.982 0 0 0 2 12c0 1.654 1.346 3 3 3s3-1.346 3-3c0-.79-.304-1.535-.857-2.1zM5 1c.551 0 1 .449 1 1v3H4V2c0-.551.449-1 1-1z"/></svg></span>
-			<h3 class="h5 no-padding-top no-margin-bottom">Temperature Converter</h3>
+		<a href="/projects/word-count/">
+			<span class="text-xlarge"><svg xmlns="http://www.w3.org/2000/svg" style="height:1em;width:1em;" viewBox="0 0 16 16"><title></title><path fill="#0088cc" d="M5.032 13l.9-3h4.137l.9 3h1.775l-3-10H6.256l-3 10h1.776zm2.4-8h1.137l.9 3H6.532l.9-3z"/></svg></span>
+			<h3 class="h5 no-padding-top no-margin-bottom">Word Count</h3>
 		</a>
-		<span class="text-small">Convert temperatures from Fahrenheit to&nbsp;Celsius.</span>
+		<span class="text-small">Count the number of words and characters in a block of&nbsp;text.</span>
 	</div>
 	<div class="grid-third margin-bottom">
 		<a href="/projects/random-ron/">
@@ -100,19 +100,20 @@ If you get stuck, there’s a **24/7 private Slack channel** exclusively for stu
 		<span class="text-small">Use the <em>New York Times</em> API to get and display today's top&nbsp;stories.</span>
 	</div>
 	<div class="grid-third margin-bottom">
-		<a href="/projects/word-count/">
-			<span class="text-xlarge"><svg xmlns="http://www.w3.org/2000/svg" style="height:1em;width:1em;" viewBox="0 0 16 16"><title></title><path fill="#0088cc" d="M5.032 13l.9-3h4.137l.9 3h1.775l-3-10H6.256l-3 10h1.776zm2.4-8h1.137l.9 3H6.532l.9-3z"/></svg></span>
-			<h3 class="h5 no-padding-top no-margin-bottom">Word Count</h3>
-		</a>
-		<span class="text-small">Count the number of words and characters in a block of&nbsp;text.</span>
-	</div>
-	<div class="grid-third margin-bottom">
 		<a href="/projects/monsters/">
 			<span class="text-xlarge"><svg style="height:1em;width:1em;" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><title></title><g transform="translate(0 .5)" fill="none" fill-rule="evenodd"><path d="M8.027 12c4.411 0 8-.651 8-3.943S12.399 0 7.987 0C3.578 0 .028 4.765.028 8.057c0 3.292 3.589 3.943 8 3.943z" fill="#800080"/><path d="M11.5 11.5l1 3M8 11.5v3M4 11.5l-1 3" stroke="#800080" stroke-linecap="round"/><ellipse fill="#fff" cx="5.5" cy="5.5" rx="1.5" ry="1"/><ellipse fill="#fff" cx="10.5" cy="5.5" rx="1.5" ry="1"/></g></svg></span>
 			<h3 class="h5 no-padding-top no-margin-bottom">Avoid the Monster</h3>
 		</a>
 		<span class="text-small">Create a fun game where you find your monster friends and avoid the&nbsp;sock.</span>
 	</div>
+	<div class="grid-third margin-bottom">
+		<a href="/projects/table-of-contents/">
+			<span class="text-xlarge"><svg xmlns="http://www.w3.org/2000/svg"style="height:1em;width:1em;" viewBox="0 0 16 16" ><title></title><path fill="#808080" d="M6 13h10v2H6zm0-6h10v2H6zm0-6h10v2H6zM3 0v4H2V1H1V0zM2 8.219V9h2v1H1V7.719l2-.938V6H1V5h3v2.281zM4 11v5H1v-1h2v-1H1v-1h2v-1H1v-1z"/></svg></span>
+			<h3 class="h5 no-padding-top no-margin-bottom">Table of Contents</h3>
+		</a>
+		<span class="text-small">Dynamically generate a table of contents from page&nbsp;headings.</span>
+	</div>
+
 </div>
 
 <div class="row text-center">
@@ -124,28 +125,28 @@ If you get stuck, there’s a **24/7 private Slack channel** exclusively for stu
 		<span class="text-small">Find a visitor's location and display their local&nbsp;weather.</span>
 	</div>
 	<div class="grid-third margin-bottom">
-		<a href="/projects/toggle-tabs/">
-			<span class="text-xlarge"><svg xmlns="http://www.w3.org/2000/svg" style="height:1em;width:1em;" viewBox="0 0 16 16"><title></title><path fill="#800080" d="M8 9L0 5l8-4 8 4zm6.398-1.801L16 8l-8 4-8-4 1.602-.801L8 10.398zm0 3L16 11l-8 4-8-4 1.602-.801L8 13.398z"/></svg></span>
-			<h3 class="h5 no-padding-top no-margin-bottom">Toggle Tabs</h3>
+		<a href="/projects/dom-library/">
+			<span class="text-xlarge"><svg xmlns="http://www.w3.org/2000/svg" style="height:1em;width:1em;" viewBox="0 0 16 16"><title></title><path fill="#f7272f" d="M15.414.586a2 2 0 0 0-2.828 0L9.897 3.275 8.001 1.379 5.88 3.5l1.663 1.663L.166 12.54a.56.56 0 0 0-.161.46H.001v2.5a.5.5 0 0 0 .5.5h2.563a.561.561 0 0 0 .398-.165l7.377-7.377 1.663 1.663L14.623 8l-1.896-1.896 2.689-2.689a2 2 0 0 0 0-2.828zM2.705 15H1v-1.705l7.337-7.337 1.704 1.704-7.337 7.337z"/></svg></span>
+			<h3 class="h5 no-padding-top no-margin-bottom">DOM Library</h3>
 		</a>
-		<span class="text-small">Create a toggle tab plugin for showing collections of&nbsp;content.</span>
+		<span class="text-small">Create your own tiny DOM manipulation library.</span>
 	</div>
-	<div class="grid-third margin-bottom">
-		<a href="/projects/api-cache/">
-			<span class="text-xlarge"><svg xmlns="http://www.w3.org/2000/svg" style="height:1em;width:1em;"  viewBox="0 0 16 16"><title></title><path fill="#808080" d="M11 4h3.627a6.38 6.38 0 0 0-.286-.421c-.347-.473-.831-1.027-1.362-1.558S11.894 1.006 11.421.659A6.38 6.38 0 0 0 11 .373V4z"/><path fill="#808080" d="M10.5 5a.5.5 0 0 1-.5-.5V0H2.25C1.561 0 1 .561 1 1.25v13.5c0 .689.561 1.25 1.25 1.25h11.5c.689 0 1.25-.561 1.25-1.25V5h-4.5zM8 15.5L4.5 12H7V7h2v5h2.5L8 15.5z"/></svg></span>
-			<h3 class="h5 no-padding-top no-margin-bottom">API Cache</h3>
-		</a>
-		<span class="text-small">Cache API data for more resilient apps.</span>
-	</div>
-</div>
-
-<div class="row margin-bottom text-center">
 	<div class="grid-third margin-bottom">
 		<a href="/projects/autosave/">
 			<span class="text-xlarge"><svg xmlns="http://www.w3.org/2000/svg" style="height:1em;width:1em;" viewBox="0 0 16 16"><title></title><path fill="#dba909" d="M15.976 6.345a.5.5 0 0 0-.476-.346h-5.367L8.475.919a.5.5 0 0 0-.95 0l-1.658 5.08H.5a.5.5 0 0 0-.293.905l4.34 3.139-1.657 5.079a.5.5 0 0 0 .769.56l4.342-3.141 4.342 3.141a.5.5 0 0 0 .769-.56l-1.657-5.079 4.34-3.139a.5.5 0 0 0 .183-.559z"/></svg></span>
 			<h3 class="h5 no-padding-top no-margin-bottom">Form Saver</h3>
 		</a>
 		<span class="text-small">Automatically save form data as a user types.</span>
+	</div>
+</div>
+
+<div class="row margin-bottom text-center">
+	<div class="grid-third margin-bottom">
+		<a href="/projects/api-cache/">
+			<span class="text-xlarge"><svg xmlns="http://www.w3.org/2000/svg" style="height:1em;width:1em;"  viewBox="0 0 16 16"><title></title><path fill="#808080" d="M11 4h3.627a6.38 6.38 0 0 0-.286-.421c-.347-.473-.831-1.027-1.362-1.558S11.894 1.006 11.421.659A6.38 6.38 0 0 0 11 .373V4z"/><path fill="#808080" d="M10.5 5a.5.5 0 0 1-.5-.5V0H2.25C1.561 0 1 .561 1 1.25v13.5c0 .689.561 1.25 1.25 1.25h11.5c.689 0 1.25-.561 1.25-1.25V5h-4.5zM8 15.5L4.5 12H7V7h2v5h2.5L8 15.5z"/></svg></span>
+			<h3 class="h5 no-padding-top no-margin-bottom">API Cache</h3>
+		</a>
+		<span class="text-small">Cache API data for more resilient apps.</span>
 	</div>
 	<div class="grid-third margin-bottom">
 		<a href="/projects/timer/">
@@ -200,18 +201,50 @@ If you get stuck, there’s a **24/7 private Slack channel** exclusively for stu
 
 Here's exactly what you'll learn in the Vanilla JS Academy.
 
-<div class="list-spaced">
-{{%md%}}
-1. **DOM Basics.** How to listen for user interactions, get elements in the DOM, manipulate elements and content, and make updates to a web page with JavaScript.
-2. **APIs & JavaScript.** How to request data from APIs, turn it into HTML, and inject it into the DOM.
-3. **Manipulating Data.** How to manipulate strings, arrays, and objects. You’ll dig into some of the newer ES6 methods, too.
-4. **JavaScript Plugins.** How to write code that's more resilient and reusable, and that can scale to a variety of use cases.
-5. **Browser Storage.** How to store data locally in the browser and use it later.
-6. **State-Based UI.** What state is and some different approaches for managing it.
-7. **Apps & Routing.** How to manage different views and layouts in your apps.
-8. **Web Accessibility.** What you need to do to make sure everyone can enjoy the sites and apps you build.
-{{%/md%}}
-</div>
+<h3 class="no-padding-top h5">1. DOM Essentials</h3>
+
+- Getting elements in the DOM
+- Listening for events and user interactions
+- Looping over elements
+- Getting and setting text and HTML
+- Working with custom HTML attributes
+
+<h3 class="no-padding-top h5">2. Ajax, HTTP, and APIs</h3>
+
+- Working with `fetch()`
+- Parsing and manipulating API data
+- Promises and chaining API calls
+- Cross-site scripting attacks and sanitizing third-party data
+
+<h3 class="no-padding-top h5">3. Arrays, Objects, Strings, and Numbers</h3>
+
+- Looping over and manipulating arrays and objects
+- Shuffling arrays
+- Adding and removing items from arrays and objects
+- Converting strings to numbers and numbers to strings
+- Doing math with JavaScript
+
+<h3 class="no-padding-top h5">4. Writing your own plugins and libraries</h3>
+
+- Adding customizable options to your scripts
+- Exposing public methods
+- Allowing multiple versions of a plugin to run at once
+- Writing flexible, scalable code
+
+<h3 class="no-padding-top h5">5. Browser Storage</h3>
+
+- Storing data locally in the browser
+- How to convert objects to strings and back again
+- How to expire stored data
+
+<h3 class="no-padding-top h5">6. JavaScript Apps</h3>
+
+- State-based UI
+- Data reactivity
+- DOM diffing
+- Routing techniques
+
+Across all of the sections, you'll also learn about web performance, debugging, and&nbsp;accessibility.
 
 
 
@@ -283,7 +316,7 @@ How much of a time commitment does the Vanilla JS Academy involve?
 : This program is for people who are *serious* about learning JavaScript. The more you put into it, the more you'll get out of it. You should be willing to spend at least 4 or 5 hours a week working on your lessons and projects.
 
 When are office hours held?
-: TBD. They're recorded for people who can't attend, and you can submit questions ahead of time if you can't make it.
+: Office hours are held at 12pm (noon) US Eastern to accommodate as many people as possible. Days of the week vary, but they're always on a weekday. They're recorded for people who can't attend, and you can submit questions ahead of time if you can't make&nbsp;it.
 
 Does the Vanilla JS Academy cover new ES6 methods?
 : Yes. Where applicable, I cover new ES6 functions and browser APIs. I also include polyfills when available to push browser support as far back as possible.

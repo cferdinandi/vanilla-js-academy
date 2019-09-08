@@ -1,164 +1,76 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html>
 <head>
 	<title>Weather App</title>
 
-	<meta charset="utf-8">
-
-	<!-- Force latest available IE rendering engine and Chrome Frame (if installed) -->
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-
-	<!-- Mobile Screen Resizing -->
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 	<style type="text/css">
-		/**
-		 * Add box sizing to everything
-		 * @link http://www.paulirish.com/2012/box-sizing-border-box-ftw/
-		 */
-		*,
-		*:before,
-		*:after {
-			box-sizing: border-box;
-		}
-
-		/**
-		 * Layout
-		 */
 		body {
-			font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-			font-size: 112.5%;
-			margin-left: auto;
-			margin-right: auto;
-			max-width: 40em;
+			margin: 1em auto;
+			max-width: 30em;
+			text-align: center;
 			width: 88%;
 		}
 
-
-		/**
-		 * Utilities
-		 */
-
-		.text-center {
-			text-align: center;
+		p {
+			font-size: 2em;
+			margin: 0 0 0.5em;
+			padding: 0;
 		}
 
-		.text-large {
-			font-size: 1.5em;
+		form {
+			padding-top: 2em;
 		}
 
-		@media (min-width: 30em) {
-			.text-large {
-				font-size: 2em;
-			}
+		label {
+			display: block;
+			width: 100%;
 		}
 	</style>
 </head>
 <body>
 
-	<p><a href="/#work-on-fun-projects">&larr; Back to the Vanilla JS Academy</a></p>
+	<p style="font-size: 1em"><a href="/#work-on-fun-projects">&larr; Back to the Vanilla JS Academy</a></p>
 
 	<h1>Weather App</h1>
 
 	<div id="app">Checking the weather near you...</div>
 
-	<script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
+	<form id="weather-by-city">
+		<label for="city">Or search by a city and state instead</label>
+		<input type="text" id="city">
+		<button>Get the Weather</button>
+	</form>
+
 	<script>
-		// The app
-		var weather = (function () {
+		var getTheWeather = (function () {
 
 			'use strict';
+
 
 			//
 			// Variables
 			//
 
-			var publicAPIs = {};
+			// Default settings
 			var defaults = {
-				message: 'It\'s {{temp}}&deg; and {{conditions}} in {{city}}, {{state}}.',
-				error: 'Sorry, we couldn\'t find the weather for you right now. Please try again later.',
-				celsius: false,
+				apiKey: null,
+				selector: '#app',
+				convertTemp: true,
+				description: 'It is currently {{temp}} degrees and {{conditions}} in {{city}}, {{state}}.',
+				noWeather: 'Unable to get weather data at this time. Sorry!',
 				showIcon: true
 			};
-			var settings;
+
+			// An object to hold the public methods
+			var methods = {};
+
+			// Placeholder variables for the app element and settings object
+			var app, settings;
 
 
 			//
 			// Methods
 			//
-
-			/**
-			 * Merge two or more objects together.
-			 * @param   {Boolean}  deep     If true, do a deep (or recursive) merge [optional]
-			 * @param   {Object}   objects  The objects to merge together
-			 * @returns {Object}            Merged values of defaults and options
-			 */
-			var extend = function () {
-
-				// Variables
-				var extended = {};
-
-				// Merge the object into the extended object
-				var merge = function (obj) {
-					for (var prop in obj) {
-						if (obj.hasOwnProperty(prop)) {
-							extended[prop] = obj[prop];
-						}
-					}
-				};
-
-				// Loop through each object and conduct a merge
-				for (var i = 0; i < arguments.length; i++) {
-					merge(arguments[i]);
-				}
-
-				return extended;
-
-			};
-
-			/**
-			 * Make an XHR request
-			 * @param  {String}   url     The URL to make the request to
-			 * @param  {Function} success Callback to run if successful
-			 * @param  {Function} error   Callback to run on error
-			 */
-			var getXHR = function (url, success, error) {
-
-				// Set up our HTTP request
-				var xhr = new XMLHttpRequest();
-
-				// Setup our listener to process compeleted requests
-				xhr.onreadystatechange = function () {
-
-					// Only run if the request is complete
-					if (xhr.readyState !== 4) return;
-
-					// Process our return data
-					if (xhr.status === 200) {
-
-						// Run the success callback
-						if (success && typeof success === 'function') {
-							success(xhr);
-						}
-
-					} else {
-
-						// Run the error callback
-						if (error && typeof error === 'function') {
-							error(xhr);
-						}
-
-					}
-
-				};
-
-				// Create and send a GET request
-				// The first argument is the post type (GET, POST, PUT, DELETE, etc.)
-				// The second argument is the endpoint URL
-				xhr.open('GET', url);
-				xhr.send();
-
-			};
 
 			/**
 			 * Sanitize and encode all HTML in a user-submitted string
@@ -172,132 +84,164 @@
 			};
 
 			/**
-			 * Get the temperature in Celsius or Fahrenheit
-			 * @param  {String|Number} temp The temperature
-			 * @return {Number}             The temperature
+			 * Convert fahrenheit to celcius
+			 * @param  {String} temp The temperature in celcius
+			 * @return {Number}      The temperature in fahrenheit
 			 */
-			var getTemp = function (temp) {
+			var fToC = function (temp) {
 
-				// If Celsius is set in the settings
-				if (settings.celsius) return sanitizeHTML(temp);
-
-				// Otherwise, convert
-				return parseInt((sanitizeHTML(temp) * 9/5) + 32, 10);
-
-			};
-
-			/**
-			 * Replace variables in the settings.message string with actual weather details
-			 * @param  {Object} weather The weather data
-			 * @return {String}         The weather details
-			 */
-			var getWeatherDetails = function (weather) {
-				return settings.message
-						.replace('{{temp}}', getTemp(weather.temp))
-						.replace('{{conditions}}', sanitizeHTML(weather.weather.description).toLowerCase())
-						.replace('{{city}}', sanitizeHTML(weather.city_name))
-						.replace('{{state}}', sanitizeHTML(weather.state_code));
-			};
-
-			/**
-			 * Create the HTML for the weather display
-			 * @param  {Object} weather The weather data
-			 * @return {String}         The markup as a string
-			 */
-			var createHTML = function (data) {
-
-				// Setup a string to add markup to
-				var dom = '';
-
-				// If an icon should be added, add one
-				if (settings.showIcon) {
-					dom +=
-						'<div class="text-center">' +
-							'<img height="60" width="60" src="https://www.weatherbit.io/static/img/icons/' + data.weather.icon + '.png">' +
-						'</div>';
+				// If temperature should be converted, convert it
+				if (settings.convertTemp) {
+					return (parseFloat(temp) * 9/5) + 32;
 				}
 
-				// Add the weather details
-				dom +=
-					'<div>' +
-						'<p><span class="text-large">' +
-							getWeatherDetails(data) +
-						'</span></p>' +
-					'</div>';
-
-				return dom;
+				// Otherwise, return it as-is
+				return temp;
 
 			};
 
 			/**
-			 * Render the weather into the DOM
-			 * @param  {Object} data The API data
+			 * Get the icon for the current weather conditions
+			 * @param  {Object} weather The weather object
+			 * @return {String}         A markup string for the icon
 			 */
-			var renderWeather = function (data) {
+			var getIcon = function (weather) {
 
-				// Get the app container
-				var app = document.querySelector('#app');
-				if (!app) return;
+				// If the icon is deactivated, return an empty string
+				if (!settings.showIcon) return '';
 
-				// Inject weather data into DOM
-				app.innerHTML = createHTML(data.data[0]);
+				// Otherwise, return the icon
+				var html =
+					'<p>' +
+						'<img src="https://www.weatherbit.io/static/img/icons/' + weather.weather.icon + '.png">' +
+					'</p>';
+				return html;
 
 			};
 
 			/**
-			 * Render an error message if the API call fails
+			 * Get the description for the current weather conditions
+			 * @param  {Object} weather The weather object
+			 * @return {String}         A markup string for the weather description
 			 */
-			var renderError = function () {
-				var app = document.querySelector('#app');
-				if (!app) return;
-				app.innerHTML = settings.error;
+			var getDescription = function (weather) {
+				return settings.description
+					.replace('{{temp}}', fToC(sanitizeHTML(weather.temp)))
+					.replace('{{conditions}}', sanitizeHTML(weather.weather.description).toLowerCase())
+					.replace('{{city}}', sanitizeHTML(weather.city_name))
+					.replace('{{state}}', sanitizeHTML(weather.state_code));
 			};
 
 			/**
-			 * Initialize the weather app
+			 * Render the weather data into the DOM
+			 * @param  {Object} weather The weather data object
 			 */
-			publicAPIs.init = function (options) {
+			var renderWeather = function (weather) {
+				app.innerHTML =
+					getIcon(weather) +
+					'<p>' + getDescription(weather) + '</p>';
+			};
 
-				// Merge options into defaults
-				settings = extend(defaults, options || {});
+			/**
+			 * Display a message when no weather data can be found
+			 */
+			var renderNoWeather = function () {
+				app.innerHTML = settings.noWeather;
+			};
 
-				// Get the user's location
-				getXHR('https://ipapi.co/json', function (xhr) {
+			/**
+			 * Fetch location and weather data from APIs
+			 */
+			var fetchWeatherData = function () {
 
-					// Get the weather for the user's location
-					var ip = JSON.parse(xhr.responseText);
-					getXHR('https://api.weatherbit.io/v2.0/current?key=9dc2cfba9102410ca49f4bc3262a9413&lat=' + ip.latitude + '&lon=' + ip.longitude
-		, function (xhr) {
-						// Render the weather for the user
-						renderWeather(JSON.parse(xhr.responseText));
-					}, function () {
-						// If weather isn't found
-						renderError();
-					});
-
-				}, function () {
-					// If location isn't found
-					renderError();
+				// Get the user's location by IP address
+				// Then, pass that into the weather API and get the current weather
+				fetch('https://ipapi.co/json').then(function (response) {
+					// Get the JSON object from the response
+					return response.json();
+				}).then(function (data) {
+					// Pass data into another API request
+					// Then, return the new Promise into the stream
+					return fetch('https://api.weatherbit.io/v2.0/current?key=' + settings.apiKey + '&lat=' + data.latitude + '&lon=' + data.longitude);
+				}).then(function (response) {
+					// Get the JSON object from the weather API
+					return response.json();
+				}).then(function (data) {
+					// Pass the first weather item into a helper function to render the UI
+					renderWeather(data.data[0]);
+				}).catch(function () {
+					renderNoWeather();
 				});
 
 			};
 
+			/**
+			 * Get weather data for a specific city/state
+			 * @param  {String} city The city and state
+			 */
+			methods.weatherByCity = function (city) {
+				fetch('https://api.weatherbit.io/v2.0/current?key=' + settings.apiKey + '&city=' + encodeURIComponent(city)).then(function (response) {
+					return response.json();
+				}).then(function (data) {
+					renderWeather(data.data[0]);
+				}).catch(function () {
+					renderNoWeather();
+				});
+			};
+
+			/**
+			 * Initialize the plugin
+			 * @param  {Object} options User options
+			 */
+			methods.init = function (options) {
+
+				// Merge user options into default settings
+				settings = Object.assign(defaults, options);
+
+				// Don't run if no API key was provided
+				if (!settings.apiKey) {
+					console.warn('Please provide an API key.');
+					return;
+				}
+
+				// Get the #app element
+				app = document.querySelector(settings.selector);
+
+				// Fetch weather data
+				fetchWeatherData();
+
+			};
+
 
 			//
-			// Return the Public APIs
+			// Return public methods
 			//
 
-			return publicAPIs;
+			return methods;
+
 
 		})();
 
-		// Get the weather
-		weather.init({
-			message: 'The temperature is {{temp}} in {{city}}, {{state}} right now. Enjoy!',
-			// celsius: true,
-			// showIcon: false
+		// Initialize the plugin
+		getTheWeather.init({
+			apiKey: '9dc2cfba9102410ca49f4bc3262a9413'
 		});
-	</script>
 
+		var form = document.querySelector('#weather-by-city');
+		var city = form.querySelector('#city');
+
+		form.addEventListener('submit', function (event) {
+
+			// If the field is empty, ignore the form submission
+			if (city.value.length < 1) return;
+
+			// Prevent default form submission
+			event.preventDefault();
+
+			// Get the weather by city/state
+			getTheWeather.weatherByCity(city.value);
+
+		}, false);
+	</script>
 </body>
 </html>

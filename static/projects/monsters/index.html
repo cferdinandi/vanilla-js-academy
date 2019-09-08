@@ -1,121 +1,50 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html>
 <head>
 	<title>Monsters!</title>
 
-	<meta charset="utf-8">
-
-	<!-- Force latest available IE rendering engine and Chrome Frame (if installed) -->
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-
-	<!-- Mobile Screen Resizing -->
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 	<style type="text/css">
-		/**
-		 * Add box sizing to everything
-		 * @link http://www.paulirish.com/2012/box-sizing-border-box-ftw/
-		 */
-		/* line 38, src/sass/components/_normalize.scss */
-		*,
-		*:before,
-		*:after {
-			box-sizing: border-box;
-		}
-
-		/**
-		 * Layout
-		 */
 		body {
-			font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-			font-size: 112.5%;
-			margin-left: auto;
-			margin-right: auto;
+			margin: 1em auto;
 			max-width: 40em;
 			width: 88%;
 		}
 
+		/**
+		 * A simple grid layout
+		 */
 		.row {
-			margin-left: -1.4%;
-			margin-right: -1.4%;
-		}
-
-		.grid {
-			float: left;
-			height: 8em;
-			padding-left: 1.4%;
-			padding-right: 1.4%;
-			width: 100%;
-		}
-
-		@media (min-width: 30em) {
-			.grid {
-				width: 33.33333333%;
-			}
-		}
-
-		.row:before,
-		.row:after {
-			display: table;
-			content: " ";
-		}
-
-		.row:after {
-			clear: both;
-		}
-
-		/**
-		 * Buttons
-		 */
-		.btn-unstyled {
-			background-color: transparent;
-			border: 0;
-		}
-
-		.btn {
-			background-color: #0088cc;
-			border: 1px solid #0088cc;
-			border-radius: 1px;
-			color: #ffffff;
-			display: inline-block;
-			font-size: 0.9375em;
-			font-weight: normal;
-			line-height: 1.2;
-			margin-right: 0.3125em;
-			margin-bottom: 0.3125em;
-			padding: 0.5em 0.6875em;
-		}
-
-		.btn:hover,
-		.btn:focus,
-		.btn:active {
-			background-color: #005580;
-			border-color: #005580;
-			color: #ffffff;
-			text-decoration: none;
-		}
-
-		/**
-		 * Utilities
-		 */
-		.padding-top {
-			padding-top: 2em;
-		}
-
-		.text-center {
+			display: grid;
+			grid-template-columns: auto auto auto;
 			text-align: center;
 		}
 
-		.text-small {
-			font-size: 0.8em;
+		.grid {
+			min-height: 6em;
+			padding: 1em;
 		}
 
-		.text-muted {
-			color: #808080;
+		/**
+		 * Make sure images scale
+		 */
+		img {
+			height: auto;
+			max-width: 100%;
 		}
 
+		/**
+		 * Scale image to the full width of the page
+		 */
 		.img-full {
-			min-width: 80%;
+			width: 100%;
+		}
+
+		/**
+		 * Style buttons to not look like buttons
+		 */
+		[data-monster-id] {
+			background-color: transparent;
+			border: 0;
 		}
 	</style>
 </head>
@@ -125,39 +54,39 @@
 
 	<h1>Monsters!</h1>
 
-	<p>Click on a door to find your monster friends. Avoid the sock!</p>
+	<div id="app"></div>
 
-	<div class="padding-top text-center" id="app">Loading...</div>
-
-	<footer class="padding-top">
-		<p class="text-small text-muted">Icons by <a href="https://thenounproject.com/term/door/311732/">Jamie Dickinson</a>, <a href="https://thenounproject.com/term/monster/184225/">Nicky Knicky</a>, <a href="https://thenounproject.com/term/monster/1510400/">Alvaro Cabrera</a>, <a href="https://thenounproject.com/term/monster/28460/">Eliricon</a>, <a href="https://thenounproject.com/term/monster/82823/">April Yang</a>, <a href="https://thenounproject.com/term/monster/1062009/">tk66</a>, <a href="https://thenounproject.com/term/monster/24990/">Alex WaZa</a>, <a href="https://thenounproject.com/term/monster/37212/">Husein Aziz</a>, and <a href="https://thenounproject.com/term/socks/38451/">Yazmin Alanis</a>.</p>
+	<footer>
+		<hr>
+		<p class="text-small text-muted">Icons by <a href="https://thenounproject.com/term/door/311732/">Jamie Dickinson</a>, <a href="https://thenounproject.com/term/monster/184225/">Nicky Knicky</a>, <a href="https://thenounproject.com/term/monster/1510400/">Alvaro Cabrera</a>, <a href="https://thenounproject.com/term/monster/28460/">Eliricon</a>, <a href="https://thenounproject.com/term/monster/82823/">April Yang</a>, <a href="https://thenounproject.com/term/monster/1062009/">tk66</a>, <a href="https://thenounproject.com/term/monster/24990/">Alex WaZa</a>, <a href="https://thenounproject.com/term/monster/37212/">Husein Aziz</a>, <a href="https://thenounproject.com/term/monster/2236082">iconcheese</a>, and <a href="https://thenounproject.com/term/socks/38451/">Yazmin Alanis</a>.</p>
 	</footer>
 
-	<script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
 	<script>
-
 		//
 		// Variables
 		//
 
-		var app = document.querySelector('#app'); // The app
-		var total;
-
 		// The monsters and socks
 		var monsters = [
-			'sock!',
-			'monster1.svg',
-			'monster2.svg',
-			'monster3.svg',
-			'monster4.svg',
-			'monster5.svg',
-			'monster6.svg',
-			'monster7.svg',
-			'monster8.svg',
-			'monster9.svg',
-			'monster10.svg',
-			'monster11.svg'
+			'monster1',
+			'monster2',
+			'monster3',
+			'monster4',
+			'monster5',
+			'monster6',
+			'monster7',
+			'monster8',
+			'monster9',
+			'monster10',
+			'monster11',
+			'sock'
 		];
+
+		// Get the #app element
+		var app = document.querySelector('#app');
+
+		// The number of monsters who have been found
+		var found;
 
 
 		//
@@ -165,14 +94,15 @@
 		//
 
 		/**
-		 * Randomly sorts an array
+		 * Randomly shuffle an array
 		 * https://stackoverflow.com/a/2450976/1293256
 		 * @param  {Array} array The array to shuffle
 		 * @return {String}      The first item in the shuffled array
 		 */
 		var shuffle = function (array) {
 
-			var currentIndex = array.length, temporaryValue, randomIndex;
+			var currentIndex = array.length;
+			var temporaryValue, randomIndex;
 
 			// While there remain elements to shuffle...
 			while (0 !== currentIndex) {
@@ -191,128 +121,118 @@
 		};
 
 		/**
-		 * Create the grid of doors with monsters behind them
-		 * @param  {Array} monsters The monster data
-		 * @return {String}         The markup
+		 * Render the grid of monsters onto the game board
 		 */
-		var getMarkup = function (monsters) {
-			var markup = '';
-			monsters.forEach(function (monster, index) {
-				markup +=
-					'<div class="grid" data-monster="' + monster + '">' +
-						'<button class="btn-unstyled"><img alt="Click Me" src="door.svg"></button>' +
-					'</div>';
-			});
-			return markup;
+		var renderMonsters = function () {
+
+			// Reset the number of monsters who have been found
+			found = 0;
+
+			// Shuffle the monsters array
+			shuffle(monsters);
+
+			// Create the HTML and inject it into the DOM
+			// A button element is focusable and conveys to screen readers that it can be clicked
+			// The data-monster-id stores the index of the monster in our array
+			app.innerHTML =
+				'<p>Click a door to reveal a monster. Try not to find the sock.</p>' +
+				'<div class="row">' +
+					monsters.map(function (monster, index) {
+						var html =
+							'<div class="grid">' +
+								'<button data-monster-id="' + index + '">' +
+									'<img alt="Click the door to see what\'s behind it" src="door.svg">' +
+								'</button>' +
+							'</div>';
+						return html;
+					}).join('') +
+				'</div>';
+
 		};
 
 		/**
-		 * Update the total number of doors opened so far
+		 * Render a new UI when the player loses
 		 */
-		var updateTotal = function () {
-			total = total - 1;
-			if (total < 2) {
-				renderWin();
-			}
+		var renderLost = function () {
+			app.innerHTML =
+				'<img class="img-full" alt="" src="https://media.giphy.com/media/13zUNhE9WZspMc/giphy.gif">' +
+				'<h2>Oops, you found a sock!</h2>' +
+				'<p>' +
+					'<button class="btn" data-monster-play-again>Play Again</button>' +
+				'</p>';
 		};
 
 		/**
-		 * Show a success message if the player finds all of the monsters
+		 * Render a new UI when the player wins
 		 */
-		var renderWin = function () {
+		var renderWon = function () {
 			app.innerHTML =
 				'<img class="img-full" alt="" src="https://media.giphy.com/media/1242bJFCbb3FxC/giphy.gif">' +
 				'<h2>You won!</h2>' +
-				'<p>You found all of your friends. Congrats!</p>' +
-				'<p><button class="btn" data-monster-play-again>Play Again</button></p>';
-		};
-
-		/**
-		 * Show a failure message if the player finds a sock
-		 */
-		renderLoss = function () {
-			app.innerHTML =
-				'<img class="img-full" alt="" src="https://media.giphy.com/media/13zUNhE9WZspMc/giphy.gif">' +
-				'<h2>You found a sock!</h2>' +
-				'<p><button class="btn" data-monster-play-again>Play Again</button></p>';
-		};
-
-		/**
-		 * Render the initial app layout
-		 */
-		var renderApp = function () {
-
-			// Create a grid layout
-			app.classList.add('row');
-
-			// Variables
-			var randomMonsters = shuffle(monsters);
-			var markup = getMarkup(randomMonsters);
-
-			// Add monsters to the app
-			app.innerHTML = markup;
-
-			// Reset total
-			total = monsters.length;
-
-		};
-
-		/**
-		 * Show an individual monster after a door is selected
-		 * @param  {Node} monster The node with the door and monster
-		 */
-		var renderMonster = function (monster) {
-
-			// Get monster img
-			var monsterImg = monster.getAttribute('data-monster');
-			if (!monsterImg) return;
-
-			// Check if a sock
-			if (monsterImg === 'sock!') {
-				renderLoss();
-			}
-
-			// Show the hidden monster
-			monster.innerHTML = '<img alt="' + monsterImg.replace('.svg', '') + '" src="' + monsterImg + '">';
-
-			// Remove the data attribute
-			monster.removeAttribute('data-monster');
-
-			// Update the total
-			updateTotal();
-
+				'<p>You found all of the monsters. Congrats!</p>' +
+				'<p>' +
+					'<button data-monster-play-again>Play Again</button>' +
+				'</p>';
 		};
 
 		/**
 		 * Handle click events
-		 * @param  {Event} event The click event
+		 * @param  {Event} event The event object
 		 */
 		var clickHandler = function (event) {
 
-			// If clicked element was a monster
-			var monster = event.target.closest('[data-monster]');
-			if (monster) {
-				// Show the monster
-				renderMonster(monster);
+			// If a "play again" button was clicked, reset the UI and end the callback function
+			if (event.target.hasAttribute('data-monster-play-again')) {
+				renderMonsters();
+				return;
 			}
 
-			// If clicked element was the "Play Again" button
-			if (event.target.matches('[data-monster-play-again]')) {
-				// Reset the game
-				renderApp();
+			// Check if clicked element or it's parent has a [data-monster-id] attribute
+			// If not, it's not a monster
+			// return and stop running our callback function
+			var monster = event.target.closest('[data-monster-id]');
+			if (!monster) return;
+
+			// Get the monster's index in the array
+			var id = monster.getAttribute('data-monster-id');
+
+			// If the door reveals a sock, render the lost UI
+			// Then, end the callback function
+			if (monsters[id] === 'sock') {
+				renderLost();
+				return;
+			}
+
+			// Store the parent node to a variable
+			// Since we're going to replace the event.target, we need to do this
+			var grid = monster.parentNode;
+
+			// Update the HTML for the button's parent element
+			// This will replace the button so that the content can't be clicked again
+			// We'll use the id to get the monster from our shuffled array
+			grid.innerHTML = '<img alt="' + monsters[id] + '" src="' + monsters[id] + '.svg">';
+
+			// Increase the number of monsters who have been found by 1
+			found++;
+
+			// If the number of monsters found is equal to the total number (-1 for the sock)
+			// then all monsters have been found and we can render the win UI
+			if (found === (monsters.length - 1)) {
+				renderWon();
 			}
 
 		};
 
 
 		//
-		// Inits and Event Listeners
+		// Inits & Event Listeners
 		//
 
-		renderApp();
+		// Render the initial game board
+		renderMonsters();
+
+		// Listen for click events
 		document.addEventListener('click', clickHandler, false);
-
 	</script>
-
 </body>
 </html>

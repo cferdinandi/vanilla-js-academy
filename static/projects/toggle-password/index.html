@@ -1,97 +1,27 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html>
 <head>
-	<title>Toggle Password Visibility</title>
-
-	<meta charset="utf-8">
-
-	<!-- Force latest available IE rendering engine and Chrome Frame (if installed) -->
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-
-	<!-- Mobile Screen Resizing -->
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Password Visibility</title>
 
 	<style type="text/css">
-		/**
-		 * Add box sizing to everything
-		 * @link http://www.paulirish.com/2012/box-sizing-border-box-ftw/
-		 */
-		/* line 38, src/sass/components/_normalize.scss */
-		*,
-		*:before,
-		*:after {
-			box-sizing: border-box;
-		}
-
-		/**
-		 * Layout
-		 */
 		body {
-			font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-			font-size: 112.5%;
-			margin-left: auto;
-			margin-right: auto;
+			margin: 1em auto;
 			max-width: 40em;
 			width: 88%;
 		}
 
-		/**
-		 * Typography
-		 */
-		h2 {
-			font-weight: normal;
-			margin-top: 2em;
+		label {
+			display: block;
+			width: 100%;
 		}
 
-		/**
-		 * Forms
-		 */
 		input {
 			margin-bottom: 1em;
-			padding: 0.5em 1em;
-			width: 100%;
 		}
 
 		[type="checkbox"] {
-			width: auto;
-		}
-
-		label {
-			display: block;
-			font-weight: bold;
-			margin-bottom: 0.5em;
-			width: 100%;
-		}
-
-		button {
-			background-color: #0088cc;
-			border: 1px solid #0088cc;
-			border-radius: 1px;
-			color: #ffffff;
-			display: inline-block;
-			font-size: 0.9375em;
-			font-weight: normal;
-			line-height: 1.2;
-			margin-right: 0.3125em;
-			margin-bottom: 0.3125em;
-			padding: 0.5em 0.6875em;
-		}
-
-		button:hover,
-		button:focus,
-		button:active {
-			background-color: #005580;
-			border-color: #005580;
-			color: #ffffff;
-			text-decoration: none;
-		}
-
-		/**
-		 * Utilities
-		 */
-
-		.no-bold {
-			font-weight: normal;
+			margin-bottom: 0;
+			margin-right: 0.25em;
 		}
 	</style>
 </head>
@@ -99,9 +29,12 @@
 
 	<p><a href="/#work-on-fun-projects">&larr; Back to the Vanilla JS Academy</a></p>
 
-	<h1>Toggle Password Visibility</h1>
+	<h1>Password Visibility</h1>
 
-	<h2>Log In</h2>
+	<h2>Change Username</h2>
+
+	<p>Enter your username and password to change your username.</p>
+
 	<form>
 		<div>
 			<label for="username">Username</label>
@@ -114,60 +47,69 @@
 		</div>
 
 		<div>
-			<label class="no-bold" for="show-passwords">
-				<input type="checkbox" name="show-passwords" id="show-passwords" data-show-pw="#password">
+			<label for="show-password">
+				<input type="checkbox" name="show-passwords" id="show-password" data-pw-toggle="#password">
 				Show password
 			</label>
 		</div>
 
-		<button type="submit">Log In</button>
+		<p>
+			<button type="submit">Change Username</button>
+		</p>
 	</form>
 
+	<h2>Change Password</h2>
 
-	<h2>Update Password</h2>
+	<p>Enter your current password and new password below.</p>
+
 	<form>
 		<div>
-			<label for="current-pw">Current Password</label>
-			<input type="password" name="current-pw" id="current-pw">
+			<label for="current-password">Current Password</label>
+			<input type="password" name="current-password" id="current-password">
 		</div>
 
 		<div>
-			<label for="new-pw">New Password</label>
-			<input type="password" name="new-pw" id="new-pw">
+			<label for="new-password">New Password</label>
+			<input type="password" name="new-password" id="new-password">
 		</div>
 
 		<div>
-			<label class="no-bold" for="show-password">
-				<input type="checkbox" name="show-password" id="show-password" data-show-pw="#current-pw, #new-pw">
+			<label for="show-passwords">
+				<input type="checkbox" name="show-passwords" id="show-passwords" data-pw-toggle="#current-password, #new-password">
 				Show passwords
 			</label>
 		</div>
 
-		<button type="submit">Change Password</button>
+		<p>
+			<button type="submit">Change Passwords</button>
+		</p>
 	</form>
 
-	<script src="https://cdn.polyfill.io/v2/polyfill.min.js"></script>
 	<script>
-		// Listen for clicks in the document
+		// Listen to all click events in the browser
 		document.addEventListener('click', function (event) {
 
-			// Check if a password selector was clicked
-			var selector = event.target.getAttribute('data-show-pw');
-			if (!selector) return;
+			// Check if clicked item was a password toggle
+			// If not, return and stop running the callback function
+			if (!event.target.matches('[data-pw-toggle]')) return;
 
-			// Get the passwords
-			var passwords = document.querySelectorAll(selector);
+			// Check target password fields
+			var passwords = Array.prototype.slice.call(document.querySelectorAll(event.target.getAttribute('data-pw-toggle')));
 
-			// Toggle visibility
-			Array.from(passwords).forEach(function (password) {
-				if (event.target.checked === true) {
+			// Loop through each password field
+			passwords.forEach(function (password) {
+
+				// If the toggle is checked, change the type to "text"
+				// Otherwise, change it back to "password"
+				if (event.target.checked) {
 					password.type = 'text';
 				} else {
 					password.type = 'password';
 				}
+
 			});
+
 		}, false);
 	</script>
-
 </body>
 </html>
