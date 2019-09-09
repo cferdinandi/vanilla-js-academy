@@ -1,6 +1,24 @@
-{{- if and (ge (now.Format "20060102") 20190401) (le (now.Format "20060102") 20190509) -}}
-
 {{- $data := getJSON $.Site.Params.api -}}
+
+{{- if (.Get "insider") -}}
+
+	{{- if and (ge (now.Format "20060102") $.Site.Params.startPre) (le (now.Format "20060102") $.Site.Params.endPre) -}}
+
+		{{- $ctas := index $data "ctas" -}}
+		{{- if isset $ctas (.Get "for") -}}
+		{{ index $ctas "academyPre" | safeHTML }}
+		{{- end -}}
+
+		<p><a class="btn btn-large edd-buy-now-button" href="https://gomakethings.com/checkout?edd_action=add_to_cart&download_id=28868&edd_options[price_id]={{ $.Site.Params.priceID }}">Join now for just <del>{{ $.Site.Params.price }}</del> {{ $.Site.Params.pricePre }}</a></p>
+
+	{{- else -}}
+
+		<p><em>Early insider access to the program has ended. <a href="/">You can register for the program here.</a></em></p>
+
+	{{- end -}}
+
+{{- else if and (ge (now.Format "20060102") $.Site.Params.start) (le (now.Format "20060102") $.Site.Params.end) -}}
+
 {{- $apiPrices := index $data "prices" -}}
 {{- .Scratch.Set "apiPrice" "" -}}
 {{- if isset $apiPrices "academy" -}}
@@ -16,7 +34,7 @@
 <p>Kick-start your journey to JavaScript mastery. You get...</p>
 
 <ul>
-	<li>10 weeks of focused lessons made for beginners</li>
+	<li>10 weeks of short, focused lessons made for beginners</li>
 	<li>34 amazing JavaScript projects</li>
 	<li>70+ lessons</li>
 	<li>Video office hours</li>
@@ -25,21 +43,25 @@
 
 {{- .Scratch.Get "cta" -}}
 
-<p><strong>The next session runs from May 6 to June 28.</strong> After joining, you'll get an email with the details.</p>
+<p><strong>The next session runs from {{ $.Site.Params.startAcademy }} to {{ $.Site.Params.endAcademy }}.</strong> After joining, you'll get an email with the details.</p>
 
-<p><a class="btn btn-large btn-block edd-buy-now-button" href="https://gomakethings.com/checkout?edd_action=add_to_cart&download_id=28868&edd_options[price_id]=4">Join now for just {{ if ne (.Scratch.Get "apiPrice") "" }}{{ .Scratch.Get "apiPrice" | safeHTML }}{{ else }}{{ $.Site.Params.price | safeHTML }}{{ end }}</a></p>
+<p><a class="btn btn-large btn-block edd-buy-now-button" href="https://gomakethings.com/checkout?edd_action=add_to_cart&download_id=28868&edd_options[price_id]={{ $.Site.Params.priceID }}">Join now for just {{ if ne (.Scratch.Get "apiPrice") "" }}{{ .Scratch.Get "apiPrice" | safeHTML }}{{ else }}{{ $.Site.Params.price | safeHTML }}{{ end }}</a></p>
 
 {{- else -}}
 
-<p><strong>A brand new Vanilla JS Academy returns on October 14.</strong></p>
+<p><strong>A brand new Vanilla JS Academy returns on {{ $.Site.Params.startAcademy }}.</strong></p>
 
+{{- if le (sub (int (now.Format "20060102")) $.Site.Params.start) 14 -}}
 <p>Registration opens in the next week or two, but you can be the first to find out when registration opens back up <em>and</em> get exclusive discounts. Enter your email&nbsp;below.</p>
+{{- else -}}
+<p>Be the first to find out when registration opens back up <em>and</em> get exclusive discounts. Enter your email&nbsp;below.</p>
+{{- end -}}
 
 {{ partial "mailchimp-form.html" }}
 
 {{- end -}}
 
 {{- if false -}}
-<h3>The Vanilla JS Academy returns on May 6.</h3>
-<p>Registration opens on April 1. Get notified the moment it does <em>and</em> get exclusive discounts. Enter your email&nbsp;below.</p>
+<h3>The Vanilla JS Academy returns on {{ $.Site.Params.startAcademy }}.</h3>
+<p>Registration opens on {{ $.Site.Params.start }}. Get notified the moment it does <em>and</em> get exclusive discounts. Enter your email&nbsp;below.</p>
 {{- end -}}
