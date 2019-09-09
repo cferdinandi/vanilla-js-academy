@@ -1,12 +1,12 @@
 {{- $data := getJSON $.Site.Params.api -}}
+{{- $ctas := index $data "ctas" -}}
 
 {{- if (.Get "insider") -}}
 
 	{{- if and (ge (now.Format "20060102") $.Site.Params.startPre) (le (now.Format "20060102") $.Site.Params.endPre) -}}
 
-		{{- $ctas := index $data "ctas" -}}
-		{{- if isset $ctas (.Get "for") -}}
-		{{ index $ctas "academyPre" | safeHTML }}
+		{{- if isset $ctas "academy-pre" -}}
+		{{ index $ctas "academy-pre" | safeHTML }}
 		{{- end -}}
 
 		<p><a class="btn btn-large edd-buy-now-button" href="https://gomakethings.com/checkout?edd_action=add_to_cart&download_id=28868&edd_options[price_id]={{ $.Site.Params.priceID }}">Join now for just <del>{{ $.Site.Params.price }}</del> {{ $.Site.Params.pricePre }}</a></p>
@@ -25,10 +25,9 @@
 	{{- .Scratch.Set "apiPrice" $apiPrices.academy.price -}}
 {{- end -}}
 
-{{- $ctas := index $data "ctas" -}}
 {{- .Scratch.Set "cta" "" -}}
-{{- if isset $ctas "academyBuy" -}}
-	{{ .Scratch.Set "cta" ($ctas.academyBuy | safeHTML) }}
+{{- if isset $ctas "academy-buy" -}}
+	{{ .Scratch.Set "cta" ((index $ctas "academy-buy") | safeHTML) }}
 {{- end -}}
 
 <p>Kick-start your journey to JavaScript mastery. You get...</p>
