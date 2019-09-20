@@ -313,7 +313,7 @@ I already purchased your pocket guides? Will I learn anything new from the Vanil
 : There's definitely some overlap in content, but the focus of the Vanilla JS Academy is on teaching you to “think in JavaScript,” through experiential, project-based learning. If you've already read the pocket guides, you'll be able to focus more on thinking through problems and less on, "what method do I need to do this?"
 
 How much of a time commitment does the Vanilla JS Academy involve?
-: This program is for people who are *serious* about learning JavaScript. The more you put into it, the more you'll get out of it. You should be willing to spend at least 4 or 5 hours a week working on your lessons and projects.
+: This program is for people who are *serious* about learning JavaScript. The more you put into it, the more you'll get out of it.<br><br>The amount of time required varies a bit from the beginning to end of the program, and based on how much experience you have already. Generally speaking, expect each project to take 30 minutes to an hour (plus maybe 15 minutes of reading with the lessons) near the start of the program, and up to two or three hours near the end.
 
 When are office hours held?
 : Office hours are held at 12pm (noon) US Eastern to accommodate as many people as possible. Days of the week vary, but they're always on a weekday. They're recorded for people who can't attend, and you can submit questions ahead of time if you can't make&nbsp;it.
