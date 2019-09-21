@@ -318,6 +318,9 @@ How much of a time commitment does the Vanilla JS Academy involve?
 When are office hours held?
 : Office hours are held at 12pm (noon) US Eastern to accommodate as many people as possible. Days of the week vary, but they're always on a weekday. They're recorded for people who can't attend, and you can submit questions ahead of time if you can't make&nbsp;it.
 
+How does it work if I'm in a different timezone?
+: The lessons and projects automatically show up in the learning portal every day, and can be completed whenever you want. The Slack channel is available 24/7, and there are people from around the globe in the program.<br><br>The only "time specific" part is the office hours. If you're in a location where you can't join them live, you can send in questions ahead of time. Office hours are recorded so that you can watch them later.
+
 Does the Vanilla JS Academy cover new ES6 methods?
 : Yes. Where applicable, I cover new ES6 functions and browser APIs. I also include polyfills when available to push browser support as far back as possible.
 
