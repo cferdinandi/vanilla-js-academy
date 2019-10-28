@@ -167,7 +167,7 @@ If you get stuck, there’s a **24/7 private Slack channel** exclusively for stu
 {{<pricing-link>}}
 
 <div class="padding-top-large padding-bottom-large">
-	{{<testimonial for="jonathanSchofield" photo="true">}}
+	{{<testimonial for="giammaCarioca" photo="true">}}
 </div>
 
 
@@ -301,6 +301,10 @@ _**Want your whole team to attend the Vanilla JS Academy?** I offer private trai
 
 <div class="padding-bottom-large">
 	{{<testimonial for="richHolman" photo="true">}}
+</div>
+
+<div class="padding-bottom-large">
+	{{<testimonial for="kieranBarker2" photo="true">}}
 </div>
 
 
