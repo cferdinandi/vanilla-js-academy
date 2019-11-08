@@ -194,7 +194,8 @@ If you get stuck, there’s a **24/7 private Slack channel** exclusively for stu
 </div>
 
 
-{{<bonuses-special>}}
+{{<cta for="bonusesAcademy">}}
+{{<cta for="bonusesList">}}
 
 
 ## The Program Schedule
