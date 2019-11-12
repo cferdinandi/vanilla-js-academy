@@ -4,17 +4,6 @@ baseURL: "https://vanillajsacademy.com"
 # Customer parameters
 params:
   description: "A project-based online JavaScript training program for beginners."
-  priceID: 5
-  price: "$799"
-  priceAlumni: "$159"
-  pricePre: "$399"
-  start: 20191129
-  end: 20200111
-  startPre: 20191129
-  endPre: 20191206
-  startAcademy: "January 6"
-  endAcademy: "March 13"
-  registration: "on November 29"
   api: "https://gomakethings.com/api/data.json"
   font: "https://fonts.googleapis.com/css?family=PT+Serif:400,400i,700,700i&display=swap"
   rssURL: ""
