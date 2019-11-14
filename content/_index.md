@@ -250,7 +250,7 @@ Across all of the sections, you'll also learn about web performance, debugging, 
 
 
 <div class="padding-top-large padding-bottom-large">
-	{{<testimonial for="elliotPorter" photo="true">}}
+	{{<testimonial for="stewartDavis" photo="true">}}
 </div>
 
 
@@ -306,6 +306,10 @@ _**Want your whole team to attend the Vanilla JS Academy?** I offer private trai
 
 <div class="padding-bottom">
 	{{<testimonial for="patriciaParker" photo="true">}}
+</div>
+
+<div class="padding-top-large padding-bottom-large">
+	{{<testimonial for="elliotPorter" photo="true">}}
 </div>
 
 <div class="padding-bottom">
