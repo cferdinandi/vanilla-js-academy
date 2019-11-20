@@ -1,0 +1,23 @@
+/**
+ * @Section Icons
+ */
+
+@media (prefers-color-scheme: dark) {
+	svg path {
+		&[fill="#272727"] {
+			fill: $color-white;
+		}
+
+		&[fill="#808080"] {
+			fill: $color-gray-light;
+		}
+
+		&[fill="#f7272f"] {
+			fill: lighten( $color-secondary, 20% );
+		}
+
+		&[fill="#800080"] {
+			fill: lighten(#800080, 40%);
+		}
+	}
+}
