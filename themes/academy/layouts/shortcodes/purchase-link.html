@@ -58,9 +58,9 @@
 	<li>Exclusive Slack access</li>
 </ul>
 
-{{- .Scratch.Get "cta" -}}
-
 <p><strong>The next session runs from {{ $details.startAcademy }} to {{ $details.endAcademy }}.</strong> After joining, you'll get an email with the details.</p>
+
+{{- .Scratch.Get "cta" -}}
 
 <p><a class="btn btn-large btn-block edd-buy-now-button" href="https://gomakethings.com/checkout?edd_action=add_to_cart&download_id=28868&edd_options[price_id]={{ $details.priceID }}">Join now for just {{ if ne (.Scratch.Get "apiPrice") "" }}{{ .Scratch.Get "apiPrice" | safeHTML }}{{ else }}{{ $details.price | safeHTML }}{{ end }}</a></p>
 
