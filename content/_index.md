@@ -279,7 +279,7 @@ _**Want your whole team to attend the Vanilla JS Academy?** I offer private trai
 {{%/purchase-box%}}
 
 <div class="padding-top-large padding-bottom">
-	{{<testimonial for="leticiaOneill" photo="true">}}
+	{{<testimonial for="leticiaOneill2" photo="true">}}
 </div>
 
 <div class="padding-bottom">
@@ -292,6 +292,10 @@ _**Want your whole team to attend the Vanilla JS Academy?** I offer private trai
 
 <div class="padding-bottom">
 	{{<testimonial for="mariaBlair" photo="true">}}
+</div>
+
+<div class="padding-bottom">
+	{{<testimonial for="stewartDavis2" photo="true">}}
 </div>
 
 <div class="padding-bottom">
