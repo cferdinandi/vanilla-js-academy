@@ -287,11 +287,11 @@ _**Want your whole team to attend the Vanilla JS Academy?** I offer private trai
 </div>
 
 <div class="padding-bottom">
-	{{<testimonial for="zacHeisey" photo="true">}}
+	{{<testimonial for="mariaBlair2" photo="true">}}
 </div>
 
 <div class="padding-bottom">
-	{{<testimonial for="mariaBlair" photo="true">}}
+	{{<testimonial for="zacHeisey" photo="true">}}
 </div>
 
 <div class="padding-bottom">
