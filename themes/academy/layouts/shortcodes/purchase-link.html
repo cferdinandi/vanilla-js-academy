@@ -66,7 +66,7 @@
 
 {{- else -}}
 
-<p><strong>A brand new Vanilla JS Academy returns on {{ $details.startAcademy }}.</strong></p>
+<p><strong>A brand new Vanilla JS Academy returns {{ $details.startAcademyPreposition }}{{ $details.startAcademy }}.</strong></p>
 
 {{- if le (sub (int (now.Format "20060102")) $details.start) 14 -}}
 <p>Registration opens {{ $details.registration }}, but you can be the first to find out when registration opens back up <em>and</em> get exclusive discounts. Enter your email&nbsp;below.</p>
