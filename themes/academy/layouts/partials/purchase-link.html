@@ -12,8 +12,6 @@
 
 		<p><a class="btn btn-large edd-buy-now-button" href="https://gomakethings.com/checkout?edd_action=add_to_cart&download_id=28868&edd_options[price_id]={{ $details.priceID }}">Join now for just <del>{{ $details.price }}</del> {{ $details.priceAlumni }}</a></p>
 
-		{{ partial "sales-numbers.html" . }}
-
 	{{- else -}}
 
 		<h3>Program registration has ended.</h3>
@@ -30,8 +28,6 @@
 		{{- end -}}
 
 		<p><a class="btn btn-large edd-buy-now-button" href="https://gomakethings.com/checkout?edd_action=add_to_cart&download_id=28868&edd_options[price_id]={{ $details.priceID }}">Join now for just <del>{{ $details.price }}</del> {{ $details.pricePre }}</a></p>
-
-		{{ partial "sales-numbers.html" . }}
 
 	{{- else -}}
 
@@ -68,8 +64,6 @@
 
 <p><a class="btn btn-large btn-block edd-buy-now-button" href="https://gomakethings.com/checkout?edd_action=add_to_cart&download_id=28868&edd_options[price_id]={{ $details.priceID }}">Join now for just {{ if ne (.Scratch.Get "apiPrice") "" }}{{ .Scratch.Get "apiPrice" | safeHTML }}{{ else }}{{ $details.price | safeHTML }}{{ end }}</a></p>
 
-{{ partial "sales-numbers.html" . }}
-
 {{- else -}}
 
 <p><strong>A brand new Vanilla JS Academy returns {{ $details.startAcademyPreposition }}{{ $details.startAcademy }}.</strong></p>
@@ -81,8 +75,6 @@
 {{- end -}}
 
 {{ partial "mailchimp-form.html" }}
-
-{{ partial "sales-numbers.html" . }}
 
 {{- end -}}
 
