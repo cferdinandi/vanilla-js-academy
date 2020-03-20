@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Timer</title>
+
+	<style type="text/css">
+		body {
+			margin: 1em auto;
+			max-width: 40em;
+			text-align: center;
+			width: 88%;
+		}
+
+		#app {
+			font-size: 2em;
+		}
+
+		p {
+			margin: 0 0.5em;
+			padding: 0;
+		}
+	</style>
+</head>
+<body>
+
+	<p><a href="/#work-on-fun-projects">&larr; Back to the Vanilla JS Academy</a></p>
+
+	<h1>Timer</h1>
+
+	<div id="app"></div>
+
+	<script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js"></script>
+	<script>
+		//
+		// Variables
+		//
+
+		// Get the #app element from the DOM
+		var app = document.querySelector('#app');
+
+		// Store duration to a variable
+		var duration = 120;
+
+		// The state/data object
+		var data = {
+			timer: duration,
+			done: false,
+			paused: true
+		};
+
+		// A placeholder for the countdown interval
+		var countdown;
+
+
+		//
+		// Methods
+		//
+
+		/**
+		 * Get the template markup
+		 * @return {String} The HTML string
+		 */
+		var template = function () {
+
+			// If the timer is done, show a different UI
+			if (data.done) {
+				return '⏰ <p><button data-restart-timer>Restart Timer</button></p>';
+			}
+
+			// Get the minutes and seconds
+			var minutes = parseInt(data.timer / 60, 10);
+			var seconds = data.timer % 60;
+
+			// Create the markup string
+			var html =
+				'<p>' + minutes.toString() + ':' + seconds.toString().padStart(2, '0') + '</p>' +
+				'<p><button data-pause-timer>' + (data.paused ? 'Start' : 'Pause') + '</button> <button data-restart-timer>Restart</button></p>';
+
+			return html;
+		};
+
+		/**
+		 * Render the template into the DOM
+		 */
+		var render = function () {
+
+			// If there are no updates to the UI, do nothing
+			if (app.innerHTML === template()) return;
+
+			// Update the UI
+			app.innerHTML = template();
+
+		};
+
+		/**
+		 * Reactively update the data object
+		 * @param {Object} obj The updated data
+		 */
+		var setData = function (obj) {
+
+			// Update the data object
+			for (var key in obj) {
+				if (obj.hasOwnProperty(key)) {
+					data[key] = obj[key];
+				}
+			}
+
+			// Render a new UI
+			render();
+
+		};
+
+		/**
+		 * Stop the countdown
+		 */
+		var stopCountdown = function () {
+			window.clearInterval(countdown);
+		};
+
+		/**
+		 * Update the timer every second
+		 */
+		var startCountdown = function () {
+			countdown = window.setInterval(function () {
+
+				// Get the new timer value
+				var time = data.timer - 1;
+
+				// If the timer hits 0, set as done
+				var done = time === 0 ? true : false;
+
+				// Update data and render new UI
+				setData({
+					timer: time,
+					done: done,
+					paused: done
+				});
+
+				// If the timer is done, stop it from running
+				if (done) {
+					stopCountdown();
+				}
+
+			}, 1000);
+		};
+
+		/**
+		 * Start the timer
+		 */
+		var startTimer = function () {
+
+			// Initial render
+			setData({
+				timer: duration,
+				done: false,
+				paused: false
+			});
+
+			// Update the timer every second
+			startCountdown();
+
+		};
+
+		/**
+		 * Handle click events
+		 * @return {Event} The event object
+		 */
+		var clickHandler = function (event) {
+
+			// If a restart button was clicked
+			// Stop any existing countdown
+			// Start the timer
+			if (event.target.hasAttribute('data-restart-timer')) {
+				stopCountdown();
+				startTimer();
+			}
+
+			// If the pause/play button was clicked
+			if (event.target.hasAttribute('data-pause-timer')) {
+
+				// If the timer is already paused, start it
+				// Update the data.paused state
+				// Restart the countdown
+				if (data.paused) {
+					setData({paused: false});
+					startCountdown();
+					return;
+				}
+
+				// Otherwise, pause it
+				// Update the data.paused state
+				// Stop the countdown
+				setData({paused: true});
+				stopCountdown();
+
+			}
+
+		};
+
+
+		//
+		// Inits & Event Listeners
+		//
+
+		// Start the timer on page load
+		startTimer();
+
+		// Listen for clicks on the timer buttons
+		document.addEventListener('click', clickHandler, false);
+	</script>
+</body>
+</html>

@@ -5,7 +5,7 @@ baseURL: "https://vanillajsacademy.com"
 params:
   description: "A project-based online JavaScript training program for beginners."
   api: "https://gomakethings.com/api/data.json"
-  sales: "https://gomakethings.com/checkout/wp-json/gmt-edd/v1/sales?category=academy&start=08-01-2016&96gdGDPqokbFsy3Lbx7LwTBdYNDxpo4a=GbwzXPHRqqCDKyy38TYmAybvV8AZZUJHmuA8zKKMjJ2ZUXFG7LcCy2rLAMmU8HEZ"
+  sales: "https://gomakethings.com/checkout/wp-json/gmt-edd/v1/sales?category=academy&start=08-01-2016&round=10&96gdGDPqokbFsy3Lbx7LwTBdYNDxpo4a=GbwzXPHRqqCDKyy38TYmAybvV8AZZUJHmuA8zKKMjJ2ZUXFG7LcCy2rLAMmU8HEZ"
   font: "https://fonts.googleapis.com/css?family=PT+Serif:400,400i,700,700i&display=swap"
   rssURL: ""
   rssLimit: 7
@@ -14,7 +14,7 @@ params:
 # Caches
 caches:
   getjson:
-    maxAge: "10m"
+    maxAge: "10s"
 
 # The language code for the site
 languageCode: "en-us"

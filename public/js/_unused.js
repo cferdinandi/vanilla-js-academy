@@ -1,9 +1,9 @@
 /*!
- * academy v1.1.0: The theme for vanillajsacademy.com
- * (c) 2018 Chris Ferdinandi
+ * academy v1.1.0
+ * The theme for vanillajsacademy.com
+ * (c) 2019 Chris Ferdinandi
  * MIT License
  * http://github.com/cferdinandi/vanilla-js-academy
- * Open Source Credits: https://github.com/toddmotto/fluidvids, http://prismjs.com, https://github.com/filamentgroup/loadJS/, https://github.com/filamentgroup/loadCSS, https://github.com/bramstein/fontfaceobserver
  */
 
 /**

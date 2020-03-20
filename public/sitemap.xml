@@ -8,7 +8,12 @@
   </url>
   
   <url>
-    <loc>https://vanillajsacademy.com/about/</loc>
+    <loc>https://vanillajsacademy.com/alumni/</loc>
+    <lastmod>2018-01-11T16:03:33-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://vanillajsacademy.com/secret/</loc>
     <lastmod>2018-01-11T16:03:33-05:00</lastmod>
   </url>
   
@@ -23,17 +28,17 @@
   </url>
   
   <url>
-    <loc>https://vanillajsacademy.com/special-discounts/</loc>
-    <lastmod>2018-01-11T16:03:33-05:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://vanillajsacademy.com/student-discount/</loc>
     <lastmod>2018-01-11T16:03:33-05:00</lastmod>
   </url>
   
   <url>
     <loc>https://vanillajsacademy.com/underrepresented-group-discount/</loc>
+    <lastmod>2018-01-11T16:03:33-05:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://vanillajsacademy.com/signup-success/</loc>
     <lastmod>2018-01-11T16:03:33-05:00</lastmod>
   </url>
   
