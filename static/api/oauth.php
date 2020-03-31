@@ -1,8 +1,8 @@
 <?php
 
-	if (empty($_POST['email'])) {
+	if (empty($_POST['email']) || empty($_POST['password'])) {
 		http_response_code(500);
-		die('Please provide a valid email address.');
+		die('Please provide a valid email address and password.');
 	}
 
 	http_response_code(200);
