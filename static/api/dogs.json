@@ -1,0 +1,129 @@
+{
+	"source": {
+		"name": "Pup Academy",
+		"url": "https://vanillajsacademy.com"
+	},
+	"dogs": [
+		{
+			"name": "Boomer",
+			"id": "",
+			"age": "adult",
+			"size": "large",
+			"gender": "male",
+			"breeds": ["Golden Retriever", "Labrador Retriever"],
+			"img": "https://cdn.gomakethings.com/academy/boomer.jpg"
+		},
+		{
+			"name": "Tucker",
+			"age": "puppy",
+			"size": "large",
+			"gender": "male",
+			"breeds": ["Golden Retriever"],
+			"img": "https://cdn.gomakethings.com/academy/tucker.jpg"
+		},
+		{
+			"name": "Sadie",
+			"age": "puppy",
+			"size": "small",
+			"gender": "female",
+			"breeds": ["French Bulldog"],
+			"img": "https://cdn.gomakethings.com/academy/sadie.jpg"
+		},
+		{
+			"name": "Harley",
+			"age": "young",
+			"size": "medium",
+			"gender": "male",
+			"breeds": ["Labrador Retriever"],
+			"img": "https://cdn.gomakethings.com/academy/harley.jpg"
+		},
+		{
+			"name": "Carlie",
+			"age": "young",
+			"size": "medium",
+			"gender": "female",
+			"breeds": ["Labrador Retriever", "Golden Retriever"],
+			"img": "https://cdn.gomakethings.com/academy/carlie.jpg"
+		},
+		{
+			"name": "Gizmo",
+			"age": "young",
+			"size": "small",
+			"gender": "male",
+			"breeds": ["Pug"],
+			"img": "https://cdn.gomakethings.com/academy/gizmo.jpg"
+		},
+		{
+			"name": "Joy",
+			"age": "young",
+			"size": "large",
+			"gender": "female",
+			"breeds": ["Golden Retriever"],
+			"img": "https://cdn.gomakethings.com/academy/joy.jpg"
+		},
+		{
+			"name": "Zeus",
+			"age": "senior",
+			"size": "small",
+			"gender": "male",
+			"breeds": ["Bichon Frise"],
+			"img": "https://cdn.gomakethings.com/academy/zeus.jpg"
+		},
+		{
+			"name": "Zoey",
+			"age": "senior",
+			"size": "large",
+			"gender": "female",
+			"breeds": ["Golden Retriever"],
+			"img": "https://cdn.gomakethings.com/academy/zoey.jpg"
+		},
+		{
+			"name": "Mandy",
+			"age": "puppy",
+			"size": "large",
+			"gender": "female",
+			"breeds": ["Golden Retriever"],
+			"img": "https://cdn.gomakethings.com/academy/mandy.jpg"
+		},
+		{
+			"name": "Cooper",
+			"age": "young",
+			"size": "medium",
+			"gender": "male",
+			"breeds": ["Beagle", "King Charles Cavalier Spaniel"],
+			"img": "https://cdn.gomakethings.com/academy/cooper.jpg"
+		},
+		{
+			"name": "Patches",
+			"age": "adult",
+			"size": "small",
+			"gender": "male",
+			"breeds": ["Miniature Pincher"],
+			"img": "https://cdn.gomakethings.com/academy/patches.jpg"
+		},
+		{
+			"name": "Delilah",
+			"age": "senior",
+			"size": "small",
+			"gender": "female",
+			"breeds": ["Pug"],
+			"img": "https://cdn.gomakethings.com/academy/delilah.jpg"
+		},
+		{
+			"name": "Bunny",
+			"age": "senior",
+			"size": "small",
+			"gender": "male",
+			"breeds": ["Yorkshire Terrier"],
+			"img": "https://cdn.gomakethings.com/academy/bunny.jpg"
+		},
+		{
+			"name": "Barney",
+			"age": "adult",
+			"size": "small",
+			"gender": "male",
+			"breeds": ["Shih Tzu"],
+			"img": "https://cdn.gomakethings.com/academy/barney.jpg"
+		}
+	]
+}
