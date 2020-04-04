@@ -11,7 +11,7 @@
 			"size": "large",
 			"gender": "male",
 			"breeds": ["Golden Retriever", "Labrador Retriever"],
-			"img": "https://cdn.gomakethings.com/academy/boomer.jpg"
+			"img": "https://cdn.gomakethings.com/academy/pets/boomer.jpg"
 		},
 		{
 			"name": "Tucker",
@@ -19,7 +19,7 @@
 			"size": "large",
 			"gender": "male",
 			"breeds": ["Golden Retriever"],
-			"img": "https://cdn.gomakethings.com/academy/tucker.jpg"
+			"img": "https://cdn.gomakethings.com/academy/pets/tucker.jpg"
 		},
 		{
 			"name": "Sadie",
@@ -27,7 +27,7 @@
 			"size": "small",
 			"gender": "female",
 			"breeds": ["French Bulldog"],
-			"img": "https://cdn.gomakethings.com/academy/sadie.jpg"
+			"img": "https://cdn.gomakethings.com/academy/pets/sadie.jpg"
 		},
 		{
 			"name": "Harley",
@@ -35,7 +35,7 @@
 			"size": "medium",
 			"gender": "male",
 			"breeds": ["Labrador Retriever"],
-			"img": "https://cdn.gomakethings.com/academy/harley.jpg"
+			"img": "https://cdn.gomakethings.com/academy/pets/harley.jpg"
 		},
 		{
 			"name": "Carlie",
@@ -43,7 +43,7 @@
 			"size": "medium",
 			"gender": "female",
 			"breeds": ["Labrador Retriever", "Golden Retriever"],
-			"img": "https://cdn.gomakethings.com/academy/carlie.jpg"
+			"img": "https://cdn.gomakethings.com/academy/pets/carlie.jpg"
 		},
 		{
 			"name": "Gizmo",
@@ -51,7 +51,7 @@
 			"size": "small",
 			"gender": "male",
 			"breeds": ["Pug"],
-			"img": "https://cdn.gomakethings.com/academy/gizmo.jpg"
+			"img": "https://cdn.gomakethings.com/academy/pets/gizmo.jpg"
 		},
 		{
 			"name": "Joy",
@@ -59,7 +59,7 @@
 			"size": "large",
 			"gender": "female",
 			"breeds": ["Golden Retriever"],
-			"img": "https://cdn.gomakethings.com/academy/joy.jpg"
+			"img": "https://cdn.gomakethings.com/academy/pets/joy.jpg"
 		},
 		{
 			"name": "Zeus",
@@ -67,7 +67,7 @@
 			"size": "small",
 			"gender": "male",
 			"breeds": ["Bichon Frise"],
-			"img": "https://cdn.gomakethings.com/academy/zeus.jpg"
+			"img": "https://cdn.gomakethings.com/academy/pets/zeus.jpg"
 		},
 		{
 			"name": "Zoey",
@@ -75,7 +75,7 @@
 			"size": "large",
 			"gender": "female",
 			"breeds": ["Golden Retriever"],
-			"img": "https://cdn.gomakethings.com/academy/zoey.jpg"
+			"img": "https://cdn.gomakethings.com/academy/pets/zoey.jpg"
 		},
 		{
 			"name": "Mandy",
@@ -83,7 +83,7 @@
 			"size": "large",
 			"gender": "female",
 			"breeds": ["Golden Retriever"],
-			"img": "https://cdn.gomakethings.com/academy/mandy.jpg"
+			"img": "https://cdn.gomakethings.com/academy/pets/mandy.jpg"
 		},
 		{
 			"name": "Cooper",
@@ -91,7 +91,7 @@
 			"size": "medium",
 			"gender": "male",
 			"breeds": ["Beagle", "King Charles Cavalier Spaniel"],
-			"img": "https://cdn.gomakethings.com/academy/cooper.jpg"
+			"img": "https://cdn.gomakethings.com/academy/pets/cooper.jpg"
 		},
 		{
 			"name": "Patches",
@@ -99,7 +99,7 @@
 			"size": "small",
 			"gender": "male",
 			"breeds": ["Miniature Pincher"],
-			"img": "https://cdn.gomakethings.com/academy/patches.jpg"
+			"img": "https://cdn.gomakethings.com/academy/pets/patches.jpg"
 		},
 		{
 			"name": "Delilah",
@@ -107,7 +107,7 @@
 			"size": "small",
 			"gender": "female",
 			"breeds": ["Pug"],
-			"img": "https://cdn.gomakethings.com/academy/delilah.jpg"
+			"img": "https://cdn.gomakethings.com/academy/pets/delilah.jpg"
 		},
 		{
 			"name": "Bunny",
@@ -115,7 +115,7 @@
 			"size": "small",
 			"gender": "male",
 			"breeds": ["Yorkshire Terrier"],
-			"img": "https://cdn.gomakethings.com/academy/bunny.jpg"
+			"img": "https://cdn.gomakethings.com/academy/pets/bunny.jpg"
 		},
 		{
 			"name": "Barney",
@@ -123,7 +123,7 @@
 			"size": "small",
 			"gender": "male",
 			"breeds": ["Shih Tzu"],
-			"img": "https://cdn.gomakethings.com/academy/barney.jpg"
+			"img": "https://cdn.gomakethings.com/academy/pets/barney.jpg"
 		}
 	]
 }
