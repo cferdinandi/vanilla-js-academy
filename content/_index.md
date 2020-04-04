@@ -10,9 +10,7 @@ description: ""
 <h1 class="no-padding-top no-margin-bottom h5">The Vanilla JS Academy</h1>
 <p class="text-xlarge margin-bottom-small">A project-based online JavaScript training program for beginners.</p>
 
-<span class="text-large">The best way to learn JavaScript is by writing lots of code, but where do you even start? And what happens when you get stuck?</span>
-
-**The Vanilla JS Academy provides a structured learning path, lots of fun projects, and the support you need to work through challenges.**
+<p><span class="text-large">Follow a structured learning path, work on lots of fun projects, and get the support you need to work through challenges.</span></p>
 
 {{<cta for="academy">}}
 
