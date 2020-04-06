@@ -1,6 +1,7 @@
 {
 	"disney": {
 		"name": "Disney World",
+		"description": "Find hidden items around the Disney World theme parks.",
 		"items": [
 			"Find a Hidden Mickey",
 			"Get a selfie with a character",
@@ -12,6 +13,7 @@
 	},
 	"nature": {
 		"name": "Exploring Nature",
+		"description": "Explore the world around you and enjoy nature's splendor.",
 		"items": [
 			"A squirrel",
 			"A bird nest",
