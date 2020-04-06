@@ -1,16 +1,22 @@
 {
-	"disney": [
-		"Find a Hidden Mickey",
-		"Get a selfie with a character",
-		"Ride the Monorail",
-		"Eat a Mickey Ice Cream Bar",
-		"Find Nemo",
-		"Find a handprint in the concrete"
-	],
-	"nature": [
-		"A squirrel",
-		"A bird nest",
-		"A tree covered in moss",
-		"A hidden trail"
-	]
+	"disney": {
+		"name": "Disney World",
+		"items": [
+			"Find a Hidden Mickey",
+			"Get a selfie with a character",
+			"Ride the Monorail",
+			"Eat a Mickey Ice Cream Bar",
+			"Find Nemo",
+			"Find a handprint in the concrete"
+		]
+	},
+	"nature": {
+		"name": "Exploring Nature",
+			"items": [
+			"A squirrel",
+			"A bird nest",
+			"A tree covered in moss",
+			"A hidden trail"
+		]
+	}
 }
