@@ -1,6 +1,0 @@
-# Allow cross-domain access to these files
-Header set Access-Control-Allow-Origin "*"
-
-# API Credentials
-SetEnv EDD_KEY "xjfZ vy3Y MZXr NxVw BTDh Qf0D"
-SetEnv EDD_USERNAME "cferdinandi"

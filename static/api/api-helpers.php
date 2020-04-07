@@ -30,13 +30,13 @@
 	// Get user session token
 	function is_authorized () {
 
-		$headers = apache_request_headers();
+		$auth_header = $_SERVER['HTTP_AUTHORIZATION'];
 
 		// If there's no auth header, fail
-		if (empty($headers) || empty($headers['Authorization'])) return false;
+		if (empty($auth_header)) return false;
 
 		// Get auth token
-		$auth = explode('Bearer', $headers['Authorization']);
+		$auth = explode('Bearer', $auth_header);
 		$token = trim($auth[1]);
 
 		// If there's no token, fail
@@ -54,13 +54,13 @@
 	// Get user basic auth credentials
 	function get_basic_auth_credentials () {
 
-		$headers = apache_request_headers();
+		$auth_header = $_SERVER['HTTP_AUTHORIZATION'];
 
 		// If there's no auth header, fail
-		if (empty($headers) || empty($headers['Authorization'])) return false;
+		if (empty($auth_header)) return false;
 
 		// Get credentials
-		$auth = trim(substr($headers['Authorization'], 5));
+		$auth = trim(substr($auth_header, 5));
 		$credentials = explode(':', trim($auth));
 
 		// If there are no credentials, fail
