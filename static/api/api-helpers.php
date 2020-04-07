@@ -81,7 +81,7 @@
 		$hash = md5($user);
 
 		// CHeck hash against list
-		$pairs = json_decode(file_get_contents('_/oauth-pairs.json'));
+		$pairs = file_exists('_/oauth-pairs.json') ? json_decode(file_get_contents('_/oauth-pairs.json')) : array();
 		if (!in_array($hash, $pairs)) return false;
 
 		// Otherwise, return the $hash
