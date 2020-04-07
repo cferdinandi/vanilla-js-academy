@@ -24,7 +24,7 @@
 	$path = md5($credentials['email']);
 
 	// If not, check if allowed to have one
-	if (!property_exists($hash, $pairs)) {
+	if (!property_exists($pairs, $hash)) {
 
 		// If the email matches a customer, return a token
 		// Otherwise, throw an error
