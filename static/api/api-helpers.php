@@ -27,6 +27,7 @@
 
 	}
 
+	// Get user session token
 	function is_authorized () {
 
 		$headers = apache_request_headers();
@@ -47,6 +48,29 @@
 
 		// Otherwise, token passes
 		return $token;
+
+	}
+
+	// Get user basic auth credentials
+	function get_basic_auth_credentials () {
+
+		$headers = apache_request_headers();
+
+		// If there's no auth header, fail
+		if (empty($headers) || empty($headers['Authorization'])) return false;
+
+		// Get credentials
+		$auth = trim(substr($headers['Authorization'], 5));
+		$credentials = explode(':', trim($auth));
+
+		// If there are no credentials, fail
+		if (empty($credentials[0]) || empty($credentials[1])) return false;
+
+		// Otherwise, return decoded credentials
+		return array(
+			'email' => base64_decode($credentials[0]),
+			'password' => base64_decode($credentials[1])
+		);
 
 	}
 
@@ -81,7 +105,7 @@
 		$path = '_/' . $hash . '_' . $filename . '.json';
 
 		// If file exists, return it
-		if (file_exists($path)) {
+		if ($hash && file_exists($path)) {
 			return json_decode(file_get_contents($path));
 		}
 

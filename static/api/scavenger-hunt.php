@@ -15,8 +15,8 @@
 		// Get the hased user token
 		$user = get_user($_GET['user']);
 
-		// If not a valid user, bail
-		if (empty($user)) {
+		// If there's no matching user, bail
+		if (empty($user) && !empty($_GET['user'])) {
 			http_response_code(403);
 			die('You shall not pass!');
 		}
