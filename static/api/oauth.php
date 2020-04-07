@@ -16,7 +16,7 @@
 	}
 
 	// Check if token already exists
-	$pairs = json_decode(file_get_contents('_/oauth-pairs.json'));
+	$pairs = file_exists('_/oauth-pairs.json') ? json_decode(file_get_contents('_/oauth-pairs.json')) : array();
 	$hash = md5($credentials['email']);
 
 	// If not, check if allowed to have one

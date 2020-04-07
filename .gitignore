@@ -6,6 +6,7 @@ public
 ## Environment
 .env
 .htaccess
+oauth-items.json
 
 ## OS X
 .DS_Store
