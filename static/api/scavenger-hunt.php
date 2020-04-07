@@ -48,7 +48,7 @@
 	if ($method === 'DELETE') {
 		set_file($token, 'scavenger-hunt', '{}');
 		http_response_code(200);
-		die(json_encode(new stdClass()));
+		die('{}');
 	}
 
 	// All other requests

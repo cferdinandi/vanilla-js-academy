@@ -3,14 +3,17 @@
 	// Include required files
 	include_once('api-helpers.php');
 
-	// Get data
-	extract_data();
-
 	// Get the API method
 	$method = get_method();
 
 	// Get credentials
 	$credentials = get_basic_auth_credentials();
+
+	// Only support GET requests
+	if ($method !== 'GET') {
+		http_response_code(405);
+		die('Method not allowed');
+	}
 
 	// Make sure a username and password are provided
 	if (empty($credentials)) {
