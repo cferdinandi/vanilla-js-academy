@@ -31,8 +31,8 @@
 	}
 
 	// For any other type of request, force authorization
-	$token = is_authorized();
-	if (!$token) {
+	$token = get_token_credentials();
+	if (empty($token)) {
 		http_response_code(403);
 		die('You shall not pass!');
 	}

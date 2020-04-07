@@ -28,7 +28,7 @@
 	}
 
 	// Get user session token
-	function is_authorized () {
+	function get_token_credentials () {
 
 		$auth_header = $_SERVER['HTTP_AUTHORIZATION'];
 
@@ -43,7 +43,7 @@
 		if (empty($token)) return false;
 
 		// Check token against list
-		$pairs = file_exists('_/oauth-pairs.json') ? json_decode(file_get_contents('_/oauth-pairs.json')) : array();
+		$pairs = file_exists('_/oauth-pairs.json') ? json_decode(file_get_contents('_/oauth-pairs.json')) : new stdClass();
 		if (!in_array($token, $pairs)) return false;
 
 		// Otherwise, token passes
@@ -78,14 +78,14 @@
 	function get_user ($user) {
 
 		// Hash the $user
-		$hash = md5($user);
+		$hash = sha1($user);
 
-		// CHeck hash against list
-		$pairs = file_exists('_/oauth-pairs.json') ? json_decode(file_get_contents('_/oauth-pairs.json')) : array();
-		if (!in_array($hash, $pairs)) return false;
+		// Check hash against list
+		$pairs = file_exists('_/oauth-pairs.json') ? json_decode(file_get_contents('_/oauth-pairs.json')) : new stdClass();
+		if (!property_exists($pairs, $hash)) return false;
 
 		// Otherwise, return the $hash
-		return $hash;
+		return $pairs->{$hash};
 
 	}
 

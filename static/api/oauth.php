@@ -19,16 +19,17 @@
 	}
 
 	// Check if token already exists
-	$pairs = file_exists('_/oauth-pairs.json') ? json_decode(file_get_contents('_/oauth-pairs.json')) : array();
-	$hash = md5($credentials['email']);
+	$pairs = file_exists('_/oauth-pairs.json') ? json_decode(file_get_contents('_/oauth-pairs.json')) : new stdClass();
+	$hash = sha1($credentials['email']);
+	$path = md5($credentials['email']);
 
 	// If not, check if allowed to have one
-	if (!in_array($hash, $pairs)) {
+	if (!property_exists($hash, $pairs)) {
 
 		// If the email matches a customer, return a token
 		// Otherwise, throw an error
 		if (is_customer($credentials['email'])) {
-			$pairs[] = $hash;
+			$pairs->{$hash} = $path;
 			file_put_contents('_/oauth-pairs.json', json_encode($pairs));
 		} else {
 			http_response_code(403);
@@ -41,6 +42,7 @@
 	http_response_code(200);
 	die(json_encode(array(
 		'access_token' => $hash,
+		'public_path' => $path,
 		'expires' => 1000 * 60 * 60,
 		'token_type' => 'Bearer'
 	)));
