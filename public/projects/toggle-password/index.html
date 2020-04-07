@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Password Visibility</title>
+
+	<style type="text/css">
+		body {
+			margin: 1em auto;
+			max-width: 40em;
+			width: 88%;
+		}
+
+		label {
+			display: block;
+			width: 100%;
+		}
+
+		input {
+			margin-bottom: 1em;
+		}
+
+		[type="checkbox"] {
+			margin-bottom: 0;
+			margin-right: 0.25em;
+		}
+	</style>
+</head>
+<body>
+
+	<p><a href="/#work-on-fun-projects">&larr; Back to the Vanilla JS Academy</a></p>
+
+	<h1>Password Visibility</h1>
+
+	<h2>Change Username</h2>
+
+	<p>Enter your username and password to change your username.</p>
+
+	<form>
+		<div>
+			<label for="username">Username</label>
+			<input type="text" name="username" id="username">
+		</div>
+
+		<div>
+			<label for="password">Password</label>
+			<input type="password" name="password" id="password">
+		</div>
+
+		<div>
+			<label for="show-password">
+				<input type="checkbox" name="show-passwords" id="show-password" data-pw-toggle="#password">
+				Show password
+			</label>
+		</div>
+
+		<p>
+			<button type="submit">Change Username</button>
+		</p>
+	</form>
+
+	<h2>Change Password</h2>
+
+	<p>Enter your current password and new password below.</p>
+
+	<form>
+		<div>
+			<label for="current-password">Current Password</label>
+			<input type="password" name="current-password" id="current-password">
+		</div>
+
+		<div>
+			<label for="new-password">New Password</label>
+			<input type="password" name="new-password" id="new-password">
+		</div>
+
+		<div>
+			<label for="show-passwords">
+				<input type="checkbox" name="show-passwords" id="show-passwords" data-pw-toggle="#current-password, #new-password">
+				Show passwords
+			</label>
+		</div>
+
+		<p>
+			<button type="submit">Change Passwords</button>
+		</p>
+	</form>
+
+	<script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js"></script>
+	<script>
+		// Listen to all click events in the browser
+		document.addEventListener('click', function (event) {
+
+			// Check if clicked item was a password toggle
+			// If not, return and stop running the callback function
+			if (!event.target.matches('[data-pw-toggle]')) return;
+
+			// Check target password fields
+			var passwords = Array.prototype.slice.call(document.querySelectorAll(event.target.getAttribute('data-pw-toggle')));
+
+			// Loop through each password field
+			passwords.forEach(function (password) {
+
+				// If the toggle is checked, change the type to "text"
+				// Otherwise, change it back to "password"
+				if (event.target.checked) {
+					password.type = 'text';
+				} else {
+					password.type = 'password';
+				}
+
+			});
+
+		}, false);
+	</script>
+</body>
+</html>

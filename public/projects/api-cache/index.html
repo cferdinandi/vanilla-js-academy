@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>API Cache</title>
+
+	<style type="text/css">
+		body {
+			margin: 1em auto;
+			max-width: 40em;
+			width: 88%;
+		}
+
+		article {
+			margin-bottom: 2em;
+		}
+
+		h2 {
+			margin-bottom: 0;
+		}
+
+		article p {
+			margin-top: 0.5em;
+			padding: 0;
+		}
+	</style>
+</head>
+<body>
+
+	<p><a href="/#work-on-fun-projects">&larr; Back to the Vanilla JS Academy</a></p>
+
+	<p><em>Look into the console to see if the data was loaded from an API call or cache.</em></p>
+
+	<h1>API Cache</h1>
+	<p><em><strong>The Scuttlebutt</strong>&mdash;the number one source for pirate news!</em></p>
+
+	<div id="app">
+		Loading...
+	</div>
+
+	<script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js?features=fetch%2Cdefault"></script>
+	<script>
+		//
+		// Variables
+		//
+
+		// Get the #app element
+		var app = document.querySelector('#app');
+
+		// Define a localStorage ID
+		var storageID = 'pirateCache';
+
+
+		//
+		// Methods
+		//
+
+		/**
+		 * Dynamically vary the API endpoint
+		 * @return {String} The API endpoint
+		 */
+		var getEndpoint = function () {
+			var endpoint = 'https://vanillajsacademy.com/api/';
+			var random = Math.random();
+			if (random < 0.5) return endpoint + 'pirates.json';
+			return endpoint + 'fail.json';
+		};
+
+		/**
+		 * Sanitize and encode all HTML in a user-submitted string
+		 * @param  {String} str  The user-submitted string
+		 * @return {String} str  The sanitized string
+		 */
+		var sanitizeHTML = function (str) {
+			var temp = document.createElement('div');
+			temp.textContent = str;
+			return temp.innerHTML;
+		};
+
+		/**
+		 * Render a message into the UI when there are no articles to share
+		 */
+		var renderNoArticles = function () {
+			app.innerHTML = '<p>There be no pirate news afoot, matey. Check back later.</p>';
+		};
+
+		/**
+		 * Render articles into the UI
+		 * @param  {Object} data The API response object
+		 */
+		var renderNews = function (data) {
+			// If there are no articles, render a message into the UI
+			if (data.articles.length < 1) {
+				renderNoArticles();
+				return;
+			}
+
+			app.innerHTML = data.articles.map(function (article) {
+				var html =
+					'<article>' +
+						'<h2>' + sanitizeHTML(article.title) + '</h2>' +
+						'<p><em>By ' + sanitizeHTML(article.author) + ' on ' + sanitizeHTML(article.pubdate) + '</em></p>' +
+						sanitizeHTML(article.article) +
+					'</article>';
+				return html;
+			}).join('') + '<p><em>Articles from <a href="' + sanitizeHTML(data.attribution.url) + '">' + sanitizeHTML(data.attribution.name) + '</a></em></p>';
+		};
+
+		/**
+		 * Check if the data is valid
+		 * @param  {Object}  saved   The data to validate
+		 * @param  {Number}  goodFor How long the data is good for
+		 * @return {Boolean}         If true, data has not yet expired
+		 */
+		var isDataValid = function (saved, goodFor) {
+
+			// Check that there's data, and a timestamp key
+			if (!saved || !saved.data || !saved.timestamp) return false;
+
+			// Get the difference between the timestamp and current time
+			var difference = new Date().getTime() - saved.timestamp;
+
+			return difference < goodFor;
+
+		};
+
+		/**
+		 * Save article data to localStorage
+		 * @param  {Object} data The article data
+		 */
+		var saveData = function (data) {
+
+			// Create a cache object with a timestamp
+			var cache = {
+				data: data,
+				timestamp: new Date().getTime()
+			};
+
+			// Stringify it and save it to localStorage
+			localStorage.setItem(storageID, JSON.stringify(cache));
+
+		};
+
+		/**
+		 * Get API data from localStorage
+		 */
+		var getData = function () {
+
+			// Get saved data from localStorage
+			var saved = localStorage.getItem(storageID);
+			if (!saved) return;
+			saved = JSON.parse(saved);
+
+			// If data is has not expired, return it
+			// Use cached data from 5 seconds
+			if (isDataValid(saved, 1000 * 5)) {
+				return saved.data;
+			}
+
+		};
+
+		/**
+		 * Render content from API cache on failed request
+		 */
+		var renderFallback = function () {
+
+			// Get data from localStorage
+			var saved = localStorage.getItem(storageID);
+
+			// If there's no API cache, show message in the UI
+			if (!saved) {
+				renderNoArticles();
+				return;
+			}
+
+			// Parse saved data
+			saved = JSON.parse(saved);
+
+			// Render articles with cached data
+			renderNews(saved.data);
+			console.log('Fallback from cache after failure');
+
+		};
+
+		/**
+		 * Get articles from the cache if still valid, or from the API if not
+		 */
+		var fetchArticles = function () {
+
+			// Check for valid cached data
+			// If it exists, use it
+			var saved = getData();
+			if (saved) {
+				renderNews(saved);
+				console.log('Loaded from cache');
+				return;
+			}
+
+			// Otherwise, fetch articles from the API
+			fetch(getEndpoint()).then(function (response) {
+				return response.json();
+			}).then(function (data) {
+				renderNews(data);
+				saveData(data);
+				console.log('Fetched from API');
+			}).catch(function () {
+				renderFallback();
+			});
+
+		};
+
+
+		//
+		// Inits
+		//
+
+		fetchArticles();
+
+	</script>
+</body>
+</html>

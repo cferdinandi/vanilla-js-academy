@@ -2,6 +2,10 @@
 node_modules
 #themes
 
+## Environment
+.env
+.htaccess
+
 ## OS X
 .DS_Store
 ._*

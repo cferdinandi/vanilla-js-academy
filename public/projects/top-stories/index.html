@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>What to read today</title>
+
+	<style type="text/css">
+		body {
+			margin: 1em auto;
+			max-width: 40em;
+			width: 88%;
+		}
+
+		article {
+			margin-bottom: 3em;
+		}
+
+		h2 {
+			text-transform: capitalize;
+		}
+	</style>
+</head>
+<body>
+
+	<p><a href="/#work-on-fun-projects">&larr; Back to the Vanilla JS Academy</a></p>
+
+	<h1>What to read today</h1>
+
+	<div id="app"></div>
+
+	<script crossorigin="anonymous" src="https://polyfill.io/v3/polyfill.min.js?features=fetch%2Cdefault"></script>
+	<script>
+		// Get the app
+		var app = document.querySelector('#app');
+
+		// Store API key to a variable for easier access
+		var apiKey = '658cf0e4f41d48a29fd424f03ea549e8';
+
+		// Set the sections and number of articles to show to variables so they can be easily changed later
+		var sections = ['technology', 'science', 'magazine'];
+		var numberOfArticles = 3;
+
+		/**
+		 * Sanitize and encode all HTML in a user-submitted string
+		 * @param  {String} str  The user-submitted string
+		 * @return {String} str  The sanitized string
+		 */
+		var sanitizeHTML = function (str) {
+			var temp = document.createElement('div');
+			temp.textContent = str;
+			return temp.innerHTML;
+		};
+
+		/**
+		 * Render articles into the DOM
+		 * @param  {Array} articles The articles to render
+		 */
+		var render = function (articles, section) {
+
+			// Create a new array of markup strings with array.map(), then
+			// Combine them into one string with array.join(), then
+			// Insert them into the DOM with innerHTML
+			app.innerHTML += '<h2>' + section + '</h2>' + articles.map(function (article) {
+				var html =
+					'<article>' +
+						'<h3><a href="' + sanitizeHTML(article.url) + '">' + sanitizeHTML(article.title) + '</a></h3>' +
+						'<p>' + sanitizeHTML(article.byline) + '</p>' +
+						'<p>' + sanitizeHTML(article.abstract) + '</p>' +
+					'</article>';
+				return html;
+			}).join('');
+
+		};
+
+		/**
+		 * Get the first few articles from the full data set
+		 * @param  {Array} articles The full set of articles
+		 * @return {Array}          The first few
+		 */
+		var getFirstFew = function (articles) {
+			return articles.slice(0, numberOfArticles);
+		};
+
+		/**
+		 * Get articles for a section
+		 * @param  {String} section The section name
+		 */
+		var getArticles = function (section) {
+			fetch('https://api.nytimes.com/svc/topstories/v2/' + section + '.json?api-key=' + apiKey).then(function (response) {
+				return response.json();
+			}).then(function (data) {
+
+				// Get the first few articles
+				var firstFew = getFirstFew(data.results);
+
+				// Render them into the DOM
+				render(firstFew, section);
+
+			}).catch(function (error) {
+				console.log('Something went wrong:', error);
+			});
+		};
+
+		// Get articles for each section
+		sections.forEach(function (section) {
+			getArticles(section);
+		});
+	</script>
+</body>
+</html>
