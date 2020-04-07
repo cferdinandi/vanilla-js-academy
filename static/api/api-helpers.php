@@ -46,8 +46,8 @@
 		$pairs = file_exists('_/oauth-pairs.json') ? json_decode(file_get_contents('_/oauth-pairs.json')) : new stdClass();
 		if (!property_exists($pairs, $token)) return false;
 
-		// Otherwise, token passes
-		return $token;
+		// Otherwise, return token value
+		return $pairs->{$token};
 
 	}
 
