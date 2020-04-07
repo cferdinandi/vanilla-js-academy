@@ -5,7 +5,7 @@ public
 
 ## Environment
 .env
-# **/*/.htaccess
+**/*/.htaccess
 **/*/oauth-items.json
 
 ## OS X
