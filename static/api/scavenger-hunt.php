@@ -22,7 +22,7 @@
 		}
 
 		// Get the file
-		$file = get_file($_POST['user'], 'scavenger-hunt', new stdClass());
+		$file = get_file($user, 'scavenger-hunt', 'scavenger-hunt-items.json', true);
 
 		// Return the file
 		http_response_code(200);

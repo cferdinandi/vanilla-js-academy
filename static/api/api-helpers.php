@@ -75,7 +75,7 @@
 	}
 
 	// Get file
-	function get_file ($hash, $filename, $fallback) {
+	function get_file ($hash, $filename, $fallback, $is_file) {
 
 		// File path
 		$path = '_/' . $hash . '_' . $filename . '.json';
@@ -86,8 +86,14 @@
 		}
 
 		// If there's a fallback, use that
-		if ($fallback) {
-			return $fallback;
+		if (!empty($fallback)) {
+			if (!empty($is_file)) {
+				if (file_exists($fallback)) {
+					return json_decode(file_get_contents($fallback));
+				}
+			} else {
+				return $fallback;
+			}
 		}
 
 		// Otherwise, return false
