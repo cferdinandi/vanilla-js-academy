@@ -176,5 +176,5 @@
 				'methods' => array('GET', 'POST', 'PUT', 'DELETE'),
 				'authentication' => 'Bearer',
 			),
-		)
+		);
 	}
