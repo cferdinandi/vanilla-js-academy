@@ -45,7 +45,7 @@
 	http_response_code(200);
 	die(json_encode(array(
 		'access_token' => $hash,
-		'public_path' => $path,
+		'public_path' => '?public=' . $path,
 		'expires' => 1000 * 60 * 60,
 		'token_type' => 'Bearer'
 	)));
