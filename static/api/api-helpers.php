@@ -28,7 +28,7 @@
 	}
 
 	// Get user session token
-	function get_token_credentials () {
+	function get_path_from_token () {
 
 		$auth_header = $_SERVER['HTTP_AUTHORIZATION'];
 
@@ -48,6 +48,21 @@
 
 		// Otherwise, return token value
 		return $pairs->{$token};
+
+	}
+
+	// Check if an unauthorized request matches a valid user
+	function get_path_from_user ($user) {
+
+		// Hash the $user
+		$hash = sha1($user);
+
+		// Check hash against list
+		$pairs = file_exists('_/oauth-pairs.json') ? json_decode(file_get_contents('_/oauth-pairs.json')) : new stdClass();
+		if (!property_exists($pairs, $hash)) return false;
+
+		// Otherwise, return the $hash
+		return $pairs->{$hash};
 
 	}
 
@@ -74,19 +89,11 @@
 
 	}
 
-	// Check if an unauthorized request matches a valid user
-	function get_user ($user) {
-
-		// Hash the $user
-		$hash = sha1($user);
-
-		// Check hash against list
-		$pairs = file_exists('_/oauth-pairs.json') ? json_decode(file_get_contents('_/oauth-pairs.json')) : new stdClass();
-		if (!property_exists($pairs, $hash)) return false;
-
-		// Otherwise, return the $hash
-		return $pairs->{$hash};
-
+	// Get file path from user credentials
+	function get_path () {
+		$basic = get_basic_auth_credentials();
+		$path = !empty($basic) && array_key_exists('email', $basic) ? get_path_from_user($basic['email']) : get_path_from_token();
+		return $path;
 	}
 
 	// Get the API method
