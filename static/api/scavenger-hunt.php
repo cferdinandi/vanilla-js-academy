@@ -6,20 +6,20 @@
 	// Get the API method
 	$method = get_method();
 
+	// Get token
+	$token = get_token_credentials();
+
 	// GET Request
 	if ($method === 'GET') {
 
-		// Get the hased user token
-		$user = get_user($_GET['public']);
-
 		// If there's no matching user, bail
-		if (empty($user) && !empty($_GET['public'])) {
+		if (empty($token) && empty($_GET['public'])) {
 			http_response_code(403);
 			die('You shall not pass!');
 		}
 
 		// Get the file
-		$file = get_file($user, 'scavenger-hunt', 'scavenger-hunt-items.json', true);
+		$file = get_file(empty($token) ? $_GET['public'] : $token, 'scavenger-hunt', 'scavenger-hunt-items.json', true);
 
 		// Return the file
 		http_response_code(200);
@@ -28,7 +28,6 @@
 	}
 
 	// For any other type of request, force authorization
-	$token = get_token_credentials();
 	if (empty($token)) {
 		http_response_code(403);
 		die('You shall not pass!');
