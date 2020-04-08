@@ -3,9 +3,6 @@
 	// Include required files
 	include_once('api-helpers.php');
 
-	// Get data
-	extract_data();
-
 	// Get the API method
 	$method = get_method();
 
@@ -13,10 +10,10 @@
 	if ($method === 'GET') {
 
 		// Get the hased user token
-		$user = get_user($_GET['user']);
+		$user = get_user($_GET['public']);
 
 		// If there's no matching user, bail
-		if (empty($user) && !empty($_GET['user'])) {
+		if (empty($user) && !empty($_GET['public'])) {
 			http_response_code(403);
 			die('You shall not pass!');
 		}
@@ -39,6 +36,7 @@
 
 	// POST/PUT Request
 	if ($method === 'POST' || $method === 'PUT') {
+		extract_data();
 		set_file($token, 'scavenger-hunt', $_POST);
 		http_response_code(200);
 		die(json_encode($_POST));
