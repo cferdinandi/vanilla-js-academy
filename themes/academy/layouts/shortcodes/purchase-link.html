@@ -10,7 +10,7 @@
 		{{ index $ctas "academy-alumni" | safeHTML }}
 		{{- end -}}
 
-		<p><a class="btn btn-large edd-buy-now-button" href="https://gomakethings.com/checkout?edd_action=add_to_cart&download_id=28868&edd_options[price_id]={{ $details.priceID }}">Join now for just <del>{{ $details.price }}</del> {{ $details.priceAlumni }}</a></p>
+		<p><a class="btn btn-large edd-buy-now-button" href="https://gomakethings.com/checkout?edd_action=add_to_cart&download_id=28868&edd_options[price_id]={{ $details.priceID }}&discount=ALUMNI">Join now for just <del>{{ $details.price }}</del> {{ $details.priceAlumni }}</a></p>
 
 		{{ partial "sales-numbers.html" . }}
 
@@ -29,7 +29,7 @@
 		{{ index $ctas "academy-pre" | safeHTML }}
 		{{- end -}}
 
-		<p><a class="btn btn-large edd-buy-now-button" href="https://gomakethings.com/checkout?edd_action=add_to_cart&download_id=28868&edd_options[price_id]={{ $details.priceID }}">Join now for just <del>{{ $details.price }}</del> {{ $details.pricePre }}</a></p>
+		<p><a class="btn btn-large edd-buy-now-button" href="https://gomakethings.com/checkout?edd_action=add_to_cart&download_id=28868&edd_options[price_id]={{ $details.priceID }}&discount=INSIDER">Join now for just <del>{{ $details.price }}</del> {{ $details.pricePre }}</a></p>
 
 		{{ partial "sales-numbers.html" . }}
 
