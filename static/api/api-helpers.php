@@ -106,7 +106,7 @@
 	}
 
 	// Get file
-	function get_file ($hash, $filename, $fallback, $is_file) {
+	function get_file ($hash, $filename, $fallback, $is_file = false) {
 
 		// File path
 		$path = '_/' . $hash . '_' . $filename . '.json';
