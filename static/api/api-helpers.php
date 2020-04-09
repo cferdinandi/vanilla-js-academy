@@ -155,6 +155,13 @@
 				'methods' => array('POST', 'PUT'),
 				'authentication' => 'Bearer',
 			),
+			'notes' => array(
+				'description' => 'Your saved notes.',
+				'endpoint' => $url . 'notes.php',
+				'publicEndpoint' => null,
+				'methods' => array('GET', 'POST', 'PUT', 'DELETE'),
+				'authentication' => 'Bearer',
+			),
 			'oauth' => array(
 				'description' => 'Get an OAuth Bearer token for use with API requests.',
 				'endpoint' => $url . 'outh.php',
