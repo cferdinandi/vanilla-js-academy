@@ -19,7 +19,7 @@
 	if ($method === 'GET') {
 
 		// Get the file
-		$file = get_file($path, 'notes', new stdClass());
+		$file = get_file($path, 'notes', 'notes.json', true);
 
 		// Return the file
 		http_response_code(200);
