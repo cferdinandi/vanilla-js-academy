@@ -83,7 +83,7 @@
 
 		// Otherwise, return decoded credentials
 		return array(
-			'email' => strtolower(base64_decode($credentials[0])),
+			'email' => base64_decode($credentials[0]),
 			'password' => base64_decode($credentials[1])
 		);
 
