@@ -7,8 +7,8 @@
 	$method = get_method();
 
 	// Authenticate user
-	$token = get_token_credentials();
-	if (empty($token)) {
+	$path = get_path_from_token();
+	if (empty($path)) {
 		http_response_code(403);
 		die('You shall not pass!');
 	}
