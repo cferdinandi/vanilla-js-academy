@@ -31,7 +31,6 @@
 		return file_exists('_/oauth-pairs.json') ? json_decode(file_get_contents('_/oauth-pairs.json')) : new stdClass();
 	}
 
-	// { [TOKEN]: [EXP_TIMESTAMP] }
 	function get_oauth_sessions () {
 		return file_exists('_/oauth-sessions.json') ? json_decode(file_get_contents('_/oauth-sessions.json')) : new stdClass();
 	}
@@ -43,6 +42,12 @@
 		$sessions->{$path} = $exp;
 		file_put_contents('_/oauth-sessions.json', json_encode($sessions));
 		return $exp;
+	}
+
+	function remove_oauth_session ($path) {
+		$sessions = get_oauth_sessions();
+		if (!property_exists($session, $path)) return;
+		unset($sessions->{$path});
 	}
 
 	function is_session_valid ($path) {

@@ -76,6 +76,15 @@
 	// Revoke an existing session token
 	if ($method === 'DELETE') {
 
+		// Remove the session
+		remove_oauth_session($path);
+
+		// Return the updated token
+		http_response_code(200);
+		die(json_encode(array(
+			'exp' => 0,
+		)));
+
 	}
 
 	// All other requests
