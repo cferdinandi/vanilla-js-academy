@@ -43,7 +43,6 @@
 	}
 
 	function is_session_valid ($path) {
-		return true;
 		$session = get_oauth_sessions();
 		return property_exists($session, $path) && time() < $session->{$path};
 	}
