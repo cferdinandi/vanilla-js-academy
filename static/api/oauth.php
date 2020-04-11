@@ -22,7 +22,7 @@
 	}
 
 	// Check if token already exists
-	$pairs = get_oauth_pairs();
+	$pairs = file_exists('_/oauth-pairs.json') ? json_decode(file_get_contents('_/oauth-pairs.json')) : new stdClass();
 	$hash = sha1($credentials['email']);
 	$path = md5($credentials['email']);
 
@@ -41,17 +41,11 @@
 
 	}
 
-	// Set session with expiration in seconds
-	// Defaults to 15 minutes
-	$duration = empty($_GET['exp']) ? $_GET['exp'] : 60 * 15;
-	$exp = time() + $duration;
-	set_oauth_session($path, $exp);
-
 	// Return the token
 	http_response_code(200);
 	die(json_encode(array(
 		'access_token' => $hash,
 		'public_path' => '?public=' . $path,
-		'exp' => $exp,
+		'expires' => 1000 * 60 * 60,
 		'token_type' => 'Bearer'
 	)));
