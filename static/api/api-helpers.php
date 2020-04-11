@@ -45,8 +45,8 @@
 	function is_session_valid ($path) {
 		$session = get_oauth_sessions();
 		http_response_code(200);
-		die(json_encode($session));
-		return property_exists($session, $path) && time() < intval($session->{$path});
+		die(json_encode(array($session->{$path})));
+		return property_exists($session, $path) && time() < $session->{$path};
 	}
 
 	function authenticate_user ($path) {
