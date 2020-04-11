@@ -6,14 +6,9 @@
 	// Get the API method
 	$method = get_method();
 
-	// Get token
+	// Authenticate user
 	$path = get_path_from_token();
-
-	// Force authorization
-	if (empty($path)) {
-		http_response_code(403);
-		die('You shall not pass!');
-	}
+	authenticate_user($path);
 
 	// GET Request
 	if ($method === 'GET') {

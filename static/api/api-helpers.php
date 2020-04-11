@@ -42,9 +42,26 @@
 		file_put_contents('_/oauth-sessions.json', json_encode($pairs));
 	}
 
-	function is_session_valid ($hash) {
+	function is_session_valid ($path) {
 		$session = get_oauth_sessions();
-		return property_exists($session, $hash) && time() < $session->{$hash};
+		return property_exists($session, $path) && time() < $session->{$path};
+	}
+
+	function authenticate_user ($path) {
+
+		// Make sure there's a valid path
+		if (empty($path)) {
+			http_response_code(403);
+			die('You shall not pass!');
+		}
+
+		// Make sure session is still valid
+		$is_valid = is_session_valid($path);
+		if (empty($is_valid)) {
+			http_response_code(440);
+			die('Session expired');
+		}
+
 	}
 
 	// Get user session token

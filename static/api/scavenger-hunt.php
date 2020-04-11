@@ -21,11 +21,8 @@
 
 	}
 
-	// For any other type of request, force authorization
-	if (empty($path)) {
-		http_response_code(403);
-		die('You shall not pass!');
-	}
+	// Authenticate user
+	authenticate_user($path);
 
 	// POST/PUT Request
 	if ($method === 'POST' || $method === 'PUT') {

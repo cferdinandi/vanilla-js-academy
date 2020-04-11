@@ -8,10 +8,7 @@
 
 	// Authenticate user
 	$path = get_path_from_token();
-	if (empty($path)) {
-		http_response_code(403);
-		die('You shall not pass!');
-	}
+	authenticate_user($path);
 
 	// POST/PUT Request
 	if ($method === 'POST' || $method === 'PUT') {

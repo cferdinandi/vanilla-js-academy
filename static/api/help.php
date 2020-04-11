@@ -8,10 +8,7 @@
 
 	// Authenticate user
 	$path = get_path();
-	if (empty($path)) {
-		http_response_code(403);
-		die('You shall not pass!');
-	}
+	authenticate_user($path);
 
 	// GET Request
 	if ($method === 'GET') {
