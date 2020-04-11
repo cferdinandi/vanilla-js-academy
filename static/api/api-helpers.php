@@ -36,10 +36,13 @@
 		return file_exists('_/oauth-sessions.json') ? json_decode(file_get_contents('_/oauth-sessions.json')) : new stdClass();
 	}
 
-	function set_oauth_session ($hash, $exp) {
+	function set_oauth_session ($path) {
+		$duration = empty($_GET['exp']) ? 60 * 15 : $_GET['exp'];
+		$exp = time() + $duration;
 		$sessions = get_oauth_sessions();
-		$sessions->{$hash} = $exp;
+		$sessions->{$path} = $exp;
 		file_put_contents('_/oauth-sessions.json', json_encode($sessions));
+		return $exp;
 	}
 
 	function is_session_valid ($path) {
