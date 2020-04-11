@@ -41,11 +41,17 @@
 
 	}
 
+	// Set session with expiration in seconds
+	// Defaults to 15 minutes
+	$duration = empty($_GET['exp']) ? $_GET['exp'] : 60 * 15;
+	$exp = time() + $duration;
+	set_oauth_session($path, $exp);
+
 	// Return the token
 	http_response_code(200);
 	die(json_encode(array(
 		'access_token' => $hash,
 		'public_path' => '?public=' . $path,
-		'expires' => 1000 * 60 * 60,
+		'exp' => $exp,
 		'token_type' => 'Bearer'
 	)));
