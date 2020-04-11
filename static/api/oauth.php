@@ -22,7 +22,7 @@
 	}
 
 	// Check if token already exists
-	$pairs = file_exists('_/oauth-pairs.json') ? json_decode(file_get_contents('_/oauth-pairs.json')) : new stdClass();
+	$pairs = get_oauth_pairs();
 	$hash = sha1($credentials['email']);
 	$path = md5($credentials['email']);
 
