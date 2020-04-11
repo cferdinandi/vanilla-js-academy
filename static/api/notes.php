@@ -6,21 +6,9 @@
 	// Get the API method
 	$method = get_method();
 
-	// Get token
+	// Authenticate user
 	$path = get_path_from_token();
-
-	// Force authorization
-	if (empty($path)) {
-		http_response_code(403);
-		die('You shall not pass!');
-	}
-
-	// Make sure session is still valid
-	$is_valid = is_session_valid($path);
-	if (empty($is_valid)) {
-		http_response_code(440);
-		die('Session expired');
-	}
+	authenticate_user($path);
 
 	// GET Request
 	if ($method === 'GET') {
