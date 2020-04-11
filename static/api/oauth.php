@@ -45,7 +45,7 @@
 	// Defaults to 15 minutes
 	$duration = empty($_GET['exp']) ? $_GET['exp'] : 60 * 15;
 	$exp = time() + $duration;
-	set_oauth_session($path, $exp);
+	// set_oauth_session($path, $exp);
 
 	// Return the token
 	http_response_code(200);
