@@ -37,9 +37,9 @@
 	}
 
 	function set_oauth_session ($hash, $exp) {
-		$session = get_oauth_sessions();
-		$session->{$hash} = $exp;
-		file_put_contents('_/oauth-sessions.json', json_encode($pairs));
+		$sessions = get_oauth_sessions();
+		$sessions->{$hash} = $exp;
+		file_put_contents('_/oauth-sessions.json', json_encode($sessions));
 	}
 
 	function is_session_valid ($path) {
