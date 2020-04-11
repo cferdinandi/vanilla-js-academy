@@ -27,6 +27,26 @@
 
 	}
 
+	function get_oauth_pairs () {
+		return file_exists('_/oauth-pairs.json') ? json_decode(file_get_contents('_/oauth-pairs.json')) : new stdClass();
+	}
+
+	// { [TOKEN]: [EXP_TIMESTAMP] }
+	function get_oauth_sessions () {
+		return file_exists('_/oauth-sessions.json') ? json_decode(file_get_contents('_/oauth-sessions.json')) : new stdClass();
+	}
+
+	function set_oauth_session ($hash, $exp) {
+		$session = get_oauth_sessions();
+		$session->{$hash} = $exp;
+		file_put_contents('_/oauth-sessions.json', json_encode($pairs));
+	}
+
+	function is_session_valid ($hash) {
+		$session = get_oauth_sessions();
+		return property_exists($session, $hash) && time() < $session->{$hash};
+	}
+
 	// Get user session token
 	function get_path_from_token () {
 
@@ -43,7 +63,7 @@
 		if (empty($token)) return false;
 
 		// Check token against list
-		$pairs = file_exists('_/oauth-pairs.json') ? json_decode(file_get_contents('_/oauth-pairs.json')) : new stdClass();
+		$pairs = get_oauth_pairs();
 		if (!property_exists($pairs, $token)) return false;
 
 		// Otherwise, return token value
@@ -58,7 +78,7 @@
 		$hash = sha1($user);
 
 		// Check hash against list
-		$pairs = file_exists('_/oauth-pairs.json') ? json_decode(file_get_contents('_/oauth-pairs.json')) : new stdClass();
+		$pairs = get_oauth_pairs();
 		if (!property_exists($pairs, $hash)) return false;
 
 		// Otherwise, return the $hash
