@@ -43,7 +43,7 @@
 
 	// Set session with expiration in seconds
 	// Defaults to 15 minutes
-	$duration = empty($_GET['exp']) ? $_GET['exp'] : 60 * 15;
+	$duration = empty($_GET['exp']) ? 60 * 15 : $_GET['exp'];
 	$exp = time() + $duration;
 	set_oauth_session($path, $exp);
 
