@@ -44,7 +44,7 @@
 
 	function is_session_valid ($path) {
 		$session = get_oauth_sessions();
-		return property_exists($session, $path) && time() < $session->{$path};
+		return property_exists($session, $path) && time() < intval($session->{$path});
 	}
 
 	function authenticate_user ($path) {
