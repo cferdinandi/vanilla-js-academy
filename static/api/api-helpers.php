@@ -198,21 +198,21 @@
 				'endpoint' => $url . 'echo.php',
 				'publicEndpoint' => null,
 				'methods' => array('POST', 'PUT'),
-				'authentication' => 'Bearer',
+				'authentication' => array('Bearer'),
 			),
 			'notes' => array(
 				'description' => 'Your saved notes.',
 				'endpoint' => $url . 'notes.php',
 				'publicEndpoint' => null,
 				'methods' => array('GET', 'POST', 'PUT', 'DELETE'),
-				'authentication' => 'Bearer',
+				'authentication' => array('Bearer'),
 			),
 			'oauth' => array(
 				'description' => 'Get an OAuth Bearer token for use with API requests.',
 				'endpoint' => $url . 'outh.php',
 				'publicEndpoint' => null,
-				'methods' => array('GET'),
-				'authentication' => 'Basic',
+				'methods' => array('GET', 'POST', 'PUT', 'DELETE'),
+				'authentication' => array('Basic', 'Bearer'),
 			),
 			'pirates' => array(
 				'description' => 'Get a list of articles for the Scuttlebutt pirate publication.',
@@ -233,7 +233,7 @@
 				'endpoint' => $url . 'scavenger-hunt.php',
 				'publicEndpoint' => $url . 'scavenger-hunt.php' . '?public=' . $user,
 				'methods' => array('GET', 'POST', 'PUT', 'DELETE'),
-				'authentication' => 'Bearer',
+				'authentication' => array('Bearer'),
 			),
 		);
 	}
