@@ -34,7 +34,10 @@
 		}
 
 		// Get the file
-		$file = get_file($path, 'workout', array('workouts' => array()));
+		$file = get_file($path, 'workout', json_decode('{workouts: []}'));
+
+		http_response_code(200);
+		die(json_encode($file));
 
 		// Check if item already exists
 		$existing = find_by_key_value('id', $_POST['id'], $file->{'workouts'});
@@ -67,7 +70,7 @@
 		}
 
 		// Get the file
-		$file = get_file($path, 'workout', array('workouts' => array()));
+		$file = get_file($path, 'workout', json_decode('{workouts: []}'));
 
 		// Check if item already exists
 		$existing = find_by_key_value('id', $_POST['id'], $file->{'workouts'});
