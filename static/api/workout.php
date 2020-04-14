@@ -43,7 +43,7 @@
 		// Otherwise, replace it
 		if ($existing === false) {
 			if (empty($file['workouts'])) {
-				$file['workouts'] = array($_POST);
+				$file['workouts'] = array(0 => $_POST);
 			} else {
 				$file['workouts'][] = $_POST;
 			}
