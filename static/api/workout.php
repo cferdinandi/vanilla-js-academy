@@ -37,14 +37,14 @@
 		$file = get_file($path, 'workout', json_decode('{workouts: []}'));
 
 		// Check if item already exists
-		$existing = find_by_key_value('id', $_POST['id'], $file['workouts']);
+		$existing = find_by_key_value('id', $_POST['id'], $file->workouts);
 
 		// If the item doesn't exist, create it
 		// Otherwise, replace it
 		if ($existing === false) {
-			$file['workouts'][] = $_POST;
+			$file->workouts[] = $_POST;
 		} else {
-			$file['workouts'][$existing] = $_POST;
+			$file->workouts[$existing] = $_POST;
 		}
 
 		// Save to database
