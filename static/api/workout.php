@@ -34,7 +34,7 @@
 		}
 
 		// Get the file
-		$file = get_file($path, 'workout', json_decode('{workouts: []}'));
+		$file = get_file($path, 'workout', array('workouts' => array()));
 
 		// Check if item already exists
 		$existing = find_by_key_value('id', $_POST['id'], $file->{'workouts'});
@@ -42,9 +42,9 @@
 		// If the item doesn't exist, create it
 		// Otherwise, replace it
 		if ($existing === false) {
-			$file['workouts'][] = $_POST;
+			$file->{'workouts'}[] = $_POST;
 		} else {
-			$file['workouts'][$existing] = $_POST;
+			$file->{'workouts'}[$existing] = $_POST;
 		}
 
 		// Save to database
@@ -67,14 +67,21 @@
 		}
 
 		// Get the file
-		$file = get_file($path, 'workout', json_decode('{workouts: []}'));
+		$file = get_file($path, 'workout', array('workouts' => array()));
+		http_response_code(200);
+		die(json_encode(array(
+			'file' => $file,
+			'type' => gettype($file),
+			'typeWorkouts' => gettype($file->{'workouts'}),
+			'workouts' => $file->{'workouts'}
+		)));
 
 		// Check if item already exists
 		$existing = find_by_key_value('id', $_POST['id'], $file->{'workouts'});
 
 		// If the item exists, delete it
 		if ($existing !== false) {
-			unset($file['workouts'][$existing]);
+			unset($file->'workouts'[$existing]);
 		}
 
 		// Save to database
