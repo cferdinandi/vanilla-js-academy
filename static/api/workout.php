@@ -22,10 +22,10 @@
 
 	}
 
+	extract_data();
+
 	// POST/PUT Request
 	if ($method === 'POST' || $method === 'PUT') {
-
-		extract_data();
 
 		// If no ID was provided, throw an error
 		if (empty($_POST['id'])) {
@@ -58,9 +58,32 @@
 
 	// DELETE Request
 	if ($method === 'DELETE') {
-		set_file($path, 'workout', '{}');
+
+		// If no ID was provided, reset entire file
+		if (empty($_POST['id'])) {
+			set_file($path, 'workout', '{workouts: []}');
+			http_response_code(200);
+			die('{workouts: []}');
+		}
+
+		// Get the file
+		$file = get_file($path, 'workout', array('workouts' => array()));
+
+		// Check if item already exists
+		$existing = array_search($_POST['id'], array_column($file->{'workouts'}, 'id'));
+
+		// If the item exists, delete it
+		if ($existing !== false) {
+			unset($file->{'workouts'}[$existing]);
+		}
+
+		// Save to database
+		set_file($path, 'workout', $file);
+
+		// Return data
 		http_response_code(200);
-		die('{}');
+		die(json_encode($file));
+
 	}
 
 	// All other requests
