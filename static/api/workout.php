@@ -42,7 +42,11 @@
 		// If the item doesn't exist, create it
 		// Otherwise, replace it
 		if ($existing === false) {
-			$file->workouts[count($file->workouts)] = $_POST;
+			if (empty($file->workouts)) {
+				$file->workouts = array($_POST);
+			} else {
+				$file->workouts[] = $_POST;
+			}
 		} else {
 			$file->workouts[$existing] = $_POST;
 		}
