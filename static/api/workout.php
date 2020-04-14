@@ -35,11 +35,9 @@
 
 		// Get the file
 		$file = get_file($path, 'workout', array('workouts' => array()));
-		http_response_code(200);
-		die(json_encode($file));
 
 		// Check if item already exists
-		$existing = array_search($_POST['id'], array_column($file->{'workouts'}, 'id'));
+		$existing = find_by_key_value('id', $_POST['id'], $file->{'workouts'});
 
 		// If the item doesn't exist, create it
 		// Otherwise, replace it
@@ -72,7 +70,7 @@
 		$file = get_file($path, 'workout', array('workouts' => array()));
 
 		// Check if item already exists
-		$existing = array_search($_POST['id'], array_column($file->{'workouts'}, 'id'));
+		$existing = find_by_key_value('id', $_POST['id'], $file->{'workouts'});
 
 		// If the item exists, delete it
 		if ($existing !== false) {

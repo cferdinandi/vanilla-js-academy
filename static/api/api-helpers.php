@@ -183,3 +183,12 @@
 	function set_file ($hash, $filename, $content) {
 		file_put_contents('_/' . $hash . '_'. $filename . '.json', json_encode($content));
 	}
+
+	function find_by_key_value ($key, $value, $array = array()) {
+		foreach ($array as $index => $val) {
+			if (array_key_exists($key, $val) && $val[$key] === $value) {
+				return $index;
+			}
+		}
+		return null;
+	}
