@@ -14,7 +14,7 @@
 	if ($method === 'GET') {
 
 		// Get the file
-		$file = get_file($path, 'workout', new stdClass());
+		$file = get_file($path, 'workout', array('workouts' => array()));
 
 		// Return the file
 		http_response_code(200);
@@ -24,10 +24,36 @@
 
 	// POST/PUT Request
 	if ($method === 'POST' || $method === 'PUT') {
+
 		extract_data();
-		set_file($path, 'workout', $_POST);
+
+		// If no ID was provided, throw an error
+		if (empty($_POST['id'])) {
+			http_response_code(400);
+			die('Please provide a unique ID for this workout');
+		}
+
+		// Get the file
+		$file = get_file($path, 'workout', array('workouts' => array()));
+
+		// Check if item already exists
+		$existing = array_search($_POST['id'], array_column($file->{'workouts'}, 'id'));
+
+		// If the item doesn't exist, create it
+		// Otherwise, replace it
+		if ($existing === false) {
+			$file->{'workouts'}[] = $_POST;
+		} else {
+			$file->{'workouts'}[$existing] = $_POST;
+		}
+
+		// Save to database
+		set_file($path, 'workout', $file);
+
+		// Return data
 		http_response_code(200);
 		die(json_encode($_POST));
+
 	}
 
 	// DELETE Request
