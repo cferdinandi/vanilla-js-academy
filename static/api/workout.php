@@ -37,7 +37,7 @@
 		$file = get_file($path, 'workout', array('workouts' => array()));
 
 		// Check if item already exists
-		$existing = find_by_key_value('id', $_POST['id'], $file->{'workouts'});
+		$existing = find_by_key_value('id', $_POST['id'], $file['workouts']);
 
 		// If the item doesn't exist, create it
 		// Otherwise, replace it
