@@ -42,8 +42,11 @@
 		// If the item doesn't exist, create it
 		// Otherwise, replace it
 		if ($existing === false) {
-			// array_push($file, );
-			$file[] = array($_POST);
+			if (empty($file)) {
+				$file[0] = $_POST;
+			} else {
+				$file[] = $_POST;
+			}
 		} else {
 			$file[$existing] = $_POST;
 		}
