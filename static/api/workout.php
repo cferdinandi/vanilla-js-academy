@@ -40,8 +40,8 @@
 		die(json_encode(array(
 			'file' => $file,
 			'type' => gettype($file),
-			'typeWorkouts' => gettype($file->workouts),
-			'workouts' => $file->workouts
+			'typeWorkouts' => gettype($file['workouts']),
+			'workouts' => $file['workouts']
 		)));
 
 		// Check if item already exists
