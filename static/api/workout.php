@@ -42,9 +42,9 @@
 		// If the item doesn't exist, create it
 		// Otherwise, replace it
 		if ($existing === false) {
-			$file->{'workouts'}[] = $_POST;
+			$file['workouts'][] = $_POST;
 		} else {
-			$file->{'workouts'}[$existing] = $_POST;
+			$file['workouts'][$existing] = $_POST;
 		}
 
 		// Save to database
@@ -74,7 +74,7 @@
 
 		// If the item exists, delete it
 		if ($existing !== false) {
-			unset($file->{'workouts'}[$existing]);
+			unset($file['workouts'][$existing]);
 		}
 
 		// Save to database
