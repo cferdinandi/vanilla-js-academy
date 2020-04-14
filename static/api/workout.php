@@ -35,6 +35,8 @@
 
 		// Get the file
 		$file = get_file($path, 'workout', array('workouts' => array()));
+		http_response_code(200);
+		die(json_encode($file));
 
 		// Check if item already exists
 		$existing = array_search($_POST['id'], array_column($file->{'workouts'}, 'id'));
