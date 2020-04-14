@@ -64,35 +64,35 @@
 
 	}
 
-	// DELETE Request
-	if ($method === 'DELETE') {
+	// // DELETE Request
+	// if ($method === 'DELETE') {
 
-		// If no ID was provided, reset entire file
-		if (empty($_POST['id'])) {
-			set_file($path, 'workout', '{workouts: []}');
-			http_response_code(200);
-			die('{workouts: []}');
-		}
+	// 	// If no ID was provided, reset entire file
+	// 	if (empty($_POST['id'])) {
+	// 		set_file($path, 'workout', '{workouts: []}');
+	// 		http_response_code(200);
+	// 		die('{workouts: []}');
+	// 	}
 
-		// Get the file
-		$file = get_file($path, 'workout', array('workouts' => array()));
+	// 	// Get the file
+	// 	$file = get_file($path, 'workout', array('workouts' => array()));
 
-		// Check if item already exists
-		$existing = find_by_key_value('id', $_POST['id'], $file->{'workouts'});
+	// 	// Check if item already exists
+	// 	$existing = find_by_key_value('id', $_POST['id'], $file->{'workouts'});
 
-		// If the item exists, delete it
-		if ($existing !== false) {
-			unset($file->'workouts'[$existing]);
-		}
+	// 	// If the item exists, delete it
+	// 	if ($existing !== false) {
+	// 		unset($file->'workouts'[$existing]);
+	// 	}
 
-		// Save to database
-		set_file($path, 'workout', $file);
+	// 	// Save to database
+	// 	set_file($path, 'workout', $file);
 
-		// Return data
-		http_response_code(200);
-		die(json_encode($file));
+	// 	// Return data
+	// 	http_response_code(200);
+	// 	die(json_encode($file));
 
-	}
+	// }
 
 	// All other requests
 	http_response_code(405);
