@@ -45,7 +45,7 @@
 			if (empty($file->workouts)) {
 				$file->workouts = array(
 					0 => $_POST
-				)
+				);
 			} else {
 				// $file->workouts[] = $_POST;
 			}
