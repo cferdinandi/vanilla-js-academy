@@ -55,7 +55,7 @@
 		if (empty($_POST['id'])) {
 			set_file($path, 'workout', new stdClass());
 			http_response_code(200);
-			die('{workouts: []}');
+			die(json_encode(new stdClass()));
 		}
 
 		// Get the file
