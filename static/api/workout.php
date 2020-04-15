@@ -37,7 +37,7 @@
 		$file = get_file($path, 'workout', new stdClass());
 
 		// Add or update the item
-		$file[$_POST['id']] = $_POST;
+		$file->{$_POST['id']} = $_POST;
 
 		// Save to database
 		set_file($path, 'workout', $file);
