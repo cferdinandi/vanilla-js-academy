@@ -35,7 +35,7 @@
 
 		// Get the file
 		// $file = get_file($path, 'workout', 'workout.json', true);
-		$file = get_file($path, 'workout');
+		$file = get_file($path, 'workout', false);
 
 		// Check if item already exists
 		// $existing = find_by_key_value('id', $_POST['id'], $file->workouts);
