@@ -43,7 +43,7 @@
 		// Otherwise, replace it
 		if ($existing === false) {
 			if (empty($file)) {
-				$file['0'] = array($_POST);
+				$file = array('0' => $_POST);
 			} else {
 				$file[] = $_POST;
 			}
