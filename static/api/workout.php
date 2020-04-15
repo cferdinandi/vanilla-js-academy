@@ -56,7 +56,8 @@
 		// 	$file->workouts[$existing] = $_POST;
 		// }
 		if (empty($existing)) {
-			array_push(array(), $_POST);
+			$arr = array();
+			array_push($arr, $_POST);
 		} else {
 			// $file->workouts[$existing] = $_POST;
 			$file[$existing] = $_POST;
