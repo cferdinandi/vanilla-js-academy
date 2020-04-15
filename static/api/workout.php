@@ -61,7 +61,8 @@
 				// $file->workouts[] = $_POST;
 			}
 		} else {
-			$file->workouts[$existing] = $_POST;
+			// $file->workouts[$existing] = $_POST;
+			$file[$existing] = $_POST;
 		}
 
 		// Save to database
