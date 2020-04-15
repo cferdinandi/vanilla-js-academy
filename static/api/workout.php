@@ -14,7 +14,7 @@
 	if ($method === 'GET') {
 
 		// Get the file
-		$file = get_file($path, 'workout', 'workout.json', true);
+		$file = get_file($path, 'workout', new stdClass());
 
 		// Return the file
 		http_response_code(200);
@@ -34,34 +34,10 @@
 		}
 
 		// Get the file
-		// $file = get_file($path, 'workout', 'workout.json', true);
-		$file = get_file($path, 'workout', false);
+		$file = get_file($path, 'workout', new stdClass());
 
-		// Check if item already exists
-		// $existing = find_by_key_value('id', $_POST['id'], $file->workouts);
-		if (!empty($file)) {
-			$existing = find_by_key_value('id', $_POST['id'], $file);
-		}
-
-		// If the item doesn't exist, create it
-		// Otherwise, replace it
-		// if ($existing === false) {
-		// 	if (empty($file->workouts)) {
-		// 		$file->workouts[] = 'first';
-		// 		$file->workouts[] = $_POST;
-		// 	} else {
-		// 		// $file->workouts[] = $_POST;
-		// 	}
-		// } else {
-		// 	$file->workouts[$existing] = $_POST;
-		// }
-		if (empty($existing)) {
-			$arr = array();
-			array_push($arr, $_POST);
-		} else {
-			// $file->workouts[$existing] = $_POST;
-			$file[$existing] = $_POST;
-		}
+		// Add or update the item
+		$file[$_POST['id']] = $_POST;
 
 		// Save to database
 		set_file($path, 'workout', $file);
