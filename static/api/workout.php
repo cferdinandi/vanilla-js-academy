@@ -14,7 +14,7 @@
 	if ($method === 'GET') {
 
 		// Get the file
-		$file = get_file($path, 'workout', array());
+		$file = get_file($path, 'workout', json_decode('[]'));
 
 		// Return the file
 		http_response_code(200);
