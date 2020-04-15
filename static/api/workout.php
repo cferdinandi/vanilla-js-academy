@@ -34,17 +34,29 @@
 		}
 
 		// Get the file
-		$file = get_file($path, 'workout', 'workout.json', true);
+		// $file = get_file($path, 'workout', 'workout.json', true);
+		$file = get_file($path, 'workout', array());
 
 		// Check if item already exists
-		$existing = find_by_key_value('id', $_POST['id'], $file->workouts);
+		// $existing = find_by_key_value('id', $_POST['id'], $file->workouts);
+		$existing = find_by_key_value('id', $_POST['id'], $file);
 
 		// If the item doesn't exist, create it
 		// Otherwise, replace it
+		// if ($existing === false) {
+		// 	if (empty($file->workouts)) {
+		// 		$file->workouts[] = 'first';
+		// 		$file->workouts[] = $_POST;
+		// 	} else {
+		// 		// $file->workouts[] = $_POST;
+		// 	}
+		// } else {
+		// 	$file->workouts[$existing] = $_POST;
+		// }
 		if ($existing === false) {
-			if (empty($file->workouts)) {
-				$file->workouts[] = 'first';
-				$file->workouts[] = $_POST;
+			if (empty($file)) {
+				$file = array('first');
+				$file[] = $_POST;
 			} else {
 				// $file->workouts[] = $_POST;
 			}
