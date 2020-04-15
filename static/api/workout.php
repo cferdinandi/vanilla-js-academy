@@ -14,7 +14,7 @@
 	if ($method === 'GET') {
 
 		// Get the file
-		$file = get_file($path, 'workout', array('workouts' => array()));
+		$file = get_file($path, 'workout', array());
 
 		// Return the file
 		http_response_code(200);
@@ -34,7 +34,7 @@
 		}
 
 		// Get the file
-		$file = get_file($path, 'workout', array());
+		$file = get_file($path, 'workout', array(array('exercises' => array(), 'workout' => null)));
 
 		// Check if item already exists
 		$existing = find_by_key_value('id', $_POST['id'], $file);
@@ -42,11 +42,7 @@
 		// If the item doesn't exist, create it
 		// Otherwise, replace it
 		if ($existing === false) {
-			if (empty($file)) {
-				$file = array('0' => $_POST);
-			} else {
-				$file[] = $_POST;
-			}
+			$file[] = $_POST;
 		} else {
 			$file[$existing] = $_POST;
 		}
