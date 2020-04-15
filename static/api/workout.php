@@ -43,9 +43,8 @@
 		// Otherwise, replace it
 		if ($existing === false) {
 			if (empty($file->workouts)) {
-				$file->workouts = array(
-					0 => $_POST
-				);
+				$file->workouts[] = 'first';
+				$file->workouts[] = $_POST;
 			} else {
 				// $file->workouts[] = $_POST;
 			}
