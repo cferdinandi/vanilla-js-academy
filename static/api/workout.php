@@ -6,9 +6,10 @@
 	// Get the API method & workout ID
 	$method = get_method();
 	$id = $_GET['id'];
+	$advanced = $_GET['track-weight'];
 
 	// Authenticate user
-	$path = get_path_from_token();
+	$path = get_path_from_token() . (empty($advanced ? '' : '_weight'));
 	authenticate_user($path);
 
 	// GET Request
