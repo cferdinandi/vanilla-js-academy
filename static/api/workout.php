@@ -9,7 +9,7 @@
 	$advanced = $_GET['track-weight'];
 
 	// Authenticate user
-	$path = get_path_from_token() . (empty($advanced ? '' : '_weight'));
+	$path = get_path_from_token() . (empty($advanced) ? '' : '_weight');
 	authenticate_user($path);
 
 	// GET Request
