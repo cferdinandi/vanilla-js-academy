@@ -3,8 +3,9 @@
 	// Include required files
 	include_once('api-helpers.php');
 
-	// Get the API method
+	// Get the API method & workout ID
 	$method = get_method();
+	$id = $_GET['id'];
 
 	// Authenticate user
 	$path = get_path_from_token();
@@ -28,7 +29,7 @@
 	if ($method === 'POST' || $method === 'PUT') {
 
 		// If no ID was provided, throw an error
-		if (empty($_POST['id'])) {
+		if (empty($id)) {
 			http_response_code(400);
 			die('Please provide a unique ID for this workout');
 		}
@@ -37,7 +38,7 @@
 		$file = get_file($path, 'workout', new stdClass());
 
 		// Add or update the item
-		$file->{$_POST['id']} = $_POST;
+		$file->{$id} = $_POST;
 
 		// Save to database
 		set_file($path, 'workout', $file);
@@ -52,7 +53,7 @@
 	if ($method === 'DELETE') {
 
 		// If no ID was provided, reset entire file
-		if (empty($_POST['id'])) {
+		if (empty($id)) {
 			set_file($path, 'workout', new stdClass());
 			http_response_code(200);
 			die(json_encode(new stdClass()));
@@ -62,7 +63,7 @@
 		$file = get_file($path, 'workout', new stdClass());
 
 		// Delete the item
-		unset($file->{$_POST['id']});
+		unset($file->{$id});
 
 		// Save to database
 		set_file($path, 'workout', $file);
