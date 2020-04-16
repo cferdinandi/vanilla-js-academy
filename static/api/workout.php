@@ -16,7 +16,7 @@
 	if ($method === 'GET') {
 
 		// Get the file
-		$file = get_file($path, 'workout', new stdClass());
+		$file = get_file($filepath, 'workout', new stdClass());
 
 		// Return the file
 		http_response_code(200);
