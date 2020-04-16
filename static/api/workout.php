@@ -46,7 +46,7 @@
 
 		// Return data
 		http_response_code(200);
-		die(json_encode($_POST));
+		die(json_encode($file->{$id}));
 
 	}
 
@@ -57,7 +57,7 @@
 		if (empty($id)) {
 			set_file($filepath, 'workout', new stdClass());
 			http_response_code(200);
-			die(json_encode(new stdClass()));
+			die('{}');
 		}
 
 		// Get the file
