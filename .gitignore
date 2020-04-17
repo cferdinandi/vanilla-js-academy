@@ -5,6 +5,7 @@ public
 
 ## Environment
 .env
+/static/api/_
 **/*/.htaccess
 **/*/oauth-items.json
 

@@ -18,9 +18,21 @@
 		// Get the file
 		$file = get_file($filepath, 'workout', new stdClass());
 
-		// Return the file
-		http_response_code(200);
-		die(json_encode($file));
+		// If there's no ID, send the whole data set
+		if (empty($id)) {
+			http_response_code(200);
+			die(json_encode($file));
+		}
+
+		// Otherwise, look for a specific item in the API
+		if (!empty($file->{$id})) {
+			http_response_code(200);
+			die(json_encode($file->{$id}));
+		}
+
+		// If there's no item, throw an error
+		http_response_code(404);
+		die('No item with this ID exists.');
 
 	}
 
