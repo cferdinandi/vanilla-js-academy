@@ -44,7 +44,7 @@
 		// If no ID was provided, throw an error
 		if (empty($id)) {
 			http_response_code(400);
-			die('Please provide a unique ID for this workout');
+			die('Please provide an ID');
 		}
 
 		// Get the file
