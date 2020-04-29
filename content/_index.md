@@ -19,7 +19,7 @@ description: ""
 
 ## How It Works
 
-<iframe src="https://player.vimeo.com/video/358304328?color=0088cc&title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe>
+<div class="fluid-vids margin-bottom-small"><iframe src="https://player.vimeo.com/video/358304328?color=0088cc&title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" allow="autoplay; fullscreen" allowfullscreen></iframe></div>
 
 <ul class="list-inline list-inline-responsive text-center">
 	<li><strong>70+ Lessons</strong></li>

@@ -23,7 +23,7 @@ languageCode: "en-us"
 title: "Vanilla JS Academy"
 
 # theme to use (located by default in /themes/THEMENAME/)
-theme: "academy"
+theme: "gmt"
 
 # Permalinks
 # See "content-management/permalinks"
