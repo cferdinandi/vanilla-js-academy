@@ -24,7 +24,7 @@
 		$request = Requests::get($url, $headers);
 		$response = json_decode($request->body, true);
 
-		// Check if user has made a purchase
+		// Check if user has made a valid purchase
 		return !empty($response['purchases']);
 
 	}
