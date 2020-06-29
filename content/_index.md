@@ -331,61 +331,7 @@ Don’t put off learning vanilla JavaScript! If you’re not 100% satisfied with
 </div>
 
 
-## Frequently Asked Questions
-
-What's the difference between the Vanilla JS Academy and your pocket guides?
-: The guides try to cover all of the important details on a particular topic, then walk you through a project to help you remember what you learned. Academy is about learning from doing, and gives you just enough information to get started on projects without giving you all the answers.<br><br>If you learn best from experience and building things, Academy is a great fit. If you learn best by being guided through a problem, Academy would probably be a waste of money.
-
-I already purchased your pocket guides? Will I learn anything new from the Vanilla JS Academy?
-: There's definitely some overlap in content, but the focus of the Vanilla JS Academy is on teaching you to “think in JavaScript,” through experiential, project-based learning. If you've already read the pocket guides, you'll be able to focus more on thinking through problems and less on, "what method do I need to do this?"
-
-How much of a time commitment does the Vanilla JS Academy involve?
-: This program is for people who are *serious* about learning JavaScript. The more you put into it, the more you'll get out of it.<br><br>The amount of time required varies a bit from the beginning to end of the program, and based on how much experience you have already. Generally speaking, expect each project to take 30 minutes to an hour (plus maybe 15 minutes of reading with the lessons) near the start of the program, and up to two or three hours near the end.
-
-When are office hours held?
-: Office hours are held at 12pm (noon) US Eastern to accommodate as many people as possible. Days of the week vary, but they're always on a weekday. They're recorded for people who can't attend, and you can submit questions ahead of time if you can't make&nbsp;it.
-
-How does it work if I'm in a different timezone?
-: The lessons and projects automatically show up in the learning portal every day, and can be completed whenever you want. The Slack channel is available 24/7, and there are people from around the globe in the program.<br><br>The only "time specific" part is the office hours. If you're in a location where you can't join them live, you can send in questions ahead of time. Office hours are recorded so that you can watch them later.
-
-Does the Vanilla JS Academy cover new ES6 methods?
-: Yes. Where applicable, I cover new ES6 functions and browser APIs. I also include polyfills when available to push browser support as far back as possible.
-
-What happens after the program? Do I lose access to the lessons?
-: You get lifetime access to all of the lessons from the program.
-
-Do you offer team training?
-: Yes. If you want your entire team to attend the Vanilla JS Academy, I offer [a private version of the program just for your team](/#team-training).
-
-Do you offer a student discount?
-: Absolutely! This applies to anyone in any type of schooling, including evening classes and coding bootcamps. [Learn more about student discounts.](/student-discount/)
-
-I have a poor exchange rate in USD. There's no way I can afford this.
-: I totally get that in some countries salaries and cost of living are such that the Vanilla JS Academy is unaffordable. Send me an email at {{<email params="subject=Vanilla%20JS%20Academy:%20Exchange%20Rate&body=I%20live%20in%20a%20{country}.%20Can%20I%20have%20a%20discount%20to%20make%20the%20Vanilla%20JS%20Academy%20more%20affordable%20for%20me?%20Thanks!">}} and I'll send you a discount to make it fair for where you live.
-
-I'm not a student. Any other discounts?
-: Yep. I've had a lot of helping getting where I am, and I want to pay it forward. If you're a member of an under-represented group in tech, you can get special pricing. [Learn more about discounts for under-represented groups in tech.](/underrepresented-group-discount/)
-
-Do you have a refund policy?
-: Absolutely! If you’re not 100% satisfied with the Vanilla JS Academy, email me at {{<email params="subject=Vanilla%20JS%20Academy:%20Refund%20Request">}} and I’ll give you a full refund.
-
-After I sign up, how do I access the training program materials?
-: Visit [https://courses.gomakethings.com](https://courses.gomakethings.com) and create an account with the email address you used to make your purchase. The program has fixed start and end dates, so not all material will be available at once. You'll get a few emails from me when the program is about to start.
-
-Are there any restrictions on the training material?
-: Nope. I trust you to do the right thing. My content is 100% DRM free. If you think others might enjoy the program, please email me at {{<email params="subject=Vanilla%20JS%20Academy&body=I'd%20like%20to%20enroll%20{Number%20of%20People}%20in%20the%20Vanilla%20JS%20Academy.%20How%20much%20would%20that%20cost?">}} for information about team pricing.
-
-Do I need any special tools or equipment for the Vanilla JS Academy?
-: All you need to go through the program and work on the projects is a modern web browser and a text editor (I recommend [VS Code](https://code.visualstudio.com/)). The program materials come in a mix streaming HD video and plain text, so you can read and watch any device you own.
-
-Do I need any prior knowledge or experience to participate in the Vanilla JS Academy?
-: Ideally you're comfortable working with HTML and CSS already. Experience with another library or framework (like jQuery, React, and so on) is helpful but not required. If you're brand new to JavaScript, the program will help you kick-start your journey to JavaScript mastery! If you have any specific questions, though, please email me at {{<email params="subject=Vanilla%20JS%20Academy:%20General%20Questions">}}.
-
-Are there any rules or requirements for participating in the office hours and Slack channel?
-: Yes. You must be at least 18 years old, and read and agree to follow the [Code of Conduct](https://gomakethings.com/slack-guidelines/).
-
-I have another question.
-: No problem! Send me an email at {{<email params="subject=Vanilla%20JS%20Academy:%20General%20Questions">}}.
+{{<faq>}}
 
 {{<pricing-link>}}
 
