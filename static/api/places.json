@@ -1,6 +1,7 @@
 [
 	{
 		"place": "Waterfire",
+		"id": "waterfire",
 		"description": "Watch burning buoys float on a river while listening to spa music and eating food. Yep, seriously.",
 		"location": "475 Valley Street, Providence, RI 02908",
 		"url": "https://waterfire.org/",
@@ -8,6 +9,7 @@
 	},
 	{
 		"place": "Roger Williams Park Zoo",
+		"id": "roger-williams-park-zoo",
 		"description": "Interact with amazing animals (you can feed the giraffes!), ride the zipline and historic carousel, and take a trip on a paddle boat.",
 		"location": "1000 Elmwood Avenue, Providence, RI 02907",
 		"url": "https://rwpzoo.org/",
@@ -15,6 +17,7 @@
 	},
 	{
 		"place": "Newport Cliff Walk",
+		"id": "newport-cliff-walk",
 		"description": "A somewhat dangerous, 3.5 mile walk along the mansion-adorned cliffs of Newport. Spectacular views.",
 		"location": "175 Memorial Blvd, Newport, RI 02840",
 		"url": "https://www.newport-discovery-guide.com/newport-cliff-walk.html",
@@ -22,6 +25,7 @@
 	},
 	{
 		"place": "Newport Mansions",
+		"id": "newport-mansions",
 		"description": "Tour a bunch of snooty old summer homes built partially with slave-trade money that occupy some of the best real estate in the state. Seriously, why do people like this one?",
 		"location": "424 Bellevue Avenue, Newport, RI 02840",
 		"url": "https://www.newportmansions.org/",
@@ -29,6 +33,7 @@
 	},
 	{
 		"place": "Aunt Carrie's",
+		"id": "aunt-carries",
 		"description": "Indulge in a Rhode Island tradition: chowdah and clam cakes after a day at the beach. Iggy's, directly next door, is actually better, but this place is more popular.",
 		"location": "1240 Ocean Road, Narragansett, RI 02882",
 		"url": "https://auntcarriesri.com/",
@@ -36,6 +41,7 @@
 	},
 	{
 		"place": "D. Palmieri's Bakery",
+		"id": "d-palmieris-baker",
 		"description": "Try a unique Rhode Island delicacy: pizza strips. No, they're not just marinara and bread. Yes, they're frickin' delicious. Don't get confused and visit J. Palmieri's Bakery (also in Johnston), or Palmieri's Bakery (in Providence). Totally different places, nowhere near as good.",
 		"location": "624 Killingly Street, Johston, RI, 02919",
 		"url": "http://www.dpalmierisbakery.com/",
@@ -43,6 +49,7 @@
 	},
 	{
 		"place": "Pawtucket Red Sox",
+		"id": "pawtucket-red-sox",
 		"description": "The farm team for the Boston Red Sox. Take the whole family out for a game and hot dogs for under $50.",
 		"location": "McCoy Stadium, 1 Columbus Avenue, Pawtucket, RI 02860",
 		"url": "http://pawsox.com/",
@@ -50,6 +57,7 @@
 	},
 	{
 		"place": "Federal Hill",
+		"id": "federal-hill",
 		"description": "Eat at some of the best restaurants in the state and take a look at the giant metal pine cone (that looks likea pineapple) and find yourself asking, simply, \"why?\"",
 		"location": "Atwells Avenue, Providence RI, 02903",
 		"url": "http://federalhillprov.com/",
