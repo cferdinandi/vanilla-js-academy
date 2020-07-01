@@ -154,11 +154,11 @@ If you get stuck, there’s a **24/7 private Slack channel** exclusively for stu
 		<span class="text-small">Create a countdown timer app for tracking&nbsp;tasks.</span>
 	</div>
 	<div class="grid-third margin-bottom">
-		<a href="/projects/todo/">
-			<span class="text-xlarge"><svg xmlns="http://www.w3.org/2000/svg" style="height:1em;width:1em;" viewBox="0 0 16 16"><title></title><path fill="#808080" d="M0 0v16h16V0H0zm15 15H1V1h14v14z"/><path fill="#2cad4e" d="M2.5 8L4 6.5 6.5 9 12 3.5 13.5 5l-7 7z"/></svg></span>
-			<h3 class="h5 no-padding-top no-margin-bottom">Todo List</h3>
+		<a href="/projects/explore/">
+			<span class="text-xlarge"><svg xmlns="http://www.w3.org/2000/svg" style="height:1em;width:1em;" viewBox="0 0 16 16"><title></title><path fill="#f7272f" d="M13.5 6l2-2-2-2H9V.75A.753.753 0 008.25 0h-.5A.753.753 0 007 .75V2H2v4h5v1H1.5L0 8.5 1.5 10H7v6h2v-6h4V7H9V6h4.5z"/></svg></span>
+			<h3 class="h5 no-padding-top no-margin-bottom">Explore</h3>
 		</a>
-		<span class="text-small">Build a simple todo app with local&nbsp;storage.</span>
+		<span class="text-small">Explore cool, quirky places in your own backyard.</span>
 	</div>
 </div>
 
