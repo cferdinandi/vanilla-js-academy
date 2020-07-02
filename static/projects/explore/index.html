@@ -250,7 +250,7 @@
 		 * Get place data from the API and update the app state
 		 */
 		var getPlaces = function () {
-			fetch('http://vanillajsacademy.com/api/places.json').then(function (response) {
+			fetch('https://vanillajsacademy.com/api/places.json').then(function (response) {
 				if (response.ok) {
 					return response.json();
 				}
