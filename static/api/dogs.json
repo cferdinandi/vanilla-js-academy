@@ -11,7 +11,8 @@
 			"size": "large",
 			"gender": "male",
 			"breeds": ["Golden Retriever", "Labrador Retriever"],
-			"img": "https://cdn.gomakethings.com/academy/pets/boomer.jpg"
+			"img": "https://cdn.gomakethings.com/academy/pets/boomer.jpg",
+			"description": "Boomer has a big personality, not that you would expect any less from a lab/golden mix. If you're looking for a running partner, Boomer is the perfect dog for you.\n\nFair warning: he sheds. A LOT."
 		},
 		{
 			"name": "Tucker",
@@ -19,7 +20,8 @@
 			"size": "large",
 			"gender": "male",
 			"breeds": ["Golden Retriever"],
-			"img": "https://cdn.gomakethings.com/academy/pets/tucker.jpg"
+			"img": "https://cdn.gomakethings.com/academy/pets/tucker.jpg",
+			"description": "Tucker has a face that will melt your heart. If he wants another treat, all he has do is tilt his head to get one.\n\nHe hasn't met another dog he doesn't like.\n\nHe's not quite house trained, but we're working on it."
 		},
 		{
 			"name": "Sadie",
@@ -27,7 +29,8 @@
 			"size": "small",
 			"gender": "female",
 			"breeds": ["French Bulldog"],
-			"img": "https://cdn.gomakethings.com/academy/pets/sadie.jpg"
+			"img": "https://cdn.gomakethings.com/academy/pets/sadie.jpg",
+			"description": "Sadie is the ultimate lap dog. Small, cuddly, and cute as a button, she'll spend the entire day in your arms if you'll let her.\n\nHer favorite activities include snuggles, naps, and snuggling while napping."
 		},
 		{
 			"name": "Harley",
@@ -35,7 +38,8 @@
 			"size": "medium",
 			"gender": "male",
 			"breeds": ["Labrador Retriever"],
-			"img": "https://cdn.gomakethings.com/academy/pets/harley.jpg"
+			"img": "https://cdn.gomakethings.com/academy/pets/harley.jpg",
+			"description": "Harley has a big heart and a wet nose.\n\nA life with Harley means belly rubs and slobbery kisses. Keep an eye on your food, though. If you're not paying attention, he'll snatch a sandwich right out of your hands."
 		},
 		{
 			"name": "Carlie",
@@ -43,7 +47,8 @@
 			"size": "medium",
 			"gender": "female",
 			"breeds": ["Labrador Retriever", "Golden Retriever"],
-			"img": "https://cdn.gomakethings.com/academy/pets/carlie.jpg"
+			"img": "https://cdn.gomakethings.com/academy/pets/carlie.jpg",
+			"description": "As you can problably tell from her photo, Carlie's favorite game is fetch.\n\nLike most golden/lab mixes, Carlie has a larger-than-life personality. If you enjoy spending time ourdoors, she's the perfect companion.\n\nCarlie likes to spend her days swimming, hiking, and enjoying nature in all its forms."
 		},
 		{
 			"name": "Gizmo",
@@ -51,7 +56,8 @@
 			"size": "small",
 			"gender": "male",
 			"breeds": ["Pug"],
-			"img": "https://cdn.gomakethings.com/academy/pets/gizmo.jpg"
+			"img": "https://cdn.gomakethings.com/academy/pets/gizmo.jpg",
+			"description": "Puppies have limitless energy... but not Gizmo! He was born to nap.\n\nIf your ideal dog is one who will spend lazy Sunday's curled up on the couch binging on Netflix, look no further! Gizmo will watch anything: reality TV, scifi, drama, rom coms.\n\nAs long as he's cuddled up with his human, life is good."
 		},
 		{
 			"name": "Joy",
@@ -59,7 +65,8 @@
 			"size": "large",
 			"gender": "female",
 			"breeds": ["Golden Retriever"],
-			"img": "https://cdn.gomakethings.com/academy/pets/joy.jpg"
+			"img": "https://cdn.gomakethings.com/academy/pets/joy.jpg",
+			"description": "Joy's original owners are moving internationally and can't bring her with them, so they're working us to find her a new, loving home.\n\nShe's great with children and other pets, but is very active and requires a family that can provides lots of attention. If you live an active lifestyle and can devote time to taking her for long walks, Joy will make a wonderful addition to your family!"
 		},
 		{
 			"name": "Zeus",
@@ -67,7 +74,8 @@
 			"size": "small",
 			"gender": "male",
 			"breeds": ["Bichon Frise"],
-			"img": "https://cdn.gomakethings.com/academy/pets/zeus.jpg"
+			"img": "https://cdn.gomakethings.com/academy/pets/zeus.jpg",
+			"description": "Zeus packs a lot of personality into a little body.\n\nAt 13 years old, he's far from young. But that doesn't mean his best years are behind him. Bichons are adorable little dogs... with funny little quirks.\n\nZeus loves to cuddle up on the couch and follow you around the house like a shadow. But he'll try to chase deer in your yard, and obsessively eats tissues if left in reach.\n\nZeus has a lot of love to give for the right family."
 		},
 		{
 			"name": "Zoey",
@@ -75,7 +83,8 @@
 			"size": "large",
 			"gender": "female",
 			"breeds": ["Golden Retriever"],
-			"img": "https://cdn.gomakethings.com/academy/pets/zoey.jpg"
+			"img": "https://cdn.gomakethings.com/academy/pets/zoey.jpg",
+			"description": "Zoey's lived a full life, and is ready to retire with a quiet family.\n\nHer previous owner passed away. She's best suited for an older family without small children.\n\nIf you're looking for someone to sit at your feet while you watch Netflix, Zoey would love to meet you."
 		},
 		{
 			"name": "Mandy",
@@ -83,7 +92,8 @@
 			"size": "large",
 			"gender": "female",
 			"breeds": ["Golden Retriever"],
-			"img": "https://cdn.gomakethings.com/academy/pets/mandy.jpg"
+			"img": "https://cdn.gomakethings.com/academy/pets/mandy.jpg",
+			"description": "A cute cuddly golden retriever puppy? What's better than that!?!\n\nA puppy this cute will get adopted fast, so if you're interested, don't wait. Apply today."
 		},
 		{
 			"name": "Cooper",
@@ -91,7 +101,8 @@
 			"size": "medium",
 			"gender": "male",
 			"breeds": ["Beagle", "King Charles Cavalier Spaniel"],
-			"img": "https://cdn.gomakethings.com/academy/pets/cooper.jpg"
+			"img": "https://cdn.gomakethings.com/academy/pets/cooper.jpg",
+			"description": "The beagle side of Cooper loves hiking in the woods, tracking a good scent. The King Charles Spaniel side loves being pampered.\n\nIf you want a dog that offers a bit of everything, Cooper is the perfect fit.\n\nHe does have that trademark beagle howl, but he only uses it if you're slow to give him dinner."
 		},
 		{
 			"name": "Patches",
@@ -99,7 +110,8 @@
 			"size": "small",
 			"gender": "male",
 			"breeds": ["Miniature Pincher"],
-			"img": "https://cdn.gomakethings.com/academy/pets/patches.jpg"
+			"img": "https://cdn.gomakethings.com/academy/pets/patches.jpg",
+			"description": "Patches was born to be a frisbee dog. He's smart, athletic, and easy-to-train (he's very food-motivated).\n\nHe's not great with other pets, but his small size makes him perfect for apartment living... as long as you take him for a few long walks each day to burn off his energy.\n\nHe's the perfect fit for someone with an active lifestyle and a big heart."
 		},
 		{
 			"name": "Delilah",
@@ -107,7 +119,8 @@
 			"size": "small",
 			"gender": "female",
 			"breeds": ["Pug"],
-			"img": "https://cdn.gomakethings.com/academy/pets/delilah.jpg"
+			"img": "https://cdn.gomakethings.com/academy/pets/delilah.jpg",
+			"description": "Look at that face!\n\nAs a senior dog, Delilah spends a lot of her day cuddled up next to her humans. Whether she's watching TV, enjoying a snooze in the sun, or snoring in the AC, Delilah is a low energy, low maintenence dog."
 		},
 		{
 			"name": "Bunny",
@@ -115,7 +128,8 @@
 			"size": "small",
 			"gender": "male",
 			"breeds": ["Yorkshire Terrier"],
-			"img": "https://cdn.gomakethings.com/academy/pets/bunny.jpg"
+			"img": "https://cdn.gomakethings.com/academy/pets/bunny.jpg",
+			"description": "Yorkies are the smallest big dogs you'll ever meet. They pack the personality of lab into the body of a stuffed animal.\n\nBunny is just as comfortable going on hikes as he is cuddling on the counch. If you're looking for an all-around great dog with a big heart and tiny legs, look no further."
 		},
 		{
 			"name": "Barney",
@@ -123,7 +137,8 @@
 			"size": "small",
 			"gender": "male",
 			"breeds": ["Shih Tzu"],
-			"img": "https://cdn.gomakethings.com/academy/pets/barney.jpg"
+			"img": "https://cdn.gomakethings.com/academy/pets/barney.jpg",
+			"description": "Small, cuddly, and prone to snoring, Barney is the perfect pal for someone with a laid back lifestyle.\n\nIf your idea of excitement is sipping coffee while you watch squirrels forage for food, Barney would love to keep you company!"
 		}
 	]
 }
