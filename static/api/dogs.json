@@ -6,7 +6,7 @@
 	"dogs": [
 		{
 			"name": "Boomer",
-			"id": "",
+			"id": "boomer",
 			"age": "adult",
 			"size": "large",
 			"gender": "male",
@@ -16,6 +16,7 @@
 		},
 		{
 			"name": "Tucker",
+			"id": "tucker",
 			"age": "puppy",
 			"size": "large",
 			"gender": "male",
@@ -25,6 +26,7 @@
 		},
 		{
 			"name": "Sadie",
+			"id": "sadie",
 			"age": "puppy",
 			"size": "small",
 			"gender": "female",
@@ -34,6 +36,7 @@
 		},
 		{
 			"name": "Harley",
+			"id": "harley",
 			"age": "young",
 			"size": "medium",
 			"gender": "male",
@@ -43,6 +46,7 @@
 		},
 		{
 			"name": "Carlie",
+			"id": "carlie",
 			"age": "young",
 			"size": "medium",
 			"gender": "female",
@@ -52,6 +56,7 @@
 		},
 		{
 			"name": "Gizmo",
+			"id": "gizmo",
 			"age": "young",
 			"size": "small",
 			"gender": "male",
@@ -61,6 +66,7 @@
 		},
 		{
 			"name": "Joy",
+			"id": "joy",
 			"age": "young",
 			"size": "large",
 			"gender": "female",
@@ -70,6 +76,7 @@
 		},
 		{
 			"name": "Zeus",
+			"id": "zeus",
 			"age": "senior",
 			"size": "small",
 			"gender": "male",
@@ -79,6 +86,7 @@
 		},
 		{
 			"name": "Zoey",
+			"id": "zoey",
 			"age": "senior",
 			"size": "large",
 			"gender": "female",
@@ -88,6 +96,7 @@
 		},
 		{
 			"name": "Mandy",
+			"id": "mandy",
 			"age": "puppy",
 			"size": "large",
 			"gender": "female",
@@ -97,6 +106,7 @@
 		},
 		{
 			"name": "Cooper",
+			"id": "cooper",
 			"age": "young",
 			"size": "medium",
 			"gender": "male",
@@ -106,6 +116,7 @@
 		},
 		{
 			"name": "Patches",
+			"id": "patches",
 			"age": "adult",
 			"size": "small",
 			"gender": "male",
@@ -115,6 +126,7 @@
 		},
 		{
 			"name": "Delilah",
+			"id": "delilah",
 			"age": "senior",
 			"size": "small",
 			"gender": "female",
@@ -124,6 +136,7 @@
 		},
 		{
 			"name": "Bunny",
+			"id": "bunny",
 			"age": "senior",
 			"size": "small",
 			"gender": "male",
@@ -133,6 +146,7 @@
 		},
 		{
 			"name": "Barney",
+			"id": "barney",
 			"age": "adult",
 			"size": "small",
 			"gender": "male",
