@@ -92,9 +92,9 @@
 			"price": 49
 		},
 		{
-			"id": "string-rays-1",
+			"id": "sting-rays-1",
 			"name": "Rays and Coral",
-			"url": "https://cdn.gomakethings.com/academy/ecommerce/sting-rays1.jpg",
+			"url": "https://cdn.gomakethings.com/academy/ecommerce/stingrays1.jpg",
 			"description": "A pair of sting rays make their way past a school of fish on the edge of a coral reef.",
 			"price": 49
 		},
@@ -129,7 +129,7 @@
 		{
 			"id": "sting-rays-2",
 			"name": "Sting Ray Taxi",
-			"url": "https://cdn.gomakethings.com/academy/ecommerce/sting-rays2.jpg",
+			"url": "https://cdn.gomakethings.com/academy/ecommerce/stingrays2.jpg",
 			"description": "A large, aging ray provides a free ride to some grifters.",
 			"price": 29
 		},
