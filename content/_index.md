@@ -7,8 +7,8 @@ noTitle: true
 description: ""
 ---
 
-<h1 class="no-padding-top no-margin-bottom h5">The Vanilla JS Academy</h1>
-<p class="text-xlarge margin-bottom-small">A project-based online JavaScript training program for beginners.</p>
+<h1 class="no-padding-top no-margin-bottom h5 text-sans">The Vanilla JS Academy</h1>
+<p class="text-xlarge margin-bottom-small text-serif">A project-based online JavaScript training program for beginners.</p>
 
 <p><span class="text-large">Follow a structured learning path, work on lots of fun projects, and get the support you need to work through challenges.</span></p>
 
