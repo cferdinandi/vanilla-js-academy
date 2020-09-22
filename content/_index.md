@@ -279,6 +279,10 @@ Don’t put off learning vanilla JavaScript! If you’re not 100% satisfied with
 </div>
 
 <div class="padding-bottom">
+	{{<testimonial for="lauraKalbag" photo="true">}}
+</div>
+
+<div class="padding-bottom">
 	{{<testimonial for="walterJenkins" photo="true">}}
 </div>
 
@@ -292,6 +296,10 @@ Don’t put off learning vanilla JavaScript! If you’re not 100% satisfied with
 
 <div class="padding-bottom">
 	{{<testimonial for="stewartDavis2" photo="true">}}
+</div>
+
+<div class="padding-bottom">
+	{{<testimonial for="izziKoning" photo="true">}}
 </div>
 
 <div class="padding-bottom">
@@ -331,7 +339,9 @@ Don’t put off learning vanilla JavaScript! If you’re not 100% satisfied with
 </div>
 
 
+<div class="margin-bottom-large">
 {{<faq>}}
+</div>
 
 {{<pricing-link>}}
 
