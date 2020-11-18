@@ -43,8 +43,10 @@
 
 {{- $apiPrices := index $data "prices" -}}
 {{- .Scratch.Set "apiPrice" "" -}}
+{{- .Scratch.Set "apiDiscount" "" -}}
 {{- if isset $apiPrices "academy" -}}
 	{{- .Scratch.Set "apiPrice" $apiPrices.academy.price -}}
+	{{- .Scratch.Set "apiDiscount" $apiPrices.academy.discount -}}
 {{- end -}}
 
 {{- .Scratch.Set "cta" "" -}}
@@ -66,7 +68,7 @@
 
 {{- .Scratch.Get "cta" -}}
 
-<p><a class="btn btn-large btn-block edd-buy-now-button" href="https://gomakethings.com/checkout?edd_action=add_to_cart&download_id=28868&edd_options[price_id]={{ $details.priceID }}">Join now for just {{ if ne (.Scratch.Get "apiPrice") "" }}{{ .Scratch.Get "apiPrice" | safeHTML }}{{ else }}{{ $details.price | safeHTML }}{{ end }}</a></p>
+<p><a class="btn btn-large btn-block edd-buy-now-button" href='https://gomakethings.com/checkout?edd_action=add_to_cart&download_id=28868&edd_options[price_id]={{ $details.priceID }}{{ if ne (.Scratch.Get "apiDiscount") "" }}&discount={{ .Scratch.Get "apiDiscount" }}{{ end }}'>Join now for just {{ if ne (.Scratch.Get "apiPrice") "" }}{{ .Scratch.Get "apiPrice" | safeHTML }}{{ else }}{{ $details.price | safeHTML }}{{ end }}</a></p>
 
 {{ partial "sales-numbers.html" . }}
 
