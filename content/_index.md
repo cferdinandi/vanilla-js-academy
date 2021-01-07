@@ -341,6 +341,10 @@ Don’t put off learning vanilla JavaScript! If you’re not 100% satisfied with
 	{{<testimonial for="craigHaggart" photo="true">}}
 </div>
 
+<div class="padding-bottom">
+	{{<testimonial for="vicenteSarmento" photo="true">}}
+</div>
+
 
 <div class="margin-bottom-large">
 {{<faq>}}
