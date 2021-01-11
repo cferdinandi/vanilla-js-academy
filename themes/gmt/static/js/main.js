@@ -1,4 +1,4 @@
-/*! academy v1.1.0 | (c) 2020 Chris Ferdinandi | MIT License | http://github.com/cferdinandi/vanilla-js-academy */
+/*! academy v1.1.0 | (c) 2021 Chris Ferdinandi | MIT License | http://github.com/cferdinandi/vanilla-js-academy */
 (function () {
 	'use strict';
 
