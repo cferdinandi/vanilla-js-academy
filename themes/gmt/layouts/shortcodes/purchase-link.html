@@ -4,7 +4,7 @@
 
 {{- if (.Get "alumni") -}}
 
-	{{- if and (ge (now.Format "20060102") $details.startPre) (le (now.Format "20060102") $details.end) -}}
+	{{- if and (ge (now.Format "20060102") $details.startPre) (le (now.Format "20060102") $details.endRegistration) -}}
 
 		{{- if isset $ctas "academy-alumni" -}}
 		{{ index $ctas "academy-alumni" | safeHTML }}
@@ -17,7 +17,7 @@
 	{{- else -}}
 
 		<h3>Program registration has ended.</h3>
-		<p>The Vanilla JS Academy returns on {{ $details.startAcademy }}.</p>
+		<p>The Vanilla JS Academy returns {{ $details.nextAcademy }}.</p>
 
 	{{- end -}}
 
@@ -39,7 +39,7 @@
 
 	{{- end -}}
 
-{{- else if and (ge (now.Format "20060102") $details.start) (le (now.Format "20060102") $details.end) -}}
+{{- else if and (ge (now.Format "20060102") $details.startRegistration) (le (now.Format "20060102") $details.endRegistration) -}}
 
 {{- $apiPrices := index $data "prices" -}}
 {{- .Scratch.Set "apiPrice" "" -}}
@@ -74,10 +74,14 @@
 
 {{- else -}}
 
-<p><strong>A brand new Vanilla JS Academy returns {{ $details.startAcademyPreposition }}{{ $details.startAcademy }}.</strong></p>
+{{- if le (now.Format "20060102") $details.endRegistration -}}
+<p><strong>A brand new Vanilla JS Academy returns on {{ $details.startAcademy }}.</strong></p>
+{{- else -}}
+<p><strong>A brand new Vanilla JS Academy returns {{ $details.nextAcademy }}.</strong></p>
+{{- end -}}
 
-{{- if le (sub (int (now.Format "20060102")) $details.start) 14 -}}
-<p>Registration opens {{ $details.registration }}, but you can be the first to find out when registration opens back up <em>and</em> get exclusive discounts. Enter your email&nbsp;below.</p>
+{{- if le (sub (int (now.Format "20060102")) $details.startRegistration) 14 -}}
+<p>Registration opens {{ $details.registrationAcademy }}, but you can be the first to find out when registration opens back up <em>and</em> get exclusive discounts. Enter your email&nbsp;below.</p>
 {{- else -}}
 <p>Be the first to find out when registration opens back up <em>and</em> get exclusive discounts. Enter your email&nbsp;below.</p>
 {{- end -}}
@@ -86,9 +90,4 @@
 
 {{ partial "sales-numbers.html" . }}
 
-{{- end -}}
-
-{{- if false -}}
-<h3>The Vanilla JS Academy returns on {{ $details.startAcademy }}.</h3>
-<p>Registration opens on {{ $details.start }}. Get notified the moment it does <em>and</em> get exclusive discounts. Enter your email&nbsp;below.</p>
 {{- end -}}
