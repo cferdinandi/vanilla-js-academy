@@ -2,22 +2,25 @@
 	"publication": "Dragon Trainer Monthly",
 	"articles": [
 		{
-			"title": "Train Like a Pro",
-			"author": "Spitelout Jorgenson",
-			"article": "Winger Waterdeep shares her top ten training tips. Learn how to gain a dragon's trust, heal cuts and burns more quickly, and keep the gods on your side.",
-			"pubdate": "December 12, 1011",
-		},
-		{
 			"title": "A New Season of Dragon Racing Starts Monday",
 			"author": "Spitelout Jorgenson",
 			"article": "To the joy of sports fans everywhere (and the terror of village sheep), a new season of Dragon Racing starts next week. This season, all eyes are on upstart rookie Aggro Flame, who made a name for herself in the Huttsgalor farm league.",
+			"url": "#dragon-racing",
 			"pubdate": "December 12, 1011",
+		},
+		{
+			"title": "By Land or by Sea: Where Should You Train?",
+			"author": "Spitelout Jorgenson",
+			"article": "Common wisdom says that over open water is the safest way to train. If you crash or lose control, you land on a softer surface away from towns and villages. But one expert is challenging conventional, and says that training over land can lead to a closer bond with your dragon in less time.",
+			"url": "#by-land-or-by-sea",
+			"pubdate": "December 17, 1011",
 		},
 		{
 			"title": "Big Changes Coming to Dragon League",
 			"author": "Spitelout Jorgenson",
 			"article": "New Dragon League commissioner Leyla Leithgar wasted no time implementing sweeping new changes aimed at improving rider safety. Many are applauding the efforts as long overdue, but some worry that she's gone too far.",
+			"url": "#big-changes",
 			"pubdate": "December 17, 1011",
-		},
+		}
 	]
 }
