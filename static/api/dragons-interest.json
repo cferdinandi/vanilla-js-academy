@@ -1,0 +1,47 @@
+{
+	"publication": "Dragon Trainer Monthly",
+	"articles": [
+		{
+			"title": "Feature: The Boy Who Started It All",
+			"author": "Fishlegs Ingerman",
+			"article": "An in-depth profile of Hiccup Horrendous Haddock III, the first Berkian to befriend the dragons. We chat about why he did it, how he convinced a night fury to be his friend, and what he's learned over the last ten years.",
+			"pubdate": "December 14, 1011",
+		},
+		{
+			"title": "Playing With Fire: A Look at This Year's Fire-Resistant Clothing",
+			"author": "Phlegma the Fierce",
+			"article": "Dragon scales are the new padded leather. We discuss the marriage of fashion and functionality with award-winning designer Dak Dragonbreath.",
+			"pubdate": "December 15, 1011",
+		},
+		{
+			"title": "The Isle of Dragons",
+			"author": "Phlegma the Fierce",
+			"article": "Not sure where to vacation this summer? Head to Ice Island and spend your days in the company of the most diverse group of dragons on this side of the planet.",
+			"pubdate": "December 15, 1011",
+		},
+		{
+			"title": "Curing Dragonfart",
+			"author": "Fishlegs Ingerman",
+			"article": "Anyone who's spent any amount of time with dragons knows that they're a stinky lot. Veterinarian Magnus Finke shares the special diet he recommends to help ease draconian tummy troubles.",
+			"pubdate": "December 14, 1011",
+		},
+		{
+			"title": "The Hidden World",
+			"author": "Phlegma the Fierce",
+			"article": "Once thought to be an old sailors tail, legendary dragon trainer Astrid Hofferson recently rediscovered a hidden paradise for many a mythical dragon species. To protect the safety of the dragons, she's not sharing its location, but she did provide us with exclusive paintings of the inside.",
+			"pubdate": "December 15, 1011",
+		},
+		{
+			"title": "Identifying Dragon Species",
+			"author": "Fishlegs Ingerman",
+			"article": "Does that dragon breathe fire or ice? Is it poisonous? Can it swim or fly? The answers to these questions can be the difference between staying safe and serious injury. Famed biologist Snotlout shares seven things to look for when trying to identify dragon species.",
+			"pubdate": "December 12, 1011",
+		},
+		{
+			"title": "By Land or by Sea: Where Should You Train?",
+			"author": "Spitelout Jorgenson",
+			"article": "Common wisdom says that over open water is the safest way to train. If you crash or lose control, you land on a softer surface away from towns and villages. But one expert is challenging conventional, and says that training over land can lead to a closer bond with your dragon in less time.",
+			"pubdate": "December 17, 1011",
+		}
+	]
+}

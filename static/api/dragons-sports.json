@@ -1,0 +1,23 @@
+{
+	"publication": "Dragon Trainer Monthly",
+	"articles": [
+		{
+			"title": "Train Like a Pro",
+			"author": "Spitelout Jorgenson",
+			"article": "Winger Waterdeep shares her top ten training tips. Learn how to gain a dragon's trust, heal cuts and burns more quickly, and keep the gods on your side.",
+			"pubdate": "December 12, 1011",
+		},
+		{
+			"title": "A New Season of Dragon Racing Starts Monday",
+			"author": "Spitelout Jorgenson",
+			"article": "To the joy of sports fans everywhere (and the terror of village sheep), a new season of Dragon Racing starts next week. This season, all eyes are on upstart rookie Aggro Flame, who made a name for herself in the Huttsgalor farm league.",
+			"pubdate": "December 12, 1011",
+		},
+		{
+			"title": "Big Changes Coming to Dragon League",
+			"author": "Spitelout Jorgenson",
+			"article": "New Dragon League commissioner Leyla Leithgar wasted no time implementing sweeping new changes aimed at improving rider safety. Many are applauding the efforts as long overdue, but some worry that she's gone too far.",
+			"pubdate": "December 17, 1011",
+		},
+	]
+}
