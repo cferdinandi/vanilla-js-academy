@@ -25,6 +25,8 @@
 
 	{{- if and (ge (now.Format "20060102") $details.startPre) (le (now.Format "20060102") $details.endPre) -}}
 
+		<p>Registration for the Vanilla JS Academy isn't open yet. But, as an insider, you get special early access and exclusive discounts.</p>
+
 		{{- if isset $ctas "academy-pre" -}}
 		{{ index $ctas "academy-pre" | safeHTML }}
 		{{- end -}}
@@ -35,7 +37,7 @@
 
 	{{- else -}}
 
-		<p><em>Early insider access to the program has ended. <a href="/">You can register for the program here.</a></em></p>
+		<p>Early insider access to the program has ended. <a href="/">You can register for the program here.</a></p>
 
 	{{- end -}}
 
