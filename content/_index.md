@@ -26,7 +26,7 @@ description: ""
 
 <ul class="list-inline list-inline-responsive text-center">
 	<li><strong>170+ Lessons</strong></li>
-	<li><strong>27 Projects</strong></li>
+	<li><strong>30 Projects</strong></li>
 	<li><strong>24/7 Peer Chat</strong></li>
 	<li><strong>10 Week Program</strong></li>
 </ul>
