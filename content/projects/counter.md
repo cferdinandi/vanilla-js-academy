@@ -271,6 +271,7 @@ document.addEventListener('counter:increase-before', function (event) {
 
 let count = new Counter('#app', {
 	buttonText: 'Increase By 1',
+	buttonClass: 'btn',
 	start: 10
 });
 {{</js>}}
