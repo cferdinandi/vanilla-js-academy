@@ -133,7 +133,7 @@ If you get stuck, there’s a **24/7 private Slack channel** exclusively for stu
 		<span class="text-small">Build a library to create and manipulate timestamps.</span>
 	</div>
 	<div class="grid-third margin-bottom">
-		<a href="/projects/dom-library/">
+		<a href="/projects/counter/">
 			<span class="text-xlarge"><svg xmlns="http://www.w3.org/2000/svg" height="1em" width="1em" viewBox="0 0 16 16" aria-hidden="true"><path fill="#808080" d="M6 13h10v2H6zm0-6h10v2H6zm0-6h10v2H6zM3 0v4H2V1H1V0zM2 8.219V9h2v1H1V7.719l2-.938V6H1V5h3v2.281zM4 11v5H1v-1h2v-1H1v-1h2v-1H1v-1z"></path></svg></span>
 			<h3 class="h5 no-padding-top no-margin-bottom">Counter</h3>
 		</a>
