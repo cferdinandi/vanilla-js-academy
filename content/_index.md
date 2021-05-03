@@ -172,7 +172,7 @@ If you get stuck, there’s a **24/7 private Slack channel** exclusively for stu
 	</div>
 </div>
 
-<svg xmlns="http://www.w3.org/2000/svg" style="margin-bottom:-0.125em" height="1em" width="1em" viewBox="0 0 16 16" aria-hidden="true"><path d="M6.5 1.5a1.5 1.5 0 113.001.001A1.5 1.5 0 016.5 1.5z"/><path d="M10 5l5.15-2.221-.371-.929L8.5 4h-1L1.221 1.85l-.371.929L6 5v4l-2.051 6.634.935.355L7.786 9.5h.429l2.902 6.489.935-.355L10.001 9z"/></svg> _**Office Hours include live automated audio transcription** for people who are hearing impaired, don't speak English as their native language, or simply prefer to read._
+<svg xmlns="http://www.w3.org/2000/svg" style="margin-bottom:-0.125em" height="1em" width="1em" viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M6.5 1.5a1.5 1.5 0 113.001.001A1.5 1.5 0 016.5 1.5z"/><path fill="currentColor" d="M10 5l5.15-2.221-.371-.929L8.5 4h-1L1.221 1.85l-.371.929L6 5v4l-2.051 6.634.935.355L7.786 9.5h.429l2.902 6.489.935-.355L10.001 9z"/></svg> _**Office Hours include live automated audio transcription** for people who are hearing impaired, don't speak English as their native language, or simply prefer to read._
 
 
 {{<cta for="bonusesAcademy">}}
