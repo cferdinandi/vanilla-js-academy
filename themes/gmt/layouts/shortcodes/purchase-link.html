@@ -31,7 +31,8 @@
 		{{ index $ctas "academy-pre" | safeHTML }}
 		{{- end -}}
 
-		<p><a class="btn btn-large edd-buy-now-button" href="https://gomakethings.com/checkout?edd_action=add_to_cart&download_id=28868&edd_options[price_id]={{ $details.priceID }}&discount=INSIDER">Join now for just <del>{{ $details.price }}</del> {{ $details.pricePre }}</a></p>
+		<p class="margin-bottom-medium"><a class="btn btn-large btn-block edd-buy-now-button" href="https://gomakethings.com/checkout?edd_action=add_to_cart&download_id=28868&edd_options[price_id]={{ $details.priceID }}&discount=INSIDER">Join now for just <del>{{ $details.price }}</del> {{ $details.pricePre }}</a></p>
+		<p class="text-small text-center">Or <a href="mailto:&#099;&#104;&#114;&#105;&#115;&#064;&#103;&#111;&#109;&#097;&#107;&#101;&#116;&#104;&#105;&#110;&#103;&#115;&#046;&#099;&#111;&#109;?subject=Vanilla%20JS%20Academy:%20Insider%20Monthly%20Payments">make three monthly payments of <del>{{ $details.priceMonthly }}</del> {{ $details.pricePreMonthly }}</a></p>
 
 		{{ partial "sales-numbers.html" . }}
 
@@ -45,9 +46,11 @@
 
 {{- $apiPrices := index $data "prices" -}}
 {{- .Scratch.Set "apiPrice" "" -}}
+{{- .Scratch.Set "apiPriceMonthly" "" -}}
 {{- .Scratch.Set "apiDiscount" "" -}}
 {{- if isset $apiPrices "academy" -}}
 	{{- .Scratch.Set "apiPrice" $apiPrices.academy.price -}}
+	{{- .Scratch.Set "apiPriceMonthly" $apiPrices.academy.priceMonthly -}}
 	{{- .Scratch.Set "apiDiscount" $apiPrices.academy.discount -}}
 {{- end -}}
 
@@ -70,7 +73,8 @@
 
 {{- .Scratch.Get "cta" -}}
 
-<p><a class="btn btn-large btn-block edd-buy-now-button" href='https://gomakethings.com/checkout?edd_action=add_to_cart&download_id=28868&edd_options[price_id]={{ $details.priceID }}{{ if ne (.Scratch.Get "apiDiscount") "" }}&discount={{ .Scratch.Get "apiDiscount" }}{{ end }}'>Join now for just {{ if ne (.Scratch.Get "apiPrice") "" }}{{ .Scratch.Get "apiPrice" | safeHTML }}{{ else }}{{ $details.price | safeHTML }}{{ end }}</a></p>
+<p class="margin-bottom-medium"><a class="btn btn-large btn-block edd-buy-now-button" href='https://gomakethings.com/checkout?edd_action=add_to_cart&download_id=28868&edd_options[price_id]={{ $details.priceID }}{{ if ne (.Scratch.Get "apiDiscount") "" }}&discount={{ .Scratch.Get "apiDiscount" }}{{ end }}'>Join now for just {{ if ne (.Scratch.Get "apiPrice") "" }}{{ .Scratch.Get "apiPrice" | safeHTML }}{{ else }}{{ $details.price | safeHTML }}{{ end }}</a></p>
+<p class="text-small text-center">Or <a href="mailto:&#099;&#104;&#114;&#105;&#115;&#064;&#103;&#111;&#109;&#097;&#107;&#101;&#116;&#104;&#105;&#110;&#103;&#115;&#046;&#099;&#111;&#109;?subject=Vanilla%20JS%20Academy:%20Monthly%20Payments">make three monthly payments of {{ if ne (.Scratch.Get "apiPrice") "" }}{{ .Scratch.Get "apiPrice" | safeHTML }}{{ else }}{{ $details.priceMonthly | safeHTML }}{{ end }}</a></p>
 
 {{ partial "sales-numbers.html" . }}
 
