@@ -1,5 +1,0 @@
-{{- $data := getJSON $.Site.Params.api -}}
-
-<p><a class="btn btn-large btn-block" href="mailto:&#099;&#104;&#114;&#105;&#115;&#064;&#103;&#111;&#109;&#097;&#107;&#101;&#116;&#104;&#105;&#110;&#103;&#115;&#046;&#099;&#111;&#109;?subject=Book%20a%20Vanilla%20JS%20Academy%20workshop&body=I%20would%20like%20to%20book%20a%20Vanilla%20JS%20Academy%20workshop%20for%20a%20team%20of%20%7B%7Bteam_size%7D%7D%20people.%20I'm%20hoping%20to%20start%20the%20program%20on%20%7B%7Bdate%7D%7D.">Reserve a Workshop - {{ $data.products.academyTeams.price }}</a></p>
-
-{{ partial "sales-numbers.html" . }}
