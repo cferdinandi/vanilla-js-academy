@@ -78,8 +78,6 @@
 
 {{ partial "sales-numbers.html" . }}
 
-{{ partial "teams-upsell.html" . }}
-
 {{- else -}}
 
 {{- if le (now.Format "20060102") $details.endRegistration -}}
@@ -97,7 +95,5 @@
 {{ partial "mailchimp-form.html" }}
 
 {{ partial "sales-numbers.html" . }}
-
-{{ partial "teams-upsell.html" . }}
 
 {{- end -}}
