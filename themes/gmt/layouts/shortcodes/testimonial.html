@@ -19,7 +19,7 @@
 	<div class="grid-two-thirds">
 		<blockquote>
 			{{ index $testimonial "quote" | safeHTML }}
-			{{- if isset $testimonial "url" -}}
+			{{- if ne (index $testimonial "url") "" -}}
 			<cite>- <a href="{{ index $testimonial "url" }}">{{ index $testimonial "name" }}</a></cite>
 			{{- else -}}
 			<cite>- {{ index $testimonial "name" }}</cite>
