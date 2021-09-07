@@ -46,24 +46,33 @@ If you get stuck, there’s a **24/7 private Slack channel** exclusively for stu
 
 ## What You'll Learn
 
-<ul class="list-columns margin-bottom-large">
-	<li>Modern JS (ES6+) essentials</li>
-	<li>How to structure and organize&nbsp;code</li>
-	<li>DOM manipulation and injection</li>
-	<li>How to save data locally</li>
-	<li>Ajax and Promises</li>
-	<li>How to work with&nbsp;APIs</li>
-	<li><code>async</code> and <code>await</code></li>
-	<li>Default function variables</li>
-	<li>Array and object destructuring</li>
-	<li>How to write JavaScript&nbsp;libraries</li>
-	<li>How to work with custom events</li>
-	<li>How to build framework-free web apps and&nbsp;games</li>
-	<li>How to transform and edit strings, numbers, arrays, and&nbsp;objects</li>
-	<li>JavaScript performance&nbsp;tricks</li>
-	<li>How to debug broken&nbsp;code</li>
-	<li>Web accessibility fundamentals</li>
-</ul>
+<div class="row margin-bottom-large">
+	<div class="grid-half">
+		<ul class="no-margin-bottom">
+			<li>Modern JS (ES6+) essentials</li>
+			<li>How to structure and organize&nbsp;code</li>
+			<li>DOM manipulation and injection</li>
+			<li>How to save data locally</li>
+			<li>Ajax and Promises</li>
+			<li>How to work with&nbsp;APIs</li>
+			<li><code>async</code> and <code>await</code></li>
+			<li>Default function variables</li>
+			<li>Array and object destructuring</li>
+		</ul>
+	</div>
+	<div class="grid-half">
+		<ul class="no-margin-bottom">
+			<li>How to write JavaScript&nbsp;libraries</li>
+			<li>State-based UI and data reactivity</li>
+			<li>How to work with custom events</li>
+			<li>Framework-free web apps and&nbsp;games</li>
+			<li>How to transform and edit strings, numbers, arrays, and&nbsp;objects</li>
+			<li>JavaScript performance&nbsp;tricks</li>
+			<li>How to debug broken&nbsp;code</li>
+			<li>Web accessibility fundamentals</li>
+		</ul>
+	</div>
+</div>
 
 🧠 _**Multiple formats for different learning styles.** Lessons include both written text and streaming HD videos (with captions). Watch or read on any device._
 
