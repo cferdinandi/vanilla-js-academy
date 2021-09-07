@@ -119,11 +119,11 @@ If you get stuck, there’s a **24/7 private Slack channel** exclusively for stu
 		<span class="text-small">Create a fun game where you find your monster friends and avoid the&nbsp;sock.</span>
 	</div>
 	<div class="grid-third margin-bottom">
-		<a href="/projects/notebook/">
-			<span class="text-xlarge"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" aria-hidden="true"><path fill="#f7272f" d="M8.313 3.813a318.01 318.01 0 00-2.239 2.209C4.236 7.86-.079 12.979 0 15.999c3.02.08 8.139-4.236 9.977-6.074a318.01 318.01 0 002.209-2.239L8.313 3.813zm6.448-.623l-.282-.281L16 1.652 14.348 0l-1.257 1.521-.282-.282c-.872-.051-2.278.793-3.663 1.907l3.707 3.707c.419-.521.798-1.045 1.107-1.542.93.767.243 3.017-3.682 5.967L11 12c3.5-2.5 5.766-5.5 3.571-7.882.131-.346.205-.663.19-.928z"/></svg></span>
-			<h3 class="h5 no-padding-top no-margin-bottom">Notebook</h3>
+		<a href="/projects/autosave/">
+			<span class="text-xlarge"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" aria-hidden="true"><path fill="#dba909" d="M15.976 6.345a.5.5 0 0 0-.476-.346h-5.367L8.475.919a.5.5 0 0 0-.95 0l-1.658 5.08H.5a.5.5 0 0 0-.293.905l4.34 3.139-1.657 5.079a.5.5 0 0 0 .769.56l4.342-3.141 4.342 3.141a.5.5 0 0 0 .769-.56l-1.657-5.079 4.34-3.139a.5.5 0 0 0 .183-.559z"/></svg></span>
+			<h3 class="h5 no-padding-top no-margin-bottom">Form Saver</h3>
 		</a>
-		<span class="text-small">Create a local web app that you can use to write down and save quick notes.</span>
+		<span class="text-small">Automatically save form data as a user types and reload it on future visits.</span>
 	</div>
 </div>
 
@@ -136,18 +136,18 @@ If you get stuck, there’s a **24/7 private Slack channel** exclusively for stu
 		<span class="text-small">Find a visitor's location and display their local&nbsp;weather.</span>
 	</div>
 	<div class="grid-third margin-bottom">
-		<a href="/projects/timestamp/">
-			<span class="text-xlarge"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" aria-hidden="true"><path fill="#0088cc" d="M12 7v2H7V3h2v4zM8 0a8 8 0 100 16A8 8 0 008 0zm0 14A6 6 0 118 2a6 6 0 010 12z"/></svg></span>
-			<h3 class="h5 no-padding-top no-margin-bottom">Timestamps</h3>
+		<a href="/projects/weights/">
+			<span class="text-xlarge"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16" aria-hidden="true"><path fill="#808080" d="M13.5 1h-12C.675 1 0 1.675 0 2.5v12c0 .825.675 1.5 1.5 1.5h12c.825 0 1.5-.675 1.5-1.5v-12c0-.825-.675-1.5-1.5-1.5zm-3 7H8V4.5a.5.5 0 00-1 0V8H4.5L2.567 6.067a5.5 5.5 0 019.866 0L10.5 8z"/></svg></span>
+			<h3 class="h5 no-padding-top no-margin-bottom">Weights</h3>
 		</a>
-		<span class="text-small">Build a library to create and manipulate timestamps.</span>
+		<span class="text-small">Build a library to add and convert units of weight.</span>
 	</div>
 	<div class="grid-third margin-bottom">
-		<a href="/projects/counter/">
-			<span class="text-xlarge"><svg xmlns="http://www.w3.org/2000/svg" height="1em" width="1em" viewBox="0 0 16 16" aria-hidden="true"><path fill="#808080" d="M6 13h10v2H6zm0-6h10v2H6zm0-6h10v2H6zM3 0v4H2V1H1V0zM2 8.219V9h2v1H1V7.719l2-.938V6H1V5h3v2.281zM4 11v5H1v-1h2v-1H1v-1h2v-1H1v-1z"></path></svg></span>
-			<h3 class="h5 no-padding-top no-margin-bottom">Counter</h3>
+		<a href="/projects/explore/">
+			<span class="text-xlarge"><svg xmlns="http://www.w3.org/2000/svg" height="1em" width="1em" viewBox="0 0 16 16" aria-hidden="true"><path fill="#f7272f" d="M13.5 6l2-2-2-2H9V.75A.753.753 0 008.25 0h-.5A.753.753 0 007 .75V2H2v4h5v1H1.5L0 8.5 1.5 10H7v6h2v-6h4V7H9V6h4.5z"/></svg></span>
+			<h3 class="h5 no-padding-top no-margin-bottom">Explore</h3>
 		</a>
-		<span class="text-small">Create a DOM manipulation library for counting things.</span>
+		<span class="text-small">Explore cool, quirky places in your own backyard.</span>
 	</div>
 </div>
 
@@ -231,6 +231,13 @@ Here's exactly what you'll learn in the Vanilla JS Academy.
 - Exposing public methods and chaining methods
 - Allowing multiple versions of a plugin to run at once
 - Writing flexible, scalable code
+
+<h3 class="no-padding-top h5">6. State-Based UI</h3>
+
+- State-based UI components
+- Data reactivity
+- UI rendering performance
+- DOM diffing
 
 Across all of the sections, you'll also learn about web performance, debugging, and web&nbsp;accessibility.
 
