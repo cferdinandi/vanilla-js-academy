@@ -37,6 +37,16 @@ _Academy for Teams_ is the same program as [the public workshop](/), with some a
 
 The per-person cost goes down the more students you enroll.
 
+| Attendees  | Price                |
+|------------|----------------------|
+| Up to 15   | $15,000              |
+| Up to 25   | $22,500 (_save 10%_) |
+| Up to 50   | $42,500 (_save 15%_) |
+| Up to 75   | $60,000 (_save 20%_) |
+| Up to 100  | $75,000 (_save 25%_) |
+| Over 100   | [Contact for Pricing](#ready-to-buy) |
+
+<!-- 
 | Attendees  | Price per Student   |
 |------------|---------------------|
 | 14 or less | [Contact for pricing](#ready-to-buy) |
@@ -45,8 +55,9 @@ The per-person cost goes down the more students you enroll.
 | 40+        | $795 (_save 20%_)   |
 | 80+        | $695 (_save 30%_)   |
 | 120+       | $595 (_save 40%_)   |
-
-_An extra office hours session (five video meetings at a specific time every other week) is included at no cost for every 30 students&mdash;a $5,000 value for free._
+ -->
+ 
+_For groups of more than 50 students, an extra office hours session is included every two weeks at no cost. That's a $5,000 value for free._
 
 
 
@@ -55,9 +66,8 @@ _An extra office hours session (five video meetings at a specific time every oth
 Want to maximize the ROI on your training investment? I offer a variety of ways to do that, from additional learning resources to post-training support.
 
 - **Additional Office Hours.** Add an additional office hours session to accomodate a range of timezones or provide more high-touch support. - _$5,000 per session_
-- **Video Downloads.** Video lessons are available streaming on-demand at any time. Add the ability to download videos and watch offline. - _$3,000_
-- **Pocket Guides.** Provide learners with my complete set of quick-reference guides and videos for use after the program. - _$199 per student_
-- **Community Support.** Help students apply what they learn after the workshop ends with four weeks of chat-based community support. - _$5,000 per every 40 students_
+- **Pocket Guides.** Provide learners with my complete set of quick-reference guides and videos for use after the program. - _$3,000 for up to 25 students_
+- **Community Support.** Help students apply what they learn after the workshop ends with four weeks of chat-based community support. - _$5,000 for up to 25 students_
 
 {{<pricing-link apply="true">}}
 
