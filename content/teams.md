@@ -56,7 +56,7 @@ The per-person cost goes down the more students you enroll.
 | 80+        | $695 (_save 30%_)   |
 | 120+       | $595 (_save 40%_)   |
  -->
- 
+
 _For groups of more than 50 students, an extra office hours session is included every two weeks at no cost. That's a $5,000 value for free._
 
 
@@ -65,7 +65,7 @@ _For groups of more than 50 students, an extra office hours session is included 
 
 Want to maximize the ROI on your training investment? I offer a variety of ways to do that, from additional learning resources to post-training support.
 
-- **Additional Office Hours.** Add an additional office hours session to accomodate a range of timezones or provide more high-touch support. - _$5,000 per session_
+- **Additional Office Hours.** Add an additional office hours session every two weeks to accomodate multiple timezones and provide more support. - _$5,000 per session_
 - **Pocket Guides.** Provide learners with my complete set of quick-reference guides and videos for use after the program. - _$3,000 for up to 25 students_
 - **Community Support.** Help students apply what they learn after the workshop ends with four weeks of chat-based community support. - _$5,000 for up to 25 students_
 
