@@ -1,5 +1,5 @@
 <div class="callout" id="ready-to-buy">
-	<h2>Ready to join?</h2>
+	<h2>{{ if .Get "apply" }}Get in touch{{ else }}Ready to join?{{ end }}</h2>
 
 	{{.Inner}}
 </div>
