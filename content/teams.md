@@ -35,7 +35,7 @@ _Academy for Teams_ is the same program as [the public workshop](/), with some a
 
 ## Pricing
 
-The per-person cost goes down the more students you enroll.
+_Academy for Teams_ includes the full 10-week workshop, video office hours every two weeks, and a private chat community for students to ask questions.
 
 | Attendees  | Price                |
 |------------|----------------------|
