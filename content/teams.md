@@ -46,17 +46,6 @@ _Academy for Teams_ includes the full 10-week workshop, video office hours every
 | Up to 100  | $75,000 (_save 25%_) |
 | Over 100   | [Contact for Pricing](#ready-to-buy) |
 
-<!-- 
-| Attendees  | Price per Student   |
-|------------|---------------------|
-| 14 or less | [Contact for pricing](#ready-to-buy) |
-| 15+        | $995                |
-| 30+        | $895 (_save 10%_)   |
-| 40+        | $795 (_save 20%_)   |
-| 80+        | $695 (_save 30%_)   |
-| 120+       | $595 (_save 40%_)   |
- -->
-
 _For groups of more than 50 students, an extra office hours session is included every two weeks at no cost. That's a $5,000 value for free._
 
 
@@ -158,5 +147,10 @@ Send me an email at {{<email params="subject%3DVanilla%20JS%20Academy%20for%20Te
 
 
 {{<pricing-link apply="true">}}
+
+
+## Looking for something more self-paced?
+
+Your team may enjoy the **[Vanilla JS Pocket Guides](https://vanillajsguides.com/teams)**, a collection of short, focused video courses and ebooks that cover the ins-and-outs of a topic in about an hour.
 
 *If you have any questions about anything, feel free to send me an email at {{<email>}}.*
