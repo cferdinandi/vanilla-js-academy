@@ -1,0 +1,26 @@
+{{- $data := getJSON $.Site.Params.api -}}
+{{- $testimonials := index $data "testimonials" -}}
+{{- $names := slice "leticiaOneill2" "lauraKalbag" "walterJenkins" "mariaBlair2" "zacHeisey" "stewartDavis2" "izziKoning" "kevinBeck" "kumarSucom" "richHolman" "kieranBarker2" "patriciaParker" "toddLibby" "elliotPorter" "ronAmick" "craigHaggart" "vicenteSarmento" -}}
+
+{{- range $index, $name := $names -}}
+{{- if isset $testimonials $name -}}
+{{- $testimonial := index $testimonials $name -}}
+<div class="{{ if $index }}{{ else }}padding-top-large {{ end }}padding-bottom-large">
+	<div class="row">
+		<div class="grid-third">
+			<img class="img-center margin-bottom-small img-circle" height="150" width="150" src="{{ index $testimonial "photo" }}">
+		</div>
+		<div class="grid-two-thirds">
+			<blockquote>
+				{{ index $testimonial "quote" | safeHTML }}
+				{{- if ne (index $testimonial "url") "" -}}
+				<cite>- <a href="{{ index $testimonial "url" }}">{{ index $testimonial "name" }}</a></cite>
+				{{- else -}}
+				<cite>- {{ index $testimonial "name" }}</cite>
+				{{- end -}}
+			</blockquote>
+		</div>
+	</div>
+</div>
+{{- end -}}
+{{- end -}}

@@ -1,0 +1,19 @@
+<h2 id="how-it-works">How It Works</h2>
+
+<ul class="list-inline list-inline-responsive">
+	<li><strong>70+ Lessons</strong></li>
+	<li><strong>18 Projects</strong></li>
+	<li><strong>24/7 Peer Chat</strong></li>
+	<li><strong>6 Week Program</strong></li>
+</ul>
+
+{{ if .Inner }}<p>{{ .Inner | markdownify }}</p>{{ end }}
+
+<ol class="list-spaces">
+	<li><strong>Every other day, you get a project to work on</strong>, 1-3 short lessons that provide some background, and a template to help you get started.</li>
+	<li><strong>On the in-between days, I share my approach to the project</strong> and some of the common challenges and “gotchas” that students often run into.</li>
+</ol>
+
+<p>If you get stuck, there’s a <strong>24/7 private Slack channel</strong> exclusively for students, and <strong>video office hours</strong> every few weeks.</p>
+
+{{ partial "testimonial-how-it-works.html" . }}
