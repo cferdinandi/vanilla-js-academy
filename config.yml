@@ -27,7 +27,7 @@ theme: "gmt"
 # Permalinks
 # See "content-management/permalinks"
 permalinks:
-  articles: /:title/
+  workshops: /:filename/
 
 # Use absolute URLs
 canonifyURLs: true

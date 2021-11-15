@@ -80,10 +80,13 @@
 
 {{- else -}}
 
+<p><strong>New sessions of the Vanilla JS Academy open up in January, April, and&nbsp;October.</strong></p>
+{{- if false -}}
 {{- if le (now.Format "20060102") $details.endRegistration -}}
 <p><strong>A brand new Vanilla JS Academy returns on {{ $details.startAcademy }}.</strong></p>
 {{- else -}}
 <p><strong>A brand new Vanilla JS Academy returns {{ $details.nextAcademy }}.</strong></p>
+{{- end -}}
 {{- end -}}
 
 {{- if le (sub (int (now.Format "20060102")) $details.startRegistration) 14 -}}
