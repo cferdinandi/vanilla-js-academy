@@ -9,7 +9,7 @@ description: ""
 <h1 class="no-padding-top no-margin-bottom h5 text-sans">Academy for Teams</h1>
 <p class="text-xlarge margin-bottom-small text-serif">The perfect JavaScript training program for remote and distributed teams.</p>
 
-<p><span class="text-large">A project-based online workshop designed to fit around your team's schedule and promote deeper learning and retention.</span></p>
+<p><span class="text-large">Project-based online workshops designed to fit around your team's schedule and promote deeper learning and retention.</span></p>
 
 {{<pricing-link apply="true">}}
 
@@ -19,7 +19,7 @@ description: ""
 
 ## How It Works
 
-_Academy for Teams_ is the same program as [the public workshop](/), with some added benefits:
+_Academy for Teams_ includes the same content and structure as [the public workshops](/#the-workshops), with some added benefits:
 
 - **Flexible Scheduling.** The program start date and office hours can be tailored to the needs of your team.
 - **Private & Team Focused.** Since only members of your team are in the program, I can really focus on the unique challenges facing your organization during office hours.
@@ -35,16 +35,19 @@ _Academy for Teams_ is the same program as [the public workshop](/), with some a
 
 ## Pricing
 
-_Academy for Teams_ includes the full 10-week workshop, video office hours every two weeks, and a private chat community for students to ask questions.
+_Academy for Teams_ includes the full 6-week workshop, video office hours every two weeks, and a private chat community for students to ask questions.
 
-| Attendees  | Price                |
-|------------|----------------------|
-| Up to 15   | $15,000              |
-| Up to 25   | $22,500 (_save 10%_) |
-| Up to 50   | $42,500 (_save 15%_) |
-| Up to 75   | $60,000 (_save 20%_) |
-| Up to 100  | $75,000 (_save 25%_) |
-| Over 100   | [Contact for Pricing](#ready-to-buy) |
+_Enroll your team in both workshops and save an additional 10 percent._
+
+| Attendees              | One Workshop | Both Workshops |
+|------------------------|--------------|----------------|
+| Up to 15               | $15,000      | $27,000        |
+| Up to 25 (_save 10%_)  | $22,500      | $40,500        |
+| Up to 50 (_save 15%_)  | $42,500      | $76,500        |
+| Up to 75 (_save 20%_)  | $60,000      | $108,000       |
+| Up to 100 (_save 25%_) | $75,000      | $135,000       |
+
+**Over 100 attendees?** [Contact me for custom pricing.](#ready-to-buy)
 
 _For groups of more than 50 students, an extra office hours session is included every two weeks at no cost. That's a $5,000 value for free._
 
@@ -64,7 +67,7 @@ Want to maximize the ROI on your training investment? I offer a variety of ways 
 
 ## Your 100% Money-Back Guarantee &#128176;
 
-Don’t put off giving your team the training they need! If you’re not 100% satisfied with the Vanilla JS Academy, let me know during the first four weeks of the program and I’ll give you a full refund.
+Don’t put off giving your team the training they need! If you’re not 100% satisfied with the Vanilla JS Academy, let me know during the first two weeks of the program and I’ll give you a full refund.
 
 
 {{<about-me>}}
@@ -77,73 +80,7 @@ Send me an email at {{<email params="subject%3DVanilla%20JS%20Academy%20for%20Te
 <a class="btn btn-large btn-block" href="mailto:&#099;&#104;&#114;&#105;&#115;&#064;&#103;&#111;&#109;&#097;&#107;&#101;&#116;&#104;&#105;&#110;&#103;&#115;&#046;&#099;&#111;&#109;?subject%3DVanilla%20JS%20Academy%20for%20Teams%26body%3DI'm%20interested%20in%20Academy%20for%20Teams.%20I%20have%20a%20team%20of%20%7BNUMBER%7D%20developers%20at%20%7BORGANIZATION%7D%2C%20and%20was%20interested%20in%20starting%20the%20program%20on%20%7BDATE%7D.">Send Me an Email</a>
 {{%/purchase-box%}}
 
-<div class="padding-top-large padding-bottom">
-	{{<testimonial for="leticiaOneill2" photo="true">}}
-</div>
-
-<div class="padding-bottom">
-	{{<testimonial for="lauraKalbag" photo="true">}}
-</div>
-
-<div class="padding-bottom">
-	{{<testimonial for="walterJenkins" photo="true">}}
-</div>
-
-<div class="padding-bottom">
-	{{<testimonial for="mariaBlair2" photo="true">}}
-</div>
-
-<div class="padding-bottom">
-	{{<testimonial for="zacHeisey" photo="true">}}
-</div>
-
-<div class="padding-bottom">
-	{{<testimonial for="stewartDavis2" photo="true">}}
-</div>
-
-<div class="padding-bottom">
-	{{<testimonial for="izziKoning" photo="true">}}
-</div>
-
-<div class="padding-bottom">
-	{{<testimonial for="kevinBeck" photo="true">}}
-</div>
-
-<div class="padding-bottom-large">
-	{{<testimonial for="kumarSucom" photo="true">}}
-</div>
-
-<div class="padding-bottom-large">
-	{{<testimonial for="richHolman" photo="true">}}
-</div>
-
-<div class="padding-bottom-large">
-	{{<testimonial for="kieranBarker2" photo="true">}}
-</div>
-
-<div class="padding-bottom">
-	{{<testimonial for="patriciaParker" photo="true">}}
-</div>
-
-<div class="padding-bottom">
-	{{<testimonial for="toddLibby" photo="true">}}
-</div>
-
-<div class="padding-top-large padding-bottom-large">
-	{{<testimonial for="elliotPorter" photo="true">}}
-</div>
-
-<div class="padding-bottom">
-	{{<testimonial for="ronAmick" photo="true">}}
-</div>
-
-<div class="padding-bottom">
-	{{<testimonial for="craigHaggart" photo="true">}}
-</div>
-
-<div class="padding-bottom">
-	{{<testimonial for="vicenteSarmento" photo="true">}}
-</div>
+{{<testimonials-purchase>}}
 
 
 {{<pricing-link apply="true">}}
