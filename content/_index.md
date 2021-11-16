@@ -27,7 +27,7 @@ Both workshops have a strong focus on modern JavaScript (ES6+), web accessibilit
 {{%/md%}}
 </div>
 
-{{<formats>}}
+{{<quiz>}}
 
 
 ## How It Works
