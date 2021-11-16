@@ -11,4 +11,4 @@ The program has been completely redesigned with a focus on modern JS. [Here's an
 
 There are new projects, new techniques, and new approach to learning. You're likely to pick up some new skills along the way.
 
-{{<purchase-link alumni="true">}}
+{{<purchase-link alumni="true" for="essentials">}}

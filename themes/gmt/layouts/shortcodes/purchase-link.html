@@ -1,40 +1,34 @@
 {{- $data := getJSON $.Site.Params.api -}}
 {{- $ctas := index $data "ctas" -}}
-{{- $details := index $data.products "academy" -}}
+{{- $academy := index $data.products "academy" -}}
+{{- $dates := index $academy "dates" -}}
+{{- $prices := index $academy "prices" -}}
+{{- $details := index $academy (.Get "for") -}}
 
 {{- if (.Get "alumni") -}}
 
-	{{- if and (ge (now.Format "20060102") $details.startPre) (le (now.Format "20060102") $details.endRegistration) -}}
+	{{- if and (ge (now.Format "20060102") $dates.registrationStart) (le (now.Format "20060102") $dates.registrationEnd) -}}
 
 		{{- if isset $ctas "academy-alumni" -}}
 		{{ index $ctas "academy-alumni" | safeHTML }}
 		{{- end -}}
 
-		<p><a class="btn btn-large edd-buy-now-button" href="https://gomakethings.com/checkout?edd_action=add_to_cart&download_id=28868&edd_options[price_id]={{ $details.priceID }}&discount=ALUMNI">Join now for just <del>{{ $details.price }}</del> {{ $details.priceAlumni }}</a></p>
+		<p><a class="btn btn-large edd-buy-now-button" href="https://gomakethings.com/checkout?edd_action=add_to_cart&download_id={{ $details.base }}&edd_options[price_id]={{ $details.id }}&discount=ALUMNI">Join now for just <del>{{ $prices.standard }}</del> {{ $prices.lumni }}</a></p>
 
 		{{ partial "sales-numbers.html" . }}
 
 	{{- else -}}
 
 		<h3>Program registration has ended.</h3>
-		<p>The Vanilla JS Academy returns {{ $details.nextAcademy }}.</p>
+		<p>New sessions run in (approximately) January, April, and&nbsp;October.</p>
 
 	{{- end -}}
 
 {{- else if (.Get "insider") -}}
 
-	{{- if and (ge (now.Format "20060102") $details.startPre) (le (now.Format "20060102") $details.endPre) -}}
+	{{- if and (ge (now.Format "20060102") $dates.preStart) (le (now.Format "20060102") $dates.preEnd) -}}
 
-		<p>Registration for the Vanilla JS Academy isn't open yet. But, as an insider, you get special early access and exclusive discounts.</p>
-
-		{{- if isset $ctas "academy-pre" -}}
-		{{ index $ctas "academy-pre" | safeHTML }}
-		{{- end -}}
-
-		<p class="margin-bottom-medium"><a class="btn btn-large btn-block edd-buy-now-button" href="https://gomakethings.com/checkout?edd_action=add_to_cart&download_id=28868&edd_options[price_id]={{ $details.priceID }}&discount=INSIDER">Join now for just <del>{{ $details.price }}</del> {{ $details.pricePre }}</a></p>
-		<p class="text-small text-center">Or <a href="https://gomakethings.com/checkout?edd_action=add_to_cart&download_id=28868&edd_options[price_id]={{ $details.priceIDMonthly }}&discount=INSIDER">make three monthly payments of <del>{{ $details.priceMonthly }}</del> {{ $details.pricePreMonthly }}</a></p>
-
-		{{ partial "sales-numbers.html" . }}
+		<p>Early insider access to the program has ended. <a href="/">You can register for the program here.</a></p>
 
 	{{- else -}}
 
@@ -42,7 +36,7 @@
 
 	{{- end -}}
 
-{{- else if and (ge (now.Format "20060102") $details.startRegistration) (le (now.Format "20060102") $details.endRegistration) -}}
+{{- else if and (ge (now.Format "20060102") $dates.registrationStart) (le (now.Format "20060102") $dates.registrationEnd) -}}
 
 {{- $apiPrices := index $data "prices" -}}
 {{- .Scratch.Set "apiPrice" "" -}}
@@ -59,38 +53,31 @@
 	{{ .Scratch.Set "cta" ((index $ctas "academy-buy") | safeHTML) }}
 {{- end -}}
 
-<p>Kick-start your journey to JavaScript mastery. You get...</p>
+<p>{{ if .Inner }}{{ .Inner }} {{ end }}You get...</p>
 
 <ul>
-	<li>10 weeks of short, focused lessons made for beginners</li>
-	<li>30 amazing JavaScript projects</li>
-	<li>170+ lessons</li>
+	<li>6 weeks of short, focused lessons</li>
+	<li>18 amazing JavaScript projects</li>
+	<li>70+ lessons</li>
 	<li>Video office hours</li>
 	<li>Exclusive Slack access</li>
 </ul>
 
-<p><strong>The next session runs from {{ $details.startAcademy }} to {{ $details.endAcademy }}.</strong> After joining, you'll get an email with the details.</p>
+<p><strong>The next session runs from {{ $dates.start }} to {{ $dates.end }}.</strong> After joining, you'll get an email with the details.</p>
 
 {{- .Scratch.Get "cta" -}}
 
-<p class="margin-bottom-medium"><a class="btn btn-large btn-block edd-buy-now-button" href='https://gomakethings.com/checkout?edd_action=add_to_cart&download_id=28868&edd_options[price_id]={{ $details.priceID }}{{ if ne (.Scratch.Get "apiDiscount") "" }}&discount={{ .Scratch.Get "apiDiscount" }}{{ end }}'>Join now for just {{ if ne (.Scratch.Get "apiPrice") "" }}{{ .Scratch.Get "apiPrice" | safeHTML }}{{ else }}{{ $details.price | safeHTML }}{{ end }}</a></p>
-<p class="text-small text-center">Or <a href="https://gomakethings.com/checkout?edd_action=add_to_cart&download_id=28868&edd_options[price_id]={{ $details.priceIDMonthly }}{{ if ne (.Scratch.Get "apiDiscount") "" }}&discount={{ .Scratch.Get "apiDiscount" }}{{ end }}">make three monthly payments of {{ if ne (.Scratch.Get "apiPriceMonthly") "" }}{{ .Scratch.Get "apiPriceMonthly" | safeHTML }}{{ else }}{{ $details.priceMonthly | safeHTML }}{{ end }}</a></p>
+<p class="margin-bottom-medium"><a class="btn btn-large btn-block edd-buy-now-button" href='https://gomakethings.com/checkout?edd_action=add_to_cart&download_id={{ $details.base }}&edd_options[price_id]={{ $details.id }}{{ if ne (.Scratch.Get "apiDiscount") "" }}&discount={{ .Scratch.Get "apiDiscount" }}{{ end }}'>Join now for just {{ if ne (.Scratch.Get "apiPrice") "" }}{{ .Scratch.Get "apiPrice" | safeHTML }}{{ else }}{{ $prices.standard | safeHTML }}{{ end }}</a></p>
+<p class="text-small text-center">Or <a href="https://gomakethings.com/checkout?edd_action=add_to_cart&download_id={{ $details.base }}&edd_options[price_id]={{ $details.monthly }}{{ if ne (.Scratch.Get "apiDiscount") "" }}&discount={{ .Scratch.Get "apiDiscount" }}{{ end }}">make three monthly payments of {{ if ne (.Scratch.Get "apiPriceMonthly") "" }}{{ .Scratch.Get "apiPriceMonthly" | safeHTML }}{{ else }}{{ $prices.monthly | safeHTML }}{{ end }}</a></p>
 
 {{ partial "sales-numbers.html" . }}
 
 {{- else -}}
 
-<p><strong>New sessions of the Vanilla JS Academy open up in January, April, and&nbsp;October.</strong></p>
-{{- if false -}}
-{{- if le (now.Format "20060102") $details.endRegistration -}}
-<p><strong>A brand new Vanilla JS Academy returns on {{ $details.startAcademy }}.</strong></p>
-{{- else -}}
-<p><strong>A brand new Vanilla JS Academy returns {{ $details.nextAcademy }}.</strong></p>
-{{- end -}}
-{{- end -}}
+<p><strong>New sessions of the Vanilla JS Academy run in January, April, and&nbsp;October.</strong></p>
 
-{{- if le (sub (int (now.Format "20060102")) $details.startRegistration) 14 -}}
-<p>Registration opens {{ $details.registrationAcademy }}, but you can be the first to find out when registration opens back up <em>and</em> get exclusive discounts. Enter your email&nbsp;below.</p>
+{{- if le (sub (int (now.Format "20060102")) $dates.registrationStart) 14 -}}
+<p>Registration opens in the next week or two, but you can be the first to find out when registration opens back up <em>and</em> get exclusive discounts. Enter your email&nbsp;below.</p>
 {{- else -}}
 <p>Be the first to find out when registration opens back up <em>and</em> get exclusive discounts. Enter your email&nbsp;below.</p>
 {{- end -}}

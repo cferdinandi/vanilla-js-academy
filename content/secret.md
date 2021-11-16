@@ -5,4 +5,4 @@ draft: false
 noIndex: true
 ---
 
-{{<purchase-link insider="true">}}
+{{<purchase-link insider="true" for="essentials">}}

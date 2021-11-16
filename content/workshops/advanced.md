@@ -13,6 +13,8 @@ description: ""
 
 {{<cta for="academy">}}
 
+{{<pricing-link>}}
+
 {{<used-by>}}
 
 
@@ -163,7 +165,7 @@ Across all of the sections, you'll also learn about web performance, debugging, 
 
 
 {{%purchase-box%}}
-{{<purchase-link>}}
+{{<purchase-link for="advanced">}}Grow your JavaScript skills.{{</purchase-link>}}
 {{%/purchase-box%}}
 
 {{<testimonials-purchase>}}
