@@ -115,8 +115,8 @@ The _Advanced JS: Structure & Scale_ workshop is designed to help you structure 
 <!-- {{<pricing-link>}} -->
 
 
-{{<cta for="bonusesAcademy">}}
-{{<cta for="bonusesList">}}
+{{<cta for="bonuses-academy">}}
+{{<cta for="bonuses-list">}}
 
 
 ## The Program Schedule

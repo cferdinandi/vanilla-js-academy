@@ -79,8 +79,8 @@ If you get stuck, there’s a **24/7 private Slack channel** exclusively for stu
 {{<pricing-link pick="true">}}
 
 
-{{<cta for="bonusesAcademy">}}
-{{<cta for="bonusesList">}}
+{{<cta for="bonuses-academy">}}
+{{<cta for="bonuses-list">}}
 
 
 ## Become a confident JavaScript developer

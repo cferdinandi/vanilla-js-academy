@@ -112,8 +112,8 @@ The _Vanilla JS Essentials_ workshop is a project-based training program designe
 {{<pricing-link>}}
 
 
-{{<cta for="bonusesAcademy">}}
-{{<cta for="bonusesList">}}
+{{<cta for="bonuses-academy">}}
+{{<cta for="bonuses-list">}}
 
 
 ## The Program Schedule
