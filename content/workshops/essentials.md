@@ -18,7 +18,7 @@ description: ""
 {{<used-by>}}
 
 
-{{<how-it-works>}}
+{{<how-it-works video="652105304">}}
 The _Vanilla JS Essentials_ workshop is a project-based training program designed to help you learn to solve problems and think in JavaScript. 
 {{</how-it-works>}}
 

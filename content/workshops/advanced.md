@@ -18,7 +18,7 @@ description: ""
 {{<used-by>}}
 
 
-{{<how-it-works>}}
+{{<how-it-works video="652105251">}}
 The _Advanced JS: Structure & Scale_ workshop is designed to help you structure and organize your code as your projects grow and scale.
 {{</how-it-works>}}
 

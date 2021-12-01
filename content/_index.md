@@ -18,12 +18,6 @@ description: ""
 
 ## The Workshops
 
-<!-- [Vanilla JS Essentials](/essentials)
-: Learn the fundamentals of DOM manipulation and injection, working with APIs and asynchronous JavaScript, managing data with arrays and objects, and saving state with browser storage.
-
-[Advanced JS: Structure & Scale](/advanced)
-: Learn how to structure and organize your code as your projects grow and scale. Dig into concepts like revealing module patterns, object-oriented programing (OOP), chaining, immutability, ES modules, and service workers. -->
-
 <div class="list-spaced">
 {{%md%}}
 1. **[Vanilla JS Essentials.](/essentials)** Learn the fundamentals of DOM manipulation and injection, working with APIs and asynchronous JavaScript, managing data with arrays and objects, and saving state with browser storage.
@@ -45,7 +39,9 @@ description: ""
 
 ## How It Works
 
-<ul class="list-inline list-inline-responsive">
+<div class="fluid-vids"><iframe src="https://player.vimeo.com/video/652105277?h=25290e8801" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>
+
+<ul class="list-inline list-inline-responsive text-center">
 	<li><strong>70+ Lessons</strong></li>
 	<li><strong>18 Projects</strong></li>
 	<li><strong>24/7 Peer Chat</strong></li>

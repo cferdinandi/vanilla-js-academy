@@ -1,6 +1,10 @@
 <h2 id="how-it-works">How It Works</h2>
 
-<ul class="list-inline list-inline-responsive">
+{{- if .Get "video" -}}
+<div class="fluid-vids"><iframe src='https://player.vimeo.com/video/{{ .Get "video" }}' width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>
+{{- end -}}
+
+<ul class='list-inline list-inline-responsive{{ if .Get "video" }} text-center{{ end }}'>
 	<li><strong>70+ Lessons</strong></li>
 	<li><strong>18 Projects</strong></li>
 	<li><strong>24/7 Peer Chat</strong></li>
