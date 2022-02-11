@@ -163,7 +163,8 @@ Across all of the sections, you'll also learn about web performance, debugging, 
 
 {{<money-back>}}
 
-{{<about-me>}}
+
+{{<cta for="bio">}}
 
 
 {{%purchase-box%}}

@@ -63,7 +63,7 @@ If you get stuck, there’s a **24/7 private Slack channel** exclusively for stu
 Don’t put off learning vanilla JavaScript! If you’re not 100% satisfied with the Vanilla JS Academy, let me know and I’ll give you a full refund.
 
 
-{{<about-me>}}
+{{<cta for="bio">}}
 
 
 {{<pricing-link pick="true">}}
