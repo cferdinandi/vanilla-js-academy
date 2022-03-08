@@ -1,7 +1,7 @@
 <h2 id="how-it-works">How It Works</h2>
 
 {{- if .Get "video" -}}
-<div class="fluid-vids"><iframe src='https://player.vimeo.com/video/{{ .Get "video" }}' width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>
+<iframe src='https://player.vimeo.com/video/{{ .Get "video" }}' width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
 {{- end -}}
 
 <ul class='list-inline list-inline-responsive{{ if .Get "video" }} text-center{{ end }}'>

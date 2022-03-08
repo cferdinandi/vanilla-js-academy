@@ -6,8 +6,7 @@ noTitle: true
 description: ""
 ---
 
-<h1 class="no-padding-top no-margin-bottom h5 text-sans">The Vanilla JS Academy</h1>
-<p class="text-xlarge margin-bottom-small text-serif">Project-based JavaScript workshops.</p>
+<h1 class="margin-bottom-small text-xlarge text-normal">Project-based JavaScript workshops.</h1>
 
 <p><span class="text-large">Follow a structured learning path, work on lots of fun projects, and get the support you need to work through challenges.</span></p>
 
@@ -39,7 +38,7 @@ description: ""
 
 ## How It Works
 
-<div class="fluid-vids"><iframe src="https://player.vimeo.com/video/652105277?h=25290e8801" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></div>
+<iframe src="https://player.vimeo.com/video/652105277?h=25290e8801" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
 
 <ul class="list-inline list-inline-responsive text-center">
 	<li><strong>70+ Lessons</strong></li>
