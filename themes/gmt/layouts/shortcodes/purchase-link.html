@@ -5,38 +5,7 @@
 {{- $prices := index $academy "prices" -}}
 {{- $details := index $academy (.Get "for") -}}
 
-{{- if (.Get "alumni") -}}
-
-	{{- if and (ge (now.Format "20060102") $dates.registrationStart) (le (now.Format "20060102") $dates.registrationEnd) -}}
-
-		{{- if isset $ctas "academy-alumni" -}}
-		{{ index $ctas "academy-alumni" | safeHTML }}
-		{{- end -}}
-
-		<p><a class="btn btn-large edd-buy-now-button" href="https://gomakethings.com/checkout?edd_action=add_to_cart&download_id={{ $details.base }}&edd_options[price_id]={{ $details.id }}&discount=ALUMNI">Join now for just <del>{{ $prices.standard }}</del> {{ $prices.lumni }}</a></p>
-
-		{{ partial "sales-numbers.html" . }}
-
-	{{- else -}}
-
-		<h3>Program registration has ended.</h3>
-		<p>New sessions run in (approximately) January, April, and&nbsp;October.</p>
-
-	{{- end -}}
-
-{{- else if (.Get "insider") -}}
-
-	{{- if and (ge (now.Format "20060102") $dates.preStart) (le (now.Format "20060102") $dates.preEnd) -}}
-
-		<p>Early insider access to the program has ended. <a href="/">You can register for the program here.</a></p>
-
-	{{- else -}}
-
-		<p>Early insider access to the program has ended. <a href="/">You can register for the program here.</a></p>
-
-	{{- end -}}
-
-{{- else if and (ge (now.Format "20060102") $dates.registrationStart) (le (now.Format "20060102") $dates.registrationEnd) -}}
+{{- if and (ge (now.Format "20060102") $dates.registrationStart) (le (now.Format "20060102") $dates.registrationEnd) -}}
 
 {{- $apiPrices := index $data "prices" -}}
 {{- .Scratch.Set "apiPrice" "" -}}
@@ -68,7 +37,7 @@
 {{- .Scratch.Get "cta" -}}
 
 <p class="margin-bottom-medium"><a class="btn btn-large btn-block edd-buy-now-button" href='https://gomakethings.com/checkout?edd_action=add_to_cart&download_id={{ $details.base }}&edd_options[price_id]={{ $details.id }}{{ if ne (.Scratch.Get "apiDiscount") "" }}&discount={{ .Scratch.Get "apiDiscount" }}{{ end }}'>Join now for just {{ if ne (.Scratch.Get "apiPrice") "" }}{{ .Scratch.Get "apiPrice" | safeHTML }}{{ else }}{{ $prices.standard | safeHTML }}{{ end }}</a></p>
-<p class="text-small text-center">Or <a href="https://gomakethings.com/checkout?edd_action=add_to_cart&download_id={{ $details.base }}&edd_options[price_id]={{ $details.monthly }}{{ if ne (.Scratch.Get "apiDiscount") "" }}&discount={{ .Scratch.Get "apiDiscount" }}{{ end }}">make three monthly payments of {{ if ne (.Scratch.Get "apiPriceMonthly") "" }}{{ .Scratch.Get "apiPriceMonthly" | safeHTML }}{{ else }}{{ $prices.monthly | safeHTML }}{{ end }}</a></p>
+<p class="text-small text-center">Or <a href='https://gomakethings.com/checkout?edd_action=add_to_cart&download_id={{ $details.base }}&edd_options[price_id]={{ $details.monthly }}{{ if ne (.Scratch.Get "apiDiscount") "" }}&discount={{ .Scratch.Get "apiDiscount" }}{{ end }}'>make three monthly payments of {{ if ne (.Scratch.Get "apiPriceMonthly") "" }}{{ .Scratch.Get "apiPriceMonthly" | safeHTML }}{{ else }}{{ $prices.monthly | safeHTML }}{{ end }}</a></p>
 
 {{ partial "sales-numbers.html" . }}
 

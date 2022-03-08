@@ -5,10 +5,6 @@ draft: false
 noIndex: true
 ---
 
-As a Vanilla JS Academy alum, you can go through the program again at a steep discount.
+As a Vanilla JS Academy alum, you can go through the _Vanilla JS Essentials_ workshop at a steep discount. [Here's an overview the current program.](/essentials)
 
-The program has been completely redesigned with a focus on modern JS. [Here's an overview of how the new Academy works.](/)
-
-There are new projects, new techniques, and new approach to learning. You're likely to pick up some new skills along the way.
-
-{{<purchase-link alumni="true" for="essentials">}}
+{{<purchase-link-alumni for="essentials">}}
