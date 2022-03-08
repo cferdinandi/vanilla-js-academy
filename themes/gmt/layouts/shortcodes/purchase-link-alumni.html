@@ -15,7 +15,7 @@
 		{{- .Scratch.Set "code" "ADVANCEDALUM" -}}
 	{{- end -}}
 
-	{{ if ne (.Scratch.Get "code") "" }}<p><mark><em><strong>Save almost 90% as an Academy Alum!</strong> Because you've gone through the program once already, you can save almost 90% on registration if you want to take the program again. Use the code <code>{{ .Scratch.Get "code" }}</code> at checkout.</em></mark></p>{{ end }}
+	<p><mark><em><strong>Save almost 90% as an Academy Alum!</strong> Because you've gone through the program once already, you can save almost 90% on registration if you want to take the program again.{{ if ne (.Scratch.Get "code") "" }} Use the code <code>{{ .Scratch.Get "code" }}</code> at checkout.{{ end }}</em></mark></p>
 
 	<p><a class="btn btn-large edd-buy-now-button" href='https://gomakethings.com/checkout?edd_action=add_to_cart&download_id={{ $details.base }}&edd_options[price_id]={{ $details.id }}&discount={{ .Scratch.Get "code"}}'>Join now for just <del>{{ $prices.standard }}</del> {{ $prices.alumni }}</a></p>
 
