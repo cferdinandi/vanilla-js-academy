@@ -1,0 +1,17 @@
+{{- $data := getJSON $.Site.Params.api -}}
+{{- $ctas := index $data "ctas" -}}
+{{- $extra := $data.products.extraCredit -}}
+{{- $id := index $extra (.Get "for") -}}
+
+
+<p>{{ if .Inner }}{{ .Inner }} {{ end }}Build on the skills you learned and keep your momentum going with...</p>
+
+<ul>
+	<li>18 more fun JavaScript projects</li>
+	<li>A flexible, self-paced format</li>
+	<li>Exclusive Slack access</li>
+</ul>
+
+<mark>🚀 <em><strong>Launch Sale!</strong> For a limited time, get 30% off Extra Credit: Essentials. This discount is automatically applied for you at checkout.</em></mark>
+
+<p><a class="btn btn-large btn-block edd-buy-now-button" href="https://gomakethings.com/checkout?edd_action=add_to_cart&download_id={{ $id }}">Join now for just {{ $extra.price | safeHTML }}</a></p>
