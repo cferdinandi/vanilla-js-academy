@@ -118,6 +118,53 @@ description: ""
 </div>
 
 
+<details class="margin-bottom">
+<summary class="margin-bottom-small"><strong>Project Details...</strong></summary>
+{{%md%}}
+Tip Calculator
+: _Build an app that you can use how much each person owes when splitting a bill._
+	
+	1. Creating a Tip Calculator
+	2. Formatting the amount owed
+	3. Calculating the per-person amount
+
+Easter Egg
+: _Write a script that detects keyboard patterns and surfaces hidden features when a user types in the right one._
+
+	1. Detecting a keyboard pattern
+	2. Creating an easter egg utility function
+
+Project Updates
+: _Update and modify some of the projects from the Vanilla JS Academy to work a little differently._
+
+	1. Toggle Password Button
+	2. Most Used Word
+	3. Save form data
+
+Drum Machine
+: _Build a web-based drum machine that you can use to create beats right in the web browser._
+
+	1. Drum Machine
+	2. Playing the drum machine with the keyboard
+	3. Light up drum keys
+
+Country API
+: _Create a tool that uses API data to people can use to look up stats about a country, and filter by size and region._
+
+	1. Display country data
+	2. Filter countries
+	3. Filter countries by name
+
+Monster Memory Game
+: _Convert our "Find the Monsters" game into a memory game._
+
+	1. Monster Memory
+	2. Improving accessibility for the memory game
+	3. Tracking matches for the memory game
+	4. Automatically flip the cards back over
+{{%md%}}
+</details>
+
 {{<money-back>}}
 
 
