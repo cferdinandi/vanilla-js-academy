@@ -17,6 +17,8 @@ description: ""
 
 ## The Workshops
 
+Workshops run concurrently, and are designed to be taken one at a time. Don't sign up for both during the same session.
+
 <div class="list-spaced">
 {{%md%}}
 1. **[Vanilla JS Essentials.](/essentials)** Learn the fundamentals of DOM manipulation and injection, working with APIs and asynchronous JavaScript, managing data with arrays and objects, and saving state with browser storage.
