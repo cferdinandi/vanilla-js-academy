@@ -1,12 +1,12 @@
 ---
-title: "Advanced JavaScript: Structure & Scale"
+title: "Structure & Scale"
 date: 2018-01-16T10:05:20-05:00
 draft: false
 noTitle: true
 description: ""
 ---
 
-<h1 class="no-padding-top no-margin-bottom h5 text-sans">Advanced JavaScript: Structure & Scale</h1>
+<h1 class="no-padding-top no-margin-bottom h5 text-sans">Structure & Scale</h1>
 <p class="text-xlarge margin-bottom-small text-serif">A project-based JS workshop focused on structuring code for scale and growth.</p>
 
 <p><span class="text-large">Follow a structured learning path, work on lots of fun projects, and get the support you need to work through challenges.</span></p>
@@ -59,33 +59,33 @@ The _Advanced JS: Structure & Scale_ workshop is designed to help you structure 
 
 ## Work on Fun Projects!
 
-<div class="row margin-bottom-large">
+<div class="row margin-top margin-bottom-large">
 	<div class="grid-fifth margin-bottom-small text-center">
-		<svg xmlns="http://www.w3.org/2000/svg" width="4em" height="4em" viewBox="0 0 16 16" aria-hidden="true"><path fill="#808080" d="M13.5 1h-12C.675 1 0 1.675 0 2.5v12c0 .825.675 1.5 1.5 1.5h12c.825 0 1.5-.675 1.5-1.5v-12c0-.825-.675-1.5-1.5-1.5zm-3 7H8V4.5a.5.5 0 0 0-1 0V8H4.5L2.567 6.067a5.5 5.5 0 0 1 9.866 0L10.5 8z"/></svg>
+		<svg xmlns="http://www.w3.org/2000/svg" width="4em" height="4em" viewBox="0 0 16 16" aria-hidden="true"><path fill="#808080" d="M13.5 3h-8A2.507 2.507 0 0 0 3 5.5v8C3 14.875 4.125 16 5.5 16h8c1.375 0 2.5-1.125 2.5-2.5v-8C16 4.125 14.875 3 13.5 3zm-7 11a1.5 1.5 0 1 1 .001-3.001A1.5 1.5 0 0 1 6.5 14zm0-6a1.5 1.5 0 1 1 .001-3.001A1.5 1.5 0 0 1 6.5 8zm3 3a1.5 1.5 0 1 1 .001-3.001A1.5 1.5 0 0 1 9.5 11zm3 3a1.5 1.5 0 1 1 .001-3.001A1.5 1.5 0 0 1 12.5 14zm0-6a1.5 1.5 0 1 1 .001-3.001A1.5 1.5 0 0 1 12.5 8zm.449-6A2.509 2.509 0 0 0 10.5 0h-8A2.507 2.507 0 0 0 0 2.5v8c0 1.204.862 2.216 2 2.449V3c0-.55.45-1 1-1h9.949z"/></svg>
 	</div>
 	<div class="grid-four-fifths">
-		<h3 class="h5 no-padding-top no-margin-bottom">Weight Conversion Library</h3>
-		<p>A library that converts weight from one unit to another. You'll build multiple versions, using different JS patterns, and add support for developer options and customizations.</p>
+		<h3 class="h5 no-padding-top no-margin-bottom">Roll the Dice</h3>
+		<p>A library for rolling dice of various sizes. You'll extend it to support ES modules so developers can import just the dice they need, and create a web component that can be used with just an HTML element.</p>
 	</div>
 </div>
 
 <div class="row margin-bottom-large">
 	<div class="grid-fifth margin-bottom-small text-center">
-		<svg xmlns="http://www.w3.org/2000/svg" width="4em" height="4em" viewBox="0 0 16 16" aria-hidden="true"><path fill="#f7272f" d="M10.293 11.707 7 8.414V4h2v3.586l2.707 2.707zM8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0zm0 14A6 6 0 1 1 8 2a6 6 0 0 1 0 12z"/></svg>
+		<svg xmlns="http://www.w3.org/2000/svg" width="4em" height="4em" viewBox="0 0 16 16" aria-hidden="true"><path fill="#dba909" d="M7.5 1a7.5 7.5 0 1 0 0 15 7.5 7.5 0 0 0 0-15zm0 13.5a6 6 0 1 1 0-12 6 6 0 0 1 0 12zM8 8V6h2V5H8V4H7v1H5v4h2v2H5v1h2v1h1v-1h2V8H8zM7 8H6V6h1v2zm2 3H8V9h1v2z"/></svg>
 	</div>
 	<div class="grid-four-fifths">
-		<h3 class="h5 no-padding-top no-margin-bottom">Date &amp; Time Library</h3>
-		<p>A library that makes it easier to format and modify dates and times. You'll make it immutable, work with ES modules to make it more flexible, and extend functionality with custom JavaScript events.</p>
+		<h3 class="h5 no-padding-top no-margin-bottom">Treasure Chest</h3>
+		<p>A library for tracking your loot. Create unique treasure chests for each member of your crew, add different types of treasure, explore modern JS class features, and add custom events developers can hook into to extend functionality in new ways.</p>
 	</div>
 </div>
 
 <div class="row margin-bottom-large">
 	<div class="grid-fifth margin-bottom-small text-center">
-		<svg xmlns="http://www.w3.org/2000/svg" width="4em" height="4em" viewBox="0 0 16 16" aria-hidden="true"><path fill="#0088cc" d="M8 0a5 5 0 0 0-5 5c0 5 5 9 5 9s5-4 5-9a5 5 0 0 0-5-5zm0 8a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm4.285 2.9a16.57 16.57 0 0 1-.682.988l.108.052c.76.38 1.101.806 1.101 1.059s-.34.679-1.101 1.059c-.957.479-2.31.753-3.712.753s-2.754-.275-3.712-.753c-.76-.38-1.101-.806-1.101-1.059s.34-.679 1.101-1.059l.108-.052c-.231-.31-.461-.64-.682-.988-1.061.541-1.715 1.282-1.715 2.1 0 1.657 2.686 3 6 3s6-1.343 6-3c0-.817-.654-1.558-1.715-2.1z"/></svg>
+		<svg xmlns="http://www.w3.org/2000/svg" width="4em" height="4em" viewBox="0 0 16 16" aria-hidden="true"><path fill="#0088cc" d="M7.939 1.907C6.433.118 5.292 0 3 0v8c4.008-2 4.457.26 6.985.032C12.477 7.806 14.595 5.889 16 4c-3.98.92-5.983.376-8.061-2.093zM0 0h2v16H0z"/></svg>
 	</div>
 	<div class="grid-four-fifths">
-		<h3 class="h5 no-padding-top no-margin-bottom">Places App</h3>
-		<p>An app for finding and saving your favorite places. You'll learn how to structure code on larger projects. You'll also use service workers to improve app performance and add offline capabilities.</p>
+		<h3 class="h5 no-padding-top no-margin-bottom">Seven Seas App</h3>
+		<p>A travel app for pirates that incorporates your previous projects. You'll learn how to structure code on larger projects, improve app performance, and add offline capabilities.</p>
 	</div>
 </div>
 
@@ -105,27 +105,36 @@ The _Advanced JS: Structure & Scale_ workshop is designed to help you structure 
 
 Here's exactly what you'll learn in the _Advanced JS: Structure & Scale_ workshop.
 
-<h3 class="no-padding-top h5">Part 1. An Intro to JavaScript Libraries</h3>
+<h3 class="no-padding-top h5">Part 1. JavaScript Library Patterns</h3>
 
-- Simple JavaScript libraries
 - The Revealing Module Pattern
 - The Constructor Pattern
 - Object-Oriented Programing (OOP)
 - Chaining library methods
+- JavaScript Classes
+- Private Library Properties
+- User Options and Settings
 - The Custom Events API
 
-<h3 class="no-padding-top h5">Part 2. Reusable JavaScript</h3>
+<h3 class="no-padding-top h5">Part 2. Web Components</h3>
+
+- Custom Elements
+- The Web Component Lifecycle
+- Adding Built-in Interactivity
+- The Shadow DOM
+- Encapsulating Components
+- Styling Web Components
+
+<h3 class="no-padding-top h5">Part 3. Modular JavaScript</h3>
 
 - ES modules and modular code
 - Build tools and module bundlers
-- Smart defaults and configurable user options
-- Allowing customization without touching the core code
 - Distributing code for different environments
-
-<h3 class="no-padding-top h5">Part 3. Scale &amp; Performance</h3>
-
-- Structuring large projects
 - Page-specific JavaScript and reduced payloads
+- How to reuse code across files
+
+<h3 class="no-padding-top h5">Part 4. Service Workers</h3>
+
 - An intro to Service Workers
 - Caching for better performance
 - Offline web apps and different offline strategies
