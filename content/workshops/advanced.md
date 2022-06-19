@@ -32,6 +32,7 @@ The _Advanced JS: Structure & Scale_ workshop is designed to help you structure 
 			<li>The Revealing Module Pattern</li>
 			<li>The Constructor Pattern</li>
 			<li>Object-Oriented Programing (OOP)</li>
+			<li>JavaScript Classes</li>
 			<li>JS libraries & chaining methods</li>
 			<li>Settings and configurable options</li>
 			<li>The custom events API</li>
@@ -40,12 +41,13 @@ The _Advanced JS: Structure & Scale_ workshop is designed to help you structure 
 	</div>
 	<div class="grid-half">
 		<ul class="no-margin-bottom">
+			<li>Web Components</li>
+			<li>The Shadow DOM</li>
 			<li>ES Modules</li>
 			<li>Build tools and module bundlers</li>
 			<li>Service Workers</li>
 			<li>Offline web apps</li>
 			<li>Web performance strategies</li>
-			<li>Immutability in JS libraries</li>
 			<li>How to debug broken&nbsp;code</li>
 			<li>Web accessibility fundamentals</li>
 		</ul>
