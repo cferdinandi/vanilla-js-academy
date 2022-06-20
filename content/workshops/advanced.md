@@ -19,7 +19,7 @@ description: ""
 
 
 {{<how-it-works video="652105251">}}
-The _Advanced JS: Structure & Scale_ workshop is designed to help you structure and organize your code as your projects grow and scale.
+The _Structure & Scale_ workshop is designed to help you structure and organize your code as your projects grow and scale.
 {{</how-it-works>}}
 
 
@@ -105,7 +105,7 @@ The _Advanced JS: Structure & Scale_ workshop is designed to help you structure 
 
 ## The Program Schedule
 
-Here's exactly what you'll learn in the _Advanced JS: Structure & Scale_ workshop.
+Here's exactly what you'll learn in the _Structure & Scale_ workshop.
 
 <h3 class="no-padding-top h5">Part 1. JavaScript Library Patterns</h3>
 
