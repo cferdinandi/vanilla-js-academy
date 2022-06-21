@@ -22,7 +22,7 @@ Workshops run concurrently, and are designed to be taken one at a time. Don't si
 <div class="list-spaced">
 {{%md%}}
 1. **[Vanilla JS Essentials.](/essentials)** Learn the fundamentals of DOM manipulation and injection, working with APIs and asynchronous JavaScript, managing data with arrays and objects, and saving state with browser storage.
-2. **[Structure & Scale.](/advanced)** Learn how to structure and organize your code as your projects grow and scale. Dig into concepts like revealing module patterns, object-oriented programing (OOP), chaining, immutability, ES modules, and service workers.
+2. **[Structure & Scale.](/advanced)** Learn how to structure and organize your code as your projects grow and scale. Dig into concepts like utility libraries, object-oriented programing, JavaScript classes, web components, ES modules, and service workers.
 {{%/md%}}
 </div>
 
