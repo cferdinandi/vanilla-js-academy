@@ -29,15 +29,6 @@ Workshops run concurrently, and are designed to be taken one at a time. Don't si
 {{<quiz>}}
 
 
-<div class="padding-top-large padding-bottom">
-	{{<testimonial for="benRudolph" photo="true">}}
-</div>
-
-<div class="padding-bottom-large">
-	{{<testimonial for="lauraKalbag" photo="true">}}
-</div>
-
-
 ## How It Works
 
 <iframe src="https://player.vimeo.com/video/652105277?h=25290e8801" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
@@ -57,6 +48,15 @@ Workshops run concurrently, and are designed to be taken one at a time. Don't si
 </div>
 
 If you get stuck, there’s a **24/7 private Slack channel** exclusively for students, and **video office hours** every few weeks.
+
+
+<div class="padding-top-large padding-bottom">
+	{{<testimonial for="benRudolph" photo="true">}}
+</div>
+
+<div class="padding-bottom-large">
+	{{<testimonial for="lauraKalbag" photo="true">}}
+</div>
 
 
 ## Your 100% Money-Back Guarantee &#128176;
