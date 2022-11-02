@@ -1,0 +1,7 @@
+##
+## Prerequisites for registration
+##
+
+advanced: <p><em><strong>Course Requirements:</strong> Before taking this workshop, you should have completed the <a href="/essentials/">JS Essentials workshop</a>, or have experience with DOM manipulation, working with arrays and objects, and browser storage.</em></p>
+
+expert: <p><em><strong>Course Requirements:</strong> Before taking this workshop, you should have completed the <a href="/advanced/">Essentials</a> and <a href="/advanced/">Structure & Scale</a> workshops, or have experience with DOM manipulation, APIs and asynchronous JS, and ES modules.</em></p>

@@ -10,6 +10,8 @@ description: ""
 
 <p><span class="text-large">Follow a structured learning path, work on lots of fun projects, and get the support you need to work through challenges.</span></p>
 
+<p><mark>🚀 <em><strong>New Workshop!</strong> <a href="/expert/">Web Apps</a> is a brand new workshop, designed to help you level-up your developer skills and learn how to build complex applications from scratch.</em></mark>
+
 {{<cta for="academy">}}
 
 {{<used-by>}}
@@ -17,16 +19,15 @@ description: ""
 
 ## The Workshops
 
-Workshops run concurrently, and are designed to be taken one at a time. Don't sign up for both during the same session.
+Workshops run concurrently, and are designed to be taken one at a time. Don't sign up for more than one during the same session.
 
 <div class="list-spaced">
 {{%md%}}
 1. **[Vanilla JS Essentials.](/essentials)** Learn the fundamentals of DOM manipulation and injection, working with APIs and asynchronous JavaScript, managing data with arrays and objects, and saving state with browser storage.
 2. **[Structure & Scale.](/advanced)** Learn how to structure and organize your code as your projects grow and scale. Dig into concepts like utility libraries, object-oriented programing, JavaScript classes, web components, ES modules, and service workers.
+3. **[Web Apps.](/expert)** Learn how to build dynamic web apps with JavaScript. Learn advanced topics like state-based UI, routing, data reactivity, serverless, how to create custom APIs, and token-based authentication.
 {{%/md%}}
 </div>
-
-{{<quiz>}}
 
 
 ## How It Works
