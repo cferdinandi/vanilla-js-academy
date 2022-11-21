@@ -10,8 +10,6 @@ description: ""
 
 <p><span class="text-large">Follow a structured learning path, work on lots of fun projects, and get the support you need to work through challenges.</span></p>
 
-<p><mark>🚀 <em><strong>New Workshop!</strong> <a href="/expert/">Web Apps</a> is a brand new workshop, designed to help you level-up your developer skills and learn how to build complex applications from scratch.</em></mark>
-
 {{<cta for="academy">}}
 
 {{<used-by>}}

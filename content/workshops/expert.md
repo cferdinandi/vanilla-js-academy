@@ -6,12 +6,10 @@ noTitle: true
 description: ""
 ---
 
-<h1 class="no-padding-top no-margin-bottom h5 text-sans">Web Apps</h1>
+<h1 class="no-padding-top no-margin-bottom h5 text-sans">Web Apps <em class="text-small text-muted">(NEW!)</em></h1>
 <p class="text-xlarge margin-bottom-small text-serif">A project-based JS workshop about building dynamic client-side web apps.</p>
 
 <p><span class="text-large">Follow a structured learning path, work on lots of fun projects, and get the support you need to work through challenges.</span></p>
-
-<p><mark>🚀 <em><strong>New Workshop!</strong> This is a brand new workshop, designed to help you level-up your developer skills and learn how to build complex applications from scratch.</em></mark>
 
 {{<cta for="academy">}}
 
@@ -60,6 +58,8 @@ The _Web Apps_ workshop is designed to help you build dynamic web apps with JS.
 
 
 ## Build an ecommerce platform from scratch
+
+<iframe src="https://player.vimeo.com/video/773393297?h=93f0b786ba" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
 
 For this workshop, you'll build an ecommerce platform for Sparrow Photography Studio, a pirate-themed photographer.
 
