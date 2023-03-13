@@ -15,19 +15,6 @@ description: ""
 {{<used-by>}}
 
 
-## The Workshops
-
-Workshops run concurrently, and are designed to be taken one at a time. Don't sign up for more than one during the same session.
-
-<div class="list-spaced">
-{{%md%}}
-1. **[Vanilla JS Essentials.](/essentials)** Learn the fundamentals of DOM manipulation and injection, working with APIs and asynchronous JavaScript, managing data with arrays and objects, and saving state with browser storage.
-2. **[Structure & Scale.](/advanced)** Learn how to structure and organize your code as your projects grow and scale. Dig into concepts like utility libraries, object-oriented programing, JavaScript classes, web components, ES modules, and service workers.
-3. **[Web Apps.](/expert)** Learn how to build dynamic web apps with JavaScript. Learn advanced topics like state-based UI, routing, data reactivity, serverless, how to create custom APIs, and token-based authentication.
-{{%/md%}}
-</div>
-
-
 ## How It Works
 
 <iframe src="https://player.vimeo.com/video/652105277?h=25290e8801" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
@@ -47,6 +34,19 @@ Workshops run concurrently, and are designed to be taken one at a time. Don't si
 </div>
 
 If you get stuck, there’s a **24/7 private Slack channel** exclusively for students, and **video office hours** every few weeks.
+
+
+## The Workshops
+
+Workshops run concurrently, and are designed to be taken one at a time. Don't sign up for more than one during the same session.
+
+<div class="list-spaced">
+{{%md%}}
+1. **[Vanilla JS Essentials.](/essentials)** Learn the fundamentals of DOM manipulation and injection, working with APIs and asynchronous JavaScript, managing data with arrays and objects, and saving state with browser storage.
+2. **[Structure & Scale.](/advanced)** Learn how to structure and organize your code as your projects grow and scale. Dig into concepts like utility libraries, object-oriented programing, JavaScript classes, web components, ES modules, and service workers.
+3. **[Web Apps.](/expert)** Learn how to build dynamic web apps with JavaScript. Learn advanced topics like state-based UI, routing, data reactivity, serverless, how to create custom APIs, and token-based authentication.
+{{%/md%}}
+</div>
 
 
 <div class="padding-top-large padding-bottom">
