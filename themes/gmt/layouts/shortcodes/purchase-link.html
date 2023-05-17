@@ -41,7 +41,7 @@
 {{- end -}}
 
 <p class="margin-bottom-medium"><a class="btn btn-large btn-block edd-buy-now-button" href='https://gomakethings.com/checkout?edd_action=add_to_cart&download_id={{ $details.base }}&edd_options[price_id]={{ $details.id }}{{ if ne (.Scratch.Get "apiDiscount") "" }}&discount={{ .Scratch.Get "apiDiscount" }}{{ end }}&ref={{ "https://vanillajsacademy.com" | urlquery }}'>Join now for just {{ if ne (.Scratch.Get "apiPrice") "" }}{{ .Scratch.Get "apiPrice" | safeHTML }}{{ else }}{{ $prices.standard | safeHTML }}{{ end }}</a></p>
-<p class="text-small text-center">Or <a href='https://gomakethings.com/checkout?edd_action=add_to_cart&download_id={{ $details.base }}&edd_options[price_id]={{ $details.monthly }}{{ if ne (.Scratch.Get "apiDiscount") "" }}&discount={{ .Scratch.Get "apiDiscount" }}{{ end }}&ref={{ "https://vanillajsacademy.com" | urlquery }}'>make three monthly payments of {{ if ne (.Scratch.Get "apiPriceMonthly") "" }}{{ .Scratch.Get "apiPriceMonthly" | safeHTML }}{{ else }}{{ $prices.monthly | safeHTML }}{{ end }}</a></p>
+<p class="text-small text-center">Or <a class="edd-buy-now-button" href='https://gomakethings.com/checkout?edd_action=add_to_cart&download_id={{ $details.base }}&edd_options[price_id]={{ $details.monthly }}{{ if ne (.Scratch.Get "apiDiscount") "" }}&discount={{ .Scratch.Get "apiDiscount" }}{{ end }}&ref={{ "https://vanillajsacademy.com" | urlquery }}'>make three monthly payments of {{ if ne (.Scratch.Get "apiPriceMonthly") "" }}{{ .Scratch.Get "apiPriceMonthly" | safeHTML }}{{ else }}{{ $prices.monthly | safeHTML }}{{ end }}</a></p>
 
 {{ partial "sales-numbers.html" . }}
 
