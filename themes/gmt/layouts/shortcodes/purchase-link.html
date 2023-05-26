@@ -51,7 +51,7 @@
 <p><strong>The next session of the Vanilla JS Academy starts on {{ $dates.start }}.</strong></p>
 <p>Registration opens on {{ time.Format "Monday, January 2" (time (printf "%s-%s-%s" (slicestr (string $dates.registrationStart) 0 4) (slicestr (string $dates.registrationStart) 4 6) (slicestr (string $dates.registrationStart) 6 8))) }}. To get notified when registration opens <em>and</em> get exclusive discounts, enter your email&nbsp;below.</p>
 {{- else -}}
-<p><strong>New sessions of the Vanilla JS Academy run in January, April, and&nbsp;October.</strong></p>
+<p><strong>New sessions of the Vanilla JS Academy run in January, April, July, and&nbsp;October.</strong></p>
 <p>Be the first to find out when registration opens back up <em>and</em> get exclusive discounts. Enter your email&nbsp;below.</p>
 {{- end -}}
 
