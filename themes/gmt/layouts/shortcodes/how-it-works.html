@@ -4,7 +4,7 @@
 <iframe src='https://player.vimeo.com/video/{{ .Get "video" }}' width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
 {{- end -}}
 
-<ul class='list-inline list-inline-responsive{{ if .Get "video" }} text-center{{ end }}'>
+<ul class='list-inline list-inline-responsive{{ if .Get "video" }} list-inline-center{{ end }}'>
 	<li><strong>70+ Lessons</strong></li>
 	<li><strong>18 Projects</strong></li>
 	<li><strong>24/7 Peer Chat</strong></li>
@@ -18,6 +18,6 @@
 	<li><strong>On the in-between days, I share my approach to the project</strong> and some of the common challenges and “gotchas” that students often run into.</li>
 </ol>
 
-<p>If you get stuck, there’s a <strong>24/7 private Slack channel</strong> exclusively for students, and <strong>video office hours</strong> every few weeks.</p>
+<p>If you get stuck, there’s a <strong>24/7 private Discord community</strong> exclusively for students, and <strong>video office hours</strong> every few weeks.</p>
 
 {{ partial "testimonial-how-it-works.html" . }}
