@@ -9,7 +9,7 @@ description: ""
 <h1 class="no-padding-top no-margin-bottom h5 text-sans">Web Apps <em class="text-small text-muted">(NEW!)</em></h1>
 <p class="text-xlarge margin-bottom-small text-serif">A project-based JS workshop about building dynamic client-side web apps.</p>
 
-<p><span class="text-large">Learn how to build full-stack web applications from scratch.</span></p>
+<p><span class="text-large">Learn how to build web applications from start-to-finish.</span></p>
 
 {{<cta for="academy">}}
 
