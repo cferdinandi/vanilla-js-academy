@@ -170,6 +170,10 @@ Across all of the sections, you'll also learn about web performance, debugging, 
 {{<cta for="bonuses-academy">}}
 {{<cta for="bonuses-list">}}
 
+
+{{<lifetime-access>}}
+
+
 {{<pricing-link>}}
 
 
