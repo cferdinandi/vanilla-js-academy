@@ -9,16 +9,14 @@ description: ""
 <h1 class="no-padding-top no-margin-bottom h5 text-sans">Web Apps <em class="text-small text-muted">(NEW!)</em></h1>
 <p class="text-xlarge margin-bottom-small text-serif">A project-based JS workshop about building dynamic client-side web apps.</p>
 
-<p><span class="text-large">Follow a structured learning path, work on lots of fun projects, and get the support you need to work through challenges.</span></p>
+<p><span class="text-large">Learn how to build full-stack web applications from scratch.</span></p>
 
 {{<cta for="academy">}}
 
 {{<pricing-link>}}
 
-{{<used-by>}}
 
-
-{{<how-it-works video="652105277">}}
+{{<how-it-works video="864056837">}}
 The _Web Apps_ workshop is designed to help you build dynamic web apps with JS.
 {{</how-it-works>}}
 
@@ -73,15 +71,17 @@ Over the course of several weeks, you'll build an online store front, add a shop
 {{<pricing-link>}}
 
 
-{{<cta for="bonuses-academy">}}
-{{<cta for="bonuses-list">}}
-
-
 ## The Program Schedule
 
 Here's exactly what you'll learn in the _Web Apps_ workshop.
 
-<h3 class="no-padding-top h5">Part 1. State-Based UI</h3>
+<h3 class="no-padding-top h5">Module 0. Getting Setup</h3>
+
+- Developer tools, the console, and debugging
+- Tools of the trade: recommended browsers and text editors
+- Tips for working on projects
+
+<h3 class="no-padding-top h5">Module 1. State-Based UI</h3>
 
 - What is state-based UI?
 - Client-side routing
@@ -90,7 +90,7 @@ Here's exactly what you'll learn in the _Web Apps_ workshop.
 - How to structure complex apps
 
 
-<h3 class="no-padding-top h5">Part 2. DOM Diffing</h3>
+<h3 class="no-padding-top h5">Module 2. DOM Diffing</h3>
 
 - What is DOM diffing?
 - The `DOMParser()` API
@@ -98,14 +98,14 @@ Here's exactly what you'll learn in the _Web Apps_ workshop.
 - JavaScript Proxies
 - Reactive components
 
-<h3 class="no-padding-top h5">Part 3. Serverless</h3>
+<h3 class="no-padding-top h5">Module 3. Serverless</h3>
 
 - What is serverless?
 - API security
 - Integrating third-party APIs
 - Serverless databases
 
-<h3 class="no-padding-top h5">Part 4. Token-Based Authentication</h3>
+<h3 class="no-padding-top h5">Module 4. Token-Based Authentication</h3>
 
 - What is token-based authentication?
 - How to send login credentials to an API
@@ -116,13 +116,16 @@ Across all of the sections, you'll also learn about web performance, debugging, 
 {{<testimonials-schedule>}}
 
 
-{{<benefits>}}Get comfortable building interactive web apps{{</benefits>}}
+{{<bonuses>}}
+{{<cta for="bonuses-academy">}}
+{{<cta for="bonuses-list">}}
+
 {{<pricing-link>}}
 
 
+{{<benefits title="Get confident building interactive web apps">}}Imagine being able to <strong>build your own full-stack web apps</strong> that work on any device.{{</benefits>}}
+
 {{<money-back>}}
-
-
 {{<cta for="bio">}}
 
 

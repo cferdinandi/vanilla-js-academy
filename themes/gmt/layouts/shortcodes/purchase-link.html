@@ -1,62 +1,69 @@
 {{- $data := getJSON $.Site.Params.api -}}
+{{- $workshops := $data.products.workshops -}}
+
 {{- $ctas := index $data "ctas" -}}
 {{- $academy := index $data.products "academy" -}}
 {{- $dates := index $academy "dates" -}}
 {{- $prices := index $academy "prices" -}}
 {{- $details := index $academy (.Get "for") -}}
 
-{{- if and (ge (now.Format "20060102") $dates.registrationStart) (le (now.Format "20060102") $dates.registrationEnd) -}}
+{{- if and (ge (now.Format "20060102") $workshops.dates.start) (le (now.Format "20060102") $workshops.dates.end) -}}
 
-{{- $apiPrices := index $data "prices" -}}
-{{- .Scratch.Set "apiPrice" "" -}}
-{{- .Scratch.Set "apiPriceMonthly" "" -}}
-{{- .Scratch.Set "apiDiscount" "" -}}
-{{- if isset $apiPrices "academy" -}}
-	{{- .Scratch.Set "apiPrice" $apiPrices.academy.price -}}
-	{{- .Scratch.Set "apiPriceMonthly" $apiPrices.academy.priceMonthly -}}
-	{{- .Scratch.Set "apiDiscount" $apiPrices.academy.discount -}}
-{{- end -}}
-
-{{- .Scratch.Set "cta" "" -}}
-{{- if isset $ctas "academy-buy" -}}
-	{{ .Scratch.Set "cta" ((index $ctas "academy-buy") | safeHTML) }}
-{{- end -}}
-
-<p>{{ if .Inner }}{{ .Inner }} {{ end }}You get...</p>
-
-<ul>
-	<li>6 weeks of short, focused lessons</li>
-	<li>18 amazing JavaScript projects</li>
-	<li>70+ lessons</li>
-	<li>Video office hours</li>
-	<li>Exclusive Slack access</li>
+<p class="margin-bottom-medium">{{ if .Inner }}<strong>{{ .Inner }}</strong> {{ end }}You get instant access to...</p>
+<ul class="list-unstyled list-columnsx">
+	<li>✓ 6 weeks of short, focused lessons</li>
+	<li>✓ 18 amazing JavaScript projects</li>
+	<li>✓ 100+ lessons</li>
+	<li>✓ Lifetime access to all workshop content</li>
+	<li>✓ Certificate of Completion</li>
+	<li>✓ <strong>Bonus:</strong> Q&amp;A videos</li>
+	<li>✓ <strong>Bonus:</strong> 18 <em>more</em> projects</li>
+	<li>✓ <strong>Bonus:</strong> Exclusive Discord community</li>
 </ul>
 
-<p><strong>The next session runs from {{ $dates.start }} to {{ $dates.end }}.</strong> After joining, you'll get an email with the details.</p>
-
-{{- .Scratch.Get "cta" -}}
-
-{{- if isset $.Site.Data.prereqs (.Get "for") -}}
-{{ index $.Site.Data.prereqs (.Get "for") | safeHTML }}
+{{- if isset $data.ctas "academy-buy" -}}
+	{{ (index $data.ctas "academy-buy") | safeHTML }}
 {{- end -}}
 
-<p class="margin-bottom-medium"><a class="btn btn-large btn-block edd-buy-now-button" href='https://gomakethings.com/checkout?edd_action=add_to_cart&download_id={{ $details.base }}&edd_options[price_id]={{ $details.id }}{{ if ne (.Scratch.Get "apiDiscount") "" }}&discount={{ .Scratch.Get "apiDiscount" }}{{ end }}&ref={{ "https://vanillajsacademy.com" | urlquery }}'>Join now for just {{ if ne (.Scratch.Get "apiPrice") "" }}{{ .Scratch.Get "apiPrice" | safeHTML }}{{ else }}{{ $prices.standard | safeHTML }}{{ end }}</a></p>
-<p class="text-small text-center">Or <a class="edd-buy-now-button" href='https://gomakethings.com/checkout?edd_action=add_to_cart&download_id={{ $details.base }}&edd_options[price_id]={{ $details.monthly }}{{ if ne (.Scratch.Get "apiDiscount") "" }}&discount={{ .Scratch.Get "apiDiscount" }}{{ end }}&ref={{ "https://vanillajsacademy.com" | urlquery }}'>make four monthly payments of {{ if ne (.Scratch.Get "apiPriceMonthly") "" }}{{ .Scratch.Get "apiPriceMonthly" | safeHTML }}{{ else }}{{ $prices.monthly | safeHTML }}{{ end }}</a></p>
+{{- $id := (index $workshops.ids (.Get "for")) -}}
+{{- $.Scratch.Set "onetime" $workshops.prices.onetime.price -}}
+{{- $.Scratch.Set "monthly" $workshops.prices.monthly.price -}}
+{{- $.Scratch.Set "discount" "" -}}
 
+{{- if isset $data.prices "workshops" -}}
+	{{- .Scratch.Set "onetime" $data.prices.workshops.onetime -}}
+	{{- .Scratch.Set "monthly" $data.prices.workshops.monthly -}}
+	{{- .Scratch.Set "discount" $data.prices.workshops.discount -}}
+{{- end -}}
+
+<div class="row text-center">
+	<div class="grid-half callout-cta">
+		<div class="margin-bottom-small">
+			<em>One-Time Payment</em><br>
+			<strong class="text-large">{{ $.Scratch.Get "onetime" | safeHTML }}</strong>
+		</div>
+		<a class="btn btn-large btn-block edd-buy-now-button" href="https://gomakethings.com/checkout?edd_action=add_to_cart&download_id={{ $id }}&edd_options[price_id]={{ $workshops.prices.onetime.id }}{{ if ne (.Scratch.Get "discount") "" }}&discount={{ .Scratch.Get "discount" }}{{ end }}">Join Now</a>
+	</div>
+	<div class="grid-half grid-start-first callout-cta">
+		<div class="margin-bottom-small">
+			<em>3 Monthly Payments</em><br>
+			<strong class="text-large">{{ $.Scratch.Get "monthly" | safeHTML }}</strong>
+		</div>
+		<a class="btn btn-secondary btn-large btn-block edd-buy-now-button" href="https://gomakethings.com/checkout?edd_action=add_to_cart&download_id={{ $id }}&edd_options[price_id]={{ $workshops.prices.monthly.id }}{{ if ne (.Scratch.Get "discount") "" }}&discount={{ .Scratch.Get "discount" }}{{ end }}">Join Now + Pay Monthly</a>
+	</div>
+</div>
 {{ partial "sales-numbers.html" . }}
 
 {{- else -}}
 
-{{- if le (sub (int (now.Format "20060102")) $dates.registrationStart) 14 -}}
-<p><strong>The next session of the Vanilla JS Academy starts on {{ $dates.start }}.</strong></p>
-<p>Registration opens on {{ time.Format "Monday, January 2" (time (printf "%s-%s-%s" (slicestr (string $dates.registrationStart) 0 4) (slicestr (string $dates.registrationStart) 4 6) (slicestr (string $dates.registrationStart) 6 8))) }}. To get notified when registration opens <em>and</em> get exclusive discounts, enter your email&nbsp;below.</p>
+{{- if le (sub $workshops.dates.start (int (now.Format "20060102"))) 14 | and (gt $workshops.dates.end (now.Format "20060102")) -}}
+<p class="margin-bottom-small"><strong>The next session of the Vanilla JS Academy starts on {{ time.Format "Monday, January 2" (time (printf "%s-%s-%s" (slicestr (string $workshops.dates.start) 0 4) (slicestr (string $workshops.dates.start) 4 6) (slicestr (string $workshops.dates.start) 6 8))) }}.</strong></p>
+<p>To get notified when registration opens <em>and</em> get exclusive discounts, enter your email&nbsp;below.</p>
 {{- else -}}
 <p><strong>New sessions of the Vanilla JS Academy run in January, April, July, and&nbsp;October.</strong></p>
 <p>Be the first to find out when registration opens back up <em>and</em> get exclusive discounts. Enter your email&nbsp;below.</p>
 {{- end -}}
-
 {{ partial "mailchimp-form.html" }}
-
 {{ partial "sales-numbers.html" . }}
 
 {{- end -}}

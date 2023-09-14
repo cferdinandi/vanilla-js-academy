@@ -1,1 +1,8 @@
-<p class="margin-bottom-large"><a class="btn" href='{{ if .Get "pick" }}#the-workshops{{ else }}#ready-to-buy{{ end }}'>{{ if .Get "apply" }}Get in touch{{ else }}Join now{{ end }} &rarr;</a></p>
+{{- $data := getJSON $.Site.Params.sales -}}
+
+{{ if not (.Get "standalone") }}<hr>{{ end }}
+<ul class="list-inline {{ if .Get "standalone" }}margin-bottom-large{{ else }}no-margin-bottom list-inline-center{{ end }}">
+	<li {{ if not (.Get "standalone") }}class="no-margin-bottom"{{ end }}><a class="btn {{ if not (.Get "standalone") }}no-margin-bottom{{ end }}" href="{{ if .Get "pick" }}#the-workshops{{ else }}#ready-to-buy{{ end }}">{{ if .Get "pick" }}Explore the workshops{{ else }}Join now{{ end }} &rarr;</a></li>
+	<li {{ if not (.Get "standalone") }}class="no-margin-bottom"{{ end }}><em>Join over {{ index $data "message" }} others</em></li>
+</ul>
+{{ if not (.Get "standalone") }}<hr>{{ end }}

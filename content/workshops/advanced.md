@@ -9,16 +9,14 @@ description: ""
 <h1 class="no-padding-top no-margin-bottom h5 text-sans">Structure & Scale</h1>
 <p class="text-xlarge margin-bottom-small text-serif">A project-based JS workshop focused on structuring code for scale and growth.</p>
 
-<p><span class="text-large">Follow a structured learning path, work on lots of fun projects, and get the support you need to work through challenges.</span></p>
+<p><span class="text-large">Take your JavaScript skills to the next level and learn patterns and approaches for managing a growing codebase.</span></p>
 
 {{<cta for="academy">}}
 
 {{<pricing-link>}}
 
-{{<used-by>}}
 
-
-{{<how-it-works video="652105251">}}
+{{<how-it-works video="863697971">}}
 The _Structure & Scale_ workshop is designed to help you structure and organize your code as your projects grow and scale.
 {{</how-it-works>}}
 
@@ -59,7 +57,7 @@ The _Structure & Scale_ workshop is designed to help you structure and organize 
 {{<pricing-link>}}
 
 
-## Work on Fun Projects!
+## Work on fun projects!
 
 <div class="row margin-top margin-bottom-large">
 	<div class="grid-fifth margin-bottom-small text-center">
@@ -99,15 +97,17 @@ The _Structure & Scale_ workshop is designed to help you structure and organize 
 {{<pricing-link>}}
 
 
-{{<cta for="bonuses-academy">}}
-{{<cta for="bonuses-list">}}
-
-
 ## The Program Schedule
 
 Here's exactly what you'll learn in the _Structure & Scale_ workshop.
 
-<h3 class="no-padding-top h5">Part 1. JavaScript Library Patterns</h3>
+<h3 class="no-padding-top h5">Module 0. Getting Setup</h3>
+
+- Developer tools, the console, and debugging
+- Tools of the trade: recommended browsers and text editors
+- Tips for working on projects
+
+<h3 class="no-padding-top h5">Module 1. JavaScript Library Patterns</h3>
 
 - The Revealing Module Pattern
 - The Constructor Pattern
@@ -118,7 +118,7 @@ Here's exactly what you'll learn in the _Structure & Scale_ workshop.
 - User Options and Settings
 - The Custom Events API
 
-<h3 class="no-padding-top h5">Part 2. Web Components</h3>
+<h3 class="no-padding-top h5">Module 2. Web Components</h3>
 
 - Custom Elements
 - The Web Component Lifecycle
@@ -127,7 +127,7 @@ Here's exactly what you'll learn in the _Structure & Scale_ workshop.
 - Encapsulating Components
 - Styling Web Components
 
-<h3 class="no-padding-top h5">Part 3. Modular JavaScript</h3>
+<h3 class="no-padding-top h5">Module 3. Modular JavaScript</h3>
 
 - ES modules and modular code
 - Build tools and module bundlers
@@ -135,7 +135,7 @@ Here's exactly what you'll learn in the _Structure & Scale_ workshop.
 - Page-specific JavaScript and reduced payloads
 - How to reuse code across files
 
-<h3 class="no-padding-top h5">Part 4. Service Workers</h3>
+<h3 class="no-padding-top h5">Module 4. Service Workers</h3>
 
 - An intro to Service Workers
 - Caching for better performance
@@ -146,13 +146,16 @@ Across all of the sections, you'll also learn about web performance, debugging, 
 
 {{<testimonials-schedule>}}
 
+{{<bonuses>}}
+{{<cta for="bonuses-academy">}}
+{{<cta for="bonuses-list">}}
 
-{{<benefits>}}Get confident with advanced JavaScript techniques{{</benefits>}}
 {{<pricing-link>}}
 
 
-{{<money-back>}}
+{{<benefits title="Level-up as JavaScript professional">}}Imagine being able to **write modular code** that you can **easily maintain and reuse**.{{</benefits>}}
 
+{{<money-back>}}
 
 {{<cta for="bio">}}
 

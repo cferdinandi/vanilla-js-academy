@@ -1,6 +1,6 @@
 {{- $data := getJSON $.Site.Params.api -}}
 {{- $testimonials := index $data "testimonials" -}}
-{{- $names := slice "leticiaOneill2" "lauraKalbag" "walterJenkins" "mariaBlair2" "zacHeisey" "stewartDavis2" "izziKoning" "kevinBeck" "kumarSucom" "richHolman" "kieranBarker2" "patriciaParker" "toddLibby" "elliotPorter" "ronAmick" "craigHaggart" "vicenteSarmento" -}}
+{{- $names := slice "leticiaOneill2" "mariaBlair2" "zacHeisey" "stewartDavis2" "izziKoning" "giammaCarioca" "kumarSucom" "richHolman" "kieranBarker2" "patriciaParker" "toddLibby" "elliotPorter" "ronAmick" "craigHaggart" "vicenteSarmento" -}}
 
 {{- range $index, $name := $names -}}
 {{- if isset $testimonials $name -}}

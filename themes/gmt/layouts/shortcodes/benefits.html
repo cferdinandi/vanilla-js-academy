@@ -1,4 +1,6 @@
-<h2 id="benefits">{{ .Inner }}</h2>
+<h2 id="benefits">{{ .Get "title" }}</h2>
+
+<p>Over the last decade, I’ve helped thousands of developers demystify JavaScript and build tons of cool stuff. I can help you...</p>
 
 <ul>
 	<li>Learn <strong>modern best practices</strong> and code patterns.</li>
@@ -7,3 +9,5 @@
 	<li>Follow a <strong>structured learning path</strong> to grow your skills more quickly.</li>
 	<li><strong>Work on real projects</strong> and build your portfolio.</li>
 </ul>
+
+{{ if .Inner }}<p>{{ .Inner | markdownify }}</p>{{ end }}
