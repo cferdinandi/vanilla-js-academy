@@ -1,24 +1,18 @@
 {{- $data := getJSON $.Site.Params.api -}}
 {{- $workshops := $data.products.workshops -}}
 
-{{- $ctas := index $data "ctas" -}}
-{{- $academy := index $data.products "academy" -}}
-{{- $dates := index $academy "dates" -}}
-{{- $prices := index $academy "prices" -}}
-{{- $details := index $academy (.Get "for") -}}
-
 {{- if and (ge (now.Format "20060102") $workshops.dates.start) (le (now.Format "20060102") $workshops.dates.end) -}}
 
 <p class="margin-bottom-medium">{{ if .Inner }}<strong>{{ .Inner }}</strong> {{ end }}You get instant access to...</p>
 <ul class="list-unstyled list-columnsx">
-	<li>✓ 6 weeks of short, focused lessons</li>
-	<li>✓ 18 amazing JavaScript projects</li>
-	<li>✓ 100+ lessons</li>
-	<li>✓ Lifetime access and FREE updates</li>
-	<li>✓ Certificate of Completion</li>
-	<li>✓ <strong>Bonus:</strong> Q&amp;A videos</li>
-	<li>✓ <strong>Bonus:</strong> 18 <em>more</em> projects</li>
-	<li>✓ <strong>Bonus:</strong> Exclusive Discord community</li>
+	<li><span style="color:#f7272f;" aria-hidden="true">✓</span> 6 weeks of short, focused lessons</li>
+	<li><span style="color:#f7272f;" aria-hidden="true">✓</span> 18 amazing JavaScript projects</li>
+	<li><span style="color:#f7272f;" aria-hidden="true">✓</span> 100+ lessons</li>
+	<li><span style="color:#f7272f;" aria-hidden="true">✓</span> Certificate of Completion</li>
+	<li><span style="color:#f7272f;" aria-hidden="true">✓</span> Lifetime access and FREE updates</li>
+	<li><span style="color:#f7272f;" aria-hidden="true">✓</span> <strong>Bonus:</strong> Q&amp;A videos</li>
+	<li><span style="color:#f7272f;" aria-hidden="true">✓</span> <strong>Bonus:</strong> 18 <em>more</em> projects</li>
+	<li><span style="color:#f7272f;" aria-hidden="true">✓</span> <strong>Bonus:</strong> Exclusive Discord community</li>
 </ul>
 
 {{- if isset $data.ctas "academy-buy" -}}
